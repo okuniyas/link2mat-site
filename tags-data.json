@@ -199,6 +199,70 @@
       ]
     },
     {
+      "tagId": "pos.guard.k_guard",
+      "category": "Position",
+      "canonicalJa": "Kガード",
+      "canonicalEn": "K-Guard",
+      "aliases": [
+        "k guard",
+        "k-guard",
+        "Kガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "act.guard.inversion",
+        "act.guard.leg_entanglement_entry"
+      ]
+    },
+    {
+      "tagId": "pos.guard.waiter",
+      "category": "Position",
+      "canonicalJa": "ウェイターガード",
+      "canonicalEn": "Waiter Guard",
+      "aliases": [
+        "waiter guard",
+        "ウェイターガード",
+        "ウェイター"
+      ],
+      "related": [
+        "pos.leg_entanglement.ashi",
+        "act.guard.leg_entanglement_entry",
+        "pre.knee_line_control"
+      ]
+    },
+    {
+      "tagId": "pos.guard.reverse_half",
+      "category": "Position",
+      "canonicalJa": "リバースハーフガード",
+      "canonicalEn": "Reverse Half Guard",
+      "aliases": [
+        "reverse half guard",
+        "リバースハーフ",
+        "リバースハーフガード"
+      ],
+      "related": [
+        "pos.guard.half",
+        "act.guard.sweep",
+        "pre.underhook"
+      ]
+    },
+    {
+      "tagId": "pos.guard.squid",
+      "category": "Position",
+      "canonicalJa": "スクイッドガード",
+      "canonicalEn": "Squid Guard",
+      "aliases": [
+        "squid guard",
+        "スクイッドガード",
+        "スクイッド"
+      ],
+      "related": [
+        "pos.guard.open",
+        "act.guard.sweep",
+        "pre.grip.collar"
+      ]
+    },
+    {
       "tagId": "pos.guard.slx",
       "category": "Position",
       "canonicalJa": "シングルレッグX",
@@ -388,6 +452,23 @@
         "act.wrestling.snapdown",
         "act.control.front_headlock_stabilize",
         "pre.head_position"
+      ]
+    },
+    {
+      "tagId": "pos.neutral.ground",
+      "category": "Position",
+      "canonicalJa": "ニュートラル（グラウンド）",
+      "canonicalEn": "Ground Neutral",
+      "aliases": [
+        "neutral",
+        "ground neutral",
+        "ニュートラル",
+        "グラウンドニュートラル"
+      ],
+      "related": [
+        "act.guard.entry",
+        "act.pass.guard_release",
+        "act.guard.sweep"
       ]
     },
     {
@@ -637,6 +718,22 @@
         "pos.guard.open",
         "pre.grip.collar",
         "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "act.guard.entry",
+      "category": "Action",
+      "canonicalJa": "ガードエントリー",
+      "canonicalEn": "Guard Entry",
+      "aliases": [
+        "guard entry",
+        "enter guard",
+        "ガードに入る"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pos.guard.closed",
+        "act.guard.guard_pull"
       ]
     },
     {
@@ -1221,30 +1318,30 @@
       "tagId": "act.control.stabilize",
       "category": "Action",
       "canonicalJa": "固める",
-      "canonicalEn": "Stabilize / Pin",
+      "canonicalEn": "Stabilize",
       "aliases": [
-        "pin",
         "stabilize",
         "キープ",
-        "固定",
-        "control",
         "コントロール"
       ],
       "related": [
         "pre.crossface",
         "pre.hip_control",
-        "pre.pressure"
+        "pre.pressure",
+        "pre.control.pin"
       ]
     },
     {
       "tagId": "act.control.cross_body",
       "category": "Action",
-      "canonicalJa": "クロスボディコントロール",
+      "canonicalJa": "崩れ袈裟固め",
       "canonicalEn": "Cross Body Control",
       "aliases": [
         "cross body control",
+        "crossbody",
         "クロスボディコントロール",
-        "クロスボディ"
+        "クロスボディ",
+        "崩れ袈裟固め"
       ],
       "related": [
         "pos.top.side_control",
@@ -1281,21 +1378,6 @@
         "act.sub.armbar.step_over",
         "act.control.cross_body",
         "pre.control_elbow_line"
-      ]
-    },
-    {
-      "tagId": "act.control.kneeling_twisting_base",
-      "category": "Action",
-      "canonicalJa": "コントロール（ニーリング、ツイスティング、スプロールベース）",
-      "canonicalEn": "Control (Kneeling / Twisting / Sprawl Base)",
-      "aliases": [
-        "control kneeling twisting sprawl base",
-        "コントロール （ニーリング、ツイスティング、スプロールベース）"
-      ],
-      "related": [
-        "act.control.kneeling_base",
-        "act.control.twisting_base",
-        "act.control.sprawl_base"
       ]
     },
     {
@@ -3200,6 +3282,23 @@
         "act.sub.armbar",
         "act.sub.kimura",
         "act.sub.americana"
+      ]
+    },
+    {
+      "tagId": "pre.control.pin",
+      "category": "Prerequisite",
+      "canonicalJa": "ピン（固定）",
+      "canonicalEn": "Pin (Fixing)",
+      "aliases": [
+        "pin",
+        "ピン",
+        "固定",
+        "押さえる"
+      ],
+      "related": [
+        "act.control.stabilize",
+        "pre.control_elbow_line",
+        "pre.control.wrist"
       ]
     },
     {
