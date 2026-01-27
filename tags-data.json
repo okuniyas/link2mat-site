@@ -1211,6 +1211,21 @@
       ]
     },
     {
+      "tagId": "act.pass.binding",
+      "category": "Action",
+      "canonicalJa": "バインディングパス",
+      "canonicalEn": "Binding Pass",
+      "aliases": [
+        "binding pass",
+        "バインディング"
+      ],
+      "related": [
+        "pre.grip.collar",
+        "pre.grip.sleeve",
+        "pre.pressure"
+      ]
+    },
+    {
       "tagId": "act.pass.stack",
       "category": "Action",
       "canonicalJa": "スタックパス",
@@ -3526,6 +3541,20 @@
       "related": [
         "act.wrestling.sprawl",
         "act.escape.turtle"
+      ]
+    },
+    {
+      "tagId": "pre.side_switch",
+      "category": "Prerequisite",
+      "canonicalJa": "サイドスイッチ",
+      "canonicalEn": "Side Switch",
+      "aliases": [
+        "side switch",
+        "サイドスイッチ"
+      ],
+      "related": [
+        "act.control.stabilize",
+        "act.pass.leg_drag"
       ]
     },
     {
