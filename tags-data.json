@@ -102,6 +102,23 @@
       ]
     },
     {
+      "tagId": "pos.guard.deep_half",
+      "category": "Position",
+      "canonicalJa": "ディープハーフガード",
+      "canonicalEn": "Deep Half Guard",
+      "aliases": [
+        "ディープハーフ",
+        "deep half guard",
+        "deep half"
+      ],
+      "related": [
+        "act.guard.sweep",
+        "act.pass.knee_cut",
+        "pre.underhook",
+        "pre.knee_shield"
+      ]
+    },
+    {
       "tagId": "pos.guard.knee_shield",
       "category": "Position",
       "canonicalJa": "ニーシールド",
