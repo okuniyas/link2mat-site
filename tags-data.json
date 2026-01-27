@@ -184,6 +184,21 @@
       ]
     },
     {
+      "tagId": "pos.guard.rubber",
+      "category": "Position",
+      "canonicalJa": "ラバーガード",
+      "canonicalEn": "Rubber Guard",
+      "aliases": [
+        "rubber guard",
+        "ラバー"
+      ],
+      "related": [
+        "act.guard.sweep",
+        "act.sub.triangle",
+        "pre.control.wrist"
+      ]
+    },
+    {
       "tagId": "pos.guard.slx",
       "category": "Position",
       "canonicalJa": "シングルレッグX",
@@ -463,9 +478,8 @@
       "canonicalJa": "エスケープ局面",
       "canonicalEn": "Escape Phase",
       "aliases": [
-        "escape",
-        "脱出",
-        "ディフェンス"
+        "escape phase",
+        "エスケープ局面"
       ],
       "related": [
         "act.escape.side",
@@ -846,6 +860,39 @@
         "pos.guard.open",
         "pre.off_balance",
         "pre.frame"
+      ]
+    },
+    {
+      "tagId": "act.guard.granby_roll",
+      "category": "Action",
+      "canonicalJa": "グランビーロール",
+      "canonicalEn": "Granby Roll",
+      "aliases": [
+        "granby roll",
+        "granby",
+        "グランビーロール",
+        "グランビー"
+      ],
+      "related": [
+        "act.guard.inversion",
+        "act.guard.retention",
+        "act.escape.back_roll"
+      ]
+    },
+    {
+      "tagId": "act.guard.berimbolo",
+      "category": "Action",
+      "canonicalJa": "ベリンボロ",
+      "canonicalEn": "Berimbolo",
+      "aliases": [
+        "berimbolo",
+        "bolo",
+        "ベリンボロ"
+      ],
+      "related": [
+        "act.guard.inversion",
+        "act.transition.take_back",
+        "pos.guard.open"
       ]
     },
     {
@@ -2079,11 +2126,11 @@
     {
       "tagId": "act.escape.back_roll",
       "category": "Action",
-      "canonicalJa": "オーバーヘッドロール",
-      "canonicalEn": "Overhead Roll",
+      "canonicalJa": "バックロール",
+      "canonicalEn": "Back Roll",
       "aliases": [
-        "overhead roll",
-        "オーバーヘッドロール"
+        "back roll",
+        "バックロール"
       ],
       "related": [
         "act.escape.overhead_roll",
@@ -2097,7 +2144,6 @@
       "canonicalEn": "Hip Escape",
       "aliases": [
         "hip escape",
-        "エビ",
         "ヒップエスケープ"
       ],
       "related": [
@@ -2109,12 +2155,12 @@
     {
       "tagId": "act.escape.shrimp",
       "category": "Action",
-      "canonicalJa": "エビ",
-      "canonicalEn": "Shrimp",
+      "canonicalJa": "エビ運動",
+      "canonicalEn": "Shrimping",
       "aliases": [
         "shrimp",
-        "エビ運動",
-        "エビ"
+        "shrimping",
+        "エビ運動"
       ],
       "related": [
         "act.escape.hip_escape",
@@ -2232,7 +2278,6 @@
       "canonicalJa": "オーバーヘッドロールバックテイク",
       "canonicalEn": "Overhead Roll Back Take",
       "aliases": [
-        "overhead roll back take",
         "オーバーヘッドロールバックテイク"
       ],
       "related": [
@@ -2243,11 +2288,12 @@
     {
       "tagId": "act.control.back_take_roll_over",
       "category": "Action",
-      "canonicalJa": "オーバーヘッドロール",
-      "canonicalEn": "Overhead Roll (Back Take)",
+      "canonicalJa": "バックテイク（オーバーヘッドロール）",
+      "canonicalEn": "Back Take (Overhead Roll)",
       "aliases": [
-        "overhead roll",
-        "オーバーヘッドロール"
+        "overhead roll back take",
+        "back take roll",
+        "バックテイクロール"
       ],
       "related": [
         "act.transition.take_back",
@@ -2588,6 +2634,44 @@
       "related": []
     },
     {
+      "tagId": "scn.phase.attack",
+      "category": "Scenario",
+      "canonicalJa": "アタック",
+      "canonicalEn": "Attack",
+      "aliases": [
+        "アタック",
+        "攻め",
+        "攻撃",
+        "attack"
+      ],
+      "related": []
+    },
+    {
+      "tagId": "scn.phase.defense",
+      "category": "Scenario",
+      "canonicalJa": "ディフェンス",
+      "canonicalEn": "Defense",
+      "aliases": [
+        "ディフェンス",
+        "防御",
+        "守り",
+        "defense"
+      ],
+      "related": []
+    },
+    {
+      "tagId": "scn.phase.escape",
+      "category": "Scenario",
+      "canonicalJa": "エスケープ",
+      "canonicalEn": "Escape",
+      "aliases": [
+        "エスケープ",
+        "逃げ",
+        "escape"
+      ],
+      "related": []
+    },
+    {
       "tagId": "scn.context.instructional",
       "category": "Scenario",
       "canonicalJa": "教則",
@@ -2808,6 +2892,42 @@
         "pant grip",
         "裾グリップ",
         "裾持ち"
+      ],
+      "related": [
+        "scn.attire.gi",
+        "act.guard.sweep",
+        "act.pass.torreando"
+      ]
+    },
+    {
+      "tagId": "pre.grip.back_pants",
+      "category": "Prerequisite",
+      "canonicalJa": "バックパンツグリップ",
+      "canonicalEn": "Back Pants Grip",
+      "aliases": [
+        "バックパンツグリップ",
+        "腰グリップ",
+        "ヒップグリップ",
+        "back pants grip",
+        "hip grip"
+      ],
+      "related": [
+        "scn.attire.gi",
+        "act.guard.sweep",
+        "act.pass.torreando"
+      ]
+    },
+    {
+      "tagId": "pre.grip.belt_front",
+      "category": "Prerequisite",
+      "canonicalJa": "ベルトグリップ",
+      "canonicalEn": "Belt Grip",
+      "aliases": [
+        "ベルトグリップ",
+        "腰前グリップ",
+        "前帯グリップ",
+        "belt grip",
+        "front belt grip"
       ],
       "related": [
         "scn.attire.gi",
@@ -3281,12 +3401,12 @@
     {
       "tagId": "pre.hip_escape",
       "category": "Prerequisite",
-      "canonicalJa": "ヒップエスケープ",
-      "canonicalEn": "Hip Escape",
+      "canonicalJa": "ヒップムーブ",
+      "canonicalEn": "Hip Movement",
       "aliases": [
-        "hip escape",
-        "shrimp",
-        "エビ"
+        "hip movement",
+        "hip shift",
+        "ヒップムーブ"
       ],
       "related": [
         "act.escape.side",
