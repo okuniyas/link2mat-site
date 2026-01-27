@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tag Detail / タグ詳細</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 32px 20px;
+        background: #ffffff;
+        color: #111111;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+      h2 {
+        font-size: 18px;
+        margin: 24px 0 8px;
+      }
+      p {
+        line-height: 1.6;
+        margin: 12px 0;
+      }
+      .muted {
+        color: #4b5563;
+        font-size: 13px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #f3f4f6;
+        color: #374151;
+        font-size: 12px;
+        margin-right: 8px;
+      }
+      .card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        background: #f9fafb;
+      }
+      .list {
+        margin: 8px 0 0 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      a {
+        color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Tag Detail / タグ詳細</h1>
+      <p class="muted"><strong>Last updated:</strong> 2026-01-27</p>
+      <p class="muted"><strong>更新日:</strong> 2026-01-27</p>
+
+      <div id="content" class="card">
+        <p>Loading...</p>
+      </div>
+
+      <h2>Support / サポート</h2>
+      <p><a href="index.html">Support page / サポートページへ</a></p>
+      <p><a href="tags-list.html">Tag list / タグ一覧へ</a></p>
+    </div>
+
+    <script>
+      const categoryLabels = {
+        Position: "Position / ポジション",
+        Prerequisite: "Setup / セットアップ",
+        Action: "Action / アクション",
+        Scenario: "Scenario / シナリオ",
+      };
+
+      const normalize = (value) => String(value || "").toLowerCase().trim();
+
+      const params = new URLSearchParams(window.location.search);
+      const tagId = params.get("id");
+      const tagQuery = params.get("tag");
+
+      const findTag = (tags) => {
+        if (tagId) {
+          return tags.find((tag) => tag.tagId === tagId) || null;
+        }
+        const q = normalize(tagQuery);
+        if (!q) return null;
+        return (
+          tags.find((tag) => normalize(tag.canonicalJa) === q) ||
+          tags.find((tag) => normalize(tag.canonicalEn) === q) ||
+          tags.find((tag) => (tag.aliases || []).some((a) => normalize(a) === q)) ||
+          null
+        );
+      };
+
+      const renderNotFound = () => {
+        const content = document.getElementById("content");
+        content.innerHTML = `
+          <p>Tag not found. Try searching from the list.</p>
+          <p>タグが見つかりません。タグ一覧から検索してください。</p>
+          <p><a href="tags-list.html">Tag list / タグ一覧へ</a></p>
+        `;
+      };
+
+      const renderTag = (tag) => {
+        const content = document.getElementById("content");
+        const title = document.getElementById("title");
+        const display = tag.canonicalJa || tag.canonicalEn || tag.tagId;
+        title.textContent = `${display} / タグ詳細`;
+
+        const aliasText = (tag.aliases || []).join(", ");
+        const related = (tag.related || []).map((id) =>
+          `<li><a href="tags-detail.html?id=${encodeURIComponent(id)}">${id}</a></li>`
+        );
+        const category = categoryLabels[tag.category] || tag.category || "Other";
+
+        const query = tag.canonicalJa || tag.canonicalEn || tag.tagId;
+        const phrase = `柔術で "${query}" とは`;
+        const webSearch = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
+
+        content.innerHTML = `
+          <p><span class="badge">${category}</span><span class="badge">${tag.tagId}</span></p>
+          <p><strong>${tag.canonicalJa || ""}</strong> ${tag.canonicalEn ? `(${tag.canonicalEn})` : ""}</p>
+          ${aliasText ? `<p><strong>Aliases:</strong> ${aliasText}</p>` : "<p><strong>Aliases:</strong> -</p>"}
+          <div>
+            <p><strong>Related tags:</strong></p>
+            ${related.length ? `<ul class="list">${related.join("")}</ul>` : "<p>-</p>"}
+          </div>
+          <div class="row">
+            <a class="button" href="${webSearch}" target="_blank" rel="noreferrer">
+              Search the web / Webで検索
+            </a>
+          </div>
+        `;
+      };
+
+      fetch("tags-data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const tags = data.tags || [];
+          const tag = findTag(tags);
+          if (!tag) {
+            renderNotFound();
+          } else {
+            renderTag(tag);
+          }
+        })
+        .catch(() => renderNotFound());
+    </script>
+  </body>
+</html>

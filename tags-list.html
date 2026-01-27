@@ -63,6 +63,13 @@
       .tag-title {
         font-weight: 700;
       }
+      .tag-title a {
+        color: #111111;
+        text-decoration: none;
+      }
+      .tag-title a:hover {
+        text-decoration: underline;
+      }
       .tag-en {
         color: #6b7280;
         font-size: 13px;
@@ -150,7 +157,10 @@
             item.className = "tag";
             const heading = document.createElement("div");
             heading.className = "tag-title";
-            heading.textContent = tag.canonicalJa || tag.canonicalEn || tag.tagId;
+            const link = document.createElement("a");
+            link.href = `tags-detail.html?id=${encodeURIComponent(tag.tagId)}`;
+            link.textContent = tag.canonicalJa || tag.canonicalEn || tag.tagId;
+            heading.appendChild(link);
 
             if (tag.canonicalEn) {
               const en = document.createElement("span");
