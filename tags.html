@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tag Help / タグヘルプ</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 32px 20px;
+        background: #ffffff;
+        color: #111111;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+      h2 {
+        font-size: 18px;
+        margin: 24px 0 8px;
+      }
+      p {
+        line-height: 1.6;
+        margin: 12px 0;
+      }
+      .card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        background: #f9fafb;
+      }
+      .muted {
+        color: #4b5563;
+        font-size: 13px;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      input {
+        padding: 10px 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      a {
+        color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tag Help / タグヘルプ</h1>
+      <p class="muted"><strong>Last updated:</strong> 2026-01-27</p>
+      <p class="muted"><strong>更新日:</strong> 2026-01-27</p>
+
+      <p>
+        Tag は「ポジション × セットアップ × アクション」で整理する考え方です。
+        例: どんなポジションでどんな状態（セットアップ）をして、
+        どんなアクション（極め、スイープ、テイクダウン）をするか。
+      </p>
+
+      <div class="card">
+        <strong>Tag search / タグ検索</strong>
+        <div class="row">
+          <input id="tagInput" type="text" placeholder="例: ハーフガード / half guard" />
+          <a id="searchLink" class="button" href="https://www.google.com" target="_blank" rel="noreferrer">
+            Search the web / Webで検索
+          </a>
+        </div>
+        <p class="muted">
+          用語の詳細は Web 検索で確認できます。タグの追加要望はサポートまでご連絡ください。
+        </p>
+      </div>
+
+      <h2>Support / サポート</h2>
+      <p><a href="index.html">Support page / サポートページへ</a></p>
+    </div>
+
+    <script>
+      const input = document.getElementById("tagInput");
+      const link = document.getElementById("searchLink");
+
+      const params = new URLSearchParams(window.location.search);
+      const initial = params.get("tag");
+      if (initial) {
+        input.value = initial;
+      }
+
+      const updateLink = () => {
+        const query = input.value.trim();
+        if (!query) {
+          link.href = "https://www.google.com";
+          return;
+        }
+        const phrase = `柔術で "${query}" とは`;
+        link.href = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
+      };
+
+      updateLink();
+      input.addEventListener("input", updateLink);
+    </script>
+  </body>
+</html>
