@@ -2316,19 +2316,6 @@
       ]
     },
     {
-      "tagId": "act.study.drill",
-      "category": "Action",
-      "canonicalJa": "ドリル",
-      "canonicalEn": "Drill",
-      "aliases": [
-        "drill",
-        "反復練習"
-      ],
-      "related": [
-        "pre.step_sequence"
-      ]
-    },
-    {
       "tagId": "act.movement.ukemi",
       "category": "Action",
       "canonicalJa": "受け身",
@@ -2443,6 +2430,17 @@
       "aliases": [
         "training",
         "練習"
+      ],
+      "related": []
+    },
+    {
+      "tagId": "scn.study.drill",
+      "category": "Scenario",
+      "canonicalJa": "ドリル",
+      "canonicalEn": "Drill",
+      "aliases": [
+        "drill",
+        "反復練習"
       ],
       "related": []
     },
@@ -3410,19 +3408,6 @@
         "act.wrestling.single_leg"
       ]
     },
-    {
-      "tagId": "pre.step_sequence",
-      "category": "Prerequisite",
-      "canonicalJa": "手順（ステップ）",
-      "canonicalEn": "Step Sequence",
-      "aliases": [
-        "sequence",
-        "手順",
-        "ステップ"
-      ],
-      "related": [
-        "act.study.drill"
-      ]
-    }
+    
   ]
 }
