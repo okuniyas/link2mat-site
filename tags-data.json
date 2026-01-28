@@ -450,7 +450,6 @@
       ],
       "related": [
         "act.guard.entry",
-        "act.pass.guard_release",
         "act.guard.sweep"
       ]
     },
@@ -1148,20 +1147,6 @@
       ]
     },
     {
-      "tagId": "act.pass.guard_release",
-      "category": "Action",
-      "canonicalJa": "ガード解除",
-      "canonicalEn": "Guard Release",
-      "aliases": [
-        "guard release",
-        "ガード解除"
-      ],
-      "related": [
-        "pos.guard.closed",
-        "pre.posture_break"
-      ]
-    },
-    {
       "tagId": "act.pass.guard_break",
       "category": "Action",
       "canonicalJa": "ガードブレイク",
@@ -1557,36 +1542,6 @@
       ]
     },
     {
-      "tagId": "act.sub.triangle.wrapped_arm",
-      "category": "Action",
-      "canonicalJa": "トライアングルチョーク（アームラップから）",
-      "canonicalEn": "Triangle Choke (From Wrapped Arm)",
-      "aliases": [
-        "triangle choke from wrapped arm",
-        "トライアングルチョーク（アームラップから）",
-        "アームラップからのトライアングル"
-      ],
-      "related": [
-        "act.sub.triangle",
-        "pre.grip.arm_wrap",
-        "pre.posture_break"
-      ]
-    },
-    {
-      "tagId": "act.sub.triangle.transition",
-      "category": "Action",
-      "canonicalJa": "トライアングルチョークトランジション",
-      "canonicalEn": "Triangle Choke Transition",
-      "aliases": [
-        "triangle choke transition",
-        "トライアングルチョークトランジション"
-      ],
-      "related": [
-        "act.sub.triangle",
-        "pre.posture_break"
-      ]
-    },
-    {
       "tagId": "act.sub.arm_triangle",
       "category": "Action",
       "canonicalJa": "腕三角",
@@ -1812,20 +1767,6 @@
       ]
     },
     {
-      "tagId": "act.sub.collar_choke.basic",
-      "category": "Action",
-      "canonicalJa": "カラーチョーク（ベーシック）",
-      "canonicalEn": "Collar Choke (Basic)",
-      "aliases": [
-        "basic collar choke",
-        "カラーチョーク（ベーシック）"
-      ],
-      "related": [
-        "act.sub.collar_choke",
-        "pre.grip.collar"
-      ]
-    },
-    {
       "tagId": "act.sub.collar_choke.half_nelson",
       "category": "Action",
       "canonicalJa": "カラーチョーク（ハーフネルソン）",
@@ -1856,37 +1797,6 @@
       ]
     },
     {
-      "tagId": "act.sub.rear_collar_choke",
-      "category": "Action",
-      "canonicalJa": "リアカラーチョーク",
-      "canonicalEn": "Rear Collar Choke",
-      "aliases": [
-        "rear collar choke",
-        "リアカラーチョーク",
-        "リアカラー チョーク"
-      ],
-      "related": [
-        "pos.top.back_control",
-        "pre.grip.collar",
-        "pre.seatbelt"
-      ]
-    },
-    {
-      "tagId": "act.sub.rear_collar_choke.overhook_side",
-      "category": "Action",
-      "canonicalJa": "リアカラーチョーク（オーバーフックサイド）",
-      "canonicalEn": "Rear Collar Choke (Overhook Side)",
-      "aliases": [
-        "rear collar choke overhook side",
-        "リアカラーチョーク（オーバーフックサイド）"
-      ],
-      "related": [
-        "act.sub.rear_collar_choke",
-        "pre.overhook",
-        "pre.grip.collar"
-      ]
-    },
-    {
       "tagId": "act.sub.bow_arrow_choke",
       "category": "Action",
       "canonicalJa": "ボウアンドアローチョーク",
@@ -1902,20 +1812,6 @@
         "pos.top.back_control",
         "pre.grip.collar",
         "pre.seatbelt"
-      ]
-    },
-    {
-      "tagId": "act.sub.bow_arrow_choke.basic",
-      "category": "Action",
-      "canonicalJa": "ボウアンドアローチョーク（ベーシック）",
-      "canonicalEn": "Bow and Arrow Choke (Basic)",
-      "aliases": [
-        "bow and arrow choke basic",
-        "ボウアンドアローチョーク（ベーシック）"
-      ],
-      "related": [
-        "act.sub.bow_arrow_choke",
-        "pre.grip.collar"
       ]
     },
     {
@@ -2192,21 +2088,6 @@
       ]
     },
     {
-      "tagId": "act.escape.half_guard",
-      "category": "Action",
-      "canonicalJa": "ハーフ脱出",
-      "canonicalEn": "Half Guard Escape",
-      "aliases": [
-        "half escape",
-        "ハーフから戻す"
-      ],
-      "related": [
-        "pre.knee_shield",
-        "pre.underhook",
-        "pre.hip_escape"
-      ]
-    },
-    {
       "tagId": "act.escape.underhook",
       "category": "Action",
       "canonicalJa": "アンダーフックエスケープ",
@@ -2256,21 +2137,6 @@
       "canonicalEn": "Overhead Roll Back Take",
       "aliases": [
         "オーバーヘッドロールバックテイク"
-      ],
-      "related": [
-        "act.transition.take_back",
-        "act.escape.overhead_roll"
-      ]
-    },
-    {
-      "tagId": "act.control.back_take_roll_over",
-      "category": "Action",
-      "canonicalJa": "バックテイク（オーバーヘッドロール）",
-      "canonicalEn": "Back Take (Overhead Roll)",
-      "aliases": [
-        "overhead roll back take",
-        "back take roll",
-        "バックテイクロール"
       ],
       "related": [
         "act.transition.take_back",
@@ -2476,22 +2342,6 @@
       "related": []
     },
     {
-      "tagId": "act.study.concept",
-      "category": "Action",
-      "canonicalJa": "コンセプト",
-      "canonicalEn": "Concept",
-      "aliases": [
-        "concept",
-        "考え方",
-        "原理"
-      ],
-      "related": [
-        "pre.angle_created",
-        "pre.connection",
-        "pre.off_balance"
-      ]
-    },
-    {
       "tagId": "act.tactic.counter",
       "category": "Action",
       "canonicalJa": "カウンター",
@@ -2658,6 +2508,22 @@
       ],
       "related": [
         "scn.format.long_form"
+      ]
+    },
+    {
+      "tagId": "scn.study.concept",
+      "category": "Scenario",
+      "canonicalJa": "コンセプト",
+      "canonicalEn": "Concept",
+      "aliases": [
+        "concept",
+        "考え方",
+        "原理"
+      ],
+      "related": [
+        "pre.angle_created",
+        "pre.connection",
+        "pre.off_balance"
       ]
     },
     {
@@ -2840,8 +2706,7 @@
       ],
       "related": [
         "scn.attire.gi",
-        "act.sub.collar_choke",
-        "act.sub.rear_collar_choke"
+        "act.sub.collar_choke"
       ]
     },
     {
@@ -2889,8 +2754,7 @@
       ],
       "related": [
         "scn.attire.gi",
-        "act.sub.collar_choke",
-        "act.sub.rear_collar_choke"
+        "act.sub.collar_choke"
       ]
     },
     {
