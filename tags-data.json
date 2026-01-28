@@ -2784,7 +2784,7 @@
     },
     {
       "tagId": "scn.format.short_form",
-      "category": "Scenario",
+      "category": "Source",
       "canonicalJa": "ショート",
       "canonicalEn": "Short-form",
       "aliases": [
@@ -2800,7 +2800,7 @@
     },
     {
       "tagId": "scn.format.long_form",
-      "category": "Scenario",
+      "category": "Source",
       "canonicalJa": "長尺",
       "canonicalEn": "Long-form",
       "aliases": [
@@ -2816,7 +2816,7 @@
     },
     {
       "tagId": "scn.provider.youtube",
-      "category": "Scenario",
+      "category": "Source",
       "canonicalJa": "YouTube",
       "canonicalEn": "YouTube",
       "aliases": [
@@ -2830,7 +2830,7 @@
     },
     {
       "tagId": "scn.provider.flo",
-      "category": "Scenario",
+      "category": "Source",
       "canonicalJa": "FloGrappling",
       "canonicalEn": "FloGrappling",
       "aliases": [
@@ -2844,7 +2844,7 @@
     },
     {
       "tagId": "scn.provider.instagram",
-      "category": "Scenario",
+      "category": "Source",
       "canonicalJa": "Instagram",
       "canonicalEn": "Instagram",
       "aliases": [
@@ -2858,7 +2858,7 @@
     },
     {
       "tagId": "scn.provider.facebook",
-      "category": "Scenario",
+      "category": "Source",
       "canonicalJa": "Facebook",
       "canonicalEn": "Facebook",
       "aliases": [
@@ -2872,7 +2872,7 @@
     },
     {
       "tagId": "scn.provider.generic_web",
-      "category": "Scenario",
+      "category": "Source",
       "canonicalJa": "Web",
       "canonicalEn": "Web",
       "aliases": [
@@ -3437,6 +3437,22 @@
       "related": [
         "act.control.turtle_breakdown",
         "act.wrestling.sprawl"
+      ]
+    },
+    {
+      "tagId": "pre.hip_turn",
+      "category": "Prerequisite",
+      "canonicalJa": "腰を切る",
+      "canonicalEn": "Hip Turn (Top Pressure)",
+      "aliases": [
+        "腰を切る",
+        "腰切り",
+        "腰を切って押し付ける"
+      ],
+      "related": [
+        "pre.pressure",
+        "pos.guard.half",
+        "act.pass.knee_cut"
       ]
     },
     {

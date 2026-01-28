@@ -112,9 +112,10 @@
     <script>
       const categoryLabels = {
         Position: "Position / ポジション",
+        Scenario: "Scenario / シナリオ",
         Prerequisite: "Setup / セットアップ",
         Action: "Action / アクション",
-        Scenario: "Scenario / シナリオ",
+        Source: "Source / ソース",
       };
 
       const list = document.getElementById("list");
@@ -143,7 +144,14 @@
           byCategory.get(key).push(tag);
         }
 
-        const order = ["Position", "Prerequisite", "Action", "Scenario", "Other"];
+        const order = [
+          "Position",
+          "Scenario",
+          "Prerequisite",
+          "Action",
+          "Source",
+          "Other",
+        ];
         for (const key of order) {
           if (!byCategory.has(key)) continue;
           const section = document.createElement("div");
