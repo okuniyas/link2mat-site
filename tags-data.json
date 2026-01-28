@@ -76,7 +76,11 @@
       "canonicalEn": "Open Guard",
       "aliases": [
         "オープン",
-        "open guard"
+        "open guard",
+        "トップオープン",
+        "ボトムオープン",
+        "top open guard",
+        "bottom open guard"
       ],
       "related": [
         "act.guard.retention",
@@ -92,7 +96,11 @@
       "canonicalEn": "Half Guard",
       "aliases": [
         "ハーフ",
-        "half guard"
+        "half guard",
+        "トップハーフ",
+        "ボトムハーフ",
+        "half guard top",
+        "half guard bottom"
       ],
       "related": [
         "act.guard.sweep",
@@ -407,32 +415,24 @@
       ]
     },
     {
-      "tagId": "pos.top.turtle",
+      "tagId": "pos.turtle",
       "category": "Position",
-      "canonicalJa": "タートル上",
-      "canonicalEn": "Top Turtle",
+      "canonicalJa": "タートル",
+      "canonicalEn": "Turtle",
       "aliases": [
+        "タートル",
+        "turtle",
         "タートル上",
-        "top turtle"
+        "タートル下",
+        "top turtle",
+        "bottom turtle"
       ],
       "related": [
         "act.control.turtle_breakdown",
         "act.transition.take_back",
-        "pre.hip_control"
-      ]
-    },
-    {
-      "tagId": "pos.bottom.turtle",
-      "category": "Position",
-      "canonicalJa": "タートル下",
-      "canonicalEn": "Bottom Turtle",
-      "aliases": [
-        "タートル下",
-        "bottom turtle"
-      ],
-      "related": [
         "act.escape.turtle",
         "act.wrestling.wrestle_up",
+        "pre.hip_control",
         "pre.frame"
       ]
     },
@@ -611,66 +611,6 @@
       "related": [
         "act.guard.sweep",
         "pre.grip.sleeve"
-      ]
-    },
-    {
-      "tagId": "pos.top.half_guard_top",
-      "category": "Position",
-      "canonicalJa": "トップハーフ",
-      "canonicalEn": "Top Half Guard",
-      "aliases": [
-        "トップハーフ",
-        "half guard top"
-      ],
-      "related": [
-        "act.pass.knee_cut",
-        "act.pass.over_under",
-        "pre.underhook"
-      ]
-    },
-    {
-      "tagId": "pos.bottom.half_guard_bottom",
-      "category": "Position",
-      "canonicalJa": "ボトムハーフ",
-      "canonicalEn": "Bottom Half Guard",
-      "aliases": [
-        "ボトムハーフ",
-        "half guard bottom"
-      ],
-      "related": [
-        "act.guard.sweep",
-        "act.escape.half_guard",
-        "pre.knee_shield"
-      ]
-    },
-    {
-      "tagId": "pos.top.open_guard_top",
-      "category": "Position",
-      "canonicalJa": "トップオープンガード",
-      "canonicalEn": "Top Open Guard",
-      "aliases": [
-        "トップオープン",
-        "top open guard"
-      ],
-      "related": [
-        "act.pass.torreando",
-        "act.pass.leg_drag",
-        "pre.distance_management"
-      ]
-    },
-    {
-      "tagId": "pos.bottom.open_guard_bottom",
-      "category": "Position",
-      "canonicalJa": "ボトムオープンガード",
-      "canonicalEn": "Bottom Open Guard",
-      "aliases": [
-        "ボトムオープン",
-        "bottom open guard"
-      ],
-      "related": [
-        "act.guard.retention",
-        "act.guard.wrestle_up",
-        "pre.frame"
       ]
     },
     {
@@ -1097,7 +1037,7 @@
         "pre.underhook",
         "pre.crossface",
         "pre.pressure",
-        "pos.top.half_guard_top"
+        "pos.guard.half"
       ]
     },
     {
@@ -1115,7 +1055,7 @@
         "pre.underhook",
         "pre.crossface",
         "pre.pressure",
-        "pos.top.half_guard_top"
+        "pos.guard.half"
       ]
     },
     {
@@ -2670,40 +2610,26 @@
       ]
     },
     {
-      "tagId": "scn.rules.ibjjf",
+      "tagId": "scn.role.top",
       "category": "Scenario",
-      "canonicalJa": "IBJJF",
-      "canonicalEn": "IBJJF",
+      "canonicalJa": "トップ",
+      "canonicalEn": "Top",
       "aliases": [
-        "ibjjf"
-      ],
-      "related": [
-        "scn.context.competition"
+        "top",
+        "トップ",
+        "top position"
       ]
     },
     {
-      "tagId": "scn.rules.adcc",
+      "tagId": "scn.role.bottom",
       "category": "Scenario",
-      "canonicalJa": "ADCC",
-      "canonicalEn": "ADCC",
+      "canonicalJa": "ボトム",
+      "canonicalEn": "Bottom",
       "aliases": [
-        "adcc"
-      ],
-      "related": [
-        "scn.context.competition",
-        "scn.attire.no_gi"
+        "bottom",
+        "ボトム",
+        "bottom position"
       ]
-    },
-    {
-      "tagId": "scn.rules.unknown",
-      "category": "Scenario",
-      "canonicalJa": "ルール不明",
-      "canonicalEn": "Rules Unknown",
-      "aliases": [
-        "unknown rules",
-        "ルール不明"
-      ],
-      "related": []
     },
     {
       "tagId": "scn.context.competition",
@@ -2813,6 +2739,42 @@
         "scn.provider.youtube",
         "scn.provider.flo"
       ]
+    },
+    {
+      "tagId": "scn.rules.ibjjf",
+      "category": "Source",
+      "canonicalJa": "IBJJF",
+      "canonicalEn": "IBJJF",
+      "aliases": [
+        "ibjjf"
+      ],
+      "related": [
+        "scn.context.competition"
+      ]
+    },
+    {
+      "tagId": "scn.rules.adcc",
+      "category": "Source",
+      "canonicalJa": "ADCC",
+      "canonicalEn": "ADCC",
+      "aliases": [
+        "adcc"
+      ],
+      "related": [
+        "scn.context.competition",
+        "scn.attire.no_gi"
+      ]
+    },
+    {
+      "tagId": "scn.rules.unknown",
+      "category": "Source",
+      "canonicalJa": "ルール不明",
+      "canonicalEn": "Rules Unknown",
+      "aliases": [
+        "unknown rules",
+        "ルール不明"
+      ],
+      "related": []
     },
     {
       "tagId": "scn.provider.youtube",
