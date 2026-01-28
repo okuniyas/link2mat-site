@@ -302,23 +302,6 @@
       ]
     },
     {
-      "tagId": "pos.pass.phase",
-      "category": "Position",
-      "canonicalJa": "パス局面",
-      "canonicalEn": "Passing Phase",
-      "aliases": [
-        "パス",
-        "pass",
-        "passing"
-      ],
-      "related": [
-        "act.pass.knee_cut",
-        "act.pass.torreando",
-        "act.pass.long_step",
-        "act.pass.over_under"
-      ]
-    },
-    {
       "tagId": "pos.top.side_control",
       "category": "Position",
       "canonicalJa": "サイドコントロール",
@@ -551,22 +534,6 @@
         "pos.leg_entanglement.ashi",
         "act.sub.heel_hook",
         "pre.knee_line_control"
-      ]
-    },
-    {
-      "tagId": "pos.escape.phase",
-      "category": "Position",
-      "canonicalJa": "エスケープ局面",
-      "canonicalEn": "Escape Phase",
-      "aliases": [
-        "escape phase",
-        "エスケープ局面"
-      ],
-      "related": [
-        "act.escape.side",
-        "act.escape.mount",
-        "act.escape.back",
-        "pre.frame"
       ]
     },
     {
@@ -1166,20 +1133,6 @@
       ]
     },
     {
-      "tagId": "act.pass.stack",
-      "category": "Action",
-      "canonicalJa": "スタックパス",
-      "canonicalEn": "Stack Pass",
-      "aliases": [
-        "stack pass",
-        "スタック"
-      ],
-      "related": [
-        "pre.posture_break",
-        "pre.pressure"
-      ]
-    },
-    {
       "tagId": "act.pass.stack_guard",
       "category": "Action",
       "canonicalJa": "スタッキングパスガード",
@@ -1225,13 +1178,14 @@
     {
       "tagId": "act.pass.guard_break.knee_split",
       "category": "Action",
-      "canonicalJa": "ガード解除（ニースプリット）",
-      "canonicalEn": "Guard Break (Knee Split)",
+      "canonicalJa": "ニースプリット",
+      "canonicalEn": "Knee Split",
       "aliases": [
         "knee split guard break",
         "guard break knee split",
         "クローズドガードの解除（ニースプリット）",
-        "ニースプリットガード解除"
+        "ニースプリットガード解除",
+        "ニースプリット"
       ],
       "related": [
         "pos.guard.closed",
@@ -1241,8 +1195,8 @@
     {
       "tagId": "act.pass.guard_break.combat_base",
       "category": "Action",
-      "canonicalJa": "ガード解除（コンバットベース）",
-      "canonicalEn": "Guard Break (Combat Base)",
+      "canonicalJa": "コンバットベース",
+      "canonicalEn": "Combat Base",
       "aliases": [
         "combat base guard break",
         "guard break combat base",
@@ -1257,12 +1211,13 @@
     {
       "tagId": "act.pass.guard_break.standing",
       "category": "Action",
-      "canonicalJa": "ガード解除（スタンディング）",
-      "canonicalEn": "Guard Break (Standing)",
+      "canonicalJa": "スタンディング",
+      "canonicalEn": "Standing",
       "aliases": [
         "standing guard break",
         "guard break standing",
-        "クローズドガードの解除（スタンディング）"
+        "クローズドガードの解除（スタンディング）",
+        "立ち上がる"
       ],
       "related": [
         "pos.guard.closed",
@@ -1316,21 +1271,6 @@
       ],
       "related": [
         "act.sub.armbar",
-        "act.control.cross_body",
-        "pre.control_elbow_line"
-      ]
-    },
-    {
-      "tagId": "act.sub.armbar.step_over_cross_body",
-      "category": "Action",
-      "canonicalJa": "クロスボディコントロール（ステップオーバーアームロック）",
-      "canonicalEn": "Cross Body Control (Step Over Arm Lock)",
-      "aliases": [
-        "cross body control step over arm lock",
-        "クロスボディコントロール（ステップオーバーアームロック）"
-      ],
-      "related": [
-        "act.sub.armbar.step_over",
         "act.control.cross_body",
         "pre.control_elbow_line"
       ]
@@ -2683,6 +2623,18 @@
       "related": []
     },
     {
+      "tagId": "scn.phase.passing",
+      "category": "Scenario",
+      "canonicalJa": "パス",
+      "canonicalEn": "Passing",
+      "aliases": [
+        "パス",
+        "pass",
+        "passing"
+      ],
+      "related": []
+    },
+    {
       "tagId": "scn.phase.escape",
       "category": "Scenario",
       "canonicalJa": "エスケープ",
@@ -3367,7 +3319,7 @@
       ],
       "related": [
         "act.control.stabilize",
-        "act.pass.stack",
+        "act.pass.stack_guard",
         "act.pass.over_under"
       ]
     },
@@ -3378,7 +3330,8 @@
       "canonicalEn": "Crossface",
       "aliases": [
         "crossface",
-        "クロスフェイス"
+        "クロスフェイス",
+        "顔を横に向かせる"
       ],
       "related": [
         "act.pass.knee_cut",
@@ -3561,7 +3514,7 @@
       ],
       "related": [
         "act.sub.triangle",
-        "act.pass.stack"
+        "act.pass.stack_guard"
       ]
     },
     {
