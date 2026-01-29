@@ -841,6 +841,62 @@
       ]
     },
     {
+      "tagId": "pos.guard.shallow_lasso",
+      "category": "Position",
+      "canonicalJa": "シャローラッソーガード",
+      "canonicalEn": "Shallow Lasso Guard",
+      "aliases": [
+        "shallow lasso",
+        "shallow lasso guard",
+        "シャローラッソー",
+        "シャローラッソーガード"
+      ],
+      "related": [
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.dlr_lasso",
+      "category": "Position",
+      "canonicalJa": "デラヒーバラッソーガード",
+      "canonicalEn": "De La Riva Lasso Guard",
+      "aliases": [
+        "de la riva lasso",
+        "dlr lasso",
+        "delariva lasso",
+        "デラヒーバラッソー",
+        "デラヒーバラッソーガード"
+      ],
+      "related": [
+        "pos.guard.dlr",
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.lapel_lasso",
+      "category": "Position",
+      "canonicalJa": "ラペルラッソーガード",
+      "canonicalEn": "Lapel Lasso Guard",
+      "aliases": [
+        "lapel lasso",
+        "lapel lasso guard",
+        "ラペルラッソー",
+        "ラペルラッソーガード",
+        "ラペララッソー",
+        "ラペララッソーガード"
+      ],
+      "related": [
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.lapel_wrap",
+        "pre.lapel_feed"
+      ]
+    },
+    {
       "tagId": "pos.guard.inverted",
       "category": "Position",
       "canonicalJa": "インバーテッドガード",
@@ -853,6 +909,21 @@
         "pos.guard.open",
         "act.guard.sweep",
         "pre.frame"
+      ]
+    },
+    {
+      "tagId": "pos.guard.octopus",
+      "category": "Position",
+      "canonicalJa": "オクトパスガード",
+      "canonicalEn": "Octopus Guard",
+      "aliases": [
+        "octopus guard",
+        "オクトパスガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.underhook",
+        "pre.connection"
       ]
     },
     {
@@ -2448,12 +2519,27 @@
     {
       "tagId": "act.escape.shrimp",
       "category": "Action",
-      "canonicalJa": "エビ運動",
+      "canonicalJa": "エビ",
       "canonicalEn": "Shrimping",
       "aliases": [
         "shrimp",
         "shrimping",
-        "エビ運動"
+        "エビ運動",
+        "エビ"
+      ],
+      "related": [
+        "act.escape.hip_escape",
+        "pre.frame"
+      ]
+    },
+    {
+      "tagId": "act.escape.reverse_shrimp",
+      "category": "Action",
+      "canonicalJa": "逆エビ",
+      "canonicalEn": "Reverse Shrimp",
+      "aliases": [
+        "reverse shrimp",
+        "逆エビ"
       ],
       "related": [
         "act.escape.hip_escape",
@@ -2851,6 +2937,37 @@
         "前回り受け身"
       ],
       "related": []
+    },
+    {
+      "tagId": "act.movement.technical_stand_up",
+      "category": "Action",
+      "canonicalJa": "テクニカルスタンドアップ",
+      "canonicalEn": "Technical Stand Up",
+      "aliases": [
+        "technical stand up",
+        "technical stand-up",
+        "柔術立ち",
+        "テクニカルスタンドアップ"
+      ],
+      "related": [
+        "pre.base",
+        "pre.hip_escape"
+      ]
+    },
+    {
+      "tagId": "act.movement.knee_walking",
+      "category": "Action",
+      "canonicalJa": "脛立ち",
+      "canonicalEn": "Knee Walking",
+      "aliases": [
+        "knee walking",
+        "shin walk",
+        "脛立ち"
+      ],
+      "related": [
+        "pre.base",
+        "pre.connection"
+      ]
     },
     {
       "tagId": "act.tactic.counter",
@@ -3990,6 +4107,20 @@
       "related": [
         "act.guard.retention",
         "pre.hip_escape"
+      ]
+    },
+    {
+      "tagId": "pre.leg_circle",
+      "category": "Prerequisite",
+      "canonicalJa": "足回し",
+      "canonicalEn": "Leg Circle",
+      "aliases": [
+        "leg circle",
+        "足回し"
+      ],
+      "related": [
+        "act.guard.retention",
+        "pre.angle_created"
       ]
     },
     {
