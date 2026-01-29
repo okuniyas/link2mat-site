@@ -1704,6 +1704,50 @@
       ]
     },
     {
+      "tagId": "act.sub.ninja_choke",
+      "category": "Submission",
+      "canonicalJa": "ニンジャチョーク",
+      "canonicalEn": "Ninja Choke",
+      "aliases": [
+        "ninja choke",
+        "ニンジャチョーク"
+      ],
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.head_position",
+        "pre.2on1"
+      ]
+    },
+    {
+      "tagId": "act.sub.japanese_necktie",
+      "category": "Submission",
+      "canonicalJa": "ジャパニーズネックタイ",
+      "canonicalEn": "Japanese Necktie",
+      "aliases": [
+        "japanese necktie",
+        "ジャパニーズネックタイ"
+      ],
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.head_position",
+        "pre.2on1"
+      ]
+    },
+    {
+      "tagId": "act.sub.lapel_choke",
+      "category": "Submission",
+      "canonicalJa": "ラペルチョーク",
+      "canonicalEn": "Lapel Choke",
+      "aliases": [
+        "lapel choke",
+        "ラペルチョーク"
+      ],
+      "related": [
+        "pre.grip.collar",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
       "tagId": "act.sub.darce",
       "category": "Submission",
       "canonicalJa": "ダースチョーク",
