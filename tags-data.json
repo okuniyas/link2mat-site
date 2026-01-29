@@ -106,6 +106,61 @@
       ]
     },
     {
+      "tagId": "pos.guard.collar_sleeve",
+      "category": "Position",
+      "canonicalJa": "片襟片袖ガード",
+      "canonicalEn": "Collar and Sleeve Guard",
+      "aliases": [
+        "collar and sleeve",
+        "collar sleeve",
+        "one collar one sleeve",
+        "片襟片袖",
+        "片襟片袖ガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.grip.collar",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.double_sleeve",
+      "category": "Position",
+      "canonicalJa": "両袖ガード",
+      "canonicalEn": "Double Sleeve Guard",
+      "aliases": [
+        "double sleeve",
+        "double sleeve guard",
+        "両袖",
+        "両袖ガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.cross_sleeve",
+      "category": "Position",
+      "canonicalJa": "クロススリーブガード",
+      "canonicalEn": "Cross Sleeve Guard",
+      "aliases": [
+        "cross sleeve",
+        "cross sleeve guard",
+        "cross guard",
+        "クロススリーブ",
+        "クロススリーブガード",
+        "レーザーガード",
+        "laser guard",
+        "lazer guard"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.grip.sleeve",
+        "pre.angle_created"
+      ]
+    },
+    {
       "tagId": "pos.guard.half",
       "category": "Position",
       "canonicalJa": "ハーフガード",
@@ -293,6 +348,38 @@
         "pos.guard.open",
         "act.guard.inversion",
         "act.guard.leg_entanglement_entry"
+      ]
+    },
+    {
+      "tagId": "pos.guard.spider_x",
+      "category": "Position",
+      "canonicalJa": "スパイダーX",
+      "canonicalEn": "Spider X Guard",
+      "aliases": [
+        "spider x",
+        "spider x guard",
+        "スパイダーX",
+        "スパイダーXガード"
+      ],
+      "related": [
+        "pos.guard.spider",
+        "pos.guard.slx",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.matrix",
+      "category": "Position",
+      "canonicalJa": "マトリックス",
+      "canonicalEn": "Matrix",
+      "aliases": [
+        "matrix",
+        "マトリックス"
+      ],
+      "related": [
+        "pos.guard.k_guard",
+        "pos.guard.dlr",
+        "pre.angle_created"
       ]
     },
     {
