@@ -3237,6 +3237,38 @@
       ]
     },
     {
+      "tagId": "pre.lapel_wrap",
+      "category": "Prerequisite",
+      "canonicalJa": "ラペルを巻き付ける",
+      "canonicalEn": "Lapel Wrap",
+      "aliases": [
+        "lapel wrap",
+        "lepel wrap",
+        "ラペル巻き",
+        "ラペルを巻き付ける"
+      ],
+      "related": [
+        "scn.attire.gi",
+        "pre.grip.collar"
+      ]
+    },
+    {
+      "tagId": "pre.lapel_feed",
+      "category": "Prerequisite",
+      "canonicalJa": "ラペルを送り込む",
+      "canonicalEn": "Lapel Feed",
+      "aliases": [
+        "lapel feed",
+        "lepel feed",
+        "ラペル送り",
+        "ラペルを送り込む"
+      ],
+      "related": [
+        "scn.attire.gi",
+        "pre.grip.collar"
+      ]
+    },
+    {
       "tagId": "pre.grip.sleeve",
       "category": "Prerequisite",
       "canonicalJa": "袖グリップ",
