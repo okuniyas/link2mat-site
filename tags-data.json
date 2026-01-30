@@ -54,6 +54,21 @@
       ]
     },
     {
+      "tagId": "pos.guard.cross",
+      "category": "Position",
+      "canonicalJa": "クロスガード",
+      "canonicalEn": "Cross Guard",
+      "aliases": [
+        "cross guard",
+        "クロスガード"
+      ],
+      "related": [
+        "pos.guard.closed",
+        "act.guard.sweep",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
       "tagId": "pos.guard.high",
       "category": "Position",
       "canonicalJa": "ハイガード",
@@ -88,6 +103,61 @@
         "act.guard.wrestle_up",
         "act.pass.torreando",
         "pre.distance_management"
+      ]
+    },
+    {
+      "tagId": "pos.guard.collar_sleeve",
+      "category": "Position",
+      "canonicalJa": "片襟片袖ガード",
+      "canonicalEn": "Collar and Sleeve Guard",
+      "aliases": [
+        "collar and sleeve",
+        "collar sleeve",
+        "one collar one sleeve",
+        "片襟片袖",
+        "片襟片袖ガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.grip.collar",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.double_sleeve",
+      "category": "Position",
+      "canonicalJa": "両袖ガード",
+      "canonicalEn": "Double Sleeve Guard",
+      "aliases": [
+        "double sleeve",
+        "double sleeve guard",
+        "両袖",
+        "両袖ガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.cross_sleeve",
+      "category": "Position",
+      "canonicalJa": "クロススリーブガード",
+      "canonicalEn": "Cross Sleeve Guard",
+      "aliases": [
+        "cross sleeve",
+        "cross sleeve guard",
+        "cross guard",
+        "クロススリーブ",
+        "クロススリーブガード",
+        "レーザーガード",
+        "laser guard",
+        "lazer guard"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.grip.sleeve",
+        "pre.angle_created"
       ]
     },
     {
@@ -148,6 +218,23 @@
       ]
     },
     {
+      "tagId": "pos.guard.shin_control",
+      "category": "Position",
+      "canonicalJa": "シンコントロールガード",
+      "canonicalEn": "Shin Control Guard",
+      "aliases": [
+        "shin control guard",
+        "shin guard",
+        "シンコントロールガード",
+        "シンガード"
+      ],
+      "related": [
+        "act.guard.sweep",
+        "act.guard.wrestle_up",
+        "pre.frame"
+      ]
+    },
+    {
       "tagId": "pos.guard.butterfly",
       "category": "Position",
       "canonicalJa": "バタフライガード",
@@ -161,6 +248,43 @@
         "act.guard.wrestle_up",
         "pre.underhook",
         "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "pos.guard.sitting",
+      "category": "Position",
+      "canonicalJa": "シッティングガード",
+      "canonicalEn": "Sitting Guard",
+      "aliases": [
+        "sitting guard",
+        "seated guard",
+        "シッティングガード",
+        "シッティング"
+      ],
+      "related": [
+        "pos.guard.open",
+        "act.guard.sweep",
+        "act.guard.wrestle_up",
+        "pre.connection"
+      ]
+    },
+    {
+      "tagId": "pos.guard.half_butterfly",
+      "category": "Position",
+      "canonicalJa": "ハーフバタフライガード",
+      "canonicalEn": "Half Butterfly Guard",
+      "aliases": [
+        "half butterfly",
+        "half butterfly guard",
+        "ハーフバタフライ",
+        "ハーフバタフライガード"
+      ],
+      "related": [
+        "pos.guard.half",
+        "pos.guard.butterfly",
+        "act.guard.sweep",
+        "act.guard.wrestle_up",
+        "pre.underhook"
       ]
     },
     {
@@ -227,6 +351,38 @@
       ]
     },
     {
+      "tagId": "pos.guard.spider_x",
+      "category": "Position",
+      "canonicalJa": "スパイダーX",
+      "canonicalEn": "Spider X Guard",
+      "aliases": [
+        "spider x",
+        "spider x guard",
+        "スパイダーX",
+        "スパイダーXガード"
+      ],
+      "related": [
+        "pos.guard.spider",
+        "pos.guard.slx",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.matrix",
+      "category": "Position",
+      "canonicalJa": "マトリックス",
+      "canonicalEn": "Matrix",
+      "aliases": [
+        "matrix",
+        "マトリックス"
+      ],
+      "related": [
+        "pos.guard.k_guard",
+        "pos.guard.dlr",
+        "pre.angle_created"
+      ]
+    },
+    {
       "tagId": "pos.guard.waiter",
       "category": "Position",
       "canonicalJa": "ウェイターガード",
@@ -272,6 +428,21 @@
         "pos.guard.open",
         "act.guard.sweep",
         "pre.grip.collar"
+      ]
+    },
+    {
+      "tagId": "pos.guard.single_leg",
+      "category": "Position",
+      "canonicalJa": "シングルレッグガード",
+      "canonicalEn": "Single Leg Guard",
+      "aliases": [
+        "single leg guard",
+        "シングルレッグガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "act.guard.sweep",
+        "pre.underhook"
       ]
     },
     {
@@ -354,6 +525,41 @@
       ]
     },
     {
+      "tagId": "pos.control.crucifix",
+      "category": "Position",
+      "canonicalJa": "クルシフィクス",
+      "canonicalEn": "Crucifix",
+      "aliases": [
+        "crucifix",
+        "クルシフィクス",
+        "クルスフィクス",
+        "クルスフィックス",
+        "クルシフィックス"
+      ],
+      "related": [
+        "pos.turtle",
+        "pos.top.back_control",
+        "act.sub.rnc",
+        "act.sub.armbar"
+      ]
+    },
+    {
+      "tagId": "pos.control.arm_pin",
+      "category": "Position",
+      "canonicalJa": "アームピンコントロール",
+      "canonicalEn": "Arm Pin Control",
+      "aliases": [
+        "arm pin",
+        "arm pin control",
+        "アームピン"
+      ],
+      "related": [
+        "pre.control.pin",
+        "act.control.stabilize",
+        "act.sub.armbar"
+      ]
+    },
+    {
       "tagId": "pos.top.knee_on_belly",
       "category": "Position",
       "canonicalJa": "ニーオンベリー",
@@ -382,6 +588,40 @@
         "act.sub.armbar",
         "act.sub.arm_triangle",
         "act.control.stabilize",
+        "pre.head_position"
+      ]
+    },
+    {
+      "tagId": "pos.top.half_mount",
+      "category": "Position",
+      "canonicalJa": "ハーフマウント",
+      "canonicalEn": "Half Mount",
+      "aliases": [
+        "half mount",
+        "ハーフマウント"
+      ],
+      "related": [
+        "pos.top.mount",
+        "act.sub.armbar",
+        "act.control.stabilize"
+      ]
+    },
+    {
+      "tagId": "pos.top.s_mount",
+      "category": "Position",
+      "canonicalJa": "Sマウント",
+      "canonicalEn": "S Mount",
+      "aliases": [
+        "s mount",
+        "s-mount",
+        "S mount",
+        "S-mount",
+        "エスマウント",
+        "Sマウント"
+      ],
+      "related": [
+        "pos.top.mount",
+        "act.sub.armbar",
         "pre.head_position"
       ]
     },
@@ -581,6 +821,109 @@
       "related": [
         "act.guard.sweep",
         "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.deep_lasso",
+      "category": "Position",
+      "canonicalJa": "ディープラッソーガード",
+      "canonicalEn": "Deep Lasso Guard",
+      "aliases": [
+        "deep lasso",
+        "deep lasso guard",
+        "ディープラッソー",
+        "ディープラッソ"
+      ],
+      "related": [
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.shallow_lasso",
+      "category": "Position",
+      "canonicalJa": "シャローラッソーガード",
+      "canonicalEn": "Shallow Lasso Guard",
+      "aliases": [
+        "shallow lasso",
+        "shallow lasso guard",
+        "シャローラッソー",
+        "シャローラッソーガード"
+      ],
+      "related": [
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.dlr_lasso",
+      "category": "Position",
+      "canonicalJa": "デラヒーバラッソーガード",
+      "canonicalEn": "De La Riva Lasso Guard",
+      "aliases": [
+        "de la riva lasso",
+        "dlr lasso",
+        "delariva lasso",
+        "デラヒーバラッソー",
+        "デラヒーバラッソーガード"
+      ],
+      "related": [
+        "pos.guard.dlr",
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "pos.guard.lapel_lasso",
+      "category": "Position",
+      "canonicalJa": "ラペルラッソーガード",
+      "canonicalEn": "Lapel Lasso Guard",
+      "aliases": [
+        "lapel lasso",
+        "lapel lasso guard",
+        "ラペルラッソー",
+        "ラペルラッソーガード",
+        "ラペララッソー",
+        "ラペララッソーガード"
+      ],
+      "related": [
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.lapel_wrap",
+        "pre.lapel_feed"
+      ]
+    },
+    {
+      "tagId": "pos.guard.inverted",
+      "category": "Position",
+      "canonicalJa": "インバーテッドガード",
+      "canonicalEn": "Inverted Guard",
+      "aliases": [
+        "inverted guard",
+        "インバーテッドガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "act.guard.sweep",
+        "pre.frame"
+      ]
+    },
+    {
+      "tagId": "pos.guard.octopus",
+      "category": "Position",
+      "canonicalJa": "オクトパスガード",
+      "canonicalEn": "Octopus Guard",
+      "aliases": [
+        "octopus guard",
+        "オクトパスガード"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.underhook",
+        "pre.connection"
       ]
     },
     {
@@ -1094,6 +1437,51 @@
       ]
     },
     {
+      "tagId": "act.pass.smash_pass",
+      "category": "Action",
+      "canonicalJa": "スマッシュパス",
+      "canonicalEn": "Smash Pass",
+      "aliases": [
+        "smash pass",
+        "スマッシュ"
+      ],
+      "related": [
+        "pre.pressure",
+        "pre.knee_line_control",
+        "pos.guard.half"
+      ]
+    },
+    {
+      "tagId": "act.pass.diving_pass",
+      "category": "Action",
+      "canonicalJa": "ダイビングパス",
+      "canonicalEn": "Diving Pass",
+      "aliases": [
+        "diving pass",
+        "ダイビング"
+      ],
+      "related": [
+        "pre.distance_management",
+        "pre.angle_created",
+        "pos.guard.open"
+      ]
+    },
+    {
+      "tagId": "act.pass.folding_pass",
+      "category": "Action",
+      "canonicalJa": "フォールディングパス",
+      "canonicalEn": "Folding Pass",
+      "aliases": [
+        "folding pass",
+        "フォールディング"
+      ],
+      "related": [
+        "pre.pressure",
+        "pre.crossface",
+        "pos.guard.half"
+      ]
+    },
+    {
       "tagId": "act.pass.over_under",
       "category": "Action",
       "canonicalJa": "オーバーアンダーパス",
@@ -1387,6 +1775,50 @@
       ]
     },
     {
+      "tagId": "act.sub.ninja_choke",
+      "category": "Submission",
+      "canonicalJa": "ニンジャチョーク",
+      "canonicalEn": "Ninja Choke",
+      "aliases": [
+        "ninja choke",
+        "ニンジャチョーク"
+      ],
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.head_position",
+        "pre.2on1"
+      ]
+    },
+    {
+      "tagId": "act.sub.japanese_necktie",
+      "category": "Submission",
+      "canonicalJa": "ジャパニーズネックタイ",
+      "canonicalEn": "Japanese Necktie",
+      "aliases": [
+        "japanese necktie",
+        "ジャパニーズネックタイ"
+      ],
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.head_position",
+        "pre.2on1"
+      ]
+    },
+    {
+      "tagId": "act.sub.lapel_choke",
+      "category": "Submission",
+      "canonicalJa": "ラペルチョーク",
+      "canonicalEn": "Lapel Choke",
+      "aliases": [
+        "lapel choke",
+        "ラペルチョーク"
+      ],
+      "related": [
+        "pre.grip.collar",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
       "tagId": "act.sub.darce",
       "category": "Submission",
       "canonicalJa": "ダースチョーク",
@@ -1616,6 +2048,25 @@
       ]
     },
     {
+      "tagId": "act.sub.ezekiel_choke",
+      "category": "Submission",
+      "canonicalJa": "エゼキエルチョーク",
+      "canonicalEn": "Ezekiel Choke",
+      "aliases": [
+        "ezekiel",
+        "ezekiel choke",
+        "イゼキエル",
+        "イゼキエルチョーク",
+        "エゼキエル"
+      ],
+      "related": [
+        "pos.top.mount",
+        "pos.top.back_control",
+        "pre.grip.sleeve",
+        "pre.grip.collar"
+      ]
+    },
+    {
       "tagId": "act.sub.collar_choke",
       "category": "Submission",
       "canonicalJa": "カラーチョーク",
@@ -1665,6 +2116,121 @@
       ]
     },
     {
+      "tagId": "act.sub.bravo_choke",
+      "category": "Submission",
+      "canonicalJa": "ブラボーチョーク",
+      "canonicalEn": "Bravo Choke",
+      "aliases": [
+        "bravo choke",
+        "ブラボーチョーク"
+      ],
+      "related": [
+        "pre.grip.collar",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "act.sub.clock_choke",
+      "category": "Submission",
+      "canonicalJa": "クロックチョーク",
+      "canonicalEn": "Clock Choke",
+      "aliases": [
+        "clock choke",
+        "クロックチョーク"
+      ],
+      "related": [
+        "pos.turtle",
+        "pre.grip.collar"
+      ]
+    },
+    {
+      "tagId": "act.sub.forearm_choke",
+      "category": "Submission",
+      "canonicalJa": "フォアアームチョーク",
+      "canonicalEn": "Forearm Choke",
+      "aliases": [
+        "forearm choke",
+        "フォアアームチョーク"
+      ],
+      "related": [
+        "pos.top.side_control",
+        "pre.control.pin"
+      ]
+    },
+    {
+      "tagId": "act.sub.reverse_triangle",
+      "category": "Submission",
+      "canonicalJa": "リバーストライアングル",
+      "canonicalEn": "Reverse Triangle",
+      "aliases": [
+        "reverse triangle",
+        "reverse triangle choke",
+        "リバーストライアングル"
+      ],
+      "related": [
+        "act.sub.triangle",
+        "pre.posture_break"
+      ]
+    },
+    {
+      "tagId": "act.sub.head_scissors",
+      "category": "Submission",
+      "canonicalJa": "ヘッドシザーズ",
+      "canonicalEn": "Head Scissors",
+      "aliases": [
+        "head scissors",
+        "ヘッドシザーズ"
+      ],
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.control.pin"
+      ]
+    },
+    {
+      "tagId": "act.sub.wrist_lock",
+      "category": "Submission",
+      "canonicalJa": "リストロック",
+      "canonicalEn": "Wrist Lock",
+      "aliases": [
+        "wrist lock",
+        "wristlock",
+        "リストロック",
+        "手首極め"
+      ],
+      "related": [
+        "pre.control.wrist",
+        "pre.control.pin"
+      ]
+    },
+    {
+      "tagId": "act.sub.shoulder_lock",
+      "category": "Submission",
+      "canonicalJa": "ショルダーロック",
+      "canonicalEn": "Shoulder Lock",
+      "aliases": [
+        "shoulder lock",
+        "ショルダーロック"
+      ],
+      "related": [
+        "pre.control_elbow_line",
+        "pre.control.pin"
+      ]
+    },
+    {
+      "tagId": "act.sub.hammerlock",
+      "category": "Submission",
+      "canonicalJa": "ハンマーロック",
+      "canonicalEn": "Hammerlock",
+      "aliases": [
+        "hammerlock",
+        "ハンマーロック"
+      ],
+      "related": [
+        "pre.control_elbow_line",
+        "pre.control.pin"
+      ]
+    },
+    {
       "tagId": "act.sub.kimura",
       "category": "Submission",
       "canonicalJa": "キムラ",
@@ -1689,12 +2255,86 @@
       "canonicalEn": "Omoplata",
       "aliases": [
         "omoplata",
+        "オモプラッタ",
         "オモプラータ"
       ],
       "related": [
         "pos.guard.closed",
         "pos.guard.high",
         "pre.control_elbow_line"
+      ]
+    },
+    {
+      "tagId": "act.sub.baratoplata",
+      "category": "Submission",
+      "canonicalJa": "バラトプラータ",
+      "canonicalEn": "Baratoplata",
+      "aliases": [
+        "baratoplata",
+        "バラトプラッタ",
+        "バラトプラータ"
+      ],
+      "related": [
+        "act.sub.omoplata",
+        "act.sub.kimura"
+      ]
+    },
+    {
+      "tagId": "act.sub.tarikoplata",
+      "category": "Submission",
+      "canonicalJa": "タリコプラッタ",
+      "canonicalEn": "Tarikoplata",
+      "aliases": [
+        "tarikoplata",
+        "トリコプラータ",
+        "タリコプラッタ"
+      ],
+      "related": [
+        "act.sub.omoplata",
+        "act.sub.kimura"
+      ]
+    },
+    {
+      "tagId": "act.sub.gogoplata",
+      "category": "Submission",
+      "canonicalJa": "ゴゴプラータ",
+      "canonicalEn": "Gogoplata",
+      "aliases": [
+        "gogoplata",
+        "ゴゴプラッタ",
+        "ゴゴプラータ"
+      ],
+      "related": [
+        "act.sub.omoplata",
+        "act.sub.triangle"
+      ]
+    },
+    {
+      "tagId": "act.sub.clarkoplata",
+      "category": "Submission",
+      "canonicalJa": "クラークプラータ",
+      "canonicalEn": "Clarkoplata",
+      "aliases": [
+        "clarkoplata",
+        "クラークプラッタ",
+        "クラークプラータ"
+      ],
+      "related": [
+        "act.sub.omoplata"
+      ]
+    },
+    {
+      "tagId": "act.sub.monoplata",
+      "category": "Submission",
+      "canonicalJa": "モノプラータ",
+      "canonicalEn": "Monoplata",
+      "aliases": [
+        "monoplata",
+        "モノプラッタ",
+        "モノプラータ"
+      ],
+      "related": [
+        "act.sub.omoplata"
       ]
     },
     {
@@ -1743,6 +2383,51 @@
         "pos.leg_entanglement.ashi",
         "pre.knee_line_control",
         "pre.heel_exposure_control"
+      ]
+    },
+    {
+      "tagId": "act.sub.toe_hold",
+      "category": "Submission",
+      "canonicalJa": "トーホールド",
+      "canonicalEn": "Toe Hold",
+      "aliases": [
+        "toe hold",
+        "トーホールド"
+      ],
+      "related": [
+        "pos.leg_entanglement.ashi",
+        "pre.knee_line_control",
+        "pre.heel_exposure_control"
+      ]
+    },
+    {
+      "tagId": "act.sub.calf_slicer",
+      "category": "Submission",
+      "canonicalJa": "カーフスライサー",
+      "canonicalEn": "Calf Slicer",
+      "aliases": [
+        "calf slicer",
+        "calf crush",
+        "カーフスライサー"
+      ],
+      "related": [
+        "pos.leg_entanglement.ashi",
+        "pre.knee_line_control"
+      ]
+    },
+    {
+      "tagId": "act.sub.biceps_slicer",
+      "category": "Submission",
+      "canonicalJa": "バイセップススライサー",
+      "canonicalEn": "Biceps Slicer",
+      "aliases": [
+        "biceps slicer",
+        "bicep slicer",
+        "バイセップススライサー"
+      ],
+      "related": [
+        "pre.control_elbow_line",
+        "pre.control.pin"
       ]
     },
     {
@@ -1834,12 +2519,27 @@
     {
       "tagId": "act.escape.shrimp",
       "category": "Action",
-      "canonicalJa": "エビ運動",
+      "canonicalJa": "エビ",
       "canonicalEn": "Shrimping",
       "aliases": [
         "shrimp",
         "shrimping",
-        "エビ運動"
+        "エビ運動",
+        "エビ"
+      ],
+      "related": [
+        "act.escape.hip_escape",
+        "pre.frame"
+      ]
+    },
+    {
+      "tagId": "act.escape.reverse_shrimp",
+      "category": "Action",
+      "canonicalJa": "逆エビ",
+      "canonicalEn": "Reverse Shrimp",
+      "aliases": [
+        "reverse shrimp",
+        "逆エビ"
       ],
       "related": [
         "act.escape.hip_escape",
@@ -2078,6 +2778,21 @@
       ]
     },
     {
+      "tagId": "act.wrestling.ankle_pick",
+      "category": "Action",
+      "canonicalJa": "アンクルピック",
+      "canonicalEn": "Ankle Pick",
+      "aliases": [
+        "ankle pick",
+        "アンクルピック"
+      ],
+      "related": [
+        "pre.level_change",
+        "pre.off_balance",
+        "pre.head_position"
+      ]
+    },
+    {
       "tagId": "act.wrestling.cross_over_lift",
       "category": "Action",
       "canonicalJa": "クロスオーバーリフト",
@@ -2093,6 +2808,124 @@
       ]
     },
     {
+      "tagId": "act.wrestling.back_clinch",
+      "category": "Action",
+      "canonicalJa": "バッククリンチ",
+      "canonicalEn": "Back Clinch",
+      "aliases": [
+        "back clinch",
+        "バッククリンチ"
+      ],
+      "related": [
+        "pos.phase.clinch",
+        "pre.connection"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.corner_cut",
+      "category": "Action",
+      "canonicalJa": "コーナーカット",
+      "canonicalEn": "Corner Cut",
+      "aliases": [
+        "corner cut",
+        "コーナーカット"
+      ],
+      "related": [
+        "pre.angle_created",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.switch_sit_out",
+      "category": "Action",
+      "canonicalJa": "スイッチ（シットアウト）",
+      "canonicalEn": "Switch (Sit-Out)",
+      "aliases": [
+        "switch",
+        "sit-out",
+        "switch sit-out",
+        "スイッチ",
+        "シットアウト"
+      ],
+      "related": [
+        "pos.scramble.general",
+        "pre.base"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.arm_throw",
+      "category": "Action",
+      "canonicalJa": "一本背負投げ",
+      "canonicalEn": "Arm Throw",
+      "aliases": [
+        "arm throw",
+        "seoi nage",
+        "一本背負投げ"
+      ],
+      "related": [
+        "pos.phase.clinch",
+        "pre.off_balance",
+        "pre.inside_position"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.spinning_arm_throw",
+      "category": "Action",
+      "canonicalJa": "巻き投げ",
+      "canonicalEn": "Spinning Arm Throw",
+      "aliases": [
+        "spinning arm throw",
+        "巻き投げ"
+      ],
+      "related": [
+        "pos.phase.clinch",
+        "pre.off_balance",
+        "pre.inside_position"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.fireman_carry",
+      "category": "Action",
+      "canonicalJa": "ファイヤーマンズキャリー",
+      "canonicalEn": "Fireman Carry",
+      "aliases": [
+        "fireman carry",
+        "ファイヤーマンズキャリー"
+      ],
+      "related": [
+        "pre.level_change",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.high_crotch",
+      "category": "Action",
+      "canonicalJa": "ハイクロッチ",
+      "canonicalEn": "High Crotch",
+      "aliases": [
+        "high crotch",
+        "ハイクロッチ"
+      ],
+      "related": [
+        "pre.level_change",
+        "pre.head_position"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.cow_catcher",
+      "category": "Action",
+      "canonicalJa": "カウキャッチャー",
+      "canonicalEn": "Cow Catcher",
+      "aliases": [
+        "cow catcher",
+        "カウキャッチャー"
+      ],
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.connection"
+      ]
+    },
+    {
       "tagId": "act.movement.ukemi",
       "category": "Action",
       "canonicalJa": "受け身",
@@ -2104,6 +2937,37 @@
         "前回り受け身"
       ],
       "related": []
+    },
+    {
+      "tagId": "act.movement.technical_stand_up",
+      "category": "Action",
+      "canonicalJa": "テクニカルスタンドアップ",
+      "canonicalEn": "Technical Stand Up",
+      "aliases": [
+        "technical stand up",
+        "technical stand-up",
+        "柔術立ち",
+        "テクニカルスタンドアップ"
+      ],
+      "related": [
+        "pre.base",
+        "pre.hip_escape"
+      ]
+    },
+    {
+      "tagId": "act.movement.knee_walking",
+      "category": "Action",
+      "canonicalJa": "脛立ち",
+      "canonicalEn": "Knee Walking",
+      "aliases": [
+        "knee walking",
+        "shin walk",
+        "脛立ち"
+      ],
+      "related": [
+        "pre.base",
+        "pre.connection"
+      ]
     },
     {
       "tagId": "act.tactic.counter",
@@ -2487,6 +3351,38 @@
       "related": [
         "scn.attire.gi",
         "act.sub.collar_choke"
+      ]
+    },
+    {
+      "tagId": "pre.lapel_wrap",
+      "category": "Prerequisite",
+      "canonicalJa": "ラペルを巻き付ける",
+      "canonicalEn": "Lapel Wrap",
+      "aliases": [
+        "lapel wrap",
+        "lepel wrap",
+        "ラペル巻き",
+        "ラペルを巻き付ける"
+      ],
+      "related": [
+        "scn.attire.gi",
+        "pre.grip.collar"
+      ]
+    },
+    {
+      "tagId": "pre.lapel_feed",
+      "category": "Prerequisite",
+      "canonicalJa": "ラペルを送り込む",
+      "canonicalEn": "Lapel Feed",
+      "aliases": [
+        "lapel feed",
+        "lepel feed",
+        "ラペル送り",
+        "ラペルを送り込む"
+      ],
+      "related": [
+        "scn.attire.gi",
+        "pre.grip.collar"
       ]
     },
     {
@@ -3214,6 +4110,20 @@
       ]
     },
     {
+      "tagId": "pre.leg_circle",
+      "category": "Prerequisite",
+      "canonicalJa": "足回し",
+      "canonicalEn": "Leg Circle",
+      "aliases": [
+        "leg circle",
+        "足回し"
+      ],
+      "related": [
+        "act.guard.retention",
+        "pre.angle_created"
+      ]
+    },
+    {
       "tagId": "pre.hip_escape",
       "category": "Prerequisite",
       "canonicalJa": "ヒップムーブ",
@@ -3368,6 +4278,276 @@
       "related": [
         "act.wrestling.double_leg",
         "act.wrestling.single_leg"
+      ]
+    },
+    {
+      "tagId": "pre.tripod",
+      "category": "Prerequisite",
+      "canonicalJa": "トライポッド",
+      "canonicalEn": "Tripod",
+      "aliases": [
+        "tripod",
+        "トライポッド"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.double_ankle",
+      "category": "Prerequisite",
+      "canonicalJa": "ダブルアンクル",
+      "canonicalEn": "Double Ankle",
+      "aliases": [
+        "double ankle",
+        "ダブルアンクル"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.shin_sweep",
+      "category": "Prerequisite",
+      "canonicalJa": "シンスイープ",
+      "canonicalEn": "Shin Sweep",
+      "aliases": [
+        "shin sweep",
+        "シンスイープ"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.back_roll",
+      "category": "Prerequisite",
+      "canonicalJa": "バックロール",
+      "canonicalEn": "Back Roll",
+      "aliases": [
+        "back roll",
+        "バックロール"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.waiter",
+      "category": "Prerequisite",
+      "canonicalJa": "ウェイターポジション",
+      "canonicalEn": "Waiter Position",
+      "aliases": [
+        "waiter",
+        "waiter position",
+        "ウェイター",
+        "ウェイターポジション"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.cross_hook",
+      "category": "Prerequisite",
+      "canonicalJa": "クロスフック",
+      "canonicalEn": "Cross Hook",
+      "aliases": [
+        "cross hook",
+        "クロスフック"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.push",
+      "category": "Prerequisite",
+      "canonicalJa": "プッシュ",
+      "canonicalEn": "Push",
+      "aliases": [
+        "push",
+        "プッシュ"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.kick",
+      "category": "Prerequisite",
+      "canonicalJa": "キック",
+      "canonicalEn": "Kick",
+      "aliases": [
+        "kick",
+        "キック"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.leg_lasso",
+      "category": "Prerequisite",
+      "canonicalJa": "レッグラッソー",
+      "canonicalEn": "Leg Lasso",
+      "aliases": [
+        "leg lasso",
+        "レッグラッソー"
+      ],
+      "related": [
+        "act.guard.sweep",
+        "pos.guard.lasso"
+      ]
+    },
+    {
+      "tagId": "pre.handlebar",
+      "category": "Prerequisite",
+      "canonicalJa": "ハンドルバー",
+      "canonicalEn": "Handlebar",
+      "aliases": [
+        "handlebar",
+        "ハンドルバー"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.spiral",
+      "category": "Prerequisite",
+      "canonicalJa": "スパイラル",
+      "canonicalEn": "Spiral",
+      "aliases": [
+        "spiral",
+        "スパイラル"
+      ],
+      "related": [
+        "act.guard.sweep"
+      ]
+    },
+    {
+      "tagId": "pre.leg_weave",
+      "category": "Prerequisite",
+      "canonicalJa": "レッグウィーブ",
+      "canonicalEn": "Leg Weave",
+      "aliases": [
+        "leg weave",
+        "レッグウィーブ"
+      ],
+      "related": [
+        "scn.phase.passing"
+      ]
+    },
+    {
+      "tagId": "pre.leg_pin",
+      "category": "Prerequisite",
+      "canonicalJa": "レッグピン",
+      "canonicalEn": "Leg Pin",
+      "aliases": [
+        "leg pin",
+        "レッグピン"
+      ],
+      "related": [
+        "scn.phase.passing"
+      ]
+    },
+    {
+      "tagId": "pre.leg_split",
+      "category": "Prerequisite",
+      "canonicalJa": "レッグスプリット",
+      "canonicalEn": "Leg Split",
+      "aliases": [
+        "leg split",
+        "レッグスプリット"
+      ],
+      "related": [
+        "scn.phase.passing"
+      ]
+    },
+    {
+      "tagId": "pre.shoulder_drive",
+      "category": "Prerequisite",
+      "canonicalJa": "ショルダードライブ",
+      "canonicalEn": "Shoulder Drive",
+      "aliases": [
+        "shoulder drive",
+        "ショルダードライブ"
+      ],
+      "related": [
+        "scn.phase.passing",
+        "pre.pressure"
+      ]
+    },
+    {
+      "tagId": "pre.high_step",
+      "category": "Prerequisite",
+      "canonicalJa": "ハイステップ",
+      "canonicalEn": "High Step",
+      "aliases": [
+        "high step",
+        "ハイステップ"
+      ],
+      "related": [
+        "scn.phase.passing",
+        "pre.angle_created"
+      ]
+    },
+    {
+      "tagId": "pre.sitting_pass",
+      "category": "Prerequisite",
+      "canonicalJa": "シッティングパス",
+      "canonicalEn": "Sitting Pass",
+      "aliases": [
+        "sitting pass",
+        "シッティングパス"
+      ],
+      "related": [
+        "scn.phase.passing"
+      ]
+    },
+    {
+      "tagId": "pre.x_pass",
+      "category": "Prerequisite",
+      "canonicalJa": "Xパス",
+      "canonicalEn": "X Pass",
+      "aliases": [
+        "x pass",
+        "X pass",
+        "エックスパス"
+      ],
+      "related": [
+        "scn.phase.passing",
+        "pre.distance_management"
+      ]
+    },
+    {
+      "tagId": "pre.reverse_half_guard_pass",
+      "category": "Prerequisite",
+      "canonicalJa": "リバースハーフパス",
+      "canonicalEn": "Reverse Half Guard Pass",
+      "aliases": [
+        "reverse half guard pass",
+        "reverse half pass",
+        "リバースハーフパス"
+      ],
+      "related": [
+        "scn.phase.passing",
+        "pos.guard.reverse_half"
+      ]
+    },
+    {
+      "tagId": "pre.arm_triangle_pass",
+      "category": "Prerequisite",
+      "canonicalJa": "アームトライアングルパス",
+      "canonicalEn": "Arm Triangle Pass",
+      "aliases": [
+        "arm triangle pass",
+        "アームトライアングルパス"
+      ],
+      "related": [
+        "scn.phase.passing",
+        "act.sub.arm_triangle"
       ]
     }
   ]
