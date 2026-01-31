@@ -13,11 +13,11 @@
         color: #111111;
       }
       .container {
-        max-width: 720px;
+        max-width: 980px;
         margin: 0 auto;
       }
       h1 {
-        font-size: 28px;
+        font-size: 30px;
         margin: 0 0 8px;
       }
       p {
@@ -31,8 +31,12 @@
         background: #f9fafb;
       }
       h2 {
-        font-size: 18px;
-        margin: 24px 0 8px;
+        font-size: 20px;
+        margin: 28px 0 10px;
+      }
+      h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
       }
       ul {
         margin: 8px 0 8px 20px;
@@ -44,16 +48,388 @@
       a {
         color: #2563eb;
       }
+      .hero {
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 20px;
+        background: #f8fafc;
+      }
+      .pill {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #e0f2fe;
+        color: #075985;
+        font-size: 12px;
+        margin-right: 6px;
+      }
+      .two-col {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .shots {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      figure {
+        margin: 0;
+      }
+      .shot {
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        overflow: hidden;
+        background: #ffffff;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      .shot:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+      }
+      .shot img {
+        width: 100%;
+        display: block;
+        background: #f3f4f6;
+        aspect-ratio: 9 / 16;
+        object-fit: contain;
+      }
+      .shots-ipad .shot img {
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+        background: #ffffff;
+      }
+      .shot figcaption {
+        padding: 10px 12px;
+        font-size: 13px;
+        color: #374151;
+        border-top: 1px solid #e5e7eb;
+      }
+      .tabs {
+        display: inline-flex;
+        gap: 8px;
+        border-bottom: 1px solid #e5e7eb;
+        margin-top: 8px;
+      }
+      .tab-btn {
+        border: 1px solid transparent;
+        background: transparent;
+        padding: 8px 12px;
+        border-radius: 10px 10px 0 0;
+        font-size: 14px;
+        cursor: pointer;
+        color: #374151;
+      }
+      .tab-btn[aria-selected="true"] {
+        background: #f8fafc;
+        border-color: #e5e7eb;
+        border-bottom-color: #f8fafc;
+        color: #111111;
+        font-weight: 600;
+      }
+      .tab-panel {
+        display: none;
+        margin-top: 12px;
+      }
+      .tab-panel.active {
+        display: block;
+      }
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(2, 6, 23, 0.85);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 24px;
+      }
+      .lightbox.active {
+        display: flex;
+      }
+      .lightbox-content {
+        position: relative;
+        max-width: min(90vw, 900px);
+        max-height: 90vh;
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+      }
+      .lightbox img {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 16px;
+        background: #0f172a;
+      }
+      .lightbox-caption {
+        color: #e2e8f0;
+        font-size: 14px;
+        text-align: center;
+      }
+      .lightbox-close,
+      .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(15, 23, 42, 0.8);
+        color: #ffffff;
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 20px;
+        display: grid;
+        place-items: center;
+      }
+      .lightbox-close {
+        top: -8px;
+        right: -8px;
+        transform: none;
+        font-size: 18px;
+      }
+      .lightbox-nav.prev {
+        left: -60px;
+      }
+      .lightbox-nav.next {
+        right: -60px;
+      }
+      @media (max-width: 720px) {
+        .lightbox-nav.prev {
+          left: 4px;
+        }
+        .lightbox-nav.next {
+          right: 4px;
+        }
+        .lightbox-close {
+          right: 4px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Link2Mat Support / サポート</h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
-      <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
+      <p class="muted"><strong>Last updated:</strong> 2026-01-31</p>
+      <p class="muted"><strong>更新日:</strong> 2026-01-31</p>
 
-      <p>Thank you for using Link2Mat. If you need help, please contact us.</p>
-      <p>Link2Mat をご利用いただきありがとうございます。サポートが必要な場合はご連絡ください。</p>
+      <div class="hero">
+        <p>
+          <span class="pill">Link saving</span>
+          <span class="pill">Clips</span>
+          <span class="pill">Tags</span>
+        </p>
+        <p>
+          <strong>Why Link2Mat?</strong>
+        </p>
+        <p>
+          Jiu-jitsu has countless techniques: choosing what to do based on your opponent,
+          recovering from bad positions, using those moments to counter, and deciding among
+          multiple options in a split second. There is joy and excitement when your body
+          moves naturally. When things go wrong or you lose, asking your instructor or teammates
+          is best, but many of us also watch instructional and technique videos.
+        </p>
+        <p>
+          YouTube and other social platforms are full of technique breakdowns and instructionals.
+          "Oh, that’s the one I got caught with last time." "How can I avoid that?"
+          "This might fit my style—I'll try it next time."
+        </p>
+        <p>
+          We save those videos, but over time they pile up and get lost. Some people keep notes,
+          but I wanted a way to manage living video references in one place: tag them, search them,
+          track how many times I've watched, and pin the ones I want to focus on right now.
+          That's why I built this app.
+        </p>
+        <p>
+          Nothing beats learning from your instructor and teammates. But with preparation and review,
+          and by tagging videos, I hope we can build a shared vocabulary for techniques and communicate
+          better on the mats.
+        </p>
+        <p>
+          I hope Link2Mat becomes a "buddy" for your jiu-jitsu learning.
+        </p>
+        <p>
+          <strong>なぜ Link2Mat?</strong>
+        </p>
+        <p>
+          柔術にはたくさんのテクニックがあります。相手との関係、劣勢からのリカバリー、
+          そこからのカウンター、複数の選択肢の中から何を選ぶか。ほんの一瞬で判断する場面が多く、
+          自然に体が動いたときの楽しさとワクワクがあります。うまくいかないときや負けたときは、
+          先生や仲間に聞くのが一番ですが、教則動画やテクニック動画を見ることも多いと思います。
+        </p>
+        <p>
+          YouTube や各種 SNS には、テクニックの紹介や教則動画が溢れています。
+          「あ、これ、この前スパーリングでやられたやつだ」「どうやったら避けられるのかな」
+          「あ、これ自分に合うかも、今度やってみよう」。
+        </p>
+        <p>
+          それぞれで保存機能を使ったりしますが、しばらくすると溜まって、どこに行ったか分からなくなります。
+          まめな人はノートにつけたりもできますが、生きた動画を 1 箇所で管理して、
+          タグをつけて検索できるようにし、何回見たか、今特に注力したいものをピン留めして
+          トップに表示できる。そんなアプリが欲しいと思って作りました。
+        </p>
+        <p>
+          道場で先生や仲間から教わる体験が一番で、勝るものはありません。
+          その予習・復習と、動画に「タグ」をつけていくことで、コミュニケーションのときに
+          「テクニックの言語化」が身につけられると良いなと思っています。
+        </p>
+        <p>
+          Link2Mat が、みなさんの「柔術のまなびのおとも」になれば嬉しいです。
+        </p>
+      </div>
+
+      <h2>Quick overview / まずは概要</h2>
+      <div class="two-col">
+        <div class="card">
+          <p><strong>What you can do</strong></p>
+          <p><strong>できること</strong></p>
+          <ul>
+            <li>Save links quickly / リンクをすぐ保存</li>
+            <li>Make clips / クリップ作成</li>
+            <li>Tag and search / タグ付け・検索</li>
+            <li>Keep everything on device / 端末内で完結</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p><strong>Best for</strong></p>
+          <p><strong>こんな方に</strong></p>
+          <ul>
+            <li>Collecting references / 参考リンクの収集</li>
+            <li>Study notes / 学習メモ</li>
+            <li>Training logs / 練習ログ</li>
+            <li>Quick lookup / すぐ見返したい人</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Screenshots / スクリーンショット</h2>
+      <p class="muted">iPhone / iPad / Android</p>
+
+      <div class="tabs" role="tablist" aria-label="Screenshots">
+        <button class="tab-btn" role="tab" aria-selected="true" data-tab="iphone">iPhone</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="ipad">iPad</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="android">Android</button>
+      </div>
+
+      <div class="tab-panel active" data-panel="iphone">
+        <div class="shots">
+          <figure class="shot" data-caption="Library overview / 保存したリンク一覧">
+            <img src="assets/screenshots/iphone/ios_01_library.png" alt="iPhone - Library overview" loading="lazy" />
+            <figcaption>Library overview / 保存したリンク一覧</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Add link / リンク追加">
+            <img src="assets/screenshots/iphone/ios_02_add.png" alt="iPhone - Add link" loading="lazy" />
+            <figcaption>Add link / リンク追加</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Clip creation / クリップ作成">
+            <img src="assets/screenshots/iphone/ios_03_clip.png" alt="iPhone - Clip creation" loading="lazy" />
+            <figcaption>Clip creation / クリップ作成</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Tagging / タグ付け">
+            <img src="assets/screenshots/iphone/ios_04_tags.png" alt="iPhone - Tagging screen" loading="lazy" />
+            <figcaption>Tagging / タグ付け</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Link detail / 詳細画面">
+            <img src="assets/screenshots/iphone/ios_05_detail.png" alt="iPhone - Link detail" loading="lazy" />
+            <figcaption>Link detail / 詳細画面</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ">
+            <img src="assets/screenshots/iphone/ios_06_short_clips.png" alt="iPhone - Shorts & clips list" loading="lazy" />
+            <figcaption>Shorts & Clips / ショート&クリップ</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Search / 検索">
+            <img src="assets/screenshots/iphone/ios_07_search.png" alt="iPhone - Search results" loading="lazy" />
+            <figcaption>Search / 検索</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="ipad">
+        <div class="shots shots-ipad">
+          <figure class="shot" data-caption="Library overview / 保存リンク一覧">
+            <img
+              src="assets/screenshots/ipad/iPad%20(V)%201.%20Library%20overview%20(saved%20links%20list)%20(captioned).png"
+              alt="iPad - Library overview"
+              loading="lazy"
+            />
+            <figcaption>Library overview / 保存リンク一覧</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Clip creation / クリップ作成">
+            <img
+              src="assets/screenshots/ipad/iPad%20(V)%203.%20Clip%20creation%20screen%20(captioned).png"
+              alt="iPad - Clip creation"
+              loading="lazy"
+            />
+            <figcaption>Clip creation / クリップ作成</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Tagging / タグ付け">
+            <img
+              src="assets/screenshots/ipad/iPad%20(V)%204.%20Tagging%20screen%20(captioned).png"
+              alt="iPad - Tagging screen"
+              loading="lazy"
+            />
+            <figcaption>Tagging / タグ付け</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Link detail / 詳細とタグ候補（タブレット横向きに対応）">
+            <img
+              src="assets/screenshots/ipad/iPad%20(H)%205.%20Link%20detail%20%3A%20metadata%20-%20with%20Suggested%20Tag%20(captioned).png"
+              alt="iPad - Link detail with tags"
+              loading="lazy"
+            />
+            <figcaption>Link detail / 詳細とタグ候補（タブレット横向きに対応）</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ">
+            <img
+              src="assets/screenshots/ipad/iPad%20(V)%206.%20Short%20%26%20Clips%20list%20(browse)%20(captioned).png"
+              alt="iPad - Shorts & clips list"
+              loading="lazy"
+            />
+            <figcaption>Shorts & Clips / ショート&クリップ</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Search / フィルタ検索">
+            <img
+              src="assets/screenshots/ipad/iPad%20(V)%207.%20Search%20%3A%20filter%20results%20(captioned).png"
+              alt="iPad - Search filter results"
+              loading="lazy"
+            />
+            <figcaption>Search / フィルタ検索</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="android">
+        <div class="shots">
+          <figure class="shot" data-caption="Library overview / 保存リンク一覧">
+            <img src="assets/screenshots/android/android_01_library.png" alt="Android - Library overview" loading="lazy" />
+            <figcaption>Library overview / 保存リンク一覧</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Add link / リンク追加">
+            <img src="assets/screenshots/android/android_02_add.png" alt="Android - Add link" loading="lazy" />
+            <figcaption>Add link / リンク追加</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Clip creation / クリップ作成">
+            <img src="assets/screenshots/android/android_03_clip.png" alt="Android - Clip creation" loading="lazy" />
+            <figcaption>Clip creation / クリップ作成</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Tagging / タグ付け">
+            <img src="assets/screenshots/android/android_04_tags.jpg" alt="Android - Tagging screen" loading="lazy" />
+            <figcaption>Tagging / タグ付け</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Link detail / 詳細画面">
+            <img src="assets/screenshots/android/android_05_detail.jpg" alt="Android - Link detail" loading="lazy" />
+            <figcaption>Link detail / 詳細画面</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ">
+            <img src="assets/screenshots/android/android_06_short_clips.jpg" alt="Android - Shorts & clips list" loading="lazy" />
+            <figcaption>Shorts & Clips / ショート&クリップ</figcaption>
+          </figure>
+          <figure class="shot" data-caption="Search / 検索">
+            <img src="assets/screenshots/android/android_07_search.jpg" alt="Android - Search results" loading="lazy" />
+            <figcaption>Search / 検索</figcaption>
+          </figure>
+        </div>
+      </div>
 
       <h2>Contact / お問い合わせ</h2>
       <div class="card">
@@ -86,12 +462,12 @@
       <p><strong>Q.</strong> What is the pricing?</p>
       <p>
         <strong>A.</strong> The free plan includes up to 30 Link2Mat items and 120 clips.
-        You can try all features free for 14 days, then it is JPY 220/month.
+        You can try all features free for 30 days, then it is JPY 200/month.
       </p>
       <p><strong>Q.</strong> 料金はいくらですか？</p>
       <p>
         <strong>A.</strong> 無料枠は Link2Mat 30 件、Clip 120 件までです。
-        30 日間はすべての機能を試せて、その後は月額 220 円です。
+        30 日間はすべての機能を試せて、その後は月額 200 円です。
       </p>
 
       <p><strong>Q.</strong> Thumbnails or metadata are not shown.</p>
@@ -108,9 +484,15 @@
       </p>
 
       <p><strong>Q.</strong> I want to delete my data.</p>
-      <p><strong>A.</strong> Please contact us and we will guide you.</p>
+      <p>
+        <strong>A.</strong> Your data is stored only on your device. You can delete items in the app,
+        or uninstall the app to remove all data.
+      </p>
       <p><strong>Q.</strong> データを削除したいです。</p>
-      <p><strong>A.</strong> サポートまでご連絡ください。手順をご案内します。</p>
+      <p>
+        <strong>A.</strong> データは端末内にのみ保存されています。アプリ内で削除するか、
+        アプリを削除すると全データが消去されます。
+      </p>
 
       <h2>Tag Help / タグヘルプ</h2>
       <p>Learn how tags are structured and check terms.</p>
@@ -138,5 +520,94 @@
         <a href="privacy.html">プライバシーポリシー</a>
       </p>
     </div>
+
+    <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Screenshot viewer">
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close">✕</button>
+        <button class="lightbox-nav prev" aria-label="Previous">‹</button>
+        <img src="" alt="" />
+        <button class="lightbox-nav next" aria-label="Next">›</button>
+        <div class="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const tabPanels = document.querySelectorAll(".tab-panel");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.getAttribute("data-tab");
+          tabButtons.forEach((btn) => btn.setAttribute("aria-selected", "false"));
+          button.setAttribute("aria-selected", "true");
+          tabPanels.forEach((panel) => {
+            panel.classList.toggle("active", panel.getAttribute("data-panel") === target);
+          });
+        });
+      });
+
+      const lightbox = document.querySelector(".lightbox");
+      const lightboxImage = lightbox.querySelector("img");
+      const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+      const prevButton = lightbox.querySelector(".lightbox-nav.prev");
+      const nextButton = lightbox.querySelector(".lightbox-nav.next");
+      const closeButton = lightbox.querySelector(".lightbox-close");
+      let currentShots = [];
+      let currentIndex = 0;
+
+      function openLightbox(shots, index) {
+        currentShots = shots;
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      function updateLightbox() {
+        const shot = currentShots[currentIndex];
+        const img = shot.querySelector("img");
+        const caption = shot.getAttribute("data-caption") || "";
+        lightboxImage.src = img.getAttribute("src");
+        lightboxImage.alt = img.getAttribute("alt") || "";
+        lightboxCaption.textContent = caption;
+      }
+
+      function navigate(direction) {
+        if (!currentShots.length) return;
+        currentIndex = (currentIndex + direction + currentShots.length) % currentShots.length;
+        updateLightbox();
+      }
+
+      document.querySelectorAll(".shots").forEach((shotGrid) => {
+        const shots = Array.from(shotGrid.querySelectorAll(".shot"));
+        shots.forEach((shot, index) => {
+          shot.addEventListener("click", () => openLightbox(shots, index));
+        });
+      });
+
+      prevButton.addEventListener("click", () => navigate(-1));
+      nextButton.addEventListener("click", () => navigate(1));
+      closeButton.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "ArrowLeft") navigate(-1);
+        if (event.key === "ArrowRight") navigate(1);
+      });
+    </script>
   </body>
 </html>
