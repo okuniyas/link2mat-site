@@ -44,6 +44,23 @@
         gap: 10px;
         margin-top: 12px;
       }
+      .bilingual {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: start;
+      }
+      .bilingual > div > p:first-child {
+        margin-top: 0;
+      }
+      .ja-intro {
+        font-size: 14px;
+      }
+      @media (max-width: 860px) {
+        .bilingual {
+          grid-template-columns: 1fr;
+        }
+      }
       input {
         padding: 10px 12px;
         border: 1px solid #e5e7eb;
@@ -71,63 +88,75 @@
       <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
       <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
 
-      <p>
-        Tags are organized as Position × Scenario × Setup × Action × Submission × Source.
-        A typical flow is: Start Position (e.g., Mount, Closed Guard), Scenario (Top/Bottom,
-        Gi/No-Gi, Passing/Escape, Competition/Instructional), Setup (2-on-1 Control, Break Posture),
-        Action (Back Take), and Finish Position (Back Control, Side Control) or Submission
-        (Collar Choke, Triangle Choke). Start Position is single, Finish Position can be multiple.
-      </p>
-      <p>
-        Tag は「ポジション × シナリオ × セットアップ × アクション × サブミッション × ソース」で整理する考え方です。
-        Tag の付け方は例えば、どんなスタートポジション（Mount、Closed Guard など）で、
-        どんなシナリオ（Top/Bottom、Gi/No-Gi、Passing/Escape、Competition/Instructional など）で、
-        どんな状態（2-on-1 Control、Break Posture など）で、どんなアクション（Back Take など）で、
-        フィニッシュポジション（Back Control、Side Control など）もしくはサブミッション（Collar Choke、Triangle Choke など）、
-        そしてソース（媒体、ルールなど）となっています。Start Position は1つ、Finish Position は複数選べます。
-      </p>
-      <p>
-        Scenario captures context like Gi/No-Gi, top/bottom, competition/training/instructional,
-        and attacking/defending/passing/escaping. Source describes the platform or ruleset
-        (IBJJF/ADCC/Rules Unknown), and is often combined with the Competition scenario.
-      </p>
-      <p>
-        シナリオは Gi / No-Gi、トップ / ボトム、試合 / 練習 / 教則、攻め / 守り / パス / エスケープ
-        などの文脈を表します。ソースは動画の媒体やルールセット（IBJJF / ADCC / Rules Unknown）
-        を表し、試合の動画ではシナリオの「試合」と組み合わせて使います。
-      </p>
-      <p>
-        Tags help you verbalize techniques and build a shared vocabulary. When you add a title
-        or notes, Link2Mat suggests tags. Accepting them tags the video and makes search and
-        filtering much easier.
-      </p>
-      <p>
-        タグを使うことでテクニックの言語化に慣れ、柔術脳を育てる助けになると思います。
-        タイトルを入れたり、ノートにどんな動画かをコメントしたりすることで、アプリがタグを提案してくれます。
-        それを受け入れる（Accept）することで、動画がタグづけされます。
-        タグがつくことで検索やフィルタが容易になります。
-      </p>
-      <p>
-        Organizing by Position, Scenario, Setup, Action, Submission, and Source makes it easier
-        to quickly find the exact theme or moment you want to review.
-      </p>
-      <p>
-        ポジション、シナリオ、セットアップ、アクション、サブミッション、ソースの組み合わせで整理しておくと、
-        学習したいテーマや復習したい局面をすばやく探せます。
-      </p>
-      <p class="muted">
-        If you have requests or changes for the tag system, please reach out. Jiu-jitsu evolves
-        daily, and we believe more community knowledge makes this better. At the same time, we
-        want to keep tags understandable, so we will balance clarity and coverage. We would be
-        grateful for advice from experienced martial artists. For specific tag requests, use the
-        in-app request; for overall policy, email support.
-      </p>
-      <p class="muted">
-        Tag の構成や追加・変更のご要望があれば、ぜひご連絡ください。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
-        一方で、Tag の構成が複雑になりすぎると分かりにくくなるため、追加・変更はバランスを見ながら進めたいと考えています。
-        柔術家の先輩方にご助言いただけるとありがたいと考えています。
-        個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
-      </p>
+      <div class="bilingual">
+        <div>
+          <p>
+            Tags are organized as Position × Scenario × Setup × Action × Submission × Source.
+            A typical flow is: Start Position (e.g., Mount, Closed Guard), Scenario (Top/Bottom,
+            Gi/No-Gi, Passing/Escape, Competition/Instructional), Setup (2-on-1 Control, Break Posture),
+            Action (Back Take), and Finish Position (Back Control, Side Control) or Submission
+            (Collar Choke, Triangle Choke). Start Position is single, Finish Position can be multiple.
+          </p>
+          <p>
+            Scenario captures context like Gi/No-Gi, top/bottom, competition/training/instructional,
+            and attacking/defending/passing/escaping. Source describes the platform or ruleset
+            (IBJJF/ADCC/Rules Unknown), and is often combined with the Competition scenario.
+          </p>
+          <p>
+            Tags help you verbalize techniques and build a shared vocabulary. When you add a title
+            or notes, Link2Mat suggests tags. Accepting them tags the video and makes search and
+            filtering much easier.
+          </p>
+          <p>
+            Organizing by Position, Scenario, Setup, Action, Submission, and Source makes it easier
+            to quickly find the exact theme or moment you want to review.
+          </p>
+        </div>
+        <div class="ja-intro">
+          <p>
+            Tag は「ポジション × シナリオ × セットアップ × アクション × サブミッション × ソース」で整理する考え方です。
+            Tag の付け方は例えば、どんなスタートポジション（Mount、Closed Guard など）で、
+            どんなシナリオ（Top/Bottom、Gi/No-Gi、Passing/Escape、Competition/Instructional など）で、
+            どんな状態（2-on-1 Control、Break Posture など）で、どんなアクション（Back Take など）で、
+            フィニッシュポジション（Back Control、Side Control など）もしくはサブミッション（Collar Choke、Triangle Choke など）、
+            そしてソース（媒体、ルールなど）となっています。Start Position は1つ、Finish Position は複数選べます。
+          </p>
+          <p>
+            シナリオは Gi / No-Gi、トップ / ボトム、試合 / 練習 / 教則、攻め / 守り / パス / エスケープ
+            などの文脈を表します。ソースは動画の媒体やルールセット（IBJJF / ADCC / Rules Unknown）
+            を表し、試合の動画ではシナリオの「試合」と組み合わせて使います。
+          </p>
+          <p>
+            タグを使うことでテクニックの言語化に慣れ、柔術脳を育てる助けになると思います。
+            タイトルを入れたり、ノートにどんな動画かをコメントしたりすることで、アプリがタグを提案してくれます。
+            それを受け入れる（Accept）することで、動画がタグづけされます。
+            タグがつくことで検索やフィルタが容易になります。
+          </p>
+          <p>
+            ポジション、シナリオ、セットアップ、アクション、サブミッション、ソースの組み合わせで整理しておくと、
+            学習したいテーマや復習したい局面をすばやく探せます。
+          </p>
+        </div>
+      </div>
+      <div class="bilingual">
+        <div>
+          <p class="muted">
+            If you have requests or changes for the tag system, please reach out. Jiu-jitsu evolves
+            daily, and we believe more community knowledge makes this better. At the same time, we
+            want to keep tags understandable, so we will balance clarity and coverage. We would be
+            grateful for advice from experienced martial artists. For specific tag requests, use the
+            in-app request; for overall policy, email support.
+          </p>
+        </div>
+        <div>
+          <p class="muted">
+            Tag の構成や追加・変更のご要望があれば、ぜひご連絡ください。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
+            一方で、Tag の構成が複雑になりすぎると分かりにくくなるため、追加・変更はバランスを見ながら進めたいと考えています。
+            柔術家の先輩方にご助言いただけるとありがたいと考えています。
+            個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
+          </p>
+        </div>
+      </div>
 
       <div class="card">
         <strong>Tag search / タグ検索</strong>

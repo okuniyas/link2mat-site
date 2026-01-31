@@ -80,6 +80,20 @@
         font-size: 12px;
         margin-top: 6px;
       }
+      .bilingual {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: start;
+      }
+      .bilingual > div > p:first-child {
+        margin-top: 0;
+      }
+      @media (max-width: 860px) {
+        .bilingual {
+          grid-template-columns: 1fr;
+        }
+      }
       a {
         color: #2563eb;
       }
@@ -91,14 +105,20 @@
       <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
       <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
 
-      <p>
-        Use the search box to filter tags. Tags are grouped into Position, Scenario, Setup, Action,
-        Submission, and Source categories.
-      </p>
-      <p>
-        検索欄でタグを絞り込みできます。タグはポジション / シナリオ / セットアップ /
-        アクション / サブミッション / ソースのカテゴリで整理しています。
-      </p>
+      <div class="bilingual">
+        <div>
+          <p>
+            Use the search box to filter tags. Tags are grouped into Position, Scenario, Setup, Action,
+            Submission, and Source categories.
+          </p>
+        </div>
+        <div>
+          <p>
+            検索欄でタグを絞り込みできます。タグはポジション / シナリオ / セットアップ /
+            アクション / サブミッション / ソースのカテゴリで整理しています。
+          </p>
+        </div>
+      </div>
 
       <div class="search">
         <input id="searchInput" type="text" placeholder="Search tags / タグ検索" />
@@ -107,27 +127,39 @@
 
       <div id="list"></div>
 
-      <p class="muted">
-        For specific tag requests, use the in-app request form. For general tag policy or structure,
-        email support. <a href="index.html">Support page</a>
-      </p>
-      <p class="muted">
-        個別のタグの追加・変更はアプリから、Tag 全般のご要望はサポートメールへお願いします。
-        <a href="index.html">Support page</a>
-      </p>
-      <p class="muted">
-        We welcome suggestions about the tag system. Jiu-jitsu evolves daily, and we believe more
-        community knowledge makes this better. At the same time, we want to keep tags understandable,
-        so we will balance clarity and coverage. We would be grateful for advice from experienced
-        jiu-jitsu practitioners. For specific tag requests, use the in-app request; for overall policy,
-        email support.
-      </p>
-      <p class="muted">
-        Tag の構成や追加・変更のご要望も歓迎しています。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
-        ただし、構成が複雑になりすぎないようバランスを見ながら進めたいと考えています。
-        柔術家の先輩方にご助言いただけるとありがたいと考えています。
-        個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
-      </p>
+      <div class="bilingual">
+        <div>
+          <p class="muted">
+            For specific tag requests, use the in-app request form. For general tag policy or structure,
+            email support. <a href="index.html">Support page</a>
+          </p>
+        </div>
+        <div>
+          <p class="muted">
+            個別のタグの追加・変更はアプリから、Tag 全般のご要望はサポートメールへお願いします。
+            <a href="index.html">Support page</a>
+          </p>
+        </div>
+      </div>
+      <div class="bilingual">
+        <div>
+          <p class="muted">
+            We welcome suggestions about the tag system. Jiu-jitsu evolves daily, and we believe more
+            community knowledge makes this better. At the same time, we want to keep tags understandable,
+            so we will balance clarity and coverage. We would be grateful for advice from experienced
+            jiu-jitsu practitioners. For specific tag requests, use the in-app request; for overall policy,
+            email support.
+          </p>
+        </div>
+        <div>
+          <p class="muted">
+            Tag の構成や追加・変更のご要望も歓迎しています。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
+            ただし、構成が複雑になりすぎないようバランスを見ながら進めたいと考えています。
+            柔術家の先輩方にご助言いただけるとありがたいと考えています。
+            個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
+          </p>
+        </div>
+      </div>
       <p class="muted">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
       <p class="muted">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
     </div>

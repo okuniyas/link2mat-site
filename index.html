@@ -96,7 +96,7 @@
         object-fit: contain;
       }
       .shots:not(.shots-ipad) .shot img {
-        max-height: 520px;
+        max-height: 360px;
       }
       .shots-ipad .shot img {
         aspect-ratio: 4 / 3;
@@ -114,6 +114,20 @@
         gap: 8px;
         border-bottom: 1px solid #e5e7eb;
         margin-top: 8px;
+      }
+      .bilingual {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: start;
+      }
+      .bilingual > div > p:first-child {
+        margin-top: 0;
+      }
+      @media (max-width: 860px) {
+        .bilingual {
+          grid-template-columns: 1fr;
+        }
       }
       .tab-btn {
         border: 1px solid transparent;
@@ -223,63 +237,69 @@
           <span class="pill">Clips</span>
           <span class="pill">Tags</span>
         </p>
-        <p>
-          <strong>Why Link2Mat?</strong>
-        </p>
-        <p>
-          Jiu-jitsu has countless techniques: choosing what to do based on your opponent,
-          recovering from bad positions, using those moments to counter, and deciding among
-          multiple options in a split second. There is joy and excitement when your body
-          moves naturally. When things go wrong or you lose, asking your instructor or teammates
-          is best, but many of us also watch instructional and technique videos.
-        </p>
-        <p>
-          YouTube and other social platforms are full of technique breakdowns and instructionals.
-          "Oh, that’s the one I got caught with last time." "How can I avoid that?"
-          "This might fit my style—I'll try it next time."
-        </p>
-        <p>
-          We save those videos, but over time they pile up and get lost. Some people keep notes,
-          but I wanted a way to manage living video references in one place: tag them, search them,
-          track how many times I've watched, and pin the ones I want to focus on right now.
-          That's why I built this app.
-        </p>
-        <p>
-          Nothing beats learning from your instructor and teammates. But with preparation and review,
-          and by tagging videos, I hope we can build a shared vocabulary for techniques and communicate
-          better on the mats.
-        </p>
-        <p>
-          I hope Link2Mat becomes a "buddy" for your jiu-jitsu learning.
-        </p>
-        <p>
-          <strong>なぜ Link2Mat?</strong>
-        </p>
-        <p>
-          柔術にはたくさんのテクニックがあります。相手との関係、劣勢からのリカバリー、
-          そこからのカウンター、複数の選択肢の中から何を選ぶか。ほんの一瞬で判断する場面が多く、
-          自然に体が動いたときの楽しさとワクワクがあります。うまくいかないときや負けたときは、
-          先生や仲間に聞くのが一番ですが、教則動画やテクニック動画を見ることも多いと思います。
-        </p>
-        <p>
-          YouTube や各種 SNS には、テクニックの紹介や教則動画が溢れています。
-          「あ、これ、この前スパーリングでやられたやつだ」「どうやったら避けられるのかな」
-          「あ、これ自分に合うかも、今度やってみよう」。
-        </p>
-        <p>
-          それぞれで保存機能を使ったりしますが、しばらくすると溜まって、どこに行ったか分からなくなります。
-          まめな人はノートにつけたりもできますが、生きた動画を 1 箇所で管理して、
-          タグをつけて検索できるようにし、何回見たか、今特に注力したいものをピン留めして
-          トップに表示できる。そんなアプリが欲しいと思って作りました。
-        </p>
-        <p>
-          道場で先生や仲間から教わる体験が一番で、勝るものはありません。
-          その予習・復習と、動画に「タグ」をつけていくことで、コミュニケーションのときに
-          「テクニックの言語化」が身につけられると良いなと思っています。
-        </p>
-        <p>
-          Link2Mat が、みなさんの「柔術のまなびのおとも」になれば嬉しいです。
-        </p>
+        <div class="bilingual">
+          <div>
+            <p>
+              <strong>Why Link2Mat?</strong>
+            </p>
+            <p>
+              Jiu-jitsu has countless techniques: choosing what to do based on your opponent,
+              recovering from bad positions, using those moments to counter, and deciding among
+              multiple options in a split second. There is joy and excitement when your body
+              moves naturally. When things go wrong or you lose, asking your instructor or teammates
+              is best, but many of us also watch instructional and technique videos.
+            </p>
+            <p>
+              YouTube and other social platforms are full of technique breakdowns and instructionals.
+              "Oh, that’s the one I got caught with last time." "How can I avoid that?"
+              "This might fit my style—I'll try it next time."
+            </p>
+            <p>
+              We save those videos, but over time they pile up and get lost. Some people keep notes,
+              but I wanted a way to manage living video references in one place: tag them, search them,
+              track how many times I've watched, and pin the ones I want to focus on right now.
+              That's why I built this app.
+            </p>
+            <p>
+              Nothing beats learning from your instructor and teammates. But with preparation and review,
+              and by tagging videos, I hope we can build a shared vocabulary for techniques and communicate
+              better on the mats.
+            </p>
+            <p>
+              I hope Link2Mat becomes a "buddy" for your jiu-jitsu learning.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>なぜ Link2Mat?</strong>
+            </p>
+            <p>
+              柔術にはたくさんのテクニックがあります。相手との関係、劣勢からのリカバリー、
+              そこからのカウンター、複数の選択肢の中から何を選ぶか。ほんの一瞬で判断する場面が多く、
+              自然に体が動いたときの楽しさとワクワクがあります。うまくいかないときや負けたときは、
+              先生や仲間に聞くのが一番ですが、教則動画やテクニック動画を見ることも多いと思います。
+            </p>
+            <p>
+              YouTube や各種 SNS には、テクニックの紹介や教則動画が溢れています。
+              「あ、これ、この前スパーリングでやられたやつだ」「どうやったら避けられるのかな」
+              「あ、これ自分に合うかも、今度やってみよう」。
+            </p>
+            <p>
+              それぞれで保存機能を使ったりしますが、しばらくすると溜まって、どこに行ったか分からなくなります。
+              まめな人はノートにつけたりもできますが、生きた動画を 1 箇所で管理して、
+              タグをつけて検索できるようにし、何回見たか、今特に注力したいものをピン留めして
+              トップに表示できる。そんなアプリが欲しいと思って作りました。
+            </p>
+            <p>
+              道場で先生や仲間から教わる体験が一番で、勝るものはありません。
+              その予習・復習と、動画に「タグ」をつけていくことで、コミュニケーションのときに
+              「テクニックの言語化」が身につけられると良いなと思っています。
+            </p>
+            <p>
+              Link2Mat が、みなさんの「柔術のまなびのおとも」になれば嬉しいです。
+            </p>
+          </div>
+        </div>
       </div>
 
       <h2>Quick overview / まずは概要</h2>
@@ -451,26 +471,32 @@
 
       <h2>Rights & Disclaimer / 権利と免責</h2>
       <div class="card">
-        <p><strong>Rights and ownership</strong></p>
-        <p>
-          Link2Mat stores links and your notes. It does not host or distribute video content.
-          All third-party content remains the property of its respective owners.
-        </p>
-        <p><strong>権利と所有権</strong></p>
-        <p>
-          Link2Mat はリンクとメモを管理するためのアプリで、動画コンテンツの配信は行いません。
-          第三者のコンテンツに関する権利は、各権利者に帰属します。
-        </p>
-        <p><strong>Use of images and content</strong></p>
-        <p>
-          Please use images and content you have the right to use. Personal use within the app is
-          generally acceptable, but redistribution is not permitted.
-        </p>
-        <p><strong>画像・コンテンツの利用</strong></p>
-        <p>
-          利用権限のある画像・コンテンツをご利用ください。アプリ内での個人利用は概ね問題ありませんが、
-          再配布はお控えください。
-        </p>
+        <div class="bilingual">
+          <div>
+            <p><strong>Rights and ownership</strong></p>
+            <p>
+              Link2Mat stores links and your notes. It does not host or distribute video content.
+              All third-party content remains the property of its respective owners.
+            </p>
+            <p><strong>Use of images and content</strong></p>
+            <p>
+              Please use images and content you have the right to use. Personal use within the app is
+              generally acceptable, but redistribution is not permitted.
+            </p>
+          </div>
+          <div>
+            <p><strong>権利と所有権</strong></p>
+            <p>
+              Link2Mat はリンクとメモを管理するためのアプリで、動画コンテンツの配信は行いません。
+              第三者のコンテンツに関する権利は、各権利者に帰属します。
+            </p>
+            <p><strong>画像・コンテンツの利用</strong></p>
+            <p>
+              利用権限のある画像・コンテンツをご利用ください。アプリ内での個人利用は概ね問題ありませんが、
+              再配布はお控えください。
+            </p>
+          </div>
+        </div>
       </div>
 
       <h2>Before you contact us / お問い合わせの前に</h2>
@@ -486,50 +512,67 @@
       </ul>
 
       <h2>FAQ / よくある質問</h2>
-      <p><strong>Q.</strong> What is the pricing?</p>
-      <p>
-        <strong>A.</strong> The free plan includes up to 30 Link2Mat items and 120 clips.
-        You can try all features free for 30 days, then it is JPY 200/month.
-      </p>
-      <p><strong>Q.</strong> 料金はいくらですか？</p>
-      <p>
-        <strong>A.</strong> 無料枠は Link2Mat 30 件、Clip 120 件までです。
-        30 日間はすべての機能を試せて、その後は月額 200 円です。
-      </p>
-
-      <p><strong>Q.</strong> Thumbnails or metadata are not shown.</p>
-      <p>
-        <strong>A.</strong> Some websites block metadata access. Please retry on a stable network.
-        You can also set a custom image (for example, your own screenshot). Please use images you
-        have the right to use; for personal use in the app is generally fine, but do not redistribute.
-      </p>
-      <p><strong>Q.</strong> サムネイルやメタデータが表示されません。</p>
-      <p>
-        <strong>A.</strong> 一部サイトでは取得が制限されます。通信環境の良い場所で再試行してください。
-        代わりにカスタム画像（自分で撮ったスクショなど）を設定することもできます。
-        利用権限のある画像をお使いください。アプリ内の個人利用は概ね問題ありませんが、再配布はお控えください。
-      </p>
-
-      <p><strong>Q.</strong> I want to delete my data.</p>
-      <p>
-        <strong>A.</strong> Your data is stored only on your device. You can delete items in the app,
-        or uninstall the app to remove all data.
-      </p>
-      <p><strong>Q.</strong> データを削除したいです。</p>
-      <p>
-        <strong>A.</strong> データは端末内にのみ保存されています。アプリ内で削除するか、
-        アプリを削除すると全データが消去されます。
-      </p>
+      <div class="bilingual">
+        <div>
+          <p><strong>Q.</strong> What is the pricing?</p>
+          <p>
+            <strong>A.</strong> The free plan includes up to 30 Link2Mat items and 120 clips.
+            You can try all features free for 30 days, then it is JPY 200/month.
+          </p>
+          <p><strong>Q.</strong> Thumbnails or metadata are not shown.</p>
+          <p>
+            <strong>A.</strong> Some websites block metadata access. Please retry on a stable network.
+            You can also set a custom image (for example, your own screenshot). Please use images you
+            have the right to use; for personal use in the app is generally fine, but do not redistribute.
+          </p>
+          <p><strong>Q.</strong> I want to delete my data.</p>
+          <p>
+            <strong>A.</strong> Your data is stored only on your device. You can delete items in the app,
+            or uninstall the app to remove all data.
+          </p>
+        </div>
+        <div>
+          <p><strong>Q.</strong> 料金はいくらですか？</p>
+          <p>
+            <strong>A.</strong> 無料枠は Link2Mat 30 件、Clip 120 件までです。
+            30 日間はすべての機能を試せて、その後は月額 200 円です。
+          </p>
+          <p><strong>Q.</strong> サムネイルやメタデータが表示されません。</p>
+          <p>
+            <strong>A.</strong> 一部サイトでは取得が制限されます。通信環境の良い場所で再試行してください。
+            代わりにカスタム画像（自分で撮ったスクショなど）を設定することもできます。
+            利用権限のある画像をお使いください。アプリ内の個人利用は概ね問題ありませんが、再配布はお控えください。
+          </p>
+          <p><strong>Q.</strong> データを削除したいです。</p>
+          <p>
+            <strong>A.</strong> データは端末内にのみ保存されています。アプリ内で削除するか、
+            アプリを削除すると全データが消去されます。
+          </p>
+        </div>
+      </div>
 
       <h2>Tag Help / タグヘルプ</h2>
-      <p>Learn how tags are structured and check terms.</p>
-      <p>タグの考え方や用語の確認はこちら:</p>
-      <p class="muted">
-        Tag の構成や追加・変更のご要望があれば、ぜひご連絡ください。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
-        一方で、Tag の構成が複雑になりすぎると分かりにくくなるため、追加・変更はバランスを見ながら進めたいと考えています。
-        柔道家の先輩方にご助言いただけるとありがたいと考えています。
-        個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
-      </p>
+      <div class="bilingual">
+        <div>
+          <p>Learn how tags are structured and check terms.</p>
+          <p class="muted">
+            If you have requests or changes for the tag system, please reach out. Jiu-jitsu evolves
+            daily, and we believe more community knowledge makes this better. At the same time, we
+            want to keep tags understandable, so we will balance clarity and coverage. We would be
+            grateful for advice from experienced jiu-jitsu practitioners. For specific tag requests,
+            use the in-app request; for overall policy, email support.
+          </p>
+        </div>
+        <div>
+          <p>タグの考え方や用語の確認はこちら:</p>
+          <p class="muted">
+            Tag の構成や追加・変更のご要望があれば、ぜひご連絡ください。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
+            一方で、Tag の構成が複雑になりすぎると分かりにくくなるため、追加・変更はバランスを見ながら進めたいと考えています。
+            柔術家の先輩方にご助言いただけるとありがたいと考えています。
+            個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
+          </p>
+        </div>
+      </div>
       <p><a href="tags.html">Tag Help / タグヘルプ</a></p>
       <p class="muted">
         Requests about specific tags are accepted in the app.
