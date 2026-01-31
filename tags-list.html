@@ -74,6 +74,10 @@
         color: #6b7280;
         font-size: 13px;
         margin-left: 6px;
+        text-decoration: none;
+      }
+      .tag-en:hover {
+        text-decoration: underline;
       }
       .tag-meta {
         color: #6b7280;
@@ -228,8 +232,9 @@
             heading.appendChild(link);
 
             if (tag.canonicalEn) {
-              const en = document.createElement("span");
+              const en = document.createElement("a");
               en.className = "tag-en";
+              en.href = `tags-detail.html?tag=${encodeURIComponent(tag.canonicalEn)}`;
               en.textContent = tag.canonicalEn;
               heading.appendChild(en);
             }

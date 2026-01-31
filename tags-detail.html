@@ -103,12 +103,13 @@
       const params = new URLSearchParams(window.location.search);
       const tagId = params.get("id");
       const tagQuery = params.get("tag");
+      const tagQueryRaw = tagQuery ? tagQuery.trim() : "";
 
       const findTag = (tags) => {
         if (tagId) {
           return tags.find((tag) => tag.tagId === tagId) || null;
         }
-        const q = normalize(tagQuery);
+        const q = normalize(tagQueryRaw);
         if (!q) return null;
         return (
           tags.find((tag) => normalize(tag.canonicalJa) === q) ||
@@ -139,8 +140,17 @@
         );
         const category = categoryLabels[tag.category] || tag.category || "Other";
 
-        const query = tag.canonicalJa || tag.canonicalEn || tag.tagId;
-        const phrase = `柔術で "${query}" とは`;
+        const matchesQuery = (value) => normalize(value) === normalize(tagQueryRaw);
+        const isEnglishQuery =
+          tagQueryRaw &&
+          (matchesQuery(tag.canonicalEn) || (tag.aliases || []).some((a) => matchesQuery(a)));
+        const query =
+          tagQueryRaw && (matchesQuery(tag.canonicalJa) || isEnglishQuery)
+            ? tagQueryRaw
+            : tag.canonicalJa || tag.canonicalEn || tag.tagId;
+        const phrase = isEnglishQuery
+          ? `what is "${query}" in jiu jitsu`
+          : `柔術で "${query}" とは`;
         const webSearch = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
 
         content.innerHTML = `
