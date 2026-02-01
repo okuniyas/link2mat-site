@@ -253,13 +253,14 @@
     {
       "tagId": "pos.guard.sitting",
       "category": "Position",
-      "canonicalJa": "シッティングガード",
+      "canonicalJa": "シットアップガード",
       "canonicalEn": "Sitting Guard",
       "aliases": [
         "sitting guard",
         "seated guard",
         "シッティングガード",
-        "シッティング"
+        "シッティング",
+        "シットアップガード"
       ],
       "related": [
         "pos.guard.open",
@@ -2860,7 +2861,8 @@
       "aliases": [
         "arm throw",
         "seoi nage",
-        "一本背負投げ"
+        "一本背負投げ",
+        "一本背負"
       ],
       "related": [
         "pos.phase.clinch",
