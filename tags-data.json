@@ -42,6 +42,9 @@
       "canonicalEn": "Closed Guard",
       "aliases": [
         "クローズド",
+        "ハイクローズド",
+        "デッドオーチャード",
+        "サイドクローズド",
         "closed guard",
         "フルガード"
       ],
@@ -114,6 +117,7 @@
         "collar and sleeve",
         "collar sleeve",
         "one collar one sleeve",
+        "片袖片襟",
         "片襟片袖",
         "片襟片袖ガード"
       ],
@@ -167,6 +171,9 @@
       "canonicalEn": "Half Guard",
       "aliases": [
         "ハーフ",
+        "四の字ハーフ",
+        "シングルレッグハーフ",
+        "コヨーテハーフ",
         "half guard",
         "トップハーフ",
         "ボトムハーフ",
@@ -207,6 +214,7 @@
       "canonicalEn": "Knee Shield",
       "aliases": [
         "シールド",
+        "ニーシールドハーフ",
         "knee shield",
         "z guard",
         "Zガード"
@@ -296,6 +304,11 @@
       "aliases": [
         "DLR",
         "デラ",
+        "ラペラデラヒーバ",
+        "アンダーフックデラヒーバ",
+        "パンツグリップデラヒーバ",
+        "ディープデラヒーバ",
+        "デラヒーバエックス",
         "de la riva"
       ],
       "related": [
@@ -454,6 +467,7 @@
       "aliases": [
         "SLX",
         "single leg x",
+        "ワンレッグエックス",
         "ashi"
       ],
       "related": [
@@ -469,7 +483,8 @@
       "canonicalEn": "X-Guard",
       "aliases": [
         "X guard",
-        "エックスガード"
+        "エックスガード",
+        "エックス"
       ],
       "related": [
         "act.guard.sweep",
@@ -649,6 +664,8 @@
       "canonicalEn": "Turtle",
       "aliases": [
         "タートル",
+        "タートルガード",
+        "カメ",
         "turtle",
         "タートル上",
         "タートル下",
@@ -919,7 +936,8 @@
       "canonicalEn": "Octopus Guard",
       "aliases": [
         "octopus guard",
-        "オクトパスガード"
+        "オクトパスガード",
+        "オクトパス"
       ],
       "related": [
         "pos.guard.open",
@@ -1007,6 +1025,124 @@
       ]
     },
     {
+      "tagId": "act.guard.sweep.grass_cutter",
+      "category": "Action",
+      "canonicalJa": "草刈りスイープ",
+      "canonicalEn": "Grass Cutter Sweep",
+      "aliases": [
+        "grass cutter sweep",
+        "grasscutter sweep",
+        "草刈りスイープ",
+        "草刈り"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.flower",
+      "category": "Action",
+      "canonicalJa": "フラワースイープ",
+      "canonicalEn": "Flower Sweep",
+      "aliases": [
+        "flower sweep",
+        "フラワースイープ",
+        "フラワー"
+      ],
+      "related": [
+        "pos.guard.closed",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.kick",
+      "category": "Action",
+      "canonicalJa": "キックスイープ",
+      "canonicalEn": "Kick Sweep",
+      "aliases": [
+        "kick sweep",
+        "キックスイープ"
+      ],
+      "related": [
+        "pos.guard.closed",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.lasso",
+      "category": "Action",
+      "canonicalJa": "ラッソースイープ",
+      "canonicalEn": "Lasso Sweep",
+      "aliases": [
+        "lasso sweep",
+        "ラッソースイープ",
+        "ラッソスイープ"
+      ],
+      "related": [
+        "pos.guard.lasso",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.tanquinho",
+      "category": "Action",
+      "canonicalJa": "タンキーニョスイープ",
+      "canonicalEn": "Tanquinho Sweep",
+      "aliases": [
+        "tanquinho sweep",
+        "タンキーニョスイープ",
+        "タンキーニョ"
+      ],
+      "related": [
+        "pos.guard.lasso",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.unstoppable",
+      "category": "Action",
+      "canonicalJa": "アンストッパブルスイープ",
+      "canonicalEn": "Unstoppable Sweep",
+      "aliases": [
+        "unstoppable sweep",
+        "アンストッパブルスイープ",
+        "アンストッパブル"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.foot",
+      "category": "Action",
+      "canonicalJa": "フットスイープ",
+      "canonicalEn": "Foot Sweep",
+      "aliases": [
+        "foot sweep",
+        "フットスイープ"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.helicopter",
+      "category": "Action",
+      "canonicalJa": "ヘリコプタースイープ",
+      "canonicalEn": "Helicopter Sweep",
+      "aliases": [
+        "helicopter sweep",
+        "ヘリコプタースイープ"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.off_balance"
+      ]
+    },
+    {
       "tagId": "act.guard.sweep.pendulum",
       "category": "Action",
       "canonicalJa": "ペンデュラムスイープ",
@@ -1046,10 +1182,43 @@
       "canonicalEn": "Overhead Sweep",
       "aliases": [
         "overhead sweep",
-        "オーバーヘッドスイープ"
+        "オーバーヘッドスイープ",
+        "巴",
+        "巴投",
+        "トモエ"
       ],
       "related": [
         "pos.guard.closed",
+        "pre.off_balance"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.sleeve_drag",
+      "category": "Action",
+      "canonicalJa": "袖流し",
+      "canonicalEn": "Sleeve Drag Sweep",
+      "aliases": [
+        "sleeve drag sweep",
+        "sleeve drag",
+        "袖流し"
+      ],
+      "related": [
+        "pos.guard.open",
+        "pre.off_balance",
+        "pre.grip.sleeve"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.false_reap",
+      "category": "Action",
+      "canonicalJa": "ファルスリープ",
+      "canonicalEn": "False Reap",
+      "aliases": [
+        "false reap",
+        "ファルスリープ"
+      ],
+      "related": [
+        "pos.guard.open",
         "pre.off_balance"
       ]
     },
@@ -1330,6 +1499,8 @@
         "knee cut",
         "knee slice",
         "knee cut pass",
+        "クロスニー",
+        "クロスニーパス",
         "ニー スライス",
         "ニースライス",
         "ニーカットパス",
@@ -1414,7 +1585,9 @@
       "aliases": [
         "torreando",
         "bullfighter pass",
-        "ブルファイター"
+        "ブルファイター",
+        "トレアドール",
+        "トレアナ"
       ],
       "related": [
         "pre.distance_management",
@@ -1489,7 +1662,9 @@
       "canonicalEn": "Over-Under Pass",
       "aliases": [
         "over under",
-        "オーバーアンダー"
+        "オーバーアンダー",
+        "カミツキ",
+        "噛みつき"
       ],
       "related": [
         "pre.connection",
@@ -1506,7 +1681,8 @@
         "leg drag",
         "leg drag pass",
         "レッグドラ",
-        "レッグドラッグパス"
+        "レッグドラッグパス",
+        "ライイングレッグドラッグ"
       ],
       "related": [
         "pre.knee_line_control",
@@ -1537,7 +1713,9 @@
         "stacking pass",
         "stack pass",
         "stacking pass guard",
-        "スタッキングパスガード"
+        "スタッキングパスガード",
+        "スタック",
+        "かつぎ"
       ],
       "related": [
         "pre.posture_break",
@@ -1674,6 +1852,22 @@
       ]
     },
     {
+      "tagId": "act.transition.take_back.gator_roll",
+      "category": "Action",
+      "canonicalJa": "ゲーターロール",
+      "canonicalEn": "Gator Roll",
+      "aliases": [
+        "gator roll",
+        "ゲーターロール"
+      ],
+      "related": [
+        "act.transition.take_back",
+        "pos.turtle",
+        "pos.top.back_control",
+        "pre.hip_control"
+      ]
+    },
+    {
       "tagId": "act.control.back_retention",
       "category": "Action",
       "canonicalJa": "バック保持",
@@ -1685,6 +1879,21 @@
       "related": [
         "pre.seatbelt",
         "pre.hook_control"
+      ]
+    },
+    {
+      "tagId": "act.control.club_ride",
+      "category": "Action",
+      "canonicalJa": "クラブライド",
+      "canonicalEn": "Club Ride",
+      "aliases": [
+        "club ride",
+        "クラブライド"
+      ],
+      "related": [
+        "pos.turtle",
+        "act.transition.take_back",
+        "pre.hip_control"
       ]
     },
     {
@@ -1846,7 +2055,8 @@
         "anaconda choke",
         "anaconda",
         "アナコンダチョーク",
-        "アナコンダ"
+        "アナコンダ",
+        "スピニングチョーク"
       ],
       "related": [
         "pos.neutral.front_headlock",
@@ -1879,7 +2089,8 @@
         "arm triangle",
         "kata gatame",
         "肩固め",
-        "アームトライアングル"
+        "アームトライアングル",
+        "アームトライアングルチョーク"
       ],
       "related": [
         "pos.top.side_control",
@@ -1948,7 +2159,8 @@
       "canonicalEn": "Reverse Straight Arm Lock",
       "aliases": [
         "reverse straight arm lock",
-        "リバースストレートアームロック"
+        "リバースストレートアームロック",
+        "リバースアームロック"
       ],
       "related": [
         "act.sub.armbar",
@@ -1988,7 +2200,9 @@
       "aliases": [
         "belly down armbar",
         "belly down armlock",
-        "ベリーダウンアームロック"
+        "ベリーダウンアームロック",
+        "裏十字",
+        "逆十字"
       ],
       "related": [
         "act.sub.armbar",
@@ -2058,7 +2272,8 @@
         "ezekiel choke",
         "イゼキエル",
         "イゼキエルチョーク",
-        "エゼキエル"
+        "エゼキエル",
+        "袖車"
       ],
       "related": [
         "pos.top.mount",
@@ -2094,7 +2309,8 @@
         "bow and arrow choke (basic)",
         "ボウアンドアローチョーク",
         "ボーアンドアロー",
-        "ボウアンドアロー"
+        "ボウアンドアロー",
+        "弓矢絞め"
       ],
       "related": [
         "pos.top.back_control",
@@ -2151,7 +2367,12 @@
       "canonicalEn": "Forearm Choke",
       "aliases": [
         "forearm choke",
-        "フォアアームチョーク"
+        "フォアアームチョーク",
+        "カットチョーク",
+        "ペーパーカッター",
+        "ハンマーチョーク",
+        "前腕チョーク",
+        "ブレッドカッター"
       ],
       "related": [
         "pos.top.side_control",
@@ -2180,7 +2401,8 @@
       "canonicalEn": "Head Scissors",
       "aliases": [
         "head scissors",
-        "ヘッドシザーズ"
+        "ヘッドシザーズ",
+        "センタクバサミ"
       ],
       "related": [
         "pos.neutral.front_headlock",
@@ -2346,6 +2568,7 @@
       "aliases": [
         "americana",
         "ude garami",
+        "V1",
         "アームロック",
         "アメリカーナアームロック"
       ],
@@ -2378,7 +2601,9 @@
       "canonicalEn": "Heel Hook",
       "aliases": [
         "heel hook",
-        "ヒール"
+        "ヒール",
+        "外ヒール",
+        "内ヒール"
       ],
       "related": [
         "pos.leg_entanglement.ashi",
@@ -2937,6 +3162,42 @@
         "受け身",
         "後ろ受け身",
         "前回り受け身"
+      ],
+      "related": []
+    },
+    {
+      "tagId": "act.movement.bridge",
+      "category": "Action",
+      "canonicalJa": "ブリッジ",
+      "canonicalEn": "Bridge",
+      "aliases": [
+        "bridge",
+        "ブリッジ"
+      ],
+      "related": []
+    },
+    {
+      "tagId": "act.movement.top_spin",
+      "category": "Action",
+      "canonicalJa": "トップスピン",
+      "canonicalEn": "Top Spin",
+      "aliases": [
+        "top spin",
+        "topspin",
+        "head spin",
+        "トップスピン",
+        "ヘッドスピン"
+      ],
+      "related": []
+    },
+    {
+      "tagId": "act.movement.shoulder_roll",
+      "category": "Action",
+      "canonicalJa": "ショルダーロール",
+      "canonicalEn": "Shoulder Roll",
+      "aliases": [
+        "shoulder roll",
+        "ショルダーロール"
       ],
       "related": []
     },
@@ -3709,6 +3970,21 @@
       "related": [
         "act.guard.wrestle_up",
         "act.wrestling.single_leg"
+      ]
+    },
+    {
+      "tagId": "pre.reverse_kimura",
+      "category": "Prerequisite",
+      "canonicalJa": "リバースキムラ",
+      "canonicalEn": "Reverse Kimura",
+      "aliases": [
+        "reverse kimura",
+        "リバースキムラ"
+      ],
+      "related": [
+        "act.sub.kimura",
+        "pre.2on1",
+        "pre.control_elbow_line"
       ]
     },
     {
