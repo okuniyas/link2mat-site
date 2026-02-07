@@ -77,6 +77,26 @@
         font-weight: 600;
         font-size: 14px;
       }
+      .lang-switch {
+        display: flex;
+        gap: 8px;
+        margin: 12px 0 4px;
+        flex-wrap: wrap;
+      }
+      .lang-switch a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid #e5e7eb;
+        font-size: 12px;
+        text-decoration: none;
+        color: #111111;
+        background: #ffffff;
+      }
+      .lang-switch a.active {
+        background: #f3f4f6;
+        border-color: #cbd5f5;
+        font-weight: 600;
+      }
       a {
         color: #2563eb;
       }
@@ -87,6 +107,13 @@
       <h1>Tag Help / タグヘルプ</h1>
       <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
       <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
+
+      <div class="lang-switch" id="langSwitch">
+        <a href="?lang=ja" data-lang="ja">日本語</a>
+        <a href="?lang=en" data-lang="en">English</a>
+        <a href="?lang=ko" data-lang="ko">한국어</a>
+        <a href="?lang=pt" data-lang="pt">Português</a>
+      </div>
 
       <div class="bilingual">
         <div>
@@ -182,7 +209,7 @@
       </div>
 
       <h2>Tag list / タグ一覧</h2>
-      <p><a href="tags-list.html">Browse all tags / タグ一覧を見る</a></p>
+      <p><a id="tagListLink" href="tags-list.html">Browse all tags / タグ一覧を見る</a></p>
 
       <h2>Support / サポート</h2>
       <p><a href="index.html">Support page / サポートページへ</a></p>
@@ -193,6 +220,47 @@
     <script>
       const input = document.getElementById("tagInput");
       const link = document.getElementById("searchLink");
+      const langSwitch = document.getElementById("langSwitch");
+      const tagListLink = document.getElementById("tagListLink");
+
+      const resolveLang = () => {
+        const params = new URLSearchParams(window.location.search);
+        const raw = String(params.get("lang") || "").toLowerCase();
+        if (raw.startsWith("ja")) return "ja";
+        if (raw.startsWith("ko")) return "ko";
+        if (raw.startsWith("pt")) return "pt";
+        if (raw.startsWith("en")) return "en";
+        const nav = String(navigator.language || "").toLowerCase();
+        if (nav.startsWith("ja")) return "ja";
+        if (nav.startsWith("ko")) return "ko";
+        if (nav.startsWith("pt")) return "pt";
+        return "en";
+      };
+
+      const lang = resolveLang();
+      const ui = {
+        ja: { placeholder: "例: ハーフガード / half guard", search: "Webで検索" },
+        en: { placeholder: "e.g. half guard / ハーフガード", search: "Search the web" },
+        ko: { placeholder: "예: 하프 가드 / half guard", search: "웹에서 검색" },
+        pt: { placeholder: "Ex: meia guarda / half guard", search: "Pesquisar na web" },
+      };
+      const phrasePrefix = {
+        ja: '柔術で "%s" とは',
+        en: 'jiu jitsu "%s"',
+        ko: '주짓수 "%s"',
+        pt: 'jiu-jitsu "%s"',
+      };
+
+      input.placeholder = ui[lang]?.placeholder ?? ui.en.placeholder;
+      link.textContent = ui[lang]?.search ?? ui.en.search;
+      if (langSwitch) {
+        langSwitch.querySelectorAll("a").forEach((a) => {
+          a.classList.toggle("active", a.getAttribute("data-lang") === lang);
+        });
+      }
+      if (tagListLink) {
+        tagListLink.href = `tags-list.html?lang=${encodeURIComponent(lang)}`;
+      }
 
       const params = new URLSearchParams(window.location.search);
       const initial = params.get("tag");
@@ -206,7 +274,8 @@
           link.href = "https://www.google.com";
           return;
         }
-        const phrase = `柔術で "${query}" とは`;
+        const template = phrasePrefix[lang] || phrasePrefix.en;
+        const phrase = template.replace("%s", query);
         link.href = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
       };
 

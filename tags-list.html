@@ -76,6 +76,11 @@
         margin-left: 6px;
         text-decoration: none;
       }
+      .tag-alt {
+        color: #6b7280;
+        font-size: 13px;
+        margin-left: 6px;
+      }
       .tag-en:hover {
         text-decoration: underline;
       }
@@ -101,6 +106,26 @@
       a {
         color: #2563eb;
       }
+      .lang-switch {
+        display: flex;
+        gap: 8px;
+        margin: 12px 0 4px;
+        flex-wrap: wrap;
+      }
+      .lang-switch a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid #e5e7eb;
+        font-size: 12px;
+        text-decoration: none;
+        color: #111111;
+        background: #ffffff;
+      }
+      .lang-switch a.active {
+        background: #f3f4f6;
+        border-color: #cbd5f5;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -108,6 +133,13 @@
       <h1>Tag List / タグ一覧</h1>
       <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
       <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
+
+      <div class="lang-switch" id="langSwitch">
+        <a href="?lang=ja" data-lang="ja">日本語</a>
+        <a href="?lang=en" data-lang="en">English</a>
+        <a href="?lang=ko" data-lang="ko">한국어</a>
+        <a href="?lang=pt" data-lang="pt">Português</a>
+      </div>
 
       <div class="bilingual">
         <div>
@@ -135,13 +167,13 @@
         <div>
           <p class="muted">
             For specific tag requests, use the in-app request form. For general tag policy or structure,
-            email support. <a href="index.html">Support page</a>
+            email support. <a id="supportLinkEn" href="index.html">Support page</a>
           </p>
         </div>
         <div>
           <p class="muted">
             個別のタグの追加・変更はアプリから、Tag 全般のご要望はサポートメールへお願いします。
-            <a href="index.html">Support page</a>
+            <a id="supportLinkJa" href="index.html">Support page</a>
           </p>
         </div>
       </div>
@@ -169,30 +201,112 @@
     </div>
 
     <script>
-      const categoryLabels = {
-        Position: "Position / ポジション",
-        Scenario: "Scenario / シナリオ",
-        Prerequisite: "Setup / セットアップ",
-        Action: "Action / アクション",
-        Submission: "Submission / 極め",
-        Source: "Source / ソース",
+      const resolveLang = () => {
+        const params = new URLSearchParams(window.location.search);
+        const raw = String(params.get("lang") || "").toLowerCase();
+        if (raw.startsWith("ja")) return "ja";
+        if (raw.startsWith("ko")) return "ko";
+        if (raw.startsWith("pt")) return "pt";
+        if (raw.startsWith("en")) return "en";
+        const nav = String(navigator.language || "").toLowerCase();
+        if (nav.startsWith("ja")) return "ja";
+        if (nav.startsWith("ko")) return "ko";
+        if (nav.startsWith("pt")) return "pt";
+        return "en";
       };
+
+      const lang = resolveLang();
+      const langSwitch = document.getElementById("langSwitch");
+      const supportLinkEn = document.getElementById("supportLinkEn");
+      const supportLinkJa = document.getElementById("supportLinkJa");
+      if (langSwitch) {
+        langSwitch.querySelectorAll("a").forEach((a) => {
+          a.classList.toggle("active", a.getAttribute("data-lang") === lang);
+        });
+      }
+      if (supportLinkEn) supportLinkEn.href = `index.html?lang=${encodeURIComponent(lang)}`;
+      if (supportLinkJa) supportLinkJa.href = `index.html?lang=${encodeURIComponent(lang)}`;
+
+      const categoryLabels =
+        lang === "ja"
+          ? {
+              Position: "ポジション",
+              Scenario: "シナリオ",
+              Prerequisite: "セットアップ",
+              Action: "アクション",
+              Submission: "極め",
+              Source: "ソース",
+            }
+          : {
+              Position: "Position",
+              Scenario: "Scenario",
+              Prerequisite: "Setup",
+              Action: "Action",
+              Submission: "Submission",
+              Source: "Source",
+            };
 
       const list = document.getElementById("list");
       const count = document.getElementById("count");
       const input = document.getElementById("searchInput");
+      const placeholders = {
+        ja: "タグ検索",
+        en: "Search tags",
+        ko: "태그 검색",
+        pt: "Pesquisar tags",
+      };
+      input.placeholder = `${placeholders[lang] || placeholders.en} / Tag`;
 
       const normalize = (value) => value.toLowerCase().trim();
+      const getLabels = (tag) => (tag.labels && typeof tag.labels === "object" ? tag.labels : {});
+      const getAliasesByLocale = (tag) =>
+        tag.aliasesByLocale && typeof tag.aliasesByLocale === "object" ? tag.aliasesByLocale : {};
+      const resolveLabel = (tag) => {
+        const labels = getLabels(tag);
+        return (
+          labels[lang] ||
+          (lang === "ja" ? tag.canonicalJa : tag.canonicalEn) ||
+          tag.canonicalJa ||
+          tag.canonicalEn ||
+          tag.tagId
+        );
+      };
+      const resolveAltLabel = (tag, primary) => {
+        const labels = getLabels(tag);
+        const alt =
+          lang === "ja"
+            ? labels.en || tag.canonicalEn
+            : labels.ja || tag.canonicalJa;
+        if (!alt || alt === primary) return "";
+        return alt;
+      };
+      const resolveAliases = (tag) => {
+        const byLocale = getAliasesByLocale(tag);
+        if (Array.isArray(byLocale[lang]) && byLocale[lang].length) return byLocale[lang];
+        if (Array.isArray(tag.aliases) && tag.aliases.length) return tag.aliases;
+        const merged = Object.values(byLocale).flat();
+        return merged.filter((value) => typeof value === "string" && value.trim());
+      };
+      const collectSearchText = (tag) => {
+        const labels = Object.values(getLabels(tag));
+        const byLocale = Object.values(getAliasesByLocale(tag)).flat();
+        return [
+          tag.canonicalJa,
+          tag.canonicalEn,
+          ...labels,
+          ...(tag.aliases || []),
+          ...byLocale,
+        ]
+          .filter(Boolean)
+          .join(" ");
+      };
 
       const render = (tags, query) => {
         list.innerHTML = "";
         const q = normalize(query || "");
         const filtered = tags.filter((tag) => {
           if (!q) return true;
-          const text = [tag.canonicalJa, tag.canonicalEn, ...(tag.aliases || [])]
-            .filter(Boolean)
-            .join(" ");
-          return normalize(text).includes(q);
+          return normalize(collectSearchText(tag)).includes(q);
         });
 
         count.textContent = `${filtered.length} tags`;
@@ -227,21 +341,24 @@
             const heading = document.createElement("div");
             heading.className = "tag-title";
             const link = document.createElement("a");
-            link.href = `tags-detail.html?id=${encodeURIComponent(tag.tagId)}`;
-            link.textContent = tag.canonicalJa || tag.canonicalEn || tag.tagId;
+            link.href = `tags-detail.html?id=${encodeURIComponent(tag.tagId)}&lang=${encodeURIComponent(
+              lang
+            )}`;
+            const primary = resolveLabel(tag);
+            link.textContent = primary;
             heading.appendChild(link);
 
-            if (tag.canonicalEn) {
-              const en = document.createElement("a");
-              en.className = "tag-en";
-              en.href = `tags-detail.html?tag=${encodeURIComponent(tag.canonicalEn)}`;
-              en.textContent = tag.canonicalEn;
-              heading.appendChild(en);
+            const alt = resolveAltLabel(tag, primary);
+            if (alt) {
+              const altSpan = document.createElement("span");
+              altSpan.className = "tag-alt";
+              altSpan.textContent = `(${alt})`;
+              heading.appendChild(altSpan);
             }
 
             const meta = document.createElement("div");
             meta.className = "tag-meta";
-            const aliasText = (tag.aliases || []).join(", ");
+            const aliasText = resolveAliases(tag).join(", ");
             meta.textContent = aliasText ? `Aliases: ${aliasText}` : "";
 
             item.appendChild(heading);

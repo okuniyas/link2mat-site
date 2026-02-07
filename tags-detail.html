@@ -66,6 +66,26 @@
         font-weight: 600;
         font-size: 14px;
       }
+      .lang-switch {
+        display: flex;
+        gap: 8px;
+        margin: 12px 0 4px;
+        flex-wrap: wrap;
+      }
+      .lang-switch a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid #e5e7eb;
+        font-size: 12px;
+        text-decoration: none;
+        color: #111111;
+        background: #ffffff;
+      }
+      .lang-switch a.active {
+        background: #f3f4f6;
+        border-color: #cbd5f5;
+        font-weight: 600;
+      }
       a {
         color: #2563eb;
       }
@@ -77,25 +97,37 @@
       <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
       <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
 
+      <div class="lang-switch" id="langSwitch">
+        <a href="?lang=ja" data-lang="ja">日本語</a>
+        <a href="?lang=en" data-lang="en">English</a>
+        <a href="?lang=ko" data-lang="ko">한국어</a>
+        <a href="?lang=pt" data-lang="pt">Português</a>
+      </div>
+
       <div id="content" class="card">
         <p>Loading...</p>
       </div>
 
       <h2>Support / サポート</h2>
-      <p><a href="index.html">Support page / サポートページへ</a></p>
-      <p><a href="tags-list.html">Tag list / タグ一覧へ</a></p>
+      <p><a id="supportLink" href="index.html">Support page / サポートページへ</a></p>
+      <p><a id="tagListLink" href="tags-list.html">Tag list / タグ一覧へ</a></p>
       <p class="muted">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
       <p class="muted">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
     </div>
 
     <script>
-      const categoryLabels = {
-        Position: "Position / ポジション",
-        Scenario: "Scenario / シナリオ",
-        Prerequisite: "Setup / セットアップ",
-        Action: "Action / アクション",
-        Submission: "Submission / 極め",
-        Source: "Source / ソース",
+      const resolveLang = () => {
+        const params = new URLSearchParams(window.location.search);
+        const raw = String(params.get("lang") || "").toLowerCase();
+        if (raw.startsWith("ja")) return "ja";
+        if (raw.startsWith("ko")) return "ko";
+        if (raw.startsWith("pt")) return "pt";
+        if (raw.startsWith("en")) return "en";
+        const nav = String(navigator.language || "").toLowerCase();
+        if (nav.startsWith("ja")) return "ja";
+        if (nav.startsWith("ko")) return "ko";
+        if (nav.startsWith("pt")) return "pt";
+        return "en";
       };
 
       const normalize = (value) => String(value || "").toLowerCase().trim();
@@ -104,6 +136,40 @@
       const tagId = params.get("id");
       const tagQuery = params.get("tag");
       const tagQueryRaw = tagQuery ? tagQuery.trim() : "";
+      const lang = resolveLang();
+      const supportLink = document.getElementById("supportLink");
+      const tagListLink = document.getElementById("tagListLink");
+      const langSwitch = document.getElementById("langSwitch");
+      if (langSwitch) {
+        langSwitch.querySelectorAll("a").forEach((a) => {
+          a.classList.toggle("active", a.getAttribute("data-lang") === lang);
+        });
+      }
+      if (supportLink) {
+        supportLink.href = `index.html?lang=${encodeURIComponent(lang)}`;
+      }
+      if (tagListLink) {
+        tagListLink.href = `tags-list.html?lang=${encodeURIComponent(lang)}`;
+      }
+      const isJapanese = lang === "ja";
+      const categoryLabels =
+        lang === "ja"
+          ? {
+              Position: "ポジション",
+              Scenario: "シナリオ",
+              Prerequisite: "セットアップ",
+              Action: "アクション",
+              Submission: "極め",
+              Source: "ソース",
+            }
+          : {
+              Position: "Position",
+              Scenario: "Scenario",
+              Prerequisite: "Setup",
+              Action: "Action",
+              Submission: "Submission",
+              Source: "Source",
+            };
 
       const findTag = (tags) => {
         if (tagId) {
@@ -115,6 +181,16 @@
           tags.find((tag) => normalize(tag.canonicalJa) === q) ||
           tags.find((tag) => normalize(tag.canonicalEn) === q) ||
           tags.find((tag) => (tag.aliases || []).some((a) => normalize(a) === q)) ||
+          tags.find((tag) => {
+            const labels = tag.labels || {};
+            return Object.values(labels).some((value) => normalize(value) === q);
+          }) ||
+          tags.find((tag) => {
+            const byLocale = tag.aliasesByLocale || {};
+            return Object.values(byLocale)
+              .flat()
+              .some((value) => normalize(value) === q);
+          }) ||
           null
         );
       };
@@ -124,38 +200,66 @@
         content.innerHTML = `
           <p>Tag not found. Try searching from the list.</p>
           <p>タグが見つかりません。タグ一覧から検索してください。</p>
-          <p><a href="tags-list.html">Tag list / タグ一覧へ</a></p>
+          <p><a href="tags-list.html?lang=${encodeURIComponent(
+            lang
+          )}">Tag list / タグ一覧へ</a></p>
         `;
       };
 
       const renderTag = (tag) => {
         const content = document.getElementById("content");
         const title = document.getElementById("title");
-        const display = tag.canonicalJa || tag.canonicalEn || tag.tagId;
+        const labels = tag.labels || {};
+        const display =
+          labels[lang] ||
+          (lang === "ja" ? tag.canonicalJa : tag.canonicalEn) ||
+          tag.canonicalJa ||
+          tag.canonicalEn ||
+          tag.tagId;
         title.textContent = `${display} / タグ詳細`;
 
-        const aliasText = (tag.aliases || []).join(", ");
-        const related = (tag.related || []).map((id) =>
-          `<li><a href="tags-detail.html?id=${encodeURIComponent(id)}">${id}</a></li>`
+        const byLocale = tag.aliasesByLocale || {};
+        const aliasText = (byLocale[lang] && byLocale[lang].length
+          ? byLocale[lang]
+          : tag.aliases || []
+        )
+          .filter(Boolean)
+          .join(", ");
+        const related = (tag.related || []).map(
+          (id) =>
+            `<li><a href="tags-detail.html?id=${encodeURIComponent(
+              id
+            )}&lang=${encodeURIComponent(lang)}">${id}</a></li>`
         );
         const category = categoryLabels[tag.category] || tag.category || "Other";
 
-        const matchesQuery = (value) => normalize(value) === normalize(tagQueryRaw);
-        const isEnglishQuery =
-          tagQueryRaw &&
-          (matchesQuery(tag.canonicalEn) || (tag.aliases || []).some((a) => matchesQuery(a)));
         const query =
-          tagQueryRaw && (matchesQuery(tag.canonicalJa) || isEnglishQuery)
-            ? tagQueryRaw
-            : tag.canonicalJa || tag.canonicalEn || tag.tagId;
-        const phrase = isEnglishQuery
-          ? `what is "${query}" in jiu jitsu`
-          : `柔術で "${query}" とは`;
+          tagQueryRaw ||
+          display ||
+          tag.tagId;
+        const phrase =
+          lang === "ja"
+            ? `柔術で "${query}" とは`
+            : lang === "ko"
+            ? `주짓수 "${query}"`
+            : lang === "pt"
+            ? `jiu-jitsu "${query}"`
+            : `jiu jitsu "${query}"`;
         const webSearch = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
+        const searchLabel =
+          lang === "ja"
+            ? "Webで検索"
+            : lang === "ko"
+            ? "웹에서 검색"
+            : lang === "pt"
+            ? "Pesquisar na web"
+            : "Search the web";
 
         content.innerHTML = `
           <p><span class="badge">${category}</span><span class="badge">${tag.tagId}</span></p>
-          <p><strong>${tag.canonicalJa || ""}</strong> ${tag.canonicalEn ? `(${tag.canonicalEn})` : ""}</p>
+          <p><strong>${display}</strong> ${
+            tag.canonicalEn && tag.canonicalEn !== display ? `(${tag.canonicalEn})` : ""
+          }</p>
           ${aliasText ? `<p><strong>Aliases:</strong> ${aliasText}</p>` : "<p><strong>Aliases:</strong> -</p>"}
           <div>
             <p><strong>Related tags:</strong></p>
@@ -163,7 +267,7 @@
           </div>
           <div class="row">
             <a class="button" href="${webSearch}" target="_blank" rel="noreferrer">
-              Search the web / Webで検索
+              ${searchLabel}
             </a>
           </div>
         `;
