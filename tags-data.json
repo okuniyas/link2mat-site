@@ -1183,6 +1183,44 @@
       ]
     },
     {
+      "tagId": "pos.top.headquarters",
+      "category": "Position",
+      "canonicalJa": "ヘッドクオーター",
+      "canonicalEn": "Headquarters",
+      "related": [
+        "pos.guard.half",
+        "pos.guard.knee_shield",
+        "act.pass.knee_cut",
+        "act.pass.long_step",
+        "act.pass.leg_drag"
+      ],
+      "labels": {
+        "ja": "ヘッドクオーター",
+        "en": "Headquarters",
+        "ko": "헤드쿼터",
+        "pt": "Headquarters"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "headquarters",
+          "hq",
+          "headquarters position"
+        ],
+        "ko": [
+          "헤드쿼터"
+        ],
+        "pt": [
+          "headquarters"
+        ]
+      },
+      "aliases": [
+        "headquarters",
+        "hq",
+        "headquarters position",
+        "헤드쿼터"
+      ]
+    },
+    {
       "tagId": "pos.top.mount",
       "category": "Position",
       "canonicalJa": "マウント",
@@ -2749,6 +2787,40 @@
       ]
     },
     {
+      "tagId": "act.guard.leg_scoop",
+      "category": "Action",
+      "canonicalJa": "レッグスクープ",
+      "canonicalEn": "Leg Scoop",
+      "related": [
+        "act.guard.sweep.leg_scoop_roll",
+        "act.guard.sweep"
+      ],
+      "labels": {
+        "ja": "レッグスクープ",
+        "en": "Leg Scoop",
+        "ko": "레그 스쿱",
+        "pt": "Scoop na perna"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "leg scoop",
+          "scoop grip"
+        ],
+        "ko": [
+          "레그 스쿱"
+        ],
+        "pt": [
+          "scoop na perna"
+        ]
+      },
+      "aliases": [
+        "leg scoop",
+        "scoop grip",
+        "레그 스쿱",
+        "scoop na perna"
+      ]
+    },
+    {
       "tagId": "act.guard.sweep.hip_thrust",
       "category": "Action",
       "canonicalJa": "ヒップスラストスイープ",
@@ -3592,6 +3664,81 @@
         "stabilize",
         "안정화",
         "estabilizar"
+      ]
+    },
+    {
+      "tagId": "act.control.head_post",
+      "category": "Action",
+      "canonicalJa": "ヘッドポスト",
+      "canonicalEn": "Head Post",
+      "related": [
+        "act.pass.knee_cut",
+        "act.pass.knee_through",
+        "pre.tripod"
+      ],
+      "labels": {
+        "ja": "ヘッドポスト",
+        "en": "Head Post",
+        "ko": "헤드 포스트",
+        "pt": "Apoio de cabeça"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "head post",
+          "forehead post",
+          "head posting"
+        ],
+        "ko": [
+          "헤드 포스트",
+          "이마 포스트"
+        ],
+        "pt": [
+          "apoio de cabeça",
+          "apoio com a testa"
+        ]
+      },
+      "aliases": [
+        "head post",
+        "forehead post",
+        "head posting",
+        "헤드 포스트",
+        "이마 포스트",
+        "apoio de cabeça",
+        "apoio com a testa"
+      ]
+    },
+    {
+      "tagId": "act.control.armpit_cup",
+      "category": "Action",
+      "canonicalJa": "脇カップ",
+      "canonicalEn": "Armpit Cup",
+      "related": [
+        "act.transition.take_back",
+        "pre.control.elbow_line"
+      ],
+      "labels": {
+        "ja": "脇カップ",
+        "en": "Armpit Cup",
+        "ko": "겨드랑이 컵",
+        "pt": "Concha na axila"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "armpit cup",
+          "underarm cup"
+        ],
+        "ko": [
+          "겨드랑이 컵"
+        ],
+        "pt": [
+          "concha na axila"
+        ]
+      },
+      "aliases": [
+        "armpit cup",
+        "underarm cup",
+        "겨드랑이 컵",
+        "concha na axila"
       ]
     },
     {
@@ -6734,6 +6881,42 @@
         "technical stand-up",
         "테크니컬 스탠드업",
         "levantada técnica"
+      ]
+    },
+    {
+      "tagId": "act.movement.step_back",
+      "category": "Action",
+      "canonicalJa": "ステップバック",
+      "canonicalEn": "Step Back",
+      "related": [
+        "pre.distance_management",
+        "act.pass.torreando"
+      ],
+      "labels": {
+        "ja": "ステップバック",
+        "en": "Step Back",
+        "ko": "스텝백",
+        "pt": "Passo atrás"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "step back",
+          "back step"
+        ],
+        "ko": [
+          "스텝백",
+          "백스텝"
+        ],
+        "pt": [
+          "passo atrás"
+        ]
+      },
+      "aliases": [
+        "step back",
+        "back step",
+        "스텝백",
+        "백스텝",
+        "passo atrás"
       ]
     },
     {

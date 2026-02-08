@@ -94,14 +94,16 @@
   <body>
     <div class="container">
       <h1 id="title">Tag Detail / タグ詳細</h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
-      <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
+      <p class="muted"><strong>Last updated:</strong> 2026-02-01</p>
+      <p class="muted"><strong>更新日:</strong> 2026-02-01</p>
 
       <div class="lang-switch" id="langSwitch">
         <a href="?lang=ja" data-lang="ja">日本語</a>
         <a href="?lang=en" data-lang="en">English</a>
         <a href="?lang=ko" data-lang="ko">한국어</a>
         <a href="?lang=pt" data-lang="pt">Português</a>
+        <a href="?lang=es" data-lang="es">Español</a>
+        <a href="?lang=fr" data-lang="fr">Français</a>
       </div>
 
       <div id="content" class="card">
@@ -122,11 +124,15 @@
         if (raw.startsWith("ja")) return "ja";
         if (raw.startsWith("ko")) return "ko";
         if (raw.startsWith("pt")) return "pt";
+        if (raw.startsWith("es")) return "es";
+        if (raw.startsWith("fr")) return "fr";
         if (raw.startsWith("en")) return "en";
         const nav = String(navigator.language || "").toLowerCase();
         if (nav.startsWith("ja")) return "ja";
         if (nav.startsWith("ko")) return "ko";
         if (nav.startsWith("pt")) return "pt";
+        if (nav.startsWith("es")) return "es";
+        if (nav.startsWith("fr")) return "fr";
         return "en";
       };
 
@@ -135,7 +141,6 @@
       const params = new URLSearchParams(window.location.search);
       const tagId = params.get("id");
       const tagQuery = params.get("tag");
-      const tagQueryRaw = tagQuery ? tagQuery.trim() : "";
       const lang = resolveLang();
       const supportLink = document.getElementById("supportLink");
       const tagListLink = document.getElementById("tagListLink");
@@ -162,14 +167,51 @@
               Submission: "極め",
               Source: "ソース",
             }
-          : {
-              Position: "Position",
-              Scenario: "Scenario",
-              Prerequisite: "Setup",
-              Action: "Action",
-              Submission: "Submission",
-              Source: "Source",
-            };
+          : lang === "ko"
+            ? {
+                Position: "포지션",
+                Scenario: "시나리오",
+                Prerequisite: "셋업",
+                Action: "액션",
+                Submission: "서브미션",
+                Source: "소스",
+              }
+            : lang === "pt"
+              ? {
+                  Position: "Posição",
+                  Scenario: "Cenário",
+                  Prerequisite: "Preparação",
+                  Action: "Ação",
+                  Submission: "Finalização",
+                  Source: "Fonte",
+                }
+              : lang === "es"
+                ? {
+                    Position: "Posición",
+                    Scenario: "Escenario",
+                    Prerequisite: "Preparación",
+                    Action: "Acción",
+                    Submission: "Finalización",
+                    Source: "Fuente",
+                  }
+                : lang === "fr"
+                  ? {
+                      Position: "Position",
+                      Scenario: "Scénario",
+                      Prerequisite: "Préparation",
+                      Action: "Action",
+                      Submission: "Soumission",
+                      Source: "Source",
+                    }
+                  : {
+                      Position: "Position",
+                      Scenario: "Scenario",
+                      Prerequisite: "Setup",
+                      Action: "Action",
+                      Submission: "Submission",
+                      Source: "Source",
+                    };
+      const tagQueryRaw = tagQuery ? tagQuery.trim() : "";
 
       const findTag = (tags) => {
         if (tagId) {
@@ -200,6 +242,8 @@
         content.innerHTML = `
           <p>Tag not found. Try searching from the list.</p>
           <p>タグが見つかりません。タグ一覧から検索してください。</p>
+          <p>No se encontró la etiqueta. Prueba a buscar en la lista.</p>
+          <p>Tag introuvable. Essayez de chercher dans la liste.</p>
           <p><a href="tags-list.html?lang=${encodeURIComponent(
             lang
           )}">Tag list / タグ一覧へ</a></p>
@@ -216,7 +260,19 @@
           tag.canonicalJa ||
           tag.canonicalEn ||
           tag.tagId;
-        title.textContent = `${display} / タグ詳細`;
+        const titleSuffix =
+          lang === "ja"
+            ? "タグ詳細"
+            : lang === "ko"
+            ? "태그 상세"
+            : lang === "pt"
+            ? "Detalhe da tag"
+            : lang === "es"
+            ? "Detalle de la etiqueta"
+            : lang === "fr"
+            ? "Détail du tag"
+            : "Tag Detail";
+        title.textContent = `${display} / ${titleSuffix}`;
 
         const byLocale = tag.aliasesByLocale || {};
         const aliasText = (byLocale[lang] && byLocale[lang].length
@@ -244,8 +300,13 @@
             ? `주짓수 "${query}"`
             : lang === "pt"
             ? `jiu-jitsu "${query}"`
+            : lang === "es"
+            ? `jiu-jitsu "${query}"`
+            : lang === "fr"
+            ? `jiu-jitsu "${query}"`
             : `jiu jitsu "${query}"`;
         const webSearch = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
+
         const searchLabel =
           lang === "ja"
             ? "Webで検索"
@@ -253,8 +314,11 @@
             ? "웹에서 검색"
             : lang === "pt"
             ? "Pesquisar na web"
+            : lang === "es"
+            ? "Buscar en la web"
+            : lang === "fr"
+            ? "Rechercher sur le web"
             : "Search the web";
-
         content.innerHTML = `
           <p><span class="badge">${category}</span><span class="badge">${tag.tagId}</span></p>
           <p><strong>${display}</strong> ${

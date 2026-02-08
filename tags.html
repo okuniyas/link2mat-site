@@ -113,6 +113,8 @@
         <a href="?lang=en" data-lang="en">English</a>
         <a href="?lang=ko" data-lang="ko">한국어</a>
         <a href="?lang=pt" data-lang="pt">Português</a>
+        <a href="?lang=es" data-lang="es">Español</a>
+        <a href="?lang=fr" data-lang="fr">Français</a>
       </div>
 
       <div class="bilingual">
@@ -229,11 +231,15 @@
         if (raw.startsWith("ja")) return "ja";
         if (raw.startsWith("ko")) return "ko";
         if (raw.startsWith("pt")) return "pt";
+        if (raw.startsWith("es")) return "es";
+        if (raw.startsWith("fr")) return "fr";
         if (raw.startsWith("en")) return "en";
         const nav = String(navigator.language || "").toLowerCase();
         if (nav.startsWith("ja")) return "ja";
         if (nav.startsWith("ko")) return "ko";
         if (nav.startsWith("pt")) return "pt";
+        if (nav.startsWith("es")) return "es";
+        if (nav.startsWith("fr")) return "fr";
         return "en";
       };
 
@@ -243,12 +249,16 @@
         en: { placeholder: "e.g. half guard / ハーフガード", search: "Search the web" },
         ko: { placeholder: "예: 하프 가드 / half guard", search: "웹에서 검색" },
         pt: { placeholder: "Ex: meia guarda / half guard", search: "Pesquisar na web" },
+        es: { placeholder: "p. ej. media guardia / half guard", search: "Buscar en la web" },
+        fr: { placeholder: "ex. demi-garde / half guard", search: "Rechercher sur le web" },
       };
       const phrasePrefix = {
         ja: '柔術で "%s" とは',
         en: 'jiu jitsu "%s"',
         ko: '주짓수 "%s"',
         pt: 'jiu-jitsu "%s"',
+        es: 'jiu-jitsu "%s"',
+        fr: 'jiu-jitsu "%s"',
       };
 
       input.placeholder = ui[lang]?.placeholder ?? ui.en.placeholder;
