@@ -3610,6 +3610,49 @@
       ]
     },
     {
+      "tagId": "act.pass.lying_leg_drag",
+      "category": "Action",
+      "canonicalJa": "ライイングレッグドラッグ",
+      "canonicalEn": "Lying Leg Drag",
+      "related": [
+        "act.pass.leg_drag",
+        "act.movement.lying_down",
+        "pre.knee_line_control",
+        "pre.hip_line_control",
+        "pre.grip.cross_collar_low"
+      ],
+      "labels": {
+        "ja": "ライイングレッグドラッグ",
+        "en": "Lying Leg Drag",
+        "ko": "라잉 레그 드래그",
+        "pt": "Arrasto de Perna Deitado"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "lying leg drag",
+          "leg drag from lying"
+        ],
+        "ja": [
+          "寝ながらレッグドラッグ",
+          "横になってレッグドラッグ"
+        ],
+        "ko": [
+          "누워서 레그 드래그"
+        ],
+        "pt": [
+          "arrasto de perna deitado"
+        ]
+      },
+      "aliases": [
+        "lying leg drag",
+        "leg drag from lying",
+        "寝ながらレッグドラッグ",
+        "横になってレッグドラッグ",
+        "누워서 레그 드래그",
+        "arrasto de perna deitado"
+      ]
+    },
+    {
       "tagId": "act.pass.duck_under",
       "category": "Action",
       "canonicalJa": "ダックアンダー",
@@ -6938,6 +6981,44 @@
       ]
     },
     {
+      "tagId": "act.movement.lying_down",
+      "category": "Action",
+      "canonicalJa": "横になる",
+      "canonicalEn": "Lying Down",
+      "related": [
+        "act.pass.lying_leg_drag",
+        "pre.angle_created"
+      ],
+      "labels": {
+        "ja": "横になる",
+        "en": "Lying Down",
+        "ko": "눕기",
+        "pt": "Deitar"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "lie down",
+          "lying down"
+        ],
+        "ja": [
+          "寝る"
+        ],
+        "ko": [
+          "눕기"
+        ],
+        "pt": [
+          "deitar"
+        ]
+      },
+      "aliases": [
+        "lie down",
+        "lying down",
+        "寝る",
+        "눕기",
+        "deitar"
+      ]
+    },
+    {
       "tagId": "act.movement.technical_stand_up",
       "category": "Action",
       "canonicalJa": "テクニカルスタンドアップ",
@@ -7931,6 +8012,48 @@
         "back collar grip",
         "백 칼라 그립",
         "pegada na gola de costas"
+      ]
+    },
+    {
+      "tagId": "pre.grip.cross_collar_low",
+      "category": "Prerequisite",
+      "canonicalJa": "クロス襟下グリップ",
+      "canonicalEn": "Low Cross Collar Grip",
+      "related": [
+        "scn.attire.gi",
+        "act.pass.stack_guard",
+        "act.pass.lying_leg_drag",
+        "pre.pressure"
+      ],
+      "labels": {
+        "ja": "クロス襟下グリップ",
+        "en": "Low Cross Collar Grip",
+        "ko": "로우 크로스 칼라 그립",
+        "pt": "Pegada Baixa na Gola Cruzada"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "low cross collar",
+          "cross collar low",
+          "low cross collar grip"
+        ],
+        "ja": [
+          "クロス襟下"
+        ],
+        "ko": [
+          "로우 크로스 칼라"
+        ],
+        "pt": [
+          "gola cruzada baixa"
+        ]
+      },
+      "aliases": [
+        "low cross collar",
+        "cross collar low",
+        "low cross collar grip",
+        "クロス襟下",
+        "로우 크로스 칼라",
+        "gola cruzada baixa"
       ]
     },
     {
