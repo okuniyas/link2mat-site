@@ -4174,7 +4174,7 @@
       "tagId": "act.control.club_ride",
       "category": "Action",
       "canonicalJa": "クラブライド",
-      "canonicalEn": "Club Ride",
+      "canonicalEn": "Crab Ride",
       "related": [
         "pos.turtle",
         "act.transition.take_back",
@@ -4182,23 +4182,23 @@
       ],
       "labels": {
         "ja": "クラブライド",
-        "en": "Club Ride",
+        "en": "Crab Ride",
         "ko": "클럽 라이드",
-        "pt": "Club Ride"
+        "pt": "Crab Ride"
       },
       "aliasesByLocale": {
         "en": [
-          "club ride"
+          "crab ride"
         ],
         "ko": [
           "클럽 라이드"
         ],
         "pt": [
-          "club ride"
+          "crab ride"
         ]
       },
       "aliases": [
-        "club ride",
+        "crab ride",
         "클럽 라이드"
       ]
     },
@@ -10365,6 +10365,44 @@
         "cross hook",
         "크로스 훅",
         "gancho cruzado"
+      ]
+    },
+    {
+      "tagId": "pre.leg_hook",
+      "category": "Prerequisite",
+      "canonicalJa": "レッグフック",
+      "canonicalEn": "Leg Hook",
+      "related": [
+        "act.guard.recovery.leg_hook",
+        "act.control.back_retention"
+      ],
+      "labels": {
+        "ja": "レッグフック",
+        "en": "Leg Hook",
+        "ko": "레그 훅",
+        "pt": "Gancho de Perna"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "leg hook",
+          "leg hooking"
+        ],
+        "ja": [
+          "足フック"
+        ],
+        "ko": [
+          "레그 훅"
+        ],
+        "pt": [
+          "gancho de perna"
+        ]
+      },
+      "aliases": [
+        "leg hook",
+        "leg hooking",
+        "足フック",
+        "레그 훅",
+        "gancho de perna"
       ]
     },
     {
