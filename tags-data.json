@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.0",
+  "version": "dict_v1.1.0",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -2941,7 +2941,9 @@
       "aliasesByLocale": {
         "en": [
           "granby roll",
-          "granby"
+          "granby",
+          "roly-poly",
+          "roly poly"
         ],
         "ko": [
           "그랜비 롤"
@@ -2953,8 +2955,52 @@
       "aliases": [
         "granby roll",
         "granby",
+        "roly-poly",
+        "roly poly",
         "그랜비 롤",
         "rolamento granby"
+      ]
+    },
+    {
+      "tagId": "act.guard.kiss_of_the_dragon",
+      "category": "Action",
+      "canonicalJa": "キスオブザドラゴン",
+      "canonicalEn": "Kiss of the Dragon",
+      "related": [
+        "act.guard.inversion",
+        "act.guard.berimbolo",
+        "act.transition.take_back",
+        "pos.guard.dlr"
+      ],
+      "labels": {
+        "ja": "キスオブザドラゴン",
+        "en": "Kiss of the Dragon",
+        "ko": "키스 오브 더 드래곤",
+        "pt": "Beijo do Dragão"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "kiss of the dragon",
+          "kiss of dragon",
+          "kotd"
+        ],
+        "ja": [
+          "キスオブザドラゴン"
+        ],
+        "ko": [
+          "키스 오브 더 드래곤"
+        ],
+        "pt": [
+          "beijo do dragão"
+        ]
+      },
+      "aliases": [
+        "kiss of the dragon",
+        "kiss of dragon",
+        "kotd",
+        "キスオブザドラゴン",
+        "키스 오브 더 드래곤",
+        "beijo do dragão"
       ]
     },
     {
@@ -3561,6 +3607,42 @@
         "leg drag pass",
         "레그 드래그",
         "arrasto de perna"
+      ]
+    },
+    {
+      "tagId": "act.pass.duck_under",
+      "category": "Action",
+      "canonicalJa": "ダックアンダー",
+      "canonicalEn": "Duck Under",
+      "related": [
+        "act.pass.leg_drag",
+        "pre.level_change",
+        "pre.angle_created"
+      ],
+      "labels": {
+        "ja": "ダックアンダー",
+        "en": "Duck Under",
+        "ko": "덕 언더",
+        "pt": "Duck Under"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "duck under"
+        ],
+        "ja": [
+          "ダックアンダー"
+        ],
+        "ko": [
+          "덕 언더"
+        ],
+        "pt": [
+          "duck under"
+        ]
+      },
+      "aliases": [
+        "duck under",
+        "ダックアンダー",
+        "덕 언더"
       ]
     },
     {
@@ -6834,7 +6916,11 @@
       },
       "aliasesByLocale": {
         "en": [
-          "shoulder roll"
+          "shoulder roll",
+          "side roll"
+        ],
+        "ja": [
+          "サイドロール"
         ],
         "ko": [
           "숄더 롤"
@@ -6845,6 +6931,8 @@
       },
       "aliases": [
         "shoulder roll",
+        "side roll",
+        "サイドロール",
         "숄더 롤",
         "rolamento de ombro"
       ]
@@ -8011,6 +8099,48 @@
         "armpit grip",
         "암핏 라펠 그립",
         "pegada na lapela da axila"
+      ]
+    },
+    {
+      "tagId": "pre.grip.shoulder_hug",
+      "category": "Prerequisite",
+      "canonicalJa": "肩抱えグリップ",
+      "canonicalEn": "Shoulder Hug Grip",
+      "related": [
+        "act.pass.smash_pass",
+        "act.pass.over_under",
+        "pre.pressure",
+        "pre.shoulder_line_control"
+      ],
+      "labels": {
+        "ja": "肩抱えグリップ",
+        "en": "Shoulder Hug Grip",
+        "ko": "숄더 허그 그립",
+        "pt": "Pegada de Abraço no Ombro"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "shoulder hug",
+          "shoulder hug grip",
+          "shoulder clamp"
+        ],
+        "ja": [
+          "肩抱え"
+        ],
+        "ko": [
+          "숄더 허그"
+        ],
+        "pt": [
+          "abraço no ombro"
+        ]
+      },
+      "aliases": [
+        "shoulder hug",
+        "shoulder hug grip",
+        "shoulder clamp",
+        "肩抱え",
+        "숄더 허그",
+        "abraço no ombro"
       ]
     },
     {
@@ -9313,6 +9443,45 @@
         "hip control",
         "힙 컨트롤",
         "controle de quadril"
+      ]
+    },
+    {
+      "tagId": "pre.foot_on_hip",
+      "category": "Prerequisite",
+      "canonicalJa": "腰踏み",
+      "canonicalEn": "Foot on Hip",
+      "related": [
+        "act.sub.triangle",
+        "pre.angle_created",
+        "pre.off_balance"
+      ],
+      "labels": {
+        "ja": "腰踏み",
+        "en": "Foot on Hip",
+        "ko": "힙에 발",
+        "pt": "Pé no Quadril"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "foot on hip",
+          "hip post"
+        ],
+        "ja": [
+          "腰を踏む"
+        ],
+        "ko": [
+          "힙 포스트"
+        ],
+        "pt": [
+          "pé no quadril"
+        ]
+      },
+      "aliases": [
+        "foot on hip",
+        "hip post",
+        "腰を踏む",
+        "힙 포스트",
+        "pé no quadril"
       ]
     },
     {
