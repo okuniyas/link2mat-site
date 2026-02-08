@@ -4849,7 +4849,8 @@
         "pos.guard.closed",
         "pos.guard.high",
         "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.grip.sleeve",
+        "pre.grip.cross_collar"
       ],
       "labels": {
         "ja": "クロスチョーク",
@@ -4878,6 +4879,43 @@
         "cross choke over under",
         "크로스 초크",
         "estrangulamento cruzado"
+      ]
+    },
+    {
+      "tagId": "act.sub.canto_choke",
+      "category": "Submission",
+      "canonicalJa": "カントチョーク",
+      "canonicalEn": "Canto Choke",
+      "related": [
+        "pos.guard.closed",
+        "pre.grip.cross_collar",
+        "pre.grip.collar"
+      ],
+      "labels": {
+        "ja": "カントチョーク",
+        "en": "Canto Choke",
+        "ko": "칸토 초크",
+        "pt": "Estrangulamento Canto"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "canto choke"
+        ],
+        "ja": [
+          "カントチョーク"
+        ],
+        "ko": [
+          "칸토 초크"
+        ],
+        "pt": [
+          "estrangulamento canto"
+        ]
+      },
+      "aliases": [
+        "canto choke",
+        "カントチョーク",
+        "칸토 초크",
+        "estrangulamento canto"
       ]
     },
     {
@@ -8015,6 +8053,45 @@
       ]
     },
     {
+      "tagId": "pre.grip.cross_collar",
+      "category": "Prerequisite",
+      "canonicalJa": "クロス襟グリップ",
+      "canonicalEn": "Cross Collar Grip",
+      "related": [
+        "scn.attire.gi",
+        "pos.guard.closed",
+        "act.sub.cross_choke"
+      ],
+      "labels": {
+        "ja": "クロス襟グリップ",
+        "en": "Cross Collar Grip",
+        "ko": "크로스 칼라 그립",
+        "pt": "Pegada na Gola Cruzada"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "cross collar",
+          "cross collar grip"
+        ],
+        "ja": [
+          "クロスカラーグリップ"
+        ],
+        "ko": [
+          "크로스 칼라"
+        ],
+        "pt": [
+          "gola cruzada"
+        ]
+      },
+      "aliases": [
+        "cross collar",
+        "cross collar grip",
+        "クロスカラーグリップ",
+        "크로스 칼라",
+        "gola cruzada"
+      ]
+    },
+    {
       "tagId": "pre.grip.cross_collar_low",
       "category": "Prerequisite",
       "canonicalJa": "クロス襟下グリップ",
@@ -9339,6 +9416,59 @@
       ]
     },
     {
+      "tagId": "pre.head_pull",
+      "category": "Prerequisite",
+      "canonicalJa": "顔を下に向かせる",
+      "canonicalEn": "Head Down",
+      "related": [
+        "act.wrestling.snapdown",
+        "pos.neutral.front_headlock",
+        "pre.head_position"
+      ],
+      "labels": {
+        "ja": "顔を下に向かせる",
+        "en": "Head Down",
+        "ko": "머리를 아래로",
+        "pt": "Cabeça para Baixo"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "head pull",
+          "head down",
+          "snap down"
+        ],
+        "ja": [
+          "頭を下げる",
+          "ヘッドダウン",
+          "後頭部を押す",
+          "後頭部を引く"
+        ],
+        "ko": [
+          "헤드 다운",
+          "뒤통수 당기기",
+          "뒤통수 누르기"
+        ],
+        "pt": [
+          "puxar a cabeça",
+          "pressionar a cabeça"
+        ]
+      },
+      "aliases": [
+        "head pull",
+        "head down",
+        "snap down",
+        "頭を下げる",
+        "ヘッドダウン",
+        "後頭部を押す",
+        "後頭部を引く",
+        "헤드 다운",
+        "뒤통수 당기기",
+        "뒤통수 누르기",
+        "puxar a cabeça",
+        "pressionar a cabeça"
+      ]
+    },
+    {
       "tagId": "pre.inside_position",
       "category": "Prerequisite",
       "canonicalJa": "インサイドポジション",
@@ -10434,6 +10564,48 @@
         "push",
         "푸시",
         "empurrar"
+      ]
+    },
+    {
+      "tagId": "pre.pull",
+      "category": "Prerequisite",
+      "canonicalJa": "引きつけ",
+      "canonicalEn": "Pull-In",
+      "related": [
+        "pre.grip.thumbless",
+        "pre.connection"
+      ],
+      "labels": {
+        "ja": "引きつけ",
+        "en": "Pull-In",
+        "ko": "끌어당기기",
+        "pt": "Puxar para Perto"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "pull in",
+          "pull-in",
+          "pull"
+        ],
+        "ja": [
+          "引き付け",
+          "引く"
+        ],
+        "ko": [
+          "풀인"
+        ],
+        "pt": [
+          "puxar"
+        ]
+      },
+      "aliases": [
+        "pull in",
+        "pull-in",
+        "pull",
+        "引き付け",
+        "引く",
+        "풀인",
+        "puxar"
       ]
     },
     {
