@@ -302,6 +302,13 @@
           "collar sleeve",
           "one collar one sleeve"
         ],
+        "ja": [
+          "片襟片袖グリップ",
+          "カラーアンドスリーブ",
+          "カラーアンドスリーブガード",
+          "カラー&スリーブ",
+          "カラー&スリーブガード"
+        ],
         "ko": [
           "콜라 앤 슬리브 가드",
           "콜라 슬리브 가드"
@@ -322,6 +329,11 @@
         "collar and sleeve",
         "collar sleeve",
         "one collar one sleeve",
+        "片襟片袖グリップ",
+        "カラーアンドスリーブ",
+        "カラーアンドスリーブガード",
+        "カラー&スリーブ",
+        "カラー&スリーブガード",
         "콜라 앤 슬리브 가드",
         "콜라 슬리브 가드",
         "gola e manga",
@@ -2514,6 +2526,10 @@
           "lapel lasso",
           "lapel lasso guard"
         ],
+        "ja": [
+          "襟ラッソーガード",
+          "襟ラッソガード"
+        ],
         "ko": [
           "라펠 라쏘 가드"
         ],
@@ -2532,6 +2548,8 @@
       "aliases": [
         "lapel lasso",
         "lapel lasso guard",
+        "襟ラッソーガード",
+        "襟ラッソガード",
         "라펠 라쏘 가드",
         "guarda laço de lapela",
         "lapel lasso guardia",
@@ -5951,6 +5969,10 @@
         "en": [
           "lapel choke"
         ],
+        "ja": [
+          "襟チョーク",
+          "襟絞め"
+        ],
         "ko": [
           "라펠 초크"
         ],
@@ -5966,6 +5988,8 @@
       },
       "aliases": [
         "lapel choke",
+        "襟チョーク",
+        "襟絞め",
         "라펠 초크",
         "estrangulamento de lapela",
         "lapel estrangulación",
@@ -6744,6 +6768,10 @@
           "collar choke",
           "collar choke (basic)"
         ],
+        "ja": [
+          "襟チョーク",
+          "襟絞め"
+        ],
         "ko": [
           "칼라 초크"
         ],
@@ -6762,6 +6790,8 @@
       "aliases": [
         "collar choke",
         "collar choke (basic)",
+        "襟チョーク",
+        "襟絞め",
         "칼라 초크",
         "estrangulamento de gola",
         "cuello estrangulación",
@@ -7556,6 +7586,12 @@
         "fr": "Straight Cheville Clé"
       },
       "aliasesByLocale": {
+        "ja": [
+          "ストレートアンクルロック",
+          "ストレートフットロック",
+          "フットロック",
+          "アンクルロック"
+        ],
         "en": [
           "straight ankle",
           "ankle lock"
@@ -7576,6 +7612,10 @@
         ]
       },
       "aliases": [
+        "ストレートアンクルロック",
+        "ストレートフットロック",
+        "フットロック",
+        "アンクルロック",
         "straight ankle",
         "ankle lock",
         "스트레이트 앵클 락",
@@ -7776,6 +7816,9 @@
         "fr": "Kneebar"
       },
       "aliasesByLocale": {
+        "ja": [
+          "膝十字"
+        ],
         "en": [
           "kneebar"
         ],
@@ -7793,6 +7836,7 @@
         ]
       },
       "aliases": [
+        "膝十字",
         "kneebar",
         "니바",
         "chave de joelho"
@@ -10585,6 +10629,10 @@
         "en": [
           "collar grip"
         ],
+        "ja": [
+          "カラーグリップ",
+          "カラー"
+        ],
         "ko": [
           "칼라 그립"
         ],
@@ -10600,6 +10648,8 @@
       },
       "aliases": [
         "collar grip",
+        "カラーグリップ",
+        "カラー",
         "칼라 그립",
         "pegada na gola",
         "cuello agarre",
@@ -10627,6 +10677,10 @@
         "en": [
           "front collar grip"
         ],
+        "ja": [
+          "前カラーグリップ",
+          "フロントカラーグリップ"
+        ],
         "ko": [
           "프론트 칼라 그립"
         ],
@@ -10642,6 +10696,8 @@
       },
       "aliases": [
         "front collar grip",
+        "前カラーグリップ",
+        "フロントカラーグリップ",
         "프론트 칼라 그립",
         "pegada na gola frontal",
         "frontal cuello agarre",
@@ -10669,6 +10725,10 @@
         "en": [
           "back collar grip"
         ],
+        "ja": [
+          "奥カラーグリップ",
+          "バックカラーグリップ"
+        ],
         "ko": [
           "백 칼라 그립"
         ],
@@ -10684,6 +10744,8 @@
       },
       "aliases": [
         "back collar grip",
+        "奥カラーグリップ",
+        "バックカラーグリップ",
         "백 칼라 그립",
         "pegada na gola de costas",
         "espalda cuello agarre",
@@ -10714,7 +10776,8 @@
           "cross collar grip"
         ],
         "ja": [
-          "クロスカラーグリップ"
+          "クロスカラーグリップ",
+          "クロスカラー"
         ],
         "ko": [
           "크로스 칼라"
@@ -10735,6 +10798,7 @@
         "cross collar",
         "cross collar grip",
         "クロスカラーグリップ",
+        "クロスカラー",
         "크로스 칼라",
         "gola cruzada",
         "cruzado cuello",
@@ -10769,7 +10833,9 @@
           "low cross collar grip"
         ],
         "ja": [
-          "クロス襟下"
+          "クロス襟下",
+          "クロスカラー下",
+          "クロスカラーグリップ下"
         ],
         "ko": [
           "로우 크로스 칼라"
@@ -10793,6 +10859,8 @@
         "cross collar low",
         "low cross collar grip",
         "クロス襟下",
+        "クロスカラー下",
+        "クロスカラーグリップ下",
         "로우 크로스 칼라",
         "gola cruzada baixa",
         "low cruzado cuello",
@@ -10825,6 +10893,10 @@
           "lapel wrap",
           "lepel wrap"
         ],
+        "ja": [
+          "襟を巻き付ける",
+          "ラペル巻き付け"
+        ],
         "ko": [
           "라펠 랩"
         ],
@@ -10843,6 +10915,8 @@
       "aliases": [
         "lapel wrap",
         "lepel wrap",
+        "襟を巻き付ける",
+        "ラペル巻き付け",
         "라펠 랩",
         "enrolar lapela"
       ]
@@ -10869,6 +10943,10 @@
           "lapel feed",
           "lepel feed"
         ],
+        "ja": [
+          "襟を送り込む",
+          "ラペル送り"
+        ],
         "ko": [
           "라펠 피드"
         ],
@@ -10887,6 +10965,8 @@
       "aliases": [
         "lapel feed",
         "lepel feed",
+        "襟を送り込む",
+        "ラペル送り",
         "라펠 피드",
         "alimentar lapela"
       ]
@@ -10932,6 +11012,63 @@
         "pegada na manga",
         "manga agarre",
         "manche prise"
+      ]
+    },
+    {
+      "tagId": "pre.grip.switch",
+      "category": "Prerequisite",
+      "canonicalJa": "グリップ持ち替え",
+      "canonicalEn": "Grip Switch",
+      "related": [],
+      "labels": {
+        "ja": "グリップ持ち替え",
+        "en": "Grip Switch",
+        "ko": "그립 스위치",
+        "pt": "Troca de Pegada",
+        "es": "Cambio de Agarre",
+        "fr": "Changement de Prise"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "grip switch",
+          "grip change",
+          "regrip",
+          "re-grip",
+          "hand switch"
+        ],
+        "ja": [
+          "持ち替え",
+          "グリップ持ち替え",
+          "グリップスイッチ",
+          "グリップチェンジ"
+        ],
+        "ko": [
+          "그립 스위치"
+        ],
+        "pt": [
+          "troca de pegada"
+        ],
+        "es": [
+          "cambio de agarre"
+        ],
+        "fr": [
+          "changement de prise"
+        ]
+      },
+      "aliases": [
+        "grip switch",
+        "grip change",
+        "regrip",
+        "re-grip",
+        "hand switch",
+        "持ち替え",
+        "グリップ持ち替え",
+        "グリップスイッチ",
+        "グリップチェンジ",
+        "그립 스위치",
+        "troca de pegada",
+        "cambio de agarre",
+        "changement de prise"
       ]
     },
     {
@@ -10999,6 +11136,9 @@
           "armpit lapel grip",
           "armpit grip"
         ],
+        "ja": [
+          "脇カラーグリップ"
+        ],
         "ko": [
           "암핏 라펠 그립"
         ],
@@ -11017,6 +11157,7 @@
       "aliases": [
         "armpit lapel grip",
         "armpit grip",
+        "脇カラーグリップ",
         "암핏 라펠 그립",
         "pegada na lapela da axila",
         "armpit lapel agarre",
@@ -11778,6 +11919,10 @@
         "fr": "Underhook"
       },
       "aliasesByLocale": {
+        "ja": [
+          "脇差し",
+          "脇を差す"
+        ],
         "en": [
           "underhook"
         ],
@@ -11795,6 +11940,8 @@
         ]
       },
       "aliases": [
+        "脇差し",
+        "脇を差す",
         "underhook",
         "언더훅",
         "gancho por baixo"
@@ -11818,6 +11965,10 @@
         "fr": "Overhook"
       },
       "aliasesByLocale": {
+        "ja": [
+          "脇抱え",
+          "脇を抱える"
+        ],
         "en": [
           "overhook",
           "whizzer"
@@ -11838,6 +11989,8 @@
         ]
       },
       "aliases": [
+        "脇抱え",
+        "脇を抱える",
         "overhook",
         "whizzer",
         "오버훅",
