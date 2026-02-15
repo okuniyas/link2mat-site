@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.1.0",
+  "version": "dict_v1.1.1",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -1436,47 +1436,6 @@
       ]
     },
     {
-      "tagId": "pos.control.kimura_trap",
-      "category": "Position",
-      "canonicalJa": "キムラトラップ",
-      "canonicalEn": "Kimura Trap",
-      "related": [
-        "act.sub.kimura",
-        "pre.2on1",
-        "pre.control_elbow_line"
-      ],
-      "labels": {
-        "ja": "キムラトラップ",
-        "en": "Kimura Trap",
-        "ko": "키무라 트랩",
-        "pt": "Armadilha de Kimura",
-        "es": "Kimura Trap",
-        "fr": "Kimura Trap"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "kimura trap"
-        ],
-        "ko": [
-          "키무라 트랩"
-        ],
-        "pt": [
-          "armadilha de kimura"
-        ],
-        "es": [
-          "kimura trap"
-        ],
-        "fr": [
-          "kimura trap"
-        ]
-      },
-      "aliases": [
-        "kimura trap",
-        "키무라 트랩",
-        "armadilha de kimura"
-      ]
-    },
-    {
       "tagId": "pos.control.crucifix",
       "category": "Position",
       "canonicalJa": "クルシフィクス",
@@ -1873,6 +1832,9 @@
         "fr": "Turtle"
       },
       "aliasesByLocale": {
+        "ja": [
+          "亀"
+        ],
         "en": [
           "turtle",
           "top turtle",
@@ -1896,6 +1858,7 @@
         ]
       },
       "aliases": [
+        "亀",
         "turtle",
         "top turtle",
         "bottom turtle",
@@ -6020,6 +5983,9 @@
           "d'arce choke",
           "darce"
         ],
+        "ja": [
+          "ダース"
+        ],
         "ko": [
           "다스 초크"
         ],
@@ -6041,6 +6007,7 @@
         "darce choke",
         "d'arce choke",
         "darce",
+        "ダース",
         "다스 초크",
         "estrangulamento d'arce",
         "darce estrangulación",
@@ -6072,6 +6039,9 @@
           "anaconda choke",
           "anaconda"
         ],
+        "ja": [
+          "アナコンダ"
+        ],
         "ko": [
           "아나콘다 초크"
         ],
@@ -6090,6 +6060,7 @@
       "aliases": [
         "anaconda choke",
         "anaconda",
+        "アナコンダ",
         "아나콘다 초크",
         "estrangulamento anaconda",
         "anaconda estrangulación",
@@ -6722,6 +6693,9 @@
           "ezekiel",
           "ezekiel choke"
         ],
+        "ja": [
+          "エゼキエル"
+        ],
         "ko": [
           "에제키엘 초크"
         ],
@@ -6740,6 +6714,7 @@
       "aliases": [
         "ezekiel",
         "ezekiel choke",
+        "エゼキエル",
         "에제키엘 초크",
         "estrangulamento ezekiel",
         "ezekiel estrangulación",
@@ -6824,6 +6799,9 @@
           "bow & arrow choke",
           "bow and arrow choke (basic)"
         ],
+        "ja": [
+          "ボウアンドアロー"
+        ],
         "ko": [
           "보우 앤 애로 초크"
         ],
@@ -6845,6 +6823,7 @@
         "bow and arrow choke",
         "bow & arrow choke",
         "bow and arrow choke (basic)",
+        "ボウアンドアロー",
         "보우 앤 애로 초크",
         "estrangulamento arco e flecha",
         "bow and arrow estrangulación",
@@ -6876,6 +6855,9 @@
         "en": [
           "baseball choke"
         ],
+        "ja": [
+          "ベースボール"
+        ],
         "ko": [
           "베이스볼 초크"
         ],
@@ -6891,6 +6873,7 @@
       },
       "aliases": [
         "baseball choke",
+        "ベースボール",
         "베이스볼 초크",
         "estrangulamento baseball",
         "baseball estrangulación",
@@ -8555,6 +8538,151 @@
         "queda de quadril",
         "cadera proyección",
         "hanche projection"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.osoto_gari",
+      "category": "Action",
+      "canonicalJa": "大外刈り",
+      "canonicalEn": "Osoto Gari",
+      "related": [
+        "pos.phase.clinch",
+        "pre.off_balance",
+        "pre.inside_position"
+      ],
+      "labels": {
+        "ja": "大外刈り",
+        "en": "Osoto Gari",
+        "ko": "Osoto Gari",
+        "pt": "Osoto Gari",
+        "es": "Osoto Gari",
+        "fr": "Osoto Gari"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "osoto gari",
+          "o-soto gari"
+        ]
+      },
+      "aliases": [
+        "osoto gari",
+        "o-soto gari"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.ouchi_gari",
+      "category": "Action",
+      "canonicalJa": "大内刈り",
+      "canonicalEn": "Ouchi Gari",
+      "related": [
+        "pos.phase.clinch",
+        "pre.off_balance",
+        "pre.inside_position"
+      ],
+      "labels": {
+        "ja": "大内刈り",
+        "en": "Ouchi Gari",
+        "ko": "Ouchi Gari",
+        "pt": "Ouchi Gari",
+        "es": "Ouchi Gari",
+        "fr": "Ouchi Gari"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "ouchi gari",
+          "o-uchi gari"
+        ]
+      },
+      "aliases": [
+        "ouchi gari",
+        "o-uchi gari"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.kouchi_gari",
+      "category": "Action",
+      "canonicalJa": "小内刈り",
+      "canonicalEn": "Kouchi Gari",
+      "related": [
+        "pos.phase.clinch",
+        "pre.off_balance",
+        "pre.inside_position"
+      ],
+      "labels": {
+        "ja": "小内刈り",
+        "en": "Kouchi Gari",
+        "ko": "Kouchi Gari",
+        "pt": "Kouchi Gari",
+        "es": "Kouchi Gari",
+        "fr": "Kouchi Gari"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "kouchi gari",
+          "ko-uchi gari"
+        ]
+      },
+      "aliases": [
+        "kouchi gari",
+        "ko-uchi gari"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.kosoto_gari",
+      "category": "Action",
+      "canonicalJa": "小外刈り",
+      "canonicalEn": "Kosoto Gari",
+      "related": [
+        "pos.phase.clinch",
+        "pre.off_balance",
+        "pre.inside_position"
+      ],
+      "labels": {
+        "ja": "小外刈り",
+        "en": "Kosoto Gari",
+        "ko": "Kosoto Gari",
+        "pt": "Kosoto Gari",
+        "es": "Kosoto Gari",
+        "fr": "Kosoto Gari"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "kosoto gari",
+          "ko-soto gari"
+        ]
+      },
+      "aliases": [
+        "kosoto gari",
+        "ko-soto gari"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.uchi_mata",
+      "category": "Action",
+      "canonicalJa": "内股",
+      "canonicalEn": "Uchi Mata",
+      "related": [
+        "pos.phase.clinch",
+        "pre.off_balance",
+        "pre.inside_position"
+      ],
+      "labels": {
+        "ja": "内股",
+        "en": "Uchi Mata",
+        "ko": "Uchi Mata",
+        "pt": "Uchi Mata",
+        "es": "Uchi Mata",
+        "fr": "Uchi Mata"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "uchi mata",
+          "uchi-mata"
+        ]
+      },
+      "aliases": [
+        "uchi mata",
+        "uchi-mata"
       ]
     },
     {
@@ -12043,6 +12171,52 @@
         "Russian tie",
         "2대1",
         "2-por-1"
+      ]
+    },
+    {
+      "tagId": "pre.grip.kimura",
+      "category": "Prerequisite",
+      "canonicalJa": "キムラグリップ",
+      "canonicalEn": "Kimura Grip",
+      "related": [
+        "act.sub.kimura",
+        "pre.2on1",
+        "pre.control_elbow_line",
+        "pre.reverse_kimura"
+      ],
+      "labels": {
+        "ja": "キムラグリップ",
+        "en": "Kimura Grip",
+        "ko": "키무라 그립",
+        "pt": "Kimura Grip",
+        "es": "Kimura Grip",
+        "fr": "Kimura Grip"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "キムラトラップ"
+        ],
+        "en": [
+          "kimura trap"
+        ],
+        "ko": [
+          "키무라 트랩"
+        ],
+        "pt": [
+          "armadilha de kimura"
+        ],
+        "es": [
+          "kimura trap"
+        ],
+        "fr": [
+          "kimura trap"
+        ]
+      },
+      "aliases": [
+        "キムラトラップ",
+        "kimura trap",
+        "키무라 트랩",
+        "armadilha de kimura"
       ]
     },
     {
