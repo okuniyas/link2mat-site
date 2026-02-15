@@ -60,55 +60,79 @@
           grid-template-columns: 1fr;
         }
       }
+      .lang-switcher { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; align-items: center; }
+      .lang-switcher span { font-size: 13px; color: #4b5563; margin-right: 4px; }
+      .lang-btn { padding: 6px 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; font-size: 14px; cursor: pointer; color: #374151; }
+      .lang-btn:hover { background: #f9fafb; border-color: #d1d5db; }
+      .lang-btn.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+      .lang-block { display: none; }
+      .lang-block.lang-visible { display: block; }
+      body[data-lang] .bilingual { grid-template-columns: 1fr; }
+      .lang-blocks-row { display: contents; }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>
-        Link2Mat Privacy Policy / プライバシーポリシー / 개인정보 처리방침 / Política de privacidade /
-        Política de privacidad / Politique de confidentialité
-      </h1>
+      <h1 class="lang-block lang-visible" data-lang="en">Link2Mat Privacy Policy</h1>
+      <h1 class="lang-block" data-lang="ja">プライバシーポリシー</h1>
+      <h1 class="lang-block" data-lang="ko">개인정보 처리방침</h1>
+      <h1 class="lang-block" data-lang="pt">Política de privacidade</h1>
+      <h1 class="lang-block" data-lang="es">Política de privacidad</h1>
+      <h1 class="lang-block" data-lang="fr">Politique de confidentialité</h1>
+      <div class="lang-switcher" role="group" aria-label="Language / 言語">
+        <span class="lang-label">Language / 言語:</span>
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+      </div>
+      <p class="lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-02-01</p>
+      <p class="lang-block" data-lang="ja"><strong>更新日:</strong> 2026-02-01</p>
+      <p class="lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-02-01</p>
+      <p class="lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-02-01</p>
+      <p class="lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-02-01</p>
+      <p class="lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-02-01</p>
 
-      <p><strong>Last updated:</strong> 2026-02-01</p>
-      <p><strong>更新日:</strong> 2026-02-01</p>
-      <p><strong>최종 업데이트:</strong> 2026-02-01</p>
-      <p><strong>Última atualização:</strong> 2026-02-01</p>
-      <p><strong>Última actualización:</strong> 2026-02-01</p>
-      <p><strong>Dernière mise à jour:</strong> 2026-02-01</p>
-
-      <h2>Overview / 概要 / 개요 / Visão geral / Resumen / Vue d’ensemble</h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Overview</h2>
+      <h2 class="lang-block" data-lang="ja">概要</h2>
+      <h2 class="lang-block" data-lang="ko">개요</h2>
+      <h2 class="lang-block" data-lang="pt">Visão geral</h2>
+      <h2 class="lang-block" data-lang="es">Resumen</h2>
+      <h2 class="lang-block" data-lang="fr">Vue d’ensemble</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>
             Link2Mat helps you save links and clips for Jiu‑Jitsu learning.
             This policy explains how your data is handled.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p>
             Link2Mat は柔術学習のためのリンクやクリップを保存するアプリです。
             本ポリシーではデータの取り扱いについて説明します。
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ko">
           <p>
             Link2Mat은 주짓수 학습을 위해 링크와 클립을 저장할 수 있도록 돕는 앱입니다.
             본 정책은 데이터 처리 방법을 설명합니다.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="pt">
           <p>
             O Link2Mat ajuda você a salvar links e clipes para estudar Jiu‑Jitsu.
             Esta política explica como seus dados são tratados.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="es">
           <p>
             Link2Mat te ayuda a guardar enlaces y clips para estudiar jiu‑jitsu.
             Esta política explica cómo se gestionan tus datos.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="fr">
           <p>
             Link2Mat vous aide à enregistrer des liens et des clips pour étudier le jiu‑jitsu.
             Cette politique explique comment vos données sont traitées.
@@ -116,42 +140,44 @@
         </div>
       </div>
 
-      <h2>
-        Data We Store / 保存されるデータ / 저장되는 데이터 / Dados armazenados /
-        Datos almacenados / Données stockées
-      </h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Data We Store</h2>
+      <h2 class="lang-block" data-lang="ja">保存されるデータ</h2>
+      <h2 class="lang-block" data-lang="ko">저장되는 데이터</h2>
+      <h2 class="lang-block" data-lang="pt">Dados armazenados</h2>
+      <h2 class="lang-block" data-lang="es">Datos almacenados</h2>
+      <h2 class="lang-block" data-lang="fr">Données stockées</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <ul>
             <li>Saved links and metadata you add</li>
             <li>Titles, notes, tags, and clips you create</li>
           </ul>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <ul>
-            <li>追加したリンクやメタデータ</li>
+            <li>追加したリンクやメタ데이터</li>
             <li>作成したタイトル・メモ・タグ・クリップ</li>
           </ul>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ko">
           <ul>
             <li>추가한 링크와 메타데이터</li>
             <li>작성한 제목, 노트, 태그, 클립</li>
           </ul>
         </div>
-        <div>
+        <div class="lang-block" data-lang="pt">
           <ul>
             <li>Links salvos e metadados adicionados</li>
             <li>Títulos, notas, tags e clipes criados</li>
           </ul>
         </div>
-        <div>
+        <div class="lang-block" data-lang="es">
           <ul>
             <li>Enlaces guardados y metadatos añadidos</li>
             <li>Títulos, notas, etiquetas y clips creados</li>
           </ul>
         </div>
-        <div>
+        <div class="lang-block" data-lang="fr">
           <ul>
             <li>Liens enregistrés et métadonnées ajoutées</li>
             <li>Titres, notes, tags et clips créés</li>
@@ -159,42 +185,44 @@
         </div>
       </div>
 
-      <h2>
-        iCloud Sync / iCloud 同期 / iCloud 동기화 / Sincronização iCloud / Sincronización iCloud /
-        Synchronisation iCloud
-      </h2>
+      <h2 class="lang-block lang-visible" data-lang="en">iCloud Sync</h2>
+      <h2 class="lang-block" data-lang="ja">iCloud 同期</h2>
+      <h2 class="lang-block" data-lang="ko">iCloud 동기화</h2>
+      <h2 class="lang-block" data-lang="pt">Sincronização iCloud</h2>
+      <h2 class="lang-block" data-lang="es">Sincronización iCloud</h2>
+      <h2 class="lang-block" data-lang="fr">Synchronisation iCloud</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>
             If you install Link2Mat on multiple devices signed into the same iCloud account, your
             changes sync between those devices. Only changes are transferred.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p>
             同じ iCloud アカウントで複数端末にインストールした場合、変更内容が端末間で同期されます。
             変更分のみが送受信されます。
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ko">
           <p>
             같은 iCloud 계정으로 여러 기기에 Link2Mat을 설치하면 변경 사항이 기기 간에 동기화됩니다.
             변경분만 전송됩니다.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="pt">
           <p>
             Se você instalar o Link2Mat em vários dispositivos com a mesma conta iCloud, as mudanças
             serão sincronizadas entre eles. Apenas as alterações são transferidas.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="es">
           <p>
             Si instalas Link2Mat en varios dispositivos con la misma cuenta de iCloud, los cambios se
             sincronizan entre ellos. Solo se transfieren los cambios.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="fr">
           <p>
             Si vous installez Link2Mat sur plusieurs appareils avec le même compte iCloud, les changements
             sont synchronisés entre eux. Seules les modifications sont transférées.
@@ -202,34 +230,41 @@
         </div>
       </div>
 
-      <h2>Data Usage / 利用目的 / 이용 목적 / Uso de dados / Uso de datos / Utilisation des données</h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Data Usage</h2>
+      <h2 class="lang-block" data-lang="ja">利用目的</h2>
+      <h2 class="lang-block" data-lang="ko">이용 목적</h2>
+      <h2 class="lang-block" data-lang="pt">Uso de dados</h2>
+      <h2 class="lang-block" data-lang="es">Uso de datos</h2>
+      <h2 class="lang-block" data-lang="fr">Utilisation des données</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>We use this data to provide search, tagging, and clip features.</p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p>検索・タグ付け・クリップ機能の提供のために利用します。</p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ko">
           <p>검색, 태그, 클립 기능 제공을 위해 사용됩니다.</p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="pt">
           <p>Usamos esses dados para oferecer pesquisa, tags e clipes.</p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="es">
           <p>Usamos estos datos para ofrecer búsqueda, etiquetas y clips.</p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="fr">
           <p>Nous utilisons ces données pour offrir la recherche, le taggage et les clips.</p>
         </div>
       </div>
 
-      <h2>
-        Optional Telemetry / 共有データ（任意） / 선택적 데이터 공유 / Telemetria opcional /
-        Telemetría opcional / Télémétrie optionnelle
-      </h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Optional Telemetry</h2>
+      <h2 class="lang-block" data-lang="ja">共有データ（任意）</h2>
+      <h2 class="lang-block" data-lang="ko">선택적 데이터 공유</h2>
+      <h2 class="lang-block" data-lang="pt">Telemetria opcional</h2>
+      <h2 class="lang-block" data-lang="es">Telemetría opcional</h2>
+      <h2 class="lang-block" data-lang="fr">Télémétrie optionnelle</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>
             If you opt in to data sharing, Link2Mat may send anonymous usage statistics (such as tag
             usage counts and viewing counts) and optional profile fields you provide (such as
@@ -237,55 +272,55 @@
             the app.
           </p>
           <p>
-            You can turn data sharing on or off in the About screen. We do not collect names, email
-            addresses, or contact details.
+            You can turn data sharing on or off in Tag → Usage. Share profile and Share tag stats
+            do not include names, email addresses, or contact details.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p>
             データ共有に同意した場合、Link2Mat は匿名の利用統計（例: タグの使用回数や閲覧回数）と、
             任意で入力したプロフィール情報（例: 国/地域）を送信することがあります。これは機能改善と
             アプリ内の集計表示のために利用します。
           </p>
           <p>
-            データ共有は「このアプリについて」画面でオン/オフを切り替えられます。氏名・メールアドレス
-            などの連絡先は収集しません。
+            データ共有は タグ → 利用状況 でオン/オフを切り替えられます。プロフィール共有・タグ統計を共有の
+            いずれにも、氏名・メールアドレス・その他の連絡先は含みません。
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ko">
           <p>
             데이터 공유에 동의하면 Link2Mat이 익명 사용 통계(예: 태그 사용 횟수, 조회 횟수)와
             선택적으로 입력한 프로필 정보(예: 국가/지역)를 전송할 수 있습니다. 이는 기능 개선과
             앱 내 집계 표시를 위해 사용됩니다.
           </p>
           <p>
-            데이터 공유는 “이 앱에 대해” 화면에서 켜거나 끌 수 있습니다. 이름, 이메일, 연락처는
-            수집하지 않습니다.
+            데이터 공유는 태그 → 사용 현황에서 켜거나 끌 수 있습니다. 프로필 공유・태그 통계 공유
+            어느 쪽에도 이름, 이메일, 연락처는 포함되지 않습니다.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="pt">
           <p>
             Se você optar por compartilhar dados, o Link2Mat pode enviar estatísticas anônimas de uso
             (por exemplo, contagens de tags e visualizações) e campos opcionais de perfil fornecidos
             (como país/região). Isso é usado para melhorar recursos e mostrar estatísticas agregadas no app.
           </p>
           <p>
-            Você pode ativar ou desativar o compartilhamento na tela “Sobre”. Não coletamos nome,
-            e‑mail ou dados de contato.
+            Você pode ativar ou desativar o compartilhamento em Tag → Uso. Compartilhar perfil e
+            Compartilhar estatísticas de tags não incluem nome, e‑mail nem dados de contato.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="es">
           <p>
             Si aceptas compartir datos, Link2Mat puede enviar estadísticas anónimas de uso (por ejemplo,
             recuentos de etiquetas y visualizaciones) y campos de perfil opcionales que proporciones
             (como país/región). Esto se usa para mejorar funciones y mostrar estadísticas agregadas en la app.
           </p>
           <p>
-            Puedes activar o desactivar el intercambio en la pantalla “Acerca de”. No recopilamos nombres,
-            correos electrónicos ni datos de contacto.
+            Puedes activar o desactivar el intercambio en Tag → Uso. Compartir perfil y
+            Compartir estadísticas de tags no incluyen nombres, correos electrónicos ni datos de contacto.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="fr">
           <p>
             Si vous acceptez le partage de données, Link2Mat peut envoyer des statistiques d’usage anonymes
             (par exemple, le nombre de tags et de vues) ainsi que des champs de profil facultatifs
@@ -293,47 +328,49 @@
             agrégées dans l’app.
           </p>
           <p>
-            Vous pouvez activer ou désactiver le partage dans l’écran « À propos ». Nous ne collectons pas
-            de noms, d’adresses e‑mail ni de coordonnées.
+            Vous pouvez activer ou désactiver le partage dans Tag → Utilisation. Partager le profil et
+            Partager les statistiques de tags n’incluent ni noms, ni adresses e‑mail, ni coordonnées.
           </p>
         </div>
       </div>
 
-      <h2>
-        Third‑Party Services / 外部サービス / 외부 서비스 / Serviços de terceiros / Servicios de terceros /
-        Services tiers
-      </h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Third‑Party Services</h2>
+      <h2 class="lang-block" data-lang="ja">外部サービス</h2>
+      <h2 class="lang-block" data-lang="ko">외부 서비스</h2>
+      <h2 class="lang-block" data-lang="pt">Serviços de terceiros</h2>
+      <h2 class="lang-block" data-lang="es">Servicios de terceros</h2>
+      <h2 class="lang-block" data-lang="fr">Services tiers</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>
             When you add a link, Link2Mat may fetch page metadata (title/description/thumbnail)
             from the source website to improve display.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p>
             リンク追加時に、表示改善のために元サイトからメタデータ（タイトル/説明/サムネイル）を取得する場合があります。
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ko">
           <p>
             링크를 추가할 때 표시를 개선하기 위해 원본 사이트에서 메타데이터(제목/설명/썸네일)를
             가져올 수 있습니다.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="pt">
           <p>
             Ao adicionar um link, o Link2Mat pode buscar metadados (título/descrição/miniatura)
             no site de origem para melhorar a exibição.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="es">
           <p>
             Al añadir un enlace, Link2Mat puede obtener metadatos (título/descripción/miniatura)
             del sitio de origen para mejorar la visualización.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="fr">
           <p>
             Lors de l’ajout d’un lien, Link2Mat peut récupérer des métadonnées (titre/description/vignette)
             depuis le site source afin d’améliorer l’affichage.
@@ -341,16 +378,72 @@
         </div>
       </div>
 
-      <h2>Contact / お問い合わせ / 문의 / Contato / Contacto / Contact</h2>
-      <div class="card">
-        <p><strong>Email</strong></p>
-        <p><strong>メール</strong></p>
-        <p><strong>이메일</strong></p>
-        <p><strong>E-mail</strong></p>
-        <p><strong>Correo</strong></p>
-        <p><strong>E-mail</strong></p>
-        <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+      <h2 class="lang-block lang-visible" data-lang="en">Contact</h2>
+      <h2 class="lang-block" data-lang="ja">お問い合わせ</h2>
+      <h2 class="lang-block" data-lang="ko">문의</h2>
+      <h2 class="lang-block" data-lang="pt">Contato</h2>
+      <h2 class="lang-block" data-lang="es">Contacto</h2>
+      <h2 class="lang-block" data-lang="fr">Contact</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible card" data-lang="en">
+          <p><strong>Email</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="ja">
+          <p><strong>メール</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="ko">
+          <p><strong>이메일</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="pt">
+          <p><strong>E-mail</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="es">
+          <p><strong>Correo</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="fr">
+          <p><strong>E-mail</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+        </div>
       </div>
     </div>
+    <script>
+      (function initLangSwitcher() {
+        const STORAGE_KEY = "link2mat-support-lang";
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const langBlocks = document.querySelectorAll(".lang-block");
+        function setLang(lang) {
+          document.body.setAttribute("data-lang", lang);
+          langBlocks.forEach(function(el) {
+            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+          });
+          langButtons.forEach(function(btn) {
+            var on = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        }
+        langButtons.forEach(function(btn) {
+          btn.addEventListener("click", function() { setLang(btn.getAttribute("data-lang")); });
+        });
+        var supported = ["en", "ja", "ko", "pt", "es", "fr"];
+        function detectBrowserLang() {
+          var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
+          for (var i = 0; i < list.length; i++) {
+            var code = (list[i] || "").toLowerCase().split("-")[0];
+            if (supported.indexOf(code) !== -1) return code;
+          }
+          return "en";
+        }
+        var saved = localStorage.getItem(STORAGE_KEY);
+        var initial = (saved && supported.indexOf(saved) !== -1) ? saved : detectBrowserLang();
+        setLang(initial);
+      })();
+    </script>
   </body>
 </html>

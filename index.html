@@ -117,14 +117,19 @@
       }
       .bilingual {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 16px;
         align-items: start;
       }
       .bilingual > div > p:first-child {
         margin-top: 0;
       }
-      @media (max-width: 860px) {
+      @media (max-width: 1100px) {
+        .bilingual {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 720px) {
         .bilingual {
           grid-template-columns: 1fr;
         }
@@ -151,6 +156,54 @@
       }
       .tab-panel.active {
         display: block;
+      }
+      .lang-switcher {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0 20px;
+        align-items: center;
+      }
+      .lang-switcher span {
+        font-size: 13px;
+        color: #4b5563;
+        margin-right: 4px;
+      }
+      .lang-btn {
+        padding: 6px 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        color: #374151;
+      }
+      .lang-btn:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+      }
+      .lang-btn.active {
+        background: #2563eb;
+        border-color: #2563eb;
+        color: #fff;
+      }
+      .lang-block {
+        display: none;
+      }
+      .lang-block.lang-visible {
+        display: block;
+      }
+      .lang-blocks-row {
+        display: contents;
+      }
+      .lang-blocks-row > .lang-block.two-col {
+        display: none;
+      }
+      .lang-blocks-row > .lang-block.two-col.lang-visible {
+        display: grid;
+      }
+      body[data-lang] .bilingual {
+        grid-template-columns: 1fr;
       }
       .lightbox {
         position: fixed;
@@ -227,9 +280,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>Link2Mat Support / サポート</h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-02-05</p>
-      <p class="muted"><strong>更新日:</strong> 2026-02-05</p>
+      <h1>Link2Mat Support</h1>
+      <div class="lang-switcher" role="group" aria-label="Language / 言語">
+        <span class="lang-label">Language / 言語:</span>
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+      </div>
+      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-02-05</p>
+      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-02-05</p>
+      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-02-05</p>
+      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-02-05</p>
+      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-02-05</p>
+      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-02-05</p>
 
       <div class="hero">
         <p>
@@ -238,7 +304,7 @@
           <span class="pill">Tags</span>
         </p>
         <div class="bilingual">
-          <div>
+          <div class="lang-block lang-visible" data-lang="en">
             <p>
               <strong>Why Link2Mat?</strong>
             </p>
@@ -269,7 +335,7 @@
               I hope Link2Mat becomes a "buddy" for your jiu-jitsu learning.
             </p>
           </div>
-          <div>
+          <div class="lang-block" data-lang="ja">
             <p>
               <strong>なぜ Link2Mat?</strong>
             </p>
@@ -299,34 +365,338 @@
               Link2Mat が、みなさんの「柔術のまなびのおとも」になれば嬉しいです。
             </p>
           </div>
+          <div class="lang-block" data-lang="ko">
+            <p>
+              <strong>왜 Link2Mat?</strong>
+            </p>
+            <p>
+              주짓수에는 수많은 기술이 있습니다. 상대와의 관계, 불리한 상황에서의 회복,
+              그 상황에서의 카운터, 여러 선택지 중 무엇을 고를지. 아주 짧은 순간에 판단해야 하고,
+              몸이 자연스럽게 움직일 때의 즐거움과 설렘이 있습니다. 잘 풀리지 않거나 졌을 때는
+              지도자나 팀원에게 묻는 것이 가장 좋지만, 많은 분이 교본/기술 영상을 보기도 합니다.
+            </p>
+            <p>
+              YouTube와 각종 SNS에는 기술 소개와 교본 영상이 넘쳐납니다.
+              “아, 이거 전에 스파링에서 당했던 거네.” “이건 어떻게 피하지?”
+              “내 스타일에 맞을 것 같아. 다음에 해봐야지.”
+            </p>
+            <p>
+              영상은 저장하지만 시간이 지나면 쌓이고 어디에 있는지 잊게 됩니다. 부지런한 분은
+              노트를 쓰기도 하지만, 살아 있는 영상을 한 곳에서 관리하고 태그로 검색하며
+              몇 번 봤는지, 지금 집중하고 싶은 것을 핀으로 고정할 수 있다면 좋겠다고 생각했습니다.
+              그래서 이 앱을 만들었습니다.
+            </p>
+            <p>
+              도장에서 지도자와 팀원에게 배우는 경험이 가장 중요합니다. 하지만 준비와 복습,
+              그리고 영상에 태그를 붙이는 과정을 통해 기술을 언어화하고 매트 위에서 더 잘
+              소통할 수 있기를 바랍니다.
+            </p>
+            <p>
+              Link2Mat이 여러분의 주짓수 학습 “버디”가 되었으면 좋겠습니다.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="pt">
+            <p>
+              <strong>Por que Link2Mat?</strong>
+            </p>
+            <p>
+              No jiu-jitsu há inúmeras técnicas: escolher o que fazer com base no oponente,
+              recuperar-se de posições ruins, contra-atacar e decidir entre várias opções em
+              frações de segundo. Há alegria quando o corpo se move naturalmente. Quando as
+              coisas não dão certo ou você perde, o melhor é perguntar ao professor ou aos
+              colegas, mas muitos de nós também assistem a vídeos instrucionais e de técnica.
+            </p>
+            <p>
+              YouTube e outras redes sociais estão cheios de explicações de técnicas e
+              instruções. “Ah, essa é a que me pegou da última vez.” “Como eu evito isso?”
+              “Isso pode combinar com meu estilo — vou tentar na próxima.”
+            </p>
+            <p>
+              Salvamos esses vídeos, mas com o tempo eles se acumulam e se perdem. Algumas
+              pessoas fazem anotações, mas eu queria um jeito de organizar referências em um
+              só lugar: marcar com tags, pesquisar, acompanhar quantas vezes vi e fixar o que
+              quero focar agora. Por isso criei este app.
+            </p>
+            <p>
+              Nada supera aprender com o professor e os colegas. Mas com preparação e revisão,
+              e ao marcar vídeos com tags, espero que possamos construir um vocabulário comum
+              e nos comunicar melhor no tatame.
+            </p>
+            <p>
+              Espero que o Link2Mat se torne um “amigo” do seu aprendizado de jiu-jitsu.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="es">
+            <p>
+              <strong>¿Por qué Link2Mat?</strong>
+            </p>
+            <p>
+              En el jiu-jitsu hay innumerables técnicas: elegir qué hacer según el oponente,
+              recuperarse de posiciones malas, contraatacar y decidir entre varias opciones en
+              fracciones de segundo. Hay alegría cuando el cuerpo se mueve de forma natural. Cuando
+              las cosas no salen o pierdes, lo mejor es preguntar al profesor o a tus compañeros,
+              pero muchos también vemos vídeos instructivos y de técnica.
+            </p>
+            <p>
+              YouTube y otras plataformas están llenas de explicaciones y técnicas. “Ah, esa es la
+              que me atrapó la última vez.” “¿Cómo evito eso?” “Esto puede encajar con mi estilo —
+              lo probaré la próxima.”
+            </p>
+            <p>
+              Guardamos esos videos, pero con el tiempo se acumulan y se pierden. Algunas personas
+              toman notas, pero yo quería una forma de organizar referencias en un solo lugar: poner
+              etiquetas, buscar, seguir cuántas veces vi algo y fijar lo que quiero trabajar ahora.
+              Por eso creé esta app.
+            </p>
+            <p>
+              Nada supera aprender con el profesor y los compañeros. Pero con preparación y repaso,
+              y al etiquetar videos, espero que podamos construir un vocabulario común y comunicarnos
+              mejor en el tatami.
+            </p>
+            <p>
+              Espero que Link2Mat se convierta en un “buddy” para tu aprendizaje de jiu-jitsu.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="fr">
+            <p>
+              <strong>Pourquoi Link2Mat ?</strong>
+            </p>
+            <p>
+              En jiu-jitsu, il existe d’innombrables techniques : choisir quoi faire selon
+              l’adversaire, se remettre de mauvaises positions, contre-attaquer et décider entre
+              plusieurs options en une fraction de seconde. Il y a une vraie joie quand le corps
+              bouge naturellement. Quand ça ne marche pas ou qu’on perd, le mieux est de demander
+              au professeur ou aux partenaires, mais beaucoup d’entre nous regardent aussi des vidéos
+              d’instruction et de technique.
+            </p>
+            <p>
+              YouTube et les réseaux sociaux regorgent de techniques et d’explications. « Ah, c’est
+              celle qui m’a coincé la dernière fois. » « Comment éviter ça ? » « Ça colle à mon style —
+              je testerai la prochaine fois. »
+            </p>
+            <p>
+              Nous sauvegardons ces vidéos, mais avec le temps elles s’accumulent et se perdent.
+              Certains prennent des notes, mais je voulais un moyen de regrouper ces références au
+              même endroit : taguer, rechercher, suivre le nombre de vues et épingler ce que je veux
+              travailler maintenant. C’est pour ça que j’ai créé cette app.
+            </p>
+            <p>
+              Rien ne remplace l’apprentissage avec le professeur et les partenaires. Mais avec la
+              préparation et la révision, et en taguant les vidéos, j’espère que nous pourrons
+              construire un vocabulaire commun et mieux communiquer sur le tatami.
+            </p>
+            <p>
+              J’espère que Link2Mat deviendra un “buddy” pour votre apprentissage du jiu-jitsu.
+            </p>
+          </div>
+        </div>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Getting Started</h2>
+      <h2 class="lang-block" data-lang="ja">はじめに</h2>
+      <h2 class="lang-block" data-lang="ko">시작하기</h2>
+      <h2 class="lang-block" data-lang="pt">Primeiros passos</h2>
+      <h2 class="lang-block" data-lang="es">Primeros pasos</h2>
+      <h2 class="lang-block" data-lang="fr">Premiers pas</h2>
+      <p class="muted lang-block lang-visible" data-lang="en">Three steps to start using Link2Mat.</p>
+      <p class="muted lang-block" data-lang="ja">3ステップではじめられます。</p>
+      <p class="muted lang-block" data-lang="ko">3단계로 시작하세요.</p>
+      <p class="muted lang-block" data-lang="pt">Três passos para começar.</p>
+      <p class="muted lang-block" data-lang="es">Tres pasos para empezar.</p>
+      <p class="muted lang-block" data-lang="fr">Trois étapes pour commencer.</p>
+      <div class="card" style="max-width: 720px;">
+        <div class="bilingual lang-blocks-row">
+          <div class="lang-block lang-visible" data-lang="en">
+            <p><strong>English</strong></p>
+            <ol style="margin: 8px 0 8px 20px; padding-left: 8px;">
+              <li style="margin-bottom: 10px;"><strong>Add a link</strong> — Paste a video URL or tap "Add" to save. It appears in your Library.</li>
+              <li style="margin-bottom: 10px;"><strong>Tag it</strong> — Open the item, tap "Tags," and add tags (e.g. position, technique). You can also add clips (timestamps) on the detail screen.</li>
+              <li style="margin-bottom: 10px;"><strong>Find it later</strong> — Use the Library list, or the "Shorts &amp; Clips" / "Tags" tabs to filter and search.</li>
+            </ol>
+          </div>
+          <div class="lang-block" data-lang="ja">
+            <p><strong>日本語</strong></p>
+            <ol style="margin: 8px 0 8px 20px; padding-left: 8px;">
+              <li style="margin-bottom: 10px;"><strong>リンクを追加</strong> — 動画URLを貼るか「追加」で保存。ライブラリに表示されます。</li>
+              <li style="margin-bottom: 10px;"><strong>タグをつける</strong> — 項目を開き「タグ」でタグを追加（ポジション・技など）。詳細画面でクリップ（タイムスタンプ）も追加できます。</li>
+              <li style="margin-bottom: 10px;"><strong>あとで探す</strong> — ライブラリ一覧や「ショート＆クリップ」「タグ」タブで絞り込み・検索。</li>
+            </ol>
+          </div>
+          <div class="lang-block" data-lang="ko">
+            <p><strong>한국어</strong></p>
+            <ol style="margin: 8px 0 8px 20px; padding-left: 8px;">
+              <li style="margin-bottom: 10px;"><strong>Add a link</strong> — Paste a video URL or tap "Add" to save. It appears in your Library.</li>
+              <li style="margin-bottom: 10px;"><strong>Tag it</strong> — Open the item, tap "Tags," and add tags (e.g. position, technique). You can also add clips (timestamps) on the detail screen.</li>
+              <li style="margin-bottom: 10px;"><strong>Find it later</strong> — Use the Library list, or the "Shorts &amp; Clips" / "Tags" tabs to filter and search.</li>
+            </ol>
+          </div>
+          <div class="lang-block" data-lang="pt">
+            <p><strong>Português</strong></p>
+            <ol style="margin: 8px 0 8px 20px; padding-left: 8px;">
+              <li style="margin-bottom: 10px;"><strong>Add a link</strong> — Paste a video URL or tap "Add" to save. It appears in your Library.</li>
+              <li style="margin-bottom: 10px;"><strong>Tag it</strong> — Open the item, tap "Tags," and add tags (e.g. position, technique). You can also add clips (timestamps) on the detail screen.</li>
+              <li style="margin-bottom: 10px;"><strong>Find it later</strong> — Use the Library list, or the "Shorts &amp; Clips" / "Tags" tabs to filter and search.</li>
+            </ol>
+          </div>
+          <div class="lang-block" data-lang="es">
+            <p><strong>Español</strong></p>
+            <ol style="margin: 8px 0 8px 20px; padding-left: 8px;">
+              <li style="margin-bottom: 10px;"><strong>Add a link</strong> — Paste a video URL or tap "Add" to save. It appears in your Library.</li>
+              <li style="margin-bottom: 10px;"><strong>Tag it</strong> — Open the item, tap "Tags," and add tags (e.g. position, technique). You can also add clips (timestamps) on the detail screen.</li>
+              <li style="margin-bottom: 10px;"><strong>Find it later</strong> — Use the Library list, or the "Shorts &amp; Clips" / "Tags" tabs to filter and search.</li>
+            </ol>
+          </div>
+          <div class="lang-block" data-lang="fr">
+            <p><strong>Français</strong></p>
+            <ol style="margin: 8px 0 8px 20px; padding-left: 8px;">
+              <li style="margin-bottom: 10px;"><strong>Add a link</strong> — Paste a video URL or tap "Add" to save. It appears in your Library.</li>
+              <li style="margin-bottom: 10px;"><strong>Tag it</strong> — Open the item, tap "Tags," and add tags (e.g. position, technique). You can also add clips (timestamps) on the detail screen.</li>
+              <li style="margin-bottom: 10px;"><strong>Find it later</strong> — Use the Library list, or the "Shorts &amp; Clips" / "Tags" tabs to filter and search.</li>
+            </ol>
+          </div>
+        </div>
+        <p class="muted lang-block lang-visible" data-lang="en" style="margin-top: 12px;">That's it. No account required; everything stays on your device.</p>
+        <p class="muted lang-block" data-lang="ja" style="margin-top: 12px;">以上。アカウント不要で、データは端末内に保存されます。</p>
+        <p class="muted lang-block" data-lang="ko" style="margin-top: 12px;">계정 없이 사용 가능하며, 모든 데이터는 기기에만 저장됩니다.</p>
+        <p class="muted lang-block" data-lang="pt" style="margin-top: 12px;">Pronto. Não é necessária conta; tudo fica no seu dispositivo.</p>
+        <p class="muted lang-block" data-lang="es" style="margin-top: 12px;">Listo. No hace falta cuenta; todo se queda en tu dispositivo.</p>
+        <p class="muted lang-block" data-lang="fr" style="margin-top: 12px;">C'est tout. Aucun compte requis ; tout reste sur votre appareil.</p>
+      </div>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Quick overview</h2>
+      <h2 class="lang-block" data-lang="ja">まずは概要</h2>
+      <h2 class="lang-block" data-lang="ko">개요</h2>
+      <h2 class="lang-block" data-lang="pt">Visão geral</h2>
+      <h2 class="lang-block" data-lang="es">Resumen</h2>
+      <h2 class="lang-block" data-lang="fr">Vue d’ensemble</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible two-col" data-lang="en">
+          <div class="card">
+            <p><strong>What you can do</strong></p>
+            <ul>
+              <li>Save links quickly</li>
+              <li>Make clips</li>
+              <li>Tag and search</li>
+              <li>Keep everything on device</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p><strong>Best for</strong></p>
+            <ul>
+              <li>Collecting references</li>
+              <li>Study notes</li>
+              <li>Training logs</li>
+              <li>Quick lookup</li>
+            </ul>
+          </div>
+        </div>
+        <div class="lang-block two-col" data-lang="ja">
+          <div class="card">
+            <p><strong>できること</strong></p>
+            <ul>
+              <li>リンクをすぐ保存</li>
+              <li>クリップ作成</li>
+              <li>タグ付け・検索</li>
+              <li>端末内で完結</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p><strong>こんな方に</strong></p>
+            <ul>
+              <li>参考リンクの収集</li>
+              <li>学習メモ</li>
+              <li>練習ログ</li>
+              <li>すぐ見返したい人</li>
+            </ul>
+          </div>
+        </div>
+        <div class="lang-block two-col" data-lang="ko">
+          <div class="card">
+            <p><strong>할 수 있는 것</strong></p>
+            <ul>
+              <li>링크를 빠르게 저장</li>
+              <li>클립 생성</li>
+              <li>태그와 검색</li>
+              <li>기기 내에서 완료</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p><strong>이런 분께</strong></p>
+            <ul>
+              <li>참고 링크 수집</li>
+              <li>학습 메모</li>
+              <li>훈련 로그</li>
+              <li>빠르게 다시 보고 싶은 분</li>
+            </ul>
+          </div>
+        </div>
+        <div class="lang-block two-col" data-lang="pt">
+          <div class="card">
+            <p><strong>O que você pode fazer</strong></p>
+            <ul>
+              <li>Salve links rapidamente</li>
+              <li>Crie clipes</li>
+              <li>Marque com tags e pesquise</li>
+              <li>Tudo fica no dispositivo</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p><strong>Ideal para</strong></p>
+            <ul>
+              <li>Coletar referências</li>
+              <li>Anotações de estudo</li>
+              <li>Registros de treino</li>
+              <li>Consulta rápida</li>
+            </ul>
+          </div>
+        </div>
+        <div class="lang-block two-col" data-lang="es">
+          <div class="card">
+            <p><strong>Lo que puedes hacer</strong></p>
+            <ul>
+              <li>Guarda enlaces rápidamente</li>
+              <li>Crea clips</li>
+              <li>Etiqueta y busca</li>
+              <li>Todo queda en el dispositivo</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p><strong>Ideal para</strong></p>
+            <ul>
+              <li>Reunir referencias</li>
+              <li>Notas de estudio</li>
+              <li>Registros de entrenamiento</li>
+              <li>Consulta rápida</li>
+            </ul>
+          </div>
+        </div>
+        <div class="lang-block two-col" data-lang="fr">
+          <div class="card">
+            <p><strong>Ce que vous pouvez faire</strong></p>
+            <ul>
+              <li>Enregistrez vite les liens</li>
+              <li>Créez des clips</li>
+              <li>Taguez et recherchez</li>
+              <li>Tout reste sur l’appareil</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p><strong>Idéal pour</strong></p>
+            <ul>
+              <li>Rassembler des références</li>
+              <li>Notes d’étude</li>
+              <li>Journaux d’entraînement</li>
+              <li>Consultation rapide</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <h2>Quick overview / まずは概要</h2>
-      <div class="two-col">
-        <div class="card">
-          <p><strong>What you can do</strong></p>
-          <p><strong>できること</strong></p>
-          <ul>
-            <li>Save links quickly / リンクをすぐ保存</li>
-            <li>Make clips / クリップ作成</li>
-            <li>Tag and search / タグ付け・検索</li>
-            <li>Keep everything on device / 端末内で完結</li>
-          </ul>
-        </div>
-        <div class="card">
-          <p><strong>Best for</strong></p>
-          <p><strong>こんな方に</strong></p>
-          <ul>
-            <li>Collecting references / 参考リンクの収集</li>
-            <li>Study notes / 学習メモ</li>
-            <li>Training logs / 練習ログ</li>
-            <li>Quick lookup / すぐ見返したい人</li>
-          </ul>
-        </div>
-      </div>
-
-      <h2>Screenshots / スクリーンショット</h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Screenshots</h2>
+      <h2 class="lang-block" data-lang="ja">スクリーンショット</h2>
+      <h2 class="lang-block" data-lang="ko">스크린샷</h2>
+      <h2 class="lang-block" data-lang="pt">Capturas de tela</h2>
+      <h2 class="lang-block" data-lang="es">Capturas</h2>
+      <h2 class="lang-block" data-lang="fr">Captures</h2>
       <p class="muted">iPhone / iPad / Android</p>
 
       <div class="tabs" role="tablist" aria-label="Screenshots">
@@ -337,152 +707,171 @@
 
       <div class="tab-panel active" data-panel="iphone">
         <div class="shots">
-          <figure class="shot" data-caption="Library overview / 保存したリンク一覧">
-            <img src="assets/screenshots/iphone/ios_01_library.png" alt="iPhone - Library overview" loading="lazy" />
-            <figcaption>Library overview / 保存したリンク一覧</figcaption>
+          <figure class="shot" data-caption="Library overview / 保存したリンク一覧 / 라이브러리 개요 / Visão geral da biblioteca / Vista general de la biblioteca / Vue d’ensemble de la bibliothèque">
+            <img data-device="iphone" data-shot="1" src="screenshots/iphone/en_1.png" alt="iPhone - Library overview" loading="lazy" />
+            <figcaption>Library overview / 保存したリンク一覧 / 라이브러리 개요 / Visão geral da biblioteca / Vista general de la biblioteca / Vue d’ensemble de la bibliothèque</figcaption>
           </figure>
-          <figure class="shot" data-caption="Add link / リンク追加">
-            <img src="assets/screenshots/iphone/ios_02_add.png" alt="iPhone - Add link" loading="lazy" />
-            <figcaption>Add link / リンク追加</figcaption>
+          <figure class="shot" data-caption="Add link / リンク追加 / 링크 추가 / Adicionar link / Añadir enlace / Ajouter un lien">
+            <img data-device="iphone" data-shot="2" src="screenshots/iphone/en_2.png" alt="iPhone - Add link" loading="lazy" />
+            <figcaption>Add link / リンク追加 / 링크 추가 / Adicionar link / Añadir enlace / Ajouter un lien</figcaption>
           </figure>
-          <figure class="shot" data-caption="Clip creation / クリップ作成">
-            <img src="assets/screenshots/iphone/ios_03_clip.png" alt="iPhone - Clip creation" loading="lazy" />
-            <figcaption>Clip creation / クリップ作成</figcaption>
+          <figure class="shot" data-caption="Clip creation / クリップ作成 / 클립 생성 / Criação de clipes / Creación de clips / Création de clips">
+            <img data-device="iphone" data-shot="3" src="screenshots/iphone/en_3.png" alt="iPhone - Clip creation" loading="lazy" />
+            <figcaption>Clip creation / クリップ作成 / 클립 생성 / Criação de clipes / Creación de clips / Création de clips</figcaption>
           </figure>
-          <figure class="shot" data-caption="Tagging / タグ付け">
-            <img src="assets/screenshots/iphone/ios_04_tags.png" alt="iPhone - Tagging screen" loading="lazy" />
-            <figcaption>Tagging / タグ付け</figcaption>
+          <figure class="shot" data-caption="Tagging / タグ付け / 태그 지정 / Tags / Etiquetas / Tags">
+            <img data-device="iphone" data-shot="4" src="screenshots/iphone/en_4.png" alt="iPhone - Tagging screen" loading="lazy" />
+            <figcaption>Tagging / タグ付け / 태그 지정 / Tags / Etiquetas / Tags</figcaption>
           </figure>
-          <figure class="shot" data-caption="Link detail / 詳細画面">
-            <img src="assets/screenshots/iphone/ios_05_detail.png" alt="iPhone - Link detail" loading="lazy" />
-            <figcaption>Link detail / 詳細画面</figcaption>
+          <figure class="shot" data-caption="Link detail / 詳細画面 / 링크 상세 / Detalhes do link / Detalle del enlace / Détail du lien">
+            <img data-device="iphone" data-shot="5" src="screenshots/iphone/en_5.png" alt="iPhone - Link detail" loading="lazy" />
+            <figcaption>Link detail / 詳細画面 / 링크 상세 / Detalhes do link / Detalle del enlace / Détail du lien</figcaption>
           </figure>
-          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ">
-            <img src="assets/screenshots/iphone/ios_06_short_clips.png" alt="iPhone - Shorts & clips list" loading="lazy" />
-            <figcaption>Shorts & Clips / ショート&クリップ</figcaption>
+          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ / 쇼츠 & 클립 / Shorts e clipes / Shorts y clips / Shorts & clips">
+            <img data-device="iphone" data-shot="6" src="screenshots/iphone/en_6.png" alt="iPhone - Shorts & clips list" loading="lazy" />
+            <figcaption>Shorts & Clips / ショート&クリップ / 쇼츠 & 클립 / Shorts e clipes / Shorts y clips / Shorts & clips</figcaption>
           </figure>
-          <figure class="shot" data-caption="Search / 検索">
-            <img src="assets/screenshots/iphone/ios_07_search.png" alt="iPhone - Search results" loading="lazy" />
-            <figcaption>Search / 検索</figcaption>
+          <figure class="shot" data-caption="Search / 検索 / 검색 / Pesquisar / Buscar / Rechercher">
+            <img data-device="iphone" data-shot="7" src="screenshots/iphone/en_7.png" alt="iPhone - Search results" loading="lazy" />
+            <figcaption>Search / 検索 / 검색 / Pesquisar / Buscar / Rechercher</figcaption>
           </figure>
         </div>
       </div>
 
       <div class="tab-panel" data-panel="ipad">
         <div class="shots shots-ipad">
-          <figure class="shot" data-caption="Library overview / 保存リンク一覧">
-            <img
-              src="assets/screenshots/ipad/iPad%20(V)%201.%20Library%20overview%20(saved%20links%20list)%20(captioned).png"
-              alt="iPad - Library overview"
-              loading="lazy"
-            />
-            <figcaption>Library overview / 保存リンク一覧</figcaption>
+          <figure class="shot" data-caption="Library overview / 保存リンク一覧 / 라이브러리 개요 / Visão geral da biblioteca / Vista general de la biblioteca / Vue d’ensemble de la bibliothèque">
+            <img data-device="ipad" data-shot="1" src="screenshots/ipad/en_1.png" alt="iPad - Library overview" loading="lazy" />
+            <figcaption>Library overview / 保存リンク一覧 / 라이브러리 개요 / Visão geral da biblioteca / Vista general de la biblioteca / Vue d’ensemble de la bibliothèque</figcaption>
           </figure>
-          <figure class="shot" data-caption="Clip creation / クリップ作成">
-            <img
-              src="assets/screenshots/ipad/iPad%20(V)%203.%20Clip%20creation%20screen%20(captioned).png"
-              alt="iPad - Clip creation"
-              loading="lazy"
-            />
-            <figcaption>Clip creation / クリップ作成</figcaption>
+          <figure class="shot" data-caption="Clip creation / クリップ作成 / 클립 생성 / Criação de clipes / Creación de clips / Création de clips">
+            <img data-device="ipad" data-shot="3" src="screenshots/ipad/en_3.png" alt="iPad - Clip creation" loading="lazy" />
+            <figcaption>Clip creation / クリップ作成 / 클립 생성 / Criação de clipes / Creación de clips / Création de clips</figcaption>
           </figure>
-          <figure class="shot" data-caption="Tagging / タグ付け">
-            <img
-              src="assets/screenshots/ipad/iPad%20(V)%204.%20Tagging%20screen%20(captioned).png"
-              alt="iPad - Tagging screen"
-              loading="lazy"
-            />
-            <figcaption>Tagging / タグ付け</figcaption>
+          <figure class="shot" data-caption="Tagging / タグ付け / 태그 지정 / Tags / Etiquetas / Tags">
+            <img data-device="ipad" data-shot="4" src="screenshots/ipad/en_4.png" alt="iPad - Tagging screen" loading="lazy" />
+            <figcaption>Tagging / タグ付け / 태그 지정 / Tags / Etiquetas / Tags</figcaption>
           </figure>
-          <figure class="shot" data-caption="Link detail / 詳細とタグ候補（タブレット横向きに対応）">
-            <img
-              src="assets/screenshots/ipad/iPad%20(H)%205.%20Link%20detail%20%3A%20metadata%20-%20with%20Suggested%20Tag%20(captioned).png"
-              alt="iPad - Link detail with tags"
-              loading="lazy"
-            />
-            <figcaption>Link detail / 詳細とタグ候補（タブレット横向きに対応）</figcaption>
+          <figure class="shot" data-caption="Link detail / 詳細とタグ候補（タブレット横向きに対応） / 링크 상세 및 태그 후보(가로 모드 대응) / Detalhes do link e sugestões de tags (modo paisagem) / Detalle del enlace y sugerencias de etiquetas (modo horizontal) / Détail du lien et suggestions de tags (mode paysage)">
+            <img data-device="ipad" data-shot="5l" src="screenshots/ipad/en_5l.png" alt="iPad - Link detail with tags" loading="lazy" />
+            <figcaption>Link detail / 詳細とタグ候補（タブレット横向きに対応） / 링크 상세 및 태그 후보(가로 모드 대응) / Detalhes do link e sugestões de tags (modo paisagem) / Detalle del enlace y sugerencias de etiquetas (modo horizontal) / Détail du lien et suggestions de tags (mode paysage)</figcaption>
           </figure>
-          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ">
-            <img
-              src="assets/screenshots/ipad/iPad%20(V)%206.%20Short%20%26%20Clips%20list%20(browse)%20(captioned).png"
-              alt="iPad - Shorts & clips list"
-              loading="lazy"
-            />
-            <figcaption>Shorts & Clips / ショート&クリップ</figcaption>
+          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ / 쇼츠 & 클립 / Shorts e clipes / Shorts y clips / Shorts & clips">
+            <img data-device="ipad" data-shot="6" src="screenshots/ipad/en_6.png" alt="iPad - Shorts & clips list" loading="lazy" />
+            <figcaption>Shorts & Clips / ショート&クリップ / 쇼츠 & 클립 / Shorts e clipes / Shorts y clips / Shorts & clips</figcaption>
           </figure>
-          <figure class="shot" data-caption="Search / フィルタ検索">
-            <img
-              src="assets/screenshots/ipad/iPad%20(V)%207.%20Search%20%3A%20filter%20results%20(captioned).png"
-              alt="iPad - Search filter results"
-              loading="lazy"
-            />
-            <figcaption>Search / フィルタ検索</figcaption>
+          <figure class="shot" data-caption="Search / フィルタ検索 / 검색 / filtro / Pesquisar / filtro / Buscar / filtro / Rechercher / filtre">
+            <img data-device="ipad" data-shot="7" src="screenshots/ipad/en_7.png" alt="iPad - Search filter results" loading="lazy" />
+            <figcaption>Search / フィルタ検索 / 검색 / filtro / Pesquisar / filtro / Buscar / filtro / Rechercher / filtre</figcaption>
           </figure>
         </div>
       </div>
 
       <div class="tab-panel" data-panel="android">
         <div class="shots">
-          <figure class="shot" data-caption="Library overview / 保存リンク一覧">
-            <img src="assets/screenshots/android/android_01_library.png" alt="Android - Library overview" loading="lazy" />
-            <figcaption>Library overview / 保存リンク一覧</figcaption>
+          <figure class="shot" data-caption="Library overview / 保存リンク一覧 / 라이브러리 개요 / Visão geral da biblioteca / Vista general de la biblioteca / Vue d’ensemble de la bibliothèque">
+            <img data-device="android" data-shot="1" src="screenshots/android/en_1.png" alt="Android - Library overview" loading="lazy" />
+            <figcaption>Library overview / 保存リンク一覧 / 라이브러리 개요 / Visão geral da biblioteca / Vista general de la biblioteca / Vue d’ensemble de la bibliothèque</figcaption>
           </figure>
-          <figure class="shot" data-caption="Add link / リンク追加">
-            <img src="assets/screenshots/android/android_02_add.png" alt="Android - Add link" loading="lazy" />
-            <figcaption>Add link / リンク追加</figcaption>
+          <figure class="shot" data-caption="Add link / リンク追加 / 링크 추가 / Adicionar link / Añadir enlace / Ajouter un lien">
+            <img data-device="android" data-shot="2" src="screenshots/android/en_2.png" alt="Android - Add link" loading="lazy" />
+            <figcaption>Add link / リンク追加 / 링크 추가 / Adicionar link / Añadir enlace / Ajouter un lien</figcaption>
           </figure>
-          <figure class="shot" data-caption="Clip creation / クリップ作成">
-            <img src="assets/screenshots/android/android_03_clip.png" alt="Android - Clip creation" loading="lazy" />
-            <figcaption>Clip creation / クリップ作成</figcaption>
+          <figure class="shot" data-caption="Clip creation / クリップ作成 / 클립 생성 / Criação de clipes / Creación de clips / Création de clips">
+            <img data-device="android" data-shot="3" src="screenshots/android/en_3.png" alt="Android - Clip creation" loading="lazy" />
+            <figcaption>Clip creation / クリップ作成 / 클립 생성 / Criação de clipes / Creación de clips / Création de clips</figcaption>
           </figure>
-          <figure class="shot" data-caption="Tagging / タグ付け">
-            <img src="assets/screenshots/android/android_04_tags.jpg" alt="Android - Tagging screen" loading="lazy" />
-            <figcaption>Tagging / タグ付け</figcaption>
+          <figure class="shot" data-caption="Tagging / タグ付け / 태그 지정 / Tags / Etiquetas / Tags">
+            <img data-device="android" data-shot="4" src="screenshots/android/en_4.png" alt="Android - Tagging screen" loading="lazy" />
+            <figcaption>Tagging / タグ付け / 태그 지정 / Tags / Etiquetas / Tags</figcaption>
           </figure>
-          <figure class="shot" data-caption="Link detail / 詳細画面">
-            <img src="assets/screenshots/android/android_05_detail.jpg" alt="Android - Link detail" loading="lazy" />
-            <figcaption>Link detail / 詳細画面</figcaption>
+          <figure class="shot" data-caption="Link detail / 詳細画面 / 링크 상세 / Detalhes do link / Detalle del enlace / Détail du lien">
+            <img data-device="android" data-shot="5" src="screenshots/android/en_5.png" alt="Android - Link detail" loading="lazy" />
+            <figcaption>Link detail / 詳細画面 / 링크 상세 / Detalhes do link / Detalle del enlace / Détail du lien</figcaption>
           </figure>
-          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ">
-            <img src="assets/screenshots/android/android_06_short_clips.jpg" alt="Android - Shorts & clips list" loading="lazy" />
-            <figcaption>Shorts & Clips / ショート&クリップ</figcaption>
+          <figure class="shot" data-caption="Shorts & Clips / ショート&クリップ / 쇼츠 & 클립 / Shorts e clipes / Shorts y clips / Shorts & clips">
+            <img data-device="android" data-shot="6" src="screenshots/android/en_6.png" alt="Android - Shorts & clips list" loading="lazy" />
+            <figcaption>Shorts & Clips / ショート&クリップ / 쇼츠 & 클립 / Shorts e clipes / Shorts y clips / Shorts & clips</figcaption>
           </figure>
-          <figure class="shot" data-caption="Search / 検索">
-            <img src="assets/screenshots/android/android_07_search.jpg" alt="Android - Search results" loading="lazy" />
-            <figcaption>Search / 検索</figcaption>
+          <figure class="shot" data-caption="Search / 検索 / 검색 / Pesquisar / Buscar / Rechercher">
+            <img data-device="android" data-shot="7" src="screenshots/android/en_7.png" alt="Android - Search results" loading="lazy" />
+            <figcaption>Search / 検索 / 검색 / Pesquisar / Buscar / Rechercher</figcaption>
           </figure>
         </div>
       </div>
 
-      <h2>Contact / お問い合わせ</h2>
-      <div class="card">
-        <p><strong>Support email</strong></p>
-        <p><strong>サポートメール</strong></p>
-        <p>
-          <a href="mailto:support@link2mat.com">support@link2mat.com</a>
-        </p>
-        <p class="muted">Response within 3 business days (JST).</p>
-        <p class="muted">3 営業日以内に返信します（日本時間）。</p>
-        <p class="muted">
-          Instagram:
-          <a href="https://www.instagram.com/link2mat/" rel="noopener noreferrer">https://www.instagram.com/link2mat/</a>
-        </p>
-        <p class="muted">
-          X:
-          <a href="https://x.com/link2mat_bjj" rel="noopener noreferrer">https://x.com/link2mat_bjj</a>
-        </p>
-        <p class="muted">Support inquiries are handled via email.</p>
-        <p class="muted">お問い合わせはサポートメールで受け付けています。</p>
-        <p class="muted">
-          Website:
-          <a href="https://link2mat.com">https://link2mat.com</a>
-        </p>
+      <h2 class="lang-block lang-visible" data-lang="en">Contact</h2>
+      <h2 class="lang-block" data-lang="ja">お問い合わせ</h2>
+      <h2 class="lang-block" data-lang="ko">문의</h2>
+      <h2 class="lang-block" data-lang="pt">Contato</h2>
+      <h2 class="lang-block" data-lang="es">Contacto</h2>
+      <h2 class="lang-block" data-lang="fr">Contact</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible card" data-lang="en">
+          <p><strong>Support email</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+          <p class="muted">Response within 3 business days (JST).</p>
+          <p class="muted">Instagram: <a href="https://www.instagram.com/link2mat/" rel="noopener noreferrer">https://www.instagram.com/link2mat/</a></p>
+          <p class="muted">X: <a href="https://x.com/link2mat_bjj" rel="noopener noreferrer">https://x.com/link2mat_bjj</a></p>
+          <p class="muted">Support inquiries are handled via email.</p>
+          <p class="muted">Website: <a href="https://link2mat.com">https://link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="ja">
+          <p><strong>サポートメール</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+          <p class="muted">3 営業日以内に返信します（日本時間）。</p>
+          <p class="muted">Instagram: <a href="https://www.instagram.com/link2mat/" rel="noopener noreferrer">https://www.instagram.com/link2mat/</a></p>
+          <p class="muted">X: <a href="https://x.com/link2mat_bjj" rel="noopener noreferrer">https://x.com/link2mat_bjj</a></p>
+          <p class="muted">お問い合わせはサポートメールで受け付けています。</p>
+          <p class="muted">Website: <a href="https://link2mat.com">https://link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="ko">
+          <p><strong>지원 이메일</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+          <p class="muted">영업일 기준 3일 이내에 답변드립니다(일본 시간).</p>
+          <p class="muted">Instagram: <a href="https://www.instagram.com/link2mat/" rel="noopener noreferrer">https://www.instagram.com/link2mat/</a></p>
+          <p class="muted">X: <a href="https://x.com/link2mat_bjj" rel="noopener noreferrer">https://x.com/link2mat_bjj</a></p>
+          <p class="muted">문의는 이메일로 접수합니다.</p>
+          <p class="muted">Website: <a href="https://link2mat.com">https://link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="pt">
+          <p><strong>E-mail de suporte</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+          <p class="muted">Resposta em até 3 dias úteis (JST).</p>
+          <p class="muted">Instagram: <a href="https://www.instagram.com/link2mat/" rel="noopener noreferrer">https://www.instagram.com/link2mat/</a></p>
+          <p class="muted">X: <a href="https://x.com/link2mat_bjj" rel="noopener noreferrer">https://x.com/link2mat_bjj</a></p>
+          <p class="muted">As solicitações de suporte são atendidas por e-mail.</p>
+          <p class="muted">Website: <a href="https://link2mat.com">https://link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="es">
+          <p><strong>Correo de soporte</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+          <p class="muted">Respuesta en hasta 3 días hábiles (JST).</p>
+          <p class="muted">Instagram: <a href="https://www.instagram.com/link2mat/" rel="noopener noreferrer">https://www.instagram.com/link2mat/</a></p>
+          <p class="muted">X: <a href="https://x.com/link2mat_bjj" rel="noopener noreferrer">https://x.com/link2mat_bjj</a></p>
+          <p class="muted">Las consultas de soporte se atienden por correo.</p>
+          <p class="muted">Website: <a href="https://link2mat.com">https://link2mat.com</a></p>
+        </div>
+        <div class="lang-block card" data-lang="fr">
+          <p><strong>E-mail de support</strong></p>
+          <p><a href="mailto:support@link2mat.com">support@link2mat.com</a></p>
+          <p class="muted">Réponse sous 3 jours ouvrés (JST).</p>
+          <p class="muted">Instagram: <a href="https://www.instagram.com/link2mat/" rel="noopener noreferrer">https://www.instagram.com/link2mat/</a></p>
+          <p class="muted">X: <a href="https://x.com/link2mat_bjj" rel="noopener noreferrer">https://x.com/link2mat_bjj</a></p>
+          <p class="muted">Les demandes d’assistance sont traitées par e-mail.</p>
+          <p class="muted">Website: <a href="https://link2mat.com">https://link2mat.com</a></p>
+        </div>
       </div>
 
-      <h2>Rights & Disclaimer / 権利と免責</h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Rights & Disclaimer</h2>
+      <h2 class="lang-block" data-lang="ja">権利と免責</h2>
+      <h2 class="lang-block" data-lang="ko">권리와 면책</h2>
+      <h2 class="lang-block" data-lang="pt">Direitos e isenção</h2>
+      <h2 class="lang-block" data-lang="es">Derechos y exención</h2>
+      <h2 class="lang-block" data-lang="fr">Droits et responsabilité</h2>
       <div class="card">
         <div class="bilingual">
-          <div>
+          <div class="lang-block lang-visible" data-lang="en">
             <p><strong>Rights and ownership</strong></p>
             <p>
               Link2Mat stores links and your notes. It does not host or distribute video content.
@@ -494,7 +883,7 @@
               generally acceptable, but redistribution is not permitted.
             </p>
           </div>
-          <div>
+          <div class="lang-block" data-lang="ja">
             <p><strong>権利と所有権</strong></p>
             <p>
               Link2Mat はリンクとメモを管理するためのアプリで、動画コンテンツの配信は行いません。
@@ -506,24 +895,140 @@
               再配布はお控えください。
             </p>
           </div>
+          <div class="lang-block" data-lang="ko">
+            <p><strong>권리와 소유권</strong></p>
+            <p>
+              Link2Mat은 링크와 메모를 저장합니다. 영상 콘텐츠를 호스팅하거나 배포하지 않습니다.
+              제3자 콘텐츠의 권리는 각 권리자에게 있습니다.
+            </p>
+            <p><strong>이미지/콘텐츠 사용</strong></p>
+            <p>
+              사용 권한이 있는 이미지와 콘텐츠만 이용해주세요. 앱 내 개인 사용은 일반적으로 허용되지만,
+              재배포는 금지됩니다.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="pt">
+            <p><strong>Direitos e propriedade</strong></p>
+            <p>
+              O Link2Mat armazena links e suas notas. Ele não hospeda nem distribui vídeos.
+              Todo conteúdo de terceiros pertence aos seus respectivos proprietários.
+            </p>
+            <p><strong>Uso de imagens e conteúdo</strong></p>
+            <p>
+              Use apenas imagens e conteúdos para os quais você tem direito de uso. O uso pessoal
+              dentro do app é geralmente aceitável, mas a redistribuição não é permitida.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="es">
+            <p><strong>Derechos y propiedad</strong></p>
+            <p>
+              Link2Mat almacena enlaces y tus notas. No aloja ni distribuye contenido de vídeo.
+              Todo contenido de terceros pertenece a sus respectivos propietarios.
+            </p>
+            <p><strong>Uso de imágenes y contenido</strong></p>
+            <p>
+              Usa solo imágenes y contenido con derecho de uso. El uso personal en la app suele
+              ser aceptable, pero la redistribución no está permitida.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="fr">
+            <p><strong>Droits et propriété</strong></p>
+            <p>
+              Link2Mat stocke des liens et vos notes. Il n’héberge ni ne distribue de contenu vidéo.
+              Tout contenu tiers reste la propriété de ses détenteurs.
+            </p>
+            <p><strong>Utilisation des images et du contenu</strong></p>
+            <p>
+              Utilisez uniquement des images et du contenu pour lesquels vous avez les droits.
+              L’usage personnel dans l’app est généralement acceptable, mais la redistribution est interdite.
+            </p>
+          </div>
         </div>
       </div>
 
-      <h2>Before you contact us / お問い合わせの前に</h2>
-      <p>Please include the following so we can help faster:</p>
-      <p>以下を記載いただくと対応が早くなります：</p>
-      <ul>
-        <li>Device model / 端末名</li>
-        <li>OS version / OS バージョン</li>
-        <li>App version / アプリのバージョン</li>
-        <li>URL (if the issue is link-specific) / 問題のURL（該当する場合）</li>
-        <li>Steps to reproduce / 再現手順</li>
-        <li>Screenshots or screen recording (if possible) / 可能ならスクリーンショット</li>
-      </ul>
+      <h2 class="lang-block lang-visible" data-lang="en">Before you contact us</h2>
+      <h2 class="lang-block" data-lang="ja">お問い合わせの前に</h2>
+      <h2 class="lang-block" data-lang="ko">문의 전</h2>
+      <h2 class="lang-block" data-lang="pt">Antes de entrar em contato</h2>
+      <h2 class="lang-block" data-lang="es">Antes de contactar</h2>
+      <h2 class="lang-block" data-lang="fr">Avant de nous contacter</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en">
+          <p>Please include the following so we can help faster:</p>
+          <ul>
+            <li>Device model</li>
+            <li>OS version</li>
+            <li>App version</li>
+            <li>URL (if the issue is link-specific)</li>
+            <li>Steps to reproduce</li>
+            <li>Screenshots or screen recording (if possible)</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ja">
+          <p>以下を記載いただくと対応が早くなります：</p>
+          <ul>
+            <li>端末名</li>
+            <li>OS バージョン</li>
+            <li>アプリのバージョン</li>
+            <li>問題のURL（該当する場合）</li>
+            <li>再現手順</li>
+            <li>可能ならスクリーンショット</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ko">
+          <p>아래 내용을 함께 알려주시면 더 빠르게 도와드릴 수 있습니다:</p>
+          <ul>
+            <li>기기 모델</li>
+            <li>OS 버전</li>
+            <li>앱 버전</li>
+            <li>문제의 URL(해당 시)</li>
+            <li>재현 방법</li>
+            <li>가능하면 스크린샷</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p>Inclua as informações abaixo para que possamos ajudar mais rápido:</p>
+          <ul>
+            <li>Modelo do dispositivo</li>
+            <li>Versão do SO</li>
+            <li>Versão do app</li>
+            <li>URL (se aplicável)</li>
+            <li>Passos para reproduzir</li>
+            <li>Se possível, captura de tela</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p>Incluye lo siguiente para que podamos ayudarte más rápido:</p>
+          <ul>
+            <li>Modelo del dispositivo</li>
+            <li>Versión del SO</li>
+            <li>Versión de la app</li>
+            <li>URL (si aplica)</li>
+            <li>Pasos para reproducir</li>
+            <li>Capturas de pantalla o grabación</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p>Merci d’indiquer les éléments suivants pour que nous puissions aider plus vite :</p>
+          <ul>
+            <li>Modèle d’appareil</li>
+            <li>Version du système</li>
+            <li>Version de l’app</li>
+            <li>URL (si c’est pertinent)</li>
+            <li>Étapes pour reproduire</li>
+            <li>Captures d’écran ou enregistrement</li>
+          </ul>
+        </div>
+      </div>
 
-      <h2>FAQ / よくある質問</h2>
+      <h2 class="lang-block lang-visible" data-lang="en">FAQ</h2>
+      <h2 class="lang-block" data-lang="ja">よくある質問</h2>
+      <h2 class="lang-block" data-lang="ko">자주 묻는 질문</h2>
+      <h2 class="lang-block" data-lang="pt">Perguntas frequentes</h2>
+      <h2 class="lang-block" data-lang="es">Preguntas frecuentes</h2>
+      <h2 class="lang-block" data-lang="fr">FAQ</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p><strong>Q.</strong> Does iCloud sync my changes between iPhone and iPad?</p>
           <p>
             <strong>A.</strong> Yes. If you install Link2Mat on multiple devices signed into the same
@@ -547,7 +1052,7 @@
             or uninstall the app to remove all data.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p><strong>Q.</strong> iPhone と iPad の変更は iCloud で同期されますか？</p>
           <p>
             <strong>A.</strong> はい。同じ iCloud アカウントで Link2Mat を複数端末にインストールすると、
@@ -570,11 +1075,114 @@
             アプリを削除すると全データが消去されます。
           </p>
         </div>
+        <div class="lang-block" data-lang="ko">
+          <p><strong>Q.</strong> iPhone과 iPad의 변경 사항이 iCloud로 동기화되나요?</p>
+          <p>
+            <strong>A.</strong> 네. 같은 iCloud 계정으로 여러 기기에 Link2Mat을 설치하면 변경 사항이
+            동기화됩니다. 변경분만 전송되므로 네트워크 사용량은 적습니다.
+          </p>
+          <p><strong>Q.</strong> 가격은 얼마인가요?</p>
+          <p>
+            <strong>A.</strong> 무료 플랜은 Link2Mat 30개, Clip 120개까지입니다.
+            30일간 모든 기능을 무료로 사용한 뒤 월 200엔입니다.
+          </p>
+          <p><strong>Q.</strong> 썸네일이나 메타데이터가 표시되지 않습니다.</p>
+          <p>
+            <strong>A.</strong> 일부 사이트는 메타데이터 접근을 제한합니다. 안정적인 네트워크에서 재시도해 주세요.
+            대신 커스텀 이미지(직접 찍은 스크린샷 등)를 설정할 수도 있습니다. 사용 권한이 있는 이미지를
+            이용해 주세요. 앱 내 개인 사용은 대체로 허용되지만 재배포는 금지됩니다.
+          </p>
+          <p><strong>Q.</strong> 데이터를 삭제하고 싶습니다.</p>
+          <p>
+            <strong>A.</strong> 데이터는 기기 내에만 저장됩니다. 앱에서 항목을 삭제하거나
+            앱을 삭제하면 모든 데이터가 제거됩니다.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p><strong>Q.</strong> As mudanças são sincronizadas entre iPhone e iPad via iCloud?</p>
+          <p>
+            <strong>A.</strong> Sim. Se você instalar o Link2Mat em vários dispositivos com a mesma conta
+            iCloud, as alterações serão sincronizadas. Apenas as mudanças são transferidas, então o uso
+            de rede é baixo.
+          </p>
+          <p><strong>Q.</strong> Qual é o preço?</p>
+          <p>
+            <strong>A.</strong> O plano gratuito inclui até 30 itens Link2Mat e 120 clipes.
+            Você pode testar todos os recursos por 30 dias; depois, custa JPY 200/mês.
+          </p>
+          <p><strong>Q.</strong> Miniaturas ou metadados não aparecem.</p>
+          <p>
+            <strong>A.</strong> Alguns sites bloqueiam o acesso a metadados. Tente novamente com uma rede
+            estável. Você também pode definir uma imagem personalizada (por exemplo, sua própria
+            captura de tela). Use imagens para as quais você tem direito; o uso pessoal no app é
+            geralmente aceitável, mas não redistribua.
+          </p>
+          <p><strong>Q.</strong> Quero excluir meus dados.</p>
+          <p>
+            <strong>A.</strong> Seus dados são armazenados apenas no dispositivo. Você pode apagar itens
+            no app ou desinstalar o app para remover todos os dados.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p><strong>Q.</strong> ¿Se sincronizan los cambios entre iPhone y iPad con iCloud?</p>
+          <p>
+            <strong>A.</strong> Sí. Si instalas Link2Mat en varios dispositivos con la misma cuenta de iCloud,
+            los cambios se sincronizan entre ellos. Solo se transfieren los cambios, por lo que el uso
+            de red es reducido.
+          </p>
+          <p><strong>Q.</strong> ¿Cuál es el precio?</p>
+          <p>
+            <strong>A.</strong> El plan gratuito incluye hasta 30 elementos Link2Mat y 120 clips.
+            Puedes probar todas las funciones gratis por 30 días; después cuesta JPY 200/mes.
+          </p>
+          <p><strong>Q.</strong> No se muestran miniaturas o metadatos.</p>
+          <p>
+            <strong>A.</strong> Algunos sitios bloquean el acceso a metadatos. Reinténtalo con una conexión
+            estable. También puedes establecer una imagen personalizada (por ejemplo, tu captura de pantalla).
+            Usa imágenes con derecho de uso; el uso personal en la app suele ser aceptable, pero no
+            redistribuyas.
+          </p>
+          <p><strong>Q.</strong> Quiero borrar mis datos.</p>
+          <p>
+            <strong>A.</strong> Tus datos se almacenan solo en tu dispositivo. Puedes borrar elementos en la app
+            o desinstalarla para eliminar todos los datos.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p><strong>Q.</strong> Les changements sont-ils synchronisés entre iPhone et iPad via iCloud ?</p>
+          <p>
+            <strong>A.</strong> Oui. Si vous installez Link2Mat sur plusieurs appareils avec le même compte iCloud,
+            les changements sont synchronisés. Seules les modifications sont transférées, ce qui limite
+            l’usage du réseau.
+          </p>
+          <p><strong>Q.</strong> Quel est le prix ?</p>
+          <p>
+            <strong>A.</strong> Le plan gratuit inclut jusqu’à 30 éléments Link2Mat et 120 clips.
+            Vous pouvez essayer toutes les fonctionnalités gratuitement pendant 30 jours, puis JPY 200/mois.
+          </p>
+          <p><strong>Q.</strong> Les miniatures ou métadonnées ne s’affichent pas.</p>
+          <p>
+            <strong>A.</strong> Certains sites bloquent l’accès aux métadonnées. Réessayez avec un réseau stable.
+            Vous pouvez aussi définir une image personnalisée (par exemple, une capture d’écran).
+            Utilisez des images pour lesquelles vous avez des droits ; l’usage personnel dans l’app est
+            généralement acceptable, mais ne redistribuez pas.
+          </p>
+          <p><strong>Q.</strong> Je veux supprimer mes données.</p>
+          <p>
+            <strong>A.</strong> Vos données sont stockées uniquement sur votre appareil. Vous pouvez supprimer
+            des éléments dans l’app ou désinstaller l’app pour tout effacer.
+          </p>
+        </div>
       </div>
 
-      <h2>Tag Help / タグヘルプ</h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Tag Help</h2>
+      <h2 class="lang-block" data-lang="ja">タグヘルプ</h2>
+      <h2 class="lang-block" data-lang="ko">태그 도움말</h2>
+      <h2 class="lang-block" data-lang="pt">Ajuda de tags</h2>
+      <h2 class="lang-block" data-lang="es">Ayuda de etiquetas</h2>
+      <h2 class="lang-block" data-lang="fr">Aide aux tags</h2>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>Learn how tags are structured and check terms.</p>
           <p class="muted">
             If you have requests or changes for the tag system, please reach out. Jiu-jitsu evolves
@@ -584,7 +1192,7 @@
             use the in-app request; for overall policy, email support.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p>タグの考え方や用語の確認はこちら:</p>
           <p class="muted">
             Tag の構成や追加・変更のご要望があれば、ぜひご連絡ください。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
@@ -593,29 +1201,159 @@
             個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
           </p>
         </div>
+        <div class="lang-block" data-lang="ko">
+          <p>태그 구조와 용어 확인:</p>
+          <p class="muted">
+            태그 구성이나 추가/변경 요청이 있다면 알려주세요. 주짓수는 매일 발전하고 있으며,
+            커뮤니티의 지식이 더해질수록 더 좋아진다고 믿습니다. 다만 태그가 너무 복잡해지면
+            이해하기 어려워질 수 있으므로 명확성과 범위를 균형 있게 유지하려 합니다.
+            경험 많은 주짓수 수련자분들의 조언을 부탁드립니다. 개별 태그 요청은 앱 내에서,
+            태그 정책 전반에 대한 요청은 이메일로 문의해 주세요.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p>Como as tags são estruturadas e termos:</p>
+          <p class="muted">
+            Se você tiver pedidos ou mudanças para o sistema de tags, entre em contato. O jiu-jitsu
+            evolui diariamente e acreditamos que o conhecimento da comunidade o torna melhor. Ao mesmo
+            tempo, queremos manter as tags compreensíveis, equilibrando clareza e cobertura. Ficaremos
+            gratos por conselhos de praticantes experientes. Para pedidos de tags específicas, use o
+            formulário no app; para políticas gerais, envie um e-mail ao suporte.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p>Cómo se estructuran las etiquetas y términos:</p>
+          <p class="muted">
+            Si tienes solicitudes o cambios para el sistema de etiquetas, contáctanos. El jiu-jitsu
+            evoluciona a diario y creemos que el conocimiento de la comunidad lo mejora. Al mismo
+            tiempo, queremos mantener las etiquetas comprensibles, equilibrando claridad y cobertura.
+            Agradecemos los consejos de practicantes con experiencia. Para solicitudes de etiquetas
+            específicas, usa el formulario en la app; para políticas generales, escribe al soporte.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p>Structure des tags et termes :</p>
+          <p class="muted">
+            Si vous avez des demandes ou des changements pour le système de tags, contactez-nous.
+            Le jiu-jitsu évolue chaque jour et nous pensons que les connaissances de la communauté
+            l’améliorent. En même temps, nous voulons garder des tags compréhensibles en équilibrant
+            clarté et couverture. Nous serions reconnaissants des conseils de pratiquants expérimentés.
+            Pour des demandes de tags spécifiques, utilisez le formulaire dans l’app ; pour les
+            politiques générales, écrivez au support.
+          </p>
+        </div>
       </div>
-      <p><a href="tags.html">Tag Help / タグヘルプ</a></p>
-      <p class="muted">
-        Requests about specific tags are accepted in the app.
-        <br />
+      <p class="lang-block lang-visible" data-lang="en">
+        <a href="tags.html">Tag Help</a>
+      </p>
+      <p class="lang-block" data-lang="ja">
+        <a href="tags.html">タグヘルプ</a>
+      </p>
+      <p class="lang-block" data-lang="ko">
+        <a href="tags.html">태그 도움말</a>
+      </p>
+      <p class="lang-block" data-lang="pt">
+        <a href="tags.html">Ajuda de tags</a>
+      </p>
+      <p class="lang-block" data-lang="es">
+        <a href="tags.html">Ayuda de etiquetas</a>
+      </p>
+      <p class="lang-block" data-lang="fr">
+        <a href="tags.html">Aide aux tags</a>
+      </p>
+      <p class="muted lang-block lang-visible" data-lang="en">
+        Requests about specific tags are accepted in the app. For tag policy in general, email support.
+      </p>
+      <p class="muted lang-block" data-lang="ja">
         個別のタグの追加・変更はアプリ内から受け付けています。Tag 全般のご要望はサポートメールへお願いします。
       </p>
+      <p class="muted lang-block" data-lang="ko">
+        개별 태그 요청은 앱 내에서 접수합니다. 태그 정책 전반은 이메일로 문의해주세요.
+      </p>
+      <p class="muted lang-block" data-lang="pt">
+        Solicitações de tags específicas são aceitas no app. Para políticas gerais, envie e-mail ao suporte.
+      </p>
+      <p class="muted lang-block" data-lang="es">
+        Las solicitudes de etiquetas específicas se aceptan en la app. Para políticas generales, escribe al soporte.
+      </p>
+      <p class="muted lang-block" data-lang="fr">
+        Les demandes de tags spécifiques sont acceptées dans l’app. Pour les politiques générales, écrivez au support.
+      </p>
 
-      <h2>Privacy / プライバシー</h2>
-      <p>
-        Please review our privacy policy:
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
-      <p>
-        プライバシーポリシーはこちら:
-        <a href="privacy.html">プライバシーポリシー</a>
-      </p>
-      <p>
-        Terms of Use:
-        <a href="terms.html">Terms of Use / 利用規約</a>
-      </p>
-      <p class="muted">© 2026 Link2Mat. All rights reserved.</p>
-      <p class="muted">© 2026 Link2Mat. 無断転載は禁止です。</p>
+      <h2 class="lang-block lang-visible" data-lang="en">Privacy</h2>
+      <h2 class="lang-block" data-lang="ja">プライバシー</h2>
+      <h2 class="lang-block" data-lang="ko">개인정보</h2>
+      <h2 class="lang-block" data-lang="pt">Privacidade</h2>
+      <h2 class="lang-block" data-lang="es">Privacidad</h2>
+      <h2 class="lang-block" data-lang="fr">Confidentialité</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en">
+          <p>
+            Please review our privacy policy:
+            <a href="privacy.html">Privacy Policy</a>
+          </p>
+          <p>
+            Terms of Use:
+            <a href="terms.html">Terms of Use</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="ja">
+          <p>
+            プライバシーポリシーはこちら:
+            <a href="privacy.html">プライバシーポリシー</a>
+          </p>
+          <p>
+            利用規約:
+            <a href="terms.html">利用規約</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="ko">
+          <p>
+            개인정보 처리방침:
+            <a href="privacy.html">개인정보 처리방침</a>
+          </p>
+          <p>
+            이용약관:
+            <a href="terms.html">이용약관</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p>
+            Política de privacidade:
+            <a href="privacy.html">Política de privacidade</a>
+          </p>
+          <p>
+            Termos de uso:
+            <a href="terms.html">Termos de uso</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p>
+            Política de privacidad:
+            <a href="privacy.html">Política de privacidad</a>
+          </p>
+          <p>
+            Términos de uso:
+            <a href="terms.html">Términos de uso</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p>
+            Politique de confidentialité :
+            <a href="privacy.html">Politique de confidentialité</a>
+          </p>
+          <p>
+            Conditions d’utilisation :
+            <a href="terms.html">Conditions d’utilisation</a>
+          </p>
+        </div>
+      </div>
+      <p class="muted lang-block lang-visible" data-lang="en">© 2026 Link2Mat. All rights reserved.</p>
+      <p class="muted lang-block" data-lang="ja">© 2026 Link2Mat. 無断転載は禁止です。</p>
+      <p class="muted lang-block" data-lang="ko">© 2026 Link2Mat. 무단 전재 및 재배포 금지.</p>
+      <p class="muted lang-block" data-lang="pt">© 2026 Link2Mat. Todos os direitos reservados.</p>
+      <p class="muted lang-block" data-lang="es">© 2026 Link2Mat. Todos los derechos reservados.</p>
+      <p class="muted lang-block" data-lang="fr">© 2026 Link2Mat. Tous droits réservés.</p>
     </div>
 
     <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Screenshot viewer">
@@ -629,6 +1367,65 @@
     </div>
 
     <script>
+      (function initLangSwitcher() {
+        const STORAGE_KEY = "link2mat-support-lang";
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const langBlocks = document.querySelectorAll(".lang-block");
+
+        const LANG_INDEX = { en: 0, ja: 1, ko: 2, pt: 3, es: 4, fr: 5 };
+
+        function setLang(lang) {
+          document.body.setAttribute("data-lang", lang);
+          langBlocks.forEach((el) => {
+            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+          });
+          langButtons.forEach((btn) => {
+            const on = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          const idx = LANG_INDEX[lang] ?? 0;
+          document.querySelectorAll(".shot").forEach((shot) => {
+            const full = shot.getAttribute("data-caption-full") || shot.getAttribute("data-caption") || "";
+            if (!shot.hasAttribute("data-caption-full")) shot.setAttribute("data-caption-full", full);
+            const parts = full.split(" / ");
+            const text = parts[idx] !== undefined ? parts[idx].trim() : full;
+            shot.setAttribute("data-caption", text);
+            const fig = shot.querySelector("figcaption");
+            if (fig) fig.textContent = text;
+          });
+          document.querySelectorAll("img[data-device][data-shot]").forEach((img) => {
+            const device = img.getAttribute("data-device");
+            const shot = img.getAttribute("data-shot");
+            img.src = "screenshots/" + device + "/" + lang + "_" + shot + ".png";
+            img.onerror = function fallbackToEn() {
+              if (img.src.indexOf("/en_") === -1) {
+                img.onerror = null;
+                img.src = "screenshots/" + device + "/en_" + shot + ".png";
+              }
+            };
+          });
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        }
+
+        langButtons.forEach((btn) => {
+          btn.addEventListener("click", () => setLang(btn.getAttribute("data-lang")));
+        });
+
+        const supported = ["en", "ja", "ko", "pt", "es", "fr"];
+        function detectBrowserLang() {
+          const list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
+          for (const raw of list) {
+            const code = (raw || "").toLowerCase().split("-")[0];
+            if (supported.indexOf(code) !== -1) return code;
+          }
+          return "en";
+        }
+        const saved = localStorage.getItem(STORAGE_KEY);
+        const initial = (saved && supported.indexOf(saved) !== -1) ? saved : detectBrowserLang();
+        setLang(initial);
+      })();
+
       const tabButtons = document.querySelectorAll(".tab-btn");
       const tabPanels = document.querySelectorAll(".tab-panel");
 

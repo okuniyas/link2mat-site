@@ -106,54 +106,74 @@
       a {
         color: #2563eb;
       }
-      .lang-switch {
-        display: flex;
-        gap: 8px;
-        margin: 12px 0 4px;
-        flex-wrap: wrap;
-      }
-      .lang-switch a {
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid #e5e7eb;
-        font-size: 12px;
-        text-decoration: none;
-        color: #111111;
-        background: #ffffff;
-      }
-      .lang-switch a.active {
-        background: #f3f4f6;
-        border-color: #cbd5f5;
-        font-weight: 600;
-      }
+      .lang-switcher { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; align-items: center; }
+      .lang-switcher span { font-size: 13px; color: #4b5563; margin-right: 4px; }
+      .lang-btn { padding: 6px 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; font-size: 14px; cursor: pointer; color: #374151; }
+      .lang-btn:hover { background: #f9fafb; border-color: #d1d5db; }
+      .lang-btn.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+      .lang-block { display: none; }
+      .lang-block.lang-visible { display: block; }
+      body[data-lang] .bilingual { grid-template-columns: 1fr; }
+      body[data-lang] .bilingual .lang-block.lang-visible { display: block; }
+      body[data-lang] .bilingual .lang-block:not(.lang-visible) { display: none; }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Tag List / タグ一覧</h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
-      <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
+      <h1 class="lang-block lang-visible" data-lang="en">Tag List</h1>
+      <h1 class="lang-block" data-lang="ja">タグ一覧</h1>
+      <h1 class="lang-block" data-lang="ko">태그 목록</h1>
+      <h1 class="lang-block" data-lang="pt">Lista de tags</h1>
+      <h1 class="lang-block" data-lang="es">Lista de etiquetas</h1>
+      <h1 class="lang-block" data-lang="fr">Liste des tags</h1>
+      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-01-29</p>
 
-      <div class="lang-switch" id="langSwitch">
-        <a href="?lang=ja" data-lang="ja">日本語</a>
-        <a href="?lang=en" data-lang="en">English</a>
-        <a href="?lang=ko" data-lang="ko">한국어</a>
-        <a href="?lang=pt" data-lang="pt">Português</a>
-        <a href="?lang=es" data-lang="es">Español</a>
-        <a href="?lang=fr" data-lang="fr">Français</a>
+      <div class="lang-switcher" role="group" aria-label="Language / 言語">
+        <span class="lang-label">Language / 言語:</span>
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
       </div>
 
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>
             Use the search box to filter tags. Tags are grouped into Position, Scenario, Setup, Action,
             Submission, and Source categories.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p>
             検索欄でタグを絞り込みできます。タグはポジション / シナリオ / セットアップ /
             アクション / サブミッション / ソースのカテゴリで整理しています。
+          </p>
+        </div>
+        <div class="lang-block" data-lang="ko">
+          <p>
+            검색창으로 태그를 필터링할 수 있습니다. 태그는 포지션, 시나리오, 셋업, 액션, 서브미션, 소스 카테고리로 구분됩니다.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p>
+            Use a caixa de pesquisa para filtrar tags. As tags estão agrupadas nas categorias Posição, Cenário, Preparação, Ação, Finalização e Fonte.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p>
+            Usa el cuadro de búsqueda para filtrar etiquetas. Las etiquetas se agrupan en las categorías Posición, Escenario, Preparación, Acción, Finalización y Fuente.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p>
+            Utilisez la zone de recherche pour filtrer les tags. Les tags sont regroupés en catégories : Position, Scénario, Préparation, Action, Soumission et Source.
           </p>
         </div>
       </div>
@@ -166,21 +186,42 @@
       <div id="list"></div>
 
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p class="muted">
             For specific tag requests, use the in-app request form. For general tag policy or structure,
-            email support. <a id="supportLinkEn" href="index.html">Support page</a>
+            email support. <a href="index.html">Support page</a>
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p class="muted">
             個別のタグの追加・変更はアプリから、Tag 全般のご要望はサポートメールへお願いします。
-            <a id="supportLinkJa" href="index.html">Support page</a>
+            <a href="index.html">サポートページ</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="ko">
+          <p class="muted">
+            개별 태그 추가·변경은 앱에서, 태그 전반 관련 요청은 지원 이메일로 문의해 주세요.
+            <a href="index.html">지원 페이지</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p class="muted">
+            Para pedidos de tags específicos, use o formulário no app. Para política ou estrutura geral, envie e-mail para o suporte. <a href="index.html">Página de suporte</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p class="muted">
+            Para solicitudes de etiquetas específicas, usa el formulario en la app. Para política o estructura general, escribe al soporte. <a href="index.html">Página de soporte</a>
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p class="muted">
+            Pour des demandes de tags spécifiques, utilisez le formulaire dans l'app. Pour la politique ou la structure générale, contactez le support par e-mail. <a href="index.html">Page d'assistance</a>
           </p>
         </div>
       </div>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p class="muted">
             We welcome suggestions about the tag system. Jiu-jitsu evolves daily, and we believe more
             community knowledge makes this better. At the same time, we want to keep tags understandable,
@@ -189,7 +230,7 @@
             email support.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p class="muted">
             Tag の構成や追加・変更のご要望も歓迎しています。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
             ただし、構成が複雑になりすぎないようバランスを見ながら進めたいと考えています。
@@ -197,41 +238,86 @@
             個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
           </p>
         </div>
+        <div class="lang-block" data-lang="ko">
+          <p class="muted">
+            태그 시스템에 대한 제안을 환영합니다. 주짓수는 매일 진화하며, 커뮤니티 지식이 많을수록 더 좋아진다고 믿습니다. 동시에 태그를 이해하기 쉽게 유지하고자 명확성과 커버리지의 균형을 맞추겠습니다. 경험 많은 주짓수 수련자들의 조언에 감사드립니다. 개별 태그 요청은 앱 내 요청을, 전반적인 정책은 이메일로 문의해 주세요.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p class="muted">
+            Aceitamos sugestões sobre o sistema de tags. O jiu-jitsu evolui diariamente e acreditamos que mais conhecimento da comunidade melhora o sistema. Ao mesmo tempo, queremos manter as tags compreensíveis, equilibrando clareza e cobertura. Agradecemos conselhos de praticantes experientes. Para pedidos específicos, use o formulário no app; para política geral, envie e-mail ao suporte.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p class="muted">
+            Aceptamos sugerencias sobre el sistema de etiquetas. El jiu-jitsu evoluciona cada día y creemos que más conocimiento de la comunidad lo mejora. Al mismo tiempo, queremos mantener las etiquetas comprensibles, equilibrando claridad y cobertura. Agradecemos consejos de practicantes experimentados. Para solicitudes específicas, usa el formulario en la app; para política general, escribe al soporte.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p class="muted">
+            Nous accueillons les suggestions sur le système de tags. Le jiu-jitsu évolue chaque jour et nous pensons que les connaissances de la communauté l'améliorent. Nous voulons garder les tags compréhensibles en équilibrant clarté et couverture. Nous serions reconnaissants des conseils de pratiquants expérimentés. Pour des demandes spécifiques, utilisez le formulaire dans l'app ; pour la politique générale, contactez le support par e-mail.
+          </p>
+        </div>
       </div>
-      <p class="muted">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
-      <p class="muted">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
+      <p class="lang-block lang-visible muted" data-lang="en">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
+      <p class="lang-block muted" data-lang="ja">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
+      <p class="lang-block muted" data-lang="ko">© 2026 Link2Mat. 사이트 내용(텍스트, 구성)은 보호됩니다.</p>
+      <p class="lang-block muted" data-lang="pt">© 2026 Link2Mat. Todos os direitos reservados.</p>
+      <p class="lang-block muted" data-lang="es">© 2026 Link2Mat. Todos los derechos reservados.</p>
+      <p class="lang-block muted" data-lang="fr">© 2026 Link2Mat. Tous droits réservés.</p>
     </div>
 
     <script>
-      const resolveLang = () => {
-        const params = new URLSearchParams(window.location.search);
-        const raw = String(params.get("lang") || "").toLowerCase();
-        if (raw.startsWith("ja")) return "ja";
-        if (raw.startsWith("ko")) return "ko";
-        if (raw.startsWith("pt")) return "pt";
-        if (raw.startsWith("es")) return "es";
-        if (raw.startsWith("fr")) return "fr";
-        if (raw.startsWith("en")) return "en";
-        const nav = String(navigator.language || "").toLowerCase();
-        if (nav.startsWith("ja")) return "ja";
-        if (nav.startsWith("ko")) return "ko";
-        if (nav.startsWith("pt")) return "pt";
-        if (nav.startsWith("es")) return "es";
-        if (nav.startsWith("fr")) return "fr";
-        return "en";
-      };
+      (function () {
+        const STORAGE_KEY = "link2mat-support-lang";
+        const supported = ["en", "ja", "ko", "pt", "es", "fr"];
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const langBlocks = document.querySelectorAll(".lang-block");
 
-      const lang = resolveLang();
-      const langSwitch = document.getElementById("langSwitch");
-      const supportLinkEn = document.getElementById("supportLinkEn");
-      const supportLinkJa = document.getElementById("supportLinkJa");
-      if (langSwitch) {
-        langSwitch.querySelectorAll("a").forEach((a) => {
-          a.classList.toggle("active", a.getAttribute("data-lang") === lang);
+        function detectBrowserLang() {
+          const list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
+          for (let i = 0; i < list.length; i++) {
+            const code = (list[i] || "").toLowerCase().split("-")[0];
+            if (supported.indexOf(code) !== -1) return code;
+          }
+          return "en";
+        }
+
+        function resolveLang() {
+          try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved && supported.indexOf(saved) !== -1) return saved;
+          } catch (e) {}
+          const params = new URLSearchParams(window.location.search);
+          const raw = String(params.get("lang") || "").toLowerCase();
+          if (raw.startsWith("ja")) return "ja";
+          if (raw.startsWith("ko")) return "ko";
+          if (raw.startsWith("pt")) return "pt";
+          if (raw.startsWith("es")) return "es";
+          if (raw.startsWith("fr")) return "fr";
+          if (raw.startsWith("en")) return "en";
+          return detectBrowserLang();
+        }
+
+        function setLang(lang) {
+          document.body.setAttribute("data-lang", lang);
+          langBlocks.forEach(function (el) {
+            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+          });
+          langButtons.forEach(function (btn) {
+            const on = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        }
+
+        langButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () { setLang(btn.getAttribute("data-lang")); });
         });
-      }
-      if (supportLinkEn) supportLinkEn.href = `index.html?lang=${encodeURIComponent(lang)}`;
-      if (supportLinkJa) supportLinkJa.href = `index.html?lang=${encodeURIComponent(lang)}`;
+
+        const lang = resolveLang();
+        setLang(lang);
 
       const categoryLabels =
         lang === "ja"
@@ -433,6 +519,8 @@
         .catch(() => {
           list.innerHTML = "<p>Failed to load tag list.</p>";
         });
+
+      })();
     </script>
   </body>
 </html>

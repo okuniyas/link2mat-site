@@ -77,26 +77,16 @@
         font-weight: 600;
         font-size: 14px;
       }
-      .lang-switch {
-        display: flex;
-        gap: 8px;
-        margin: 12px 0 4px;
-        flex-wrap: wrap;
-      }
-      .lang-switch a {
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid #e5e7eb;
-        font-size: 12px;
-        text-decoration: none;
-        color: #111111;
-        background: #ffffff;
-      }
-      .lang-switch a.active {
-        background: #f3f4f6;
-        border-color: #cbd5f5;
-        font-weight: 600;
-      }
+      .lang-switcher { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; align-items: center; }
+      .lang-switcher span { font-size: 13px; color: #4b5563; margin-right: 4px; }
+      .lang-btn { padding: 6px 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; font-size: 14px; cursor: pointer; color: #374151; }
+      .lang-btn:hover { background: #f9fafb; border-color: #d1d5db; }
+      .lang-btn.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+      .lang-block { display: none; }
+      .lang-block.lang-visible { display: block; }
+      body[data-lang] .bilingual { grid-template-columns: 1fr; }
+      body[data-lang] .bilingual .lang-block.lang-visible { display: block; }
+      body[data-lang] .bilingual .lang-block:not(.lang-visible) { display: none; }
       a {
         color: #2563eb;
       }
@@ -104,21 +94,31 @@
   </head>
   <body>
     <div class="container">
-      <h1>Tag Help / タグヘルプ</h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-01-29</p>
-      <p class="muted"><strong>更新日:</strong> 2026-01-29</p>
+      <h1 class="lang-block lang-visible" data-lang="en">Tag Help</h1>
+      <h1 class="lang-block" data-lang="ja">タグヘルプ</h1>
+      <h1 class="lang-block" data-lang="ko">태그 도움말</h1>
+      <h1 class="lang-block" data-lang="pt">Ajuda com tags</h1>
+      <h1 class="lang-block" data-lang="es">Ayuda con etiquetas</h1>
+      <h1 class="lang-block" data-lang="fr">Aide sur les tags</h1>
+      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-01-29</p>
+      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-01-29</p>
 
-      <div class="lang-switch" id="langSwitch">
-        <a href="?lang=ja" data-lang="ja">日本語</a>
-        <a href="?lang=en" data-lang="en">English</a>
-        <a href="?lang=ko" data-lang="ko">한국어</a>
-        <a href="?lang=pt" data-lang="pt">Português</a>
-        <a href="?lang=es" data-lang="es">Español</a>
-        <a href="?lang=fr" data-lang="fr">Français</a>
+      <div class="lang-switcher" role="group" aria-label="Language / 言語">
+        <span class="lang-label">Language / 言語:</span>
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
       </div>
 
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p>
             Tags are organized as Position × Scenario × Setup × Action × Submission × Source.
             A typical flow is: Start Position (e.g., Mount, Closed Guard), Scenario (Top/Bottom,
@@ -146,7 +146,7 @@
             adding the parent/general term as an alias of a specific variant.
           </p>
         </div>
-        <div class="ja-intro">
+        <div class="lang-block ja-intro" data-lang="ja">
           <p>
             Tag は「ポジション × シナリオ × セットアップ × アクション × サブミッション × ソース」で整理する考え方です。
             Tag の付け方は例えば、どんなスタートポジション（Mount、Closed Guard など）で、
@@ -176,9 +176,77 @@
             入れない運用を基本にしています。
           </p>
         </div>
+        <div class="lang-block" data-lang="ko">
+          <p>
+            태그는 포지션 × 시나리오 × 셋업 × 액션 × 서브미션 × 소스로 정리합니다. 흐름 예: 스타트 포지션(예: Mount, Closed Guard), 시나리오(Top/Bottom, Gi/No-Gi, Passing/Escape, Competition/Instructional), 셋업(2-on-1 Control, Break Posture), 액션(Back Take), 피니시 포지션(Back Control, Side Control) 또는 서브미션(Collar Choke, Triangle Choke). 스타트 포지션은 1개, 피니시 포지션은 복수 선택 가능.
+          </p>
+          <p>
+            시나리오는 Gi/No-Gi, 탑/바텀, 대회/연습/교습, 공격/수비/패스/이스케이프 등 맥락을 나타냅니다. 소스는 플랫폼·룰셋(IBJJF/ADCC/Rules Unknown)을 나타내며, 대회 영상에서는 시나리오의 "대회"와 함께 씁니다.
+          </p>
+          <p>
+            태그로 테크닉을 말로 익히고 공통 어휘를 쌓을 수 있습니다. 제목이나 노트를 넣으면 Link2Mat이 태그를 제안합니다. 수락하면 영상에 태그가 붙고 검색·필터가 쉬워집니다.
+          </p>
+          <p>
+            포지션, 시나리오, 셋업, 액션, 서브미션, 소스로 정리해 두면 복습하고 싶은 테마나 장면을 빠르게 찾을 수 있습니다.
+          </p>
+          <p class="muted">
+            별칭 가이드: 태그당 약 5개(최대 7개). 변형이 많으면 자주 쓰는 것을 별도 태그로 두세요. 혼동을 피하기 위해 상위·일반 용어를 구체 변형의 별칭으로 넣지 않는 것을 원칙으로 합니다.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p>
+            As tags são organizadas como Posição × Cenário × Preparação × Ação × Finalização × Fonte. Um fluxo típico: Posição inicial (ex.: Mount, Closed Guard), Cenário (Top/Bottom, Gi/No-Gi, Passing/Escape, Competition/Instructional), Preparação (2-on-1 Control, Break Posture), Ação (Back Take) e Posição final (Back Control, Side Control) ou Finalização (Collar Choke, Triangle Choke). A posição inicial é única; a posição final pode ser múltipla.
+          </p>
+          <p>
+            O cenário captura contexto como Gi/No-Gi, top/bottom, competição/treino/instrução e ataque/defesa/passagem/fuga. A fonte descreve a plataforma ou regras (IBJJF/ADCC/Rules Unknown) e costuma ser combinada com o cenário de competição.
+          </p>
+          <p>
+            As tags ajudam a verbalizar técnicas e construir um vocabulário comum. Ao adicionar título ou notas, o Link2Mat sugere tags. Aceitá-las marca o vídeo e facilita busca e filtros.
+          </p>
+          <p>
+            Organizar por Posição, Cenário, Preparação, Ação, Finalização e Fonte facilita encontrar o tema ou momento que você quer revisar.
+          </p>
+          <p class="muted">
+            Diretriz de aliases: mantenha cerca de 5 por tag (até 7). Se uma tag tiver muitas variantes, promova as comuns a tags próprias. Para evitar confusão, em geral evitamos colocar o termo geral como alias de uma variante específica.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p>
+            Las etiquetas se organizan como Posición × Escenario × Preparación × Acción × Finalización × Fuente. Un flujo típico: Posición inicial (p. ej. Mount, Closed Guard), Escenario (Top/Bottom, Gi/No-Gi, Passing/Escape, Competition/Instructional), Preparación (2-on-1 Control, Break Posture), Acción (Back Take) y Posición final (Back Control, Side Control) o Finalización (Collar Choke, Triangle Choke). La posición inicial es una; la final puede ser varias.
+          </p>
+          <p>
+            El escenario capta contexto como Gi/No-Gi, top/bottom, competición/entrenamiento/instrucción y ataque/defensa/pase/escape. La fuente describe la plataforma o reglamento (IBJJF/ADCC/Rules Unknown) y suele combinarse con el escenario de competición.
+          </p>
+          <p>
+            Las etiquetas ayudan a verbalizar técnicas y construir un vocabulario común. Al añadir título o notas, Link2Mat sugiere etiquetas. Aceptarlas etiqueta el vídeo y facilita búsqueda y filtros.
+          </p>
+          <p>
+            Organizar por Posición, Escenario, Preparación, Acción, Finalización y Fuente facilita encontrar el tema o momento que quieres repasar.
+          </p>
+          <p class="muted">
+            Guía de alias: unos 5 por etiqueta (hasta 7). Si una etiqueta tiene muchas variantes, promociona las comunes a etiquetas propias. Para evitar confusión, en general no añadimos el término general como alias de una variante específica.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p>
+            Les tags sont organisés en Position × Scénario × Préparation × Action × Soumission × Source. Un flux typique : position de départ (ex. Mount, Closed Guard), scénario (Top/Bottom, Gi/No-Gi, Passing/Escape, Competition/Instructional), préparation (2-on-1 Control, Break Posture), action (Back Take), position finale (Back Control, Side Control) ou soumission (Collar Choke, Triangle Choke). La position de départ est unique ; la position finale peut être multiple.
+          </p>
+          <p>
+            Le scénario capture le contexte (Gi/No-Gi, top/bottom, compétition/entraînement/pédagogie, attaque/défense/passe/échappement). La source décrit la plateforme ou le règlement (IBJJF/ADCC/Rules Unknown) et est souvent combinée au scénario compétition.
+          </p>
+          <p>
+            Les tags aident à verbaliser les techniques et à construire un vocabulaire commun. Quand vous ajoutez un titre ou des notes, Link2Mat propose des tags. Les accepter tague la vidéo et facilite la recherche et le filtrage.
+          </p>
+          <p>
+            Organiser par Position, Scénario, Préparation, Action, Soumission et Source permet de retrouver rapidement le thème ou le moment à réviser.
+          </p>
+          <p class="muted">
+            Guide des alias : environ 5 par tag (jusqu'à 7). Si un tag a beaucoup de variantes, promeuvez les plus courantes en tags distincts. Pour éviter la confusion, nous évitons en général d'ajouter le terme général comme alias d'une variante spécifique.
+          </p>
+        </div>
       </div>
       <div class="bilingual">
-        <div>
+        <div class="lang-block lang-visible" data-lang="en">
           <p class="muted">
             If you have requests or changes for the tag system, please reach out. Jiu-jitsu evolves
             daily, and we believe more community knowledge makes this better. At the same time, we
@@ -187,7 +255,7 @@
             in-app request; for overall policy, email support.
           </p>
         </div>
-        <div>
+        <div class="lang-block" data-lang="ja">
           <p class="muted">
             Tag の構成や追加・変更のご要望があれば、ぜひご連絡ください。柔術は日々進化していますし、多くの方の知見が入るとさらに良くなると感じています。
             一方で、Tag の構成が複雑になりすぎると分かりにくくなるため、追加・変更はバランスを見ながら進めたいと考えています。
@@ -195,102 +263,187 @@
             個別のタグについての追加・変更はアプリからお送りいただくのが便利です。Tag 全般の方針や構成へのご要望はサポートメールまでお願いします。
           </p>
         </div>
+        <div class="lang-block" data-lang="ko">
+          <p class="muted">
+            태그 시스템에 대한 요청이나 변경 사항이 있으면 연락해 주세요. 주짓수는 매일 진화하며, 커뮤니티 지식이 많을수록 더 좋아진다고 믿습니다. 동시에 태그를 이해하기 쉽게 유지하고자 명확성과 커버리지의 균형을 맞추겠습니다. 경험 많은 무술인들의 조언에 감사드립니다. 개별 태그 요청은 앱 내 요청을, 전반적인 정책은 이메일로 문의해 주세요.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <p class="muted">
+            Se tiver pedidos ou alterações no sistema de tags, entre em contato. O jiu-jitsu evolui diariamente e acreditamos que mais conhecimento da comunidade melhora o sistema. Ao mesmo tempo, queremos manter as tags compreensíveis, equilibrando clareza e cobertura. Agradecemos conselhos de artistas marciais experientes. Para pedidos específicos, use o formulário no app; para política geral, envie e-mail ao suporte.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <p class="muted">
+            Si tienes solicitudes o cambios para el sistema de etiquetas, contáctanos. El jiu-jitsu evoluciona cada día y creemos que más conocimiento de la comunidad lo mejora. Queremos mantener las etiquetas comprensibles, equilibrando claridad y cobertura. Agradecemos consejos de artistas marciales experimentados. Para solicitudes específicas, usa el formulario en la app; para política general, escribe al soporte.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <p class="muted">
+            Pour des demandes ou des changements sur le système de tags, contactez-nous. Le jiu-jitsu évolue chaque jour et nous pensons que les connaissances de la communauté l'améliorent. Nous voulons garder les tags compréhensibles en équilibrant clarté et couverture. Nous serions reconnaissants des conseils de pratiquants expérimentés. Pour des demandes spécifiques, utilisez le formulaire dans l'app ; pour la politique générale, contactez le support par e-mail.
+          </p>
+        </div>
       </div>
 
       <div class="card">
-        <strong>Tag search / タグ検索</strong>
+        <strong class="lang-block lang-visible" data-lang="en">Tag search</strong>
+        <strong class="lang-block" data-lang="ja">タグ検索</strong>
+        <strong class="lang-block" data-lang="ko">태그 검색</strong>
+        <strong class="lang-block" data-lang="pt">Pesquisar tags</strong>
+        <strong class="lang-block" data-lang="es">Buscar etiquetas</strong>
+        <strong class="lang-block" data-lang="fr">Rechercher des tags</strong>
         <div class="row">
           <input id="tagInput" type="text" placeholder="例: ハーフガード / half guard" />
           <a id="searchLink" class="button" href="https://www.google.com" target="_blank" rel="noreferrer">
             Search the web / Webで検索
           </a>
         </div>
-        <p class="muted">
+        <p class="lang-block lang-visible muted" data-lang="en">
+          You can look up terms via web search. For specific tag requests use the app; for general tag policy, email support.
+        </p>
+        <p class="lang-block muted" data-lang="ja">
           用語の詳細は Web 検索で確認できます。個別のタグの追加・変更はアプリから、Tag 全般のご要望はサポートメールへお願いします。
+        </p>
+        <p class="lang-block muted" data-lang="ko">
+          용어는 웹 검색으로 확인할 수 있습니다. 개별 태그는 앱에서, 태그 전반은 지원 이메일로 문의해 주세요.
+        </p>
+        <p class="lang-block muted" data-lang="pt">
+          Você pode consultar termos na pesquisa web. Para pedidos específicos use o app; para política geral, envie e-mail ao suporte.
+        </p>
+        <p class="lang-block muted" data-lang="es">
+          Puedes consultar términos en la búsqueda web. Para solicitudes específicas usa la app; para política general, escribe al soporte.
+        </p>
+        <p class="lang-block muted" data-lang="fr">
+          Vous pouvez consulter les termes via la recherche web. Pour des demandes spécifiques, utilisez l'app ; pour la politique générale, contactez le support par e-mail.
         </p>
       </div>
 
-      <h2>Tag list / タグ一覧</h2>
-      <p><a id="tagListLink" href="tags-list.html">Browse all tags / タグ一覧を見る</a></p>
+      <h2 class="lang-block lang-visible" data-lang="en">Tag list</h2>
+      <h2 class="lang-block" data-lang="ja">タグ一覧</h2>
+      <h2 class="lang-block" data-lang="ko">태그 목록</h2>
+      <h2 class="lang-block" data-lang="pt">Lista de tags</h2>
+      <h2 class="lang-block" data-lang="es">Lista de etiquetas</h2>
+      <h2 class="lang-block" data-lang="fr">Liste des tags</h2>
+      <p class="lang-block lang-visible" data-lang="en"><a id="tagListLink" href="tags-list.html">Browse all tags</a></p>
+      <p class="lang-block" data-lang="ja"><a href="tags-list.html">タグ一覧を見る</a></p>
+      <p class="lang-block" data-lang="ko"><a href="tags-list.html">태그 목록 보기</a></p>
+      <p class="lang-block" data-lang="pt"><a href="tags-list.html">Ver todas as tags</a></p>
+      <p class="lang-block" data-lang="es"><a href="tags-list.html">Ver todas las etiquetas</a></p>
+      <p class="lang-block" data-lang="fr"><a href="tags-list.html">Voir tous les tags</a></p>
 
-      <h2>Support / サポート</h2>
-      <p><a href="index.html">Support page / サポートページへ</a></p>
-      <p class="muted">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
-      <p class="muted">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
+      <h2 class="lang-block lang-visible" data-lang="en">Support</h2>
+      <h2 class="lang-block" data-lang="ja">サポート</h2>
+      <h2 class="lang-block" data-lang="ko">지원</h2>
+      <h2 class="lang-block" data-lang="pt">Suporte</h2>
+      <h2 class="lang-block" data-lang="es">Soporte</h2>
+      <h2 class="lang-block" data-lang="fr">Assistance</h2>
+      <p class="lang-block lang-visible" data-lang="en"><a href="index.html">Support page</a></p>
+      <p class="lang-block" data-lang="ja"><a href="index.html">サポートページへ</a></p>
+      <p class="lang-block" data-lang="ko"><a href="index.html">지원 페이지</a></p>
+      <p class="lang-block" data-lang="pt"><a href="index.html">Página de suporte</a></p>
+      <p class="lang-block" data-lang="es"><a href="index.html">Página de soporte</a></p>
+      <p class="lang-block" data-lang="fr"><a href="index.html">Page d'assistance</a></p>
+      <p class="lang-block lang-visible muted" data-lang="en">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
+      <p class="lang-block muted" data-lang="ja">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
+      <p class="lang-block muted" data-lang="ko">© 2026 Link2Mat. 사이트 내용(텍스트, 구성)은 보호됩니다.</p>
+      <p class="lang-block muted" data-lang="pt">© 2026 Link2Mat. Todos os direitos reservados.</p>
+      <p class="lang-block muted" data-lang="es">© 2026 Link2Mat. Todos los derechos reservados.</p>
+      <p class="lang-block muted" data-lang="fr">© 2026 Link2Mat. Tous droits réservés.</p>
     </div>
 
     <script>
-      const input = document.getElementById("tagInput");
-      const link = document.getElementById("searchLink");
-      const langSwitch = document.getElementById("langSwitch");
-      const tagListLink = document.getElementById("tagListLink");
+      (function () {
+        const STORAGE_KEY = "link2mat-support-lang";
+        const supported = ["en", "ja", "ko", "pt", "es", "fr"];
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const langBlocks = document.querySelectorAll(".lang-block");
 
-      const resolveLang = () => {
-        const params = new URLSearchParams(window.location.search);
-        const raw = String(params.get("lang") || "").toLowerCase();
-        if (raw.startsWith("ja")) return "ja";
-        if (raw.startsWith("ko")) return "ko";
-        if (raw.startsWith("pt")) return "pt";
-        if (raw.startsWith("es")) return "es";
-        if (raw.startsWith("fr")) return "fr";
-        if (raw.startsWith("en")) return "en";
-        const nav = String(navigator.language || "").toLowerCase();
-        if (nav.startsWith("ja")) return "ja";
-        if (nav.startsWith("ko")) return "ko";
-        if (nav.startsWith("pt")) return "pt";
-        if (nav.startsWith("es")) return "es";
-        if (nav.startsWith("fr")) return "fr";
-        return "en";
-      };
-
-      const lang = resolveLang();
-      const ui = {
-        ja: { placeholder: "例: ハーフガード / half guard", search: "Webで検索" },
-        en: { placeholder: "e.g. half guard / ハーフガード", search: "Search the web" },
-        ko: { placeholder: "예: 하프 가드 / half guard", search: "웹에서 검색" },
-        pt: { placeholder: "Ex: meia guarda / half guard", search: "Pesquisar na web" },
-        es: { placeholder: "p. ej. media guardia / half guard", search: "Buscar en la web" },
-        fr: { placeholder: "ex. demi-garde / half guard", search: "Rechercher sur le web" },
-      };
-      const phrasePrefix = {
-        ja: '柔術で "%s" とは',
-        en: 'jiu jitsu "%s"',
-        ko: '주짓수 "%s"',
-        pt: 'jiu-jitsu "%s"',
-        es: 'jiu-jitsu "%s"',
-        fr: 'jiu-jitsu "%s"',
-      };
-
-      input.placeholder = ui[lang]?.placeholder ?? ui.en.placeholder;
-      link.textContent = ui[lang]?.search ?? ui.en.search;
-      if (langSwitch) {
-        langSwitch.querySelectorAll("a").forEach((a) => {
-          a.classList.toggle("active", a.getAttribute("data-lang") === lang);
-        });
-      }
-      if (tagListLink) {
-        tagListLink.href = `tags-list.html?lang=${encodeURIComponent(lang)}`;
-      }
-
-      const params = new URLSearchParams(window.location.search);
-      const initial = params.get("tag");
-      if (initial) {
-        input.value = initial;
-      }
-
-      const updateLink = () => {
-        const query = input.value.trim();
-        if (!query) {
-          link.href = "https://www.google.com";
-          return;
+        function detectBrowserLang() {
+          const list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
+          for (let i = 0; i < list.length; i++) {
+            const code = (list[i] || "").toLowerCase().split("-")[0];
+            if (supported.indexOf(code) !== -1) return code;
+          }
+          return "en";
         }
-        const template = phrasePrefix[lang] || phrasePrefix.en;
-        const phrase = template.replace("%s", query);
-        link.href = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
-      };
 
-      updateLink();
-      input.addEventListener("input", updateLink);
+        function resolveLang() {
+          try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved && supported.indexOf(saved) !== -1) return saved;
+          } catch (e) {}
+          const params = new URLSearchParams(window.location.search);
+          const raw = String(params.get("lang") || "").toLowerCase();
+          if (raw.startsWith("ja")) return "ja";
+          if (raw.startsWith("ko")) return "ko";
+          if (raw.startsWith("pt")) return "pt";
+          if (raw.startsWith("es")) return "es";
+          if (raw.startsWith("fr")) return "fr";
+          if (raw.startsWith("en")) return "en";
+          return detectBrowserLang();
+        }
+
+        function setLang(lang) {
+          document.body.setAttribute("data-lang", lang);
+          langBlocks.forEach(function (el) {
+            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+          });
+          langButtons.forEach(function (btn) {
+            const on = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        }
+
+        langButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () { setLang(btn.getAttribute("data-lang")); });
+        });
+
+        const lang = resolveLang();
+        setLang(lang);
+
+        const input = document.getElementById("tagInput");
+        const link = document.getElementById("searchLink");
+        const ui = {
+          ja: { placeholder: "例: ハーフガード / half guard", search: "Webで検索" },
+          en: { placeholder: "e.g. half guard / ハーフガード", search: "Search the web" },
+          ko: { placeholder: "예: 하프 가드 / half guard", search: "웹에서 검색" },
+          pt: { placeholder: "Ex: meia guarda / half guard", search: "Pesquisar na web" },
+          es: { placeholder: "p. ej. media guardia / half guard", search: "Buscar en la web" },
+          fr: { placeholder: "ex. demi-garde / half guard", search: "Rechercher sur le web" },
+        };
+        const phrasePrefix = {
+          ja: '柔術で "%s" とは',
+          en: 'jiu jitsu "%s"',
+          ko: '주짓수 "%s"',
+          pt: 'jiu-jitsu "%s"',
+          es: 'jiu-jitsu "%s"',
+          fr: 'jiu-jitsu "%s"',
+        };
+
+        if (input) input.placeholder = ui[lang]?.placeholder ?? ui.en.placeholder;
+        if (link) link.textContent = ui[lang]?.search ?? ui.en.search;
+
+        const params = new URLSearchParams(window.location.search);
+        const initial = params.get("tag");
+        if (initial && input) input.value = initial;
+
+        function updateLink() {
+          if (!link) return;
+          const query = input ? input.value.trim() : "";
+          if (!query) {
+            link.href = "https://www.google.com";
+            return;
+          }
+          const template = phrasePrefix[lang] || phrasePrefix.en;
+          const phrase = template.replace("%s", query);
+          link.href = "https://www.google.com/search?q=" + encodeURIComponent(phrase);
+        }
+
+        updateLink();
+        if (input) input.addEventListener("input", updateLink);
+      })();
     </script>
   </body>
 </html>

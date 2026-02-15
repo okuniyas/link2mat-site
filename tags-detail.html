@@ -66,26 +66,13 @@
         font-weight: 600;
         font-size: 14px;
       }
-      .lang-switch {
-        display: flex;
-        gap: 8px;
-        margin: 12px 0 4px;
-        flex-wrap: wrap;
-      }
-      .lang-switch a {
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid #e5e7eb;
-        font-size: 12px;
-        text-decoration: none;
-        color: #111111;
-        background: #ffffff;
-      }
-      .lang-switch a.active {
-        background: #f3f4f6;
-        border-color: #cbd5f5;
-        font-weight: 600;
-      }
+      .lang-switcher { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; align-items: center; }
+      .lang-switcher span { font-size: 13px; color: #4b5563; margin-right: 4px; }
+      .lang-btn { padding: 6px 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; font-size: 14px; cursor: pointer; color: #374151; }
+      .lang-btn:hover { background: #f9fafb; border-color: #d1d5db; }
+      .lang-btn.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+      .lang-block { display: none; }
+      .lang-block.lang-visible { display: block; }
       a {
         color: #2563eb;
       }
@@ -94,68 +81,110 @@
   <body>
     <div class="container">
       <h1 id="title">Tag Detail / タグ詳細</h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-02-01</p>
-      <p class="muted"><strong>更新日:</strong> 2026-02-01</p>
+      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-02-01</p>
 
-      <div class="lang-switch" id="langSwitch">
-        <a href="?lang=ja" data-lang="ja">日本語</a>
-        <a href="?lang=en" data-lang="en">English</a>
-        <a href="?lang=ko" data-lang="ko">한국어</a>
-        <a href="?lang=pt" data-lang="pt">Português</a>
-        <a href="?lang=es" data-lang="es">Español</a>
-        <a href="?lang=fr" data-lang="fr">Français</a>
+      <div class="lang-switcher" role="group" aria-label="Language / 言語">
+        <span class="lang-label">Language / 言語:</span>
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
       </div>
 
       <div id="content" class="card">
         <p>Loading...</p>
       </div>
 
-      <h2>Support / サポート</h2>
-      <p><a id="supportLink" href="index.html">Support page / サポートページへ</a></p>
-      <p><a id="tagListLink" href="tags-list.html">Tag list / タグ一覧へ</a></p>
-      <p class="muted">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
-      <p class="muted">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
+      <h2 class="lang-block lang-visible" data-lang="en">Support</h2>
+      <h2 class="lang-block" data-lang="ja">サポート</h2>
+      <h2 class="lang-block" data-lang="ko">지원</h2>
+      <h2 class="lang-block" data-lang="pt">Suporte</h2>
+      <h2 class="lang-block" data-lang="es">Soporte</h2>
+      <h2 class="lang-block" data-lang="fr">Assistance</h2>
+      <p class="lang-block lang-visible" data-lang="en"><a href="index.html">Support page</a></p>
+      <p class="lang-block" data-lang="ja"><a href="index.html">サポートページへ</a></p>
+      <p class="lang-block" data-lang="ko"><a href="index.html">지원 페이지</a></p>
+      <p class="lang-block" data-lang="pt"><a href="index.html">Página de suporte</a></p>
+      <p class="lang-block" data-lang="es"><a href="index.html">Página de soporte</a></p>
+      <p class="lang-block" data-lang="fr"><a href="index.html">Page d'assistance</a></p>
+      <p class="lang-block lang-visible" data-lang="en"><a href="tags-list.html">Tag list</a></p>
+      <p class="lang-block" data-lang="ja"><a href="tags-list.html">タグ一覧へ</a></p>
+      <p class="lang-block" data-lang="ko"><a href="tags-list.html">태그 목록</a></p>
+      <p class="lang-block" data-lang="pt"><a href="tags-list.html">Lista de tags</a></p>
+      <p class="lang-block" data-lang="es"><a href="tags-list.html">Lista de etiquetas</a></p>
+      <p class="lang-block" data-lang="fr"><a href="tags-list.html">Liste des tags</a></p>
+      <p class="lang-block lang-visible muted" data-lang="en">© 2026 Link2Mat. Site content (text, layout) is protected.</p>
+      <p class="lang-block muted" data-lang="ja">© 2026 Link2Mat. 本サイトの文章・構成の著作権を保護します。</p>
+      <p class="lang-block muted" data-lang="ko">© 2026 Link2Mat. 사이트 내용(텍스트, 구성)은 보호됩니다.</p>
+      <p class="lang-block muted" data-lang="pt">© 2026 Link2Mat. Todos os direitos reservados.</p>
+      <p class="lang-block muted" data-lang="es">© 2026 Link2Mat. Todos los derechos reservados.</p>
+      <p class="lang-block muted" data-lang="fr">© 2026 Link2Mat. Tous droits réservés.</p>
     </div>
 
     <script>
-      const resolveLang = () => {
-        const params = new URLSearchParams(window.location.search);
-        const raw = String(params.get("lang") || "").toLowerCase();
-        if (raw.startsWith("ja")) return "ja";
-        if (raw.startsWith("ko")) return "ko";
-        if (raw.startsWith("pt")) return "pt";
-        if (raw.startsWith("es")) return "es";
-        if (raw.startsWith("fr")) return "fr";
-        if (raw.startsWith("en")) return "en";
-        const nav = String(navigator.language || "").toLowerCase();
-        if (nav.startsWith("ja")) return "ja";
-        if (nav.startsWith("ko")) return "ko";
-        if (nav.startsWith("pt")) return "pt";
-        if (nav.startsWith("es")) return "es";
-        if (nav.startsWith("fr")) return "fr";
-        return "en";
-      };
+      (function () {
+        const STORAGE_KEY = "link2mat-support-lang";
+        const supported = ["en", "ja", "ko", "pt", "es", "fr"];
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const langBlocks = document.querySelectorAll(".lang-block");
+
+        function detectBrowserLang() {
+          const list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
+          for (let i = 0; i < list.length; i++) {
+            const code = (list[i] || "").toLowerCase().split("-")[0];
+            if (supported.indexOf(code) !== -1) return code;
+          }
+          return "en";
+        }
+
+        function resolveLang() {
+          try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved && supported.indexOf(saved) !== -1) return saved;
+          } catch (e) {}
+          const params = new URLSearchParams(window.location.search);
+          const raw = String(params.get("lang") || "").toLowerCase();
+          if (raw.startsWith("ja")) return "ja";
+          if (raw.startsWith("ko")) return "ko";
+          if (raw.startsWith("pt")) return "pt";
+          if (raw.startsWith("es")) return "es";
+          if (raw.startsWith("fr")) return "fr";
+          if (raw.startsWith("en")) return "en";
+          return detectBrowserLang();
+        }
+
+        function setLang(lang) {
+          document.body.setAttribute("data-lang", lang);
+          document.querySelectorAll(".lang-block").forEach(function (el) {
+            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+          });
+          langButtons.forEach(function (btn) {
+            const on = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        }
+
+        langButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () { setLang(btn.getAttribute("data-lang")); });
+        });
+
+        const lang = resolveLang();
+        setLang(lang);
 
       const normalize = (value) => String(value || "").toLowerCase().trim();
 
       const params = new URLSearchParams(window.location.search);
       const tagId = params.get("id");
       const tagQuery = params.get("tag");
-      const lang = resolveLang();
-      const supportLink = document.getElementById("supportLink");
-      const tagListLink = document.getElementById("tagListLink");
-      const langSwitch = document.getElementById("langSwitch");
-      if (langSwitch) {
-        langSwitch.querySelectorAll("a").forEach((a) => {
-          a.classList.toggle("active", a.getAttribute("data-lang") === lang);
-        });
-      }
-      if (supportLink) {
-        supportLink.href = `index.html?lang=${encodeURIComponent(lang)}`;
-      }
-      if (tagListLink) {
-        tagListLink.href = `tags-list.html?lang=${encodeURIComponent(lang)}`;
-      }
       const isJapanese = lang === "ja";
       const categoryLabels =
         lang === "ja"
@@ -240,14 +269,20 @@
       const renderNotFound = () => {
         const content = document.getElementById("content");
         content.innerHTML = `
-          <p>Tag not found. Try searching from the list.</p>
-          <p>タグが見つかりません。タグ一覧から検索してください。</p>
-          <p>No se encontró la etiqueta. Prueba a buscar en la lista.</p>
-          <p>Tag introuvable. Essayez de chercher dans la liste.</p>
-          <p><a href="tags-list.html?lang=${encodeURIComponent(
-            lang
-          )}">Tag list / タグ一覧へ</a></p>
+          <p class="lang-block lang-visible" data-lang="en">Tag not found. Try searching from the list.</p>
+          <p class="lang-block" data-lang="ja">タグが見つかりません。タグ一覧から検索してください。</p>
+          <p class="lang-block" data-lang="ko">태그를 찾을 수 없습니다. 목록에서 검색해 보세요.</p>
+          <p class="lang-block" data-lang="pt">Tag não encontrada. Tente buscar na lista.</p>
+          <p class="lang-block" data-lang="es">No se encontró la etiqueta. Prueba a buscar en la lista.</p>
+          <p class="lang-block" data-lang="fr">Tag introuvable. Essayez de chercher dans la liste.</p>
+          <p class="lang-block lang-visible" data-lang="en"><a href="tags-list.html">Tag list</a></p>
+          <p class="lang-block" data-lang="ja"><a href="tags-list.html">タグ一覧へ</a></p>
+          <p class="lang-block" data-lang="ko"><a href="tags-list.html">태그 목록</a></p>
+          <p class="lang-block" data-lang="pt"><a href="tags-list.html">Lista de tags</a></p>
+          <p class="lang-block" data-lang="es"><a href="tags-list.html">Lista de etiquetas</a></p>
+          <p class="lang-block" data-lang="fr"><a href="tags-list.html">Liste des tags</a></p>
         `;
+        setLang(lang);
       };
 
       const renderTag = (tag) => {
@@ -349,6 +384,8 @@
           }
         })
         .catch(() => renderNotFound());
+
+      })();
     </script>
   </body>
 </html>

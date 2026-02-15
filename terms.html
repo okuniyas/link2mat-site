@@ -44,294 +44,402 @@
         padding: 16px;
         background: #f9fafb;
       }
+      .lang-switcher { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; align-items: center; }
+      .lang-switcher span { font-size: 13px; color: #4b5563; margin-right: 4px; }
+      .lang-btn { padding: 6px 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; font-size: 14px; cursor: pointer; color: #374151; }
+      .lang-btn:hover { background: #f9fafb; border-color: #d1d5db; }
+      .lang-block { display: none; }
+      .lang-block.lang-visible { display: block; }
+      .lang-blocks-row { display: contents; }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>
-        Link2Mat Terms of Use / 利用規約 / 이용약관 / Termos de uso / Términos de uso /
-        Conditions d’utilisation
-      </h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-02-01</p>
-      <p class="muted"><strong>更新日:</strong> 2026-02-01</p>
-      <p class="muted"><strong>최종 업데이트:</strong> 2026-02-01</p>
-      <p class="muted"><strong>Última atualização:</strong> 2026-02-01</p>
-      <p class="muted"><strong>Última actualización:</strong> 2026-02-01</p>
-      <p class="muted"><strong>Dernière mise à jour:</strong> 2026-02-01</p>
+      <h1 class="lang-block lang-visible" data-lang="en">Link2Mat Terms of Use</h1>
+      <h1 class="lang-block" data-lang="ja">利用規約</h1>
+      <h1 class="lang-block" data-lang="ko">이용약관</h1>
+      <h1 class="lang-block" data-lang="pt">Termos de uso</h1>
+      <h1 class="lang-block" data-lang="es">Términos de uso</h1>
+      <h1 class="lang-block" data-lang="fr">Conditions d’utilisation</h1>
+      <div class="lang-switcher" role="group" aria-label="Language / 言語">
+        <span class="lang-label">Language / 言語:</span>
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+      </div>
+      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-02-01</p>
+      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-02-01</p>
 
-      <div class="card">
-        <p>
+      <div class="card lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
           These terms apply to the Link2Mat app and related support pages. By using Link2Mat, you
           agree to the terms below.
-        </p>
-        <p>
+        </p></div>
+        <div class="lang-block" data-lang="ja"><p>
           本規約は Link2Mat アプリおよびサポートページに適用されます。Link2Mat を利用することで、
           以下の内容に同意したものとみなします。
-        </p>
-        <p>
+        </p></div>
+        <div class="lang-block" data-lang="ko"><p>
           본 약관은 Link2Mat 앱 및 관련 지원 페이지에 적용됩니다. Link2Mat을 사용함으로써
           아래 약관에 동의한 것으로 간주합니다.
-        </p>
-        <p>
+        </p></div>
+        <div class="lang-block" data-lang="pt"><p>
           Estes termos se aplicam ao app Link2Mat e às páginas de suporte relacionadas. Ao usar o
           Link2Mat, você concorda com os termos abaixo.
-        </p>
-        <p>
+        </p></div>
+        <div class="lang-block" data-lang="es"><p>
           Estos términos se aplican a la app Link2Mat y a las páginas de soporte relacionadas. Al usar
           Link2Mat, aceptas los términos siguientes.
-        </p>
-        <p>
+        </p></div>
+        <div class="lang-block" data-lang="fr"><p>
           Ces conditions s’appliquent à l’app Link2Mat et aux pages d’assistance associées. En utilisant
           Link2Mat, vous acceptez les conditions ci‑dessous.
-        </p>
+        </p></div>
       </div>
 
-      <h2>
-        1. Service overview / サービス概要 / 서비스 개요 / Visão do serviço / Resumen del servicio /
-        Présentation du service
-      </h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">1. Service overview</h2>
+      <h2 class="lang-block" data-lang="ja">サービス概要</h2>
+      <h2 class="lang-block" data-lang="ko">서비스 개요</h2>
+      <h2 class="lang-block" data-lang="pt">Visão do serviço</h2>
+      <h2 class="lang-block" data-lang="es">Resumen del servicio</h2>
+      <h2 class="lang-block" data-lang="fr">Présentation du service</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         Link2Mat helps you save links, add tags, and take notes. It does not host or distribute
         third-party videos or content.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
         Link2Mat はリンクの保存・タグ付け・メモの管理を行うアプリで、第三者の動画・コンテンツを配信
         するものではありません。
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
         Link2Mat은 링크 저장, 태그 추가, 메모 관리를 돕는 앱이며, 제3자 영상이나 콘텐츠를
         호스팅하거나 배포하지 않습니다.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
         O Link2Mat ajuda a salvar links, adicionar tags e fazer anotações. Ele não hospeda nem
         distribui vídeos ou conteúdos de terceiros.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
         Link2Mat te ayuda a guardar enlaces, añadir etiquetas y tomar notas. No aloja ni distribuye
         vídeos ni contenido de terceros.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
         Link2Mat vous aide à enregistrer des liens, ajouter des tags et prendre des notes. Il n’héberge
         ni ne distribue de vidéos ou de contenus tiers.
-      </p>
+      </p></div>
+      </div>
 
-      <h2>
-        1-1. iCloud sync / iCloud 同期 / iCloud 동기화 / Sincronização iCloud / Sincronización iCloud /
-        Synchronisation iCloud
-      </h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">1-1. iCloud sync</h2>
+      <h2 class="lang-block" data-lang="ja">iCloud 同期</h2>
+      <h2 class="lang-block" data-lang="ko">iCloud 동기화</h2>
+      <h2 class="lang-block" data-lang="pt">Sincronização iCloud</h2>
+      <h2 class="lang-block" data-lang="es">Sincronización iCloud</h2>
+      <h2 class="lang-block" data-lang="fr">Synchronisation iCloud</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         When you install Link2Mat on multiple devices signed into the same iCloud account, your
         changes sync between those devices. Only changes are transferred.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
         同じ iCloud アカウントで複数端末にインストールした場合、変更内容が端末間で同期されます。
         変更分のみが送受信されます。
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
         같은 iCloud 계정으로 여러 기기에 Link2Mat을 설치하면 변경 사항이 기기 간에 동기화됩니다.
         변경분만 전송됩니다.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
         Se você instalar o Link2Mat em vários dispositivos com a mesma conta iCloud, as alterações
         serão sincronizadas entre eles. Apenas as mudanças são transferidas.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
         Si instalas Link2Mat en varios dispositivos con la misma cuenta de iCloud, los cambios se
         sincronizan entre ellos. Solo se transfieren los cambios.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
         Si vous installez Link2Mat sur plusieurs appareils avec le même compte iCloud, les changements
         sont synchronisés entre eux. Seules les modifications sont transférées.
-      </p>
+      </p></div>
+      </div>
 
-      <h2>
-        1-2. Optional data sharing / データ共有（任意） / 선택적 데이터 공유 / Compartilhamento opcional /
-        Compartición opcional / Partage optionnel
-      </h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">1-2. Optional data sharing</h2>
+      <h2 class="lang-block" data-lang="ja">データ共有（任意）</h2>
+      <h2 class="lang-block" data-lang="ko">선택적 데이터 공유</h2>
+      <h2 class="lang-block" data-lang="pt">Compartilhamento opcional</h2>
+      <h2 class="lang-block" data-lang="es">Compartición opcional</h2>
+      <h2 class="lang-block" data-lang="fr">Partage optionnel</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         If you opt in, Link2Mat may send anonymous usage statistics and optional profile fields you
         provide to improve features and display aggregated insights. You can change this setting in
-        the About screen.
-      </p>
-      <p>
+        Tag → Usage. Share profile and Share tag stats do not include names, email addresses, or contact details.
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
         同意した場合に限り、機能改善や集計表示のために匿名の利用統計と任意のプロフィール情報が送信されます。
-        設定は「このアプリについて」画面で変更できます。
-      </p>
-      <p>
+        設定は タグ → 利用状況 で変更できます。プロフィール共有・タグ統計を共有のいずれにも、氏名・メールアドレス・その他の連絡先は含みません。
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
         동의한 경우에만 기능 개선과 집계 표시를 위해 익명 사용 통계와 선택적 프로필 정보가 전송됩니다.
-        설정은 “이 앱에 대해” 화면에서 변경할 수 있습니다.
-      </p>
-      <p>
+        설정은 태그 → 사용 현황에서 변경할 수 있습니다. 프로필 공유・태그 통계 공유 어느 쪽에도 이름, 이메일, 연락처는 포함되지 않습니다.
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
         Se você aceitar, o Link2Mat pode enviar estatísticas anônimas de uso e campos opcionais de
         perfil para melhorar recursos e mostrar estatísticas agregadas. A configuração pode ser alterada
-        na tela “Sobre”.
-      </p>
-      <p>
+        em Tag → Uso. Compartilhar perfil e Compartilhar estatísticas de tags não incluem nome, e‑mail nem dados de contato.
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
         Si aceptas, Link2Mat puede enviar estadísticas anónimas de uso y campos de perfil opcionales
-        para mejorar funciones y mostrar estadísticas agregadas. Esta opción se puede cambiar en la pantalla
-        “Acerca de”.
-      </p>
-      <p>
+        para mejorar funciones y mostrar estadísticas agregadas. Esta opción se puede cambiar en Tag → Uso. Compartir perfil y Compartir estadísticas de tags no incluyen nombres, correos electrónicos ni datos de contacto.
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
         Si vous acceptez, Link2Mat peut envoyer des statistiques d’usage anonymes et des champs de profil
         facultatifs pour améliorer les fonctionnalités et afficher des statistiques agrégées. Ce réglage peut
-        être modifié dans l’écran « À propos ».
-      </p>
+        être modifié dans Tag → Utilisation. Partager le profil et Partager les statistiques de tags n'incluent ni noms, ni adresses e‑mail, ni coordonnées.
+      </p></div>
+      </div>
 
-      <h2>
-        2. Content ownership / コンテンツの権利 / 콘텐츠 권리 / Direitos sobre conteúdo / Derechos de contenido /
-        Droits sur le contenu
-      </h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">2. Content ownership</h2>
+      <h2 class="lang-block" data-lang="ja">コンテンツの権利</h2>
+      <h2 class="lang-block" data-lang="ko">콘텐츠 권리</h2>
+      <h2 class="lang-block" data-lang="pt">Direitos sobre conteúdo</h2>
+      <h2 class="lang-block" data-lang="es">Derechos de contenido</h2>
+      <h2 class="lang-block" data-lang="fr">Droits sur le contenu</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         Third-party content remains the property of its respective owners. You are responsible for
         ensuring you have the right to save or reference content. Do not redistribute content
         without permission.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
         第三者コンテンツの権利は各権利者に帰属します。保存や参照に必要な権利を有することは利用者の責任
         です。権利者の許可なく再配布しないでください。
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
         제3자 콘텐츠의 권리는 각 권리자에게 있습니다. 저장 또는 참조에 필요한 권리를 보유하는 것은
         이용자의 책임입니다. 허가 없이 재배포하지 마세요.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
         O conteúdo de terceiros pertence aos respectivos proprietários. Você é responsável por ter
         o direito de salvar ou referenciar conteúdo. Não redistribua sem permissão.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
         El contenido de terceros pertenece a sus respectivos propietarios. Eres responsable de tener
         el derecho de guardar o referenciar contenido. No redistribuyas sin permiso.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
         Le contenu tiers appartient à ses propriétaires respectifs. Vous êtes responsable d’avoir le
         droit de sauvegarder ou de référencer du contenu. Ne redistribuez pas sans autorisation.
-      </p>
+      </p></div>
+      </div>
 
-      <h2>
-        3. User responsibilities / 利用者の責任 / 이용자 책임 / Responsabilidades do usuário /
-        Responsabilidades del usuario / Responsabilités de l’utilisateur
-      </h2>
-      <ul>
+      <h2 class="lang-block lang-visible" data-lang="en">3. User responsibilities</h2>
+      <h2 class="lang-block" data-lang="ja">利用者の責任</h2>
+      <h2 class="lang-block" data-lang="ko">이용자 책임</h2>
+      <h2 class="lang-block" data-lang="pt">Responsabilidades do usuário</h2>
+      <h2 class="lang-block" data-lang="es">Responsabilidades del usuario</h2>
+      <h2 class="lang-block" data-lang="fr">Responsabilités de l’utilisateur</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><ul>
         <li>Use content only if you have the right to use it.</li>
         <li>Do not upload or share unlawful or infringing material.</li>
         <li>Comply with the terms of third-party services you use.</li>
-      </ul>
-      <ul>
+      </ul></div>
+        <div class="lang-block" data-lang="ja"><ul>
         <li>利用権限のあるコンテンツのみを利用してください。</li>
         <li>違法または権利侵害となる内容を投稿・共有しないでください。</li>
         <li>利用する第三者サービスの規約に従ってください。</li>
-      </ul>
-      <ul>
+      </ul></div>
+        <div class="lang-block" data-lang="ko"><ul>
         <li>사용 권한이 있는 콘텐츠만 이용하세요.</li>
         <li>불법 또는 권리 침해 자료를 업로드/공유하지 마세요.</li>
         <li>이용하는 제3자 서비스의 약관을 준수하세요.</li>
-      </ul>
-      <ul>
+      </ul></div>
+        <div class="lang-block" data-lang="pt"><ul>
         <li>Use conteúdo apenas se tiver direito de uso.</li>
         <li>Não envie nem compartilhe material ilegal ou infrator.</li>
         <li>Cumpra os termos dos serviços de terceiros utilizados.</li>
-      </ul>
-      <ul>
+      </ul></div>
+        <div class="lang-block" data-lang="es"><ul>
         <li>Usa contenido solo si tienes derecho de uso.</li>
         <li>No subas ni compartas material ilegal o infractor.</li>
         <li>Cumple los términos de los servicios de terceros que uses.</li>
-      </ul>
-      <ul>
+      </ul></div>
+        <div class="lang-block" data-lang="fr"><ul>
         <li>Utilisez du contenu uniquement si vous avez le droit de l’utiliser.</li>
         <li>Ne téléversez ni ne partagez de contenu illégal ou contrefaisant.</li>
         <li>Respectez les conditions des services tiers utilisés.</li>
-      </ul>
+      </ul></div>
+      </div>
 
-      <h2>
-        4. External content and links / 外部コンテンツとリンク / 외부 콘텐츠 및 링크 / Conteúdo e links externos /
-        Contenido y enlaces externos / Contenu et liens externes
-      </h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">4. External content and links</h2>
+      <h2 class="lang-block" data-lang="ja">外部コンテンツとリンク</h2>
+      <h2 class="lang-block" data-lang="ko">외부 콘텐츠 및 링크</h2>
+      <h2 class="lang-block" data-lang="pt">Conteúdo e links externos</h2>
+      <h2 class="lang-block" data-lang="es">Contenido y enlaces externos</h2>
+      <h2 class="lang-block" data-lang="fr">Contenu et liens externes</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         Link2Mat provides access to external links. We are not responsible for the availability,
         accuracy, or legality of external content. Access is at your own risk.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
         Link2Mat は外部リンクへのアクセスを提供しますが、その内容の正確性・合法性・継続性について責任を
         負いません。外部コンテンツの利用は自己責任でお願いします。
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
         Link2Mat은 외부 링크에 대한 접근을 제공하지만, 외부 콘텐츠의 정확성/합법성/지속성에 대해
         책임지지 않습니다. 이용은 본인 책임입니다.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
         O Link2Mat fornece acesso a links externos. Não nos responsabilizamos pela disponibilidade,
         exatidão ou legalidade do conteúdo externo. O acesso é por sua conta e risco.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
         Link2Mat proporciona acceso a enlaces externos. No somos responsables de la disponibilidad,
         exactitud ni legalidad del contenido externo. El acceso es bajo tu propio riesgo.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
         Link2Mat fournit l’accès à des liens externes. Nous ne sommes pas responsables de la disponibilité,
         de l’exactitude ou de la légalité du contenu externe. L’accès se fait à vos risques.
-      </p>
+      </p></div>
+      </div>
 
-      <h2>
-        5. Limitation of liability / 免責 / 책임 제한 / Limitação de responsabilidade /
-        Limitación de responsabilidad / Limitation de responsabilité
-      </h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">5. Limitation of liability</h2>
+      <h2 class="lang-block" data-lang="ja">免責</h2>
+      <h2 class="lang-block" data-lang="ko">책임 제한</h2>
+      <h2 class="lang-block" data-lang="pt">Limitação de responsabilidade</h2>
+      <h2 class="lang-block" data-lang="es">Limitación de responsabilidad</h2>
+      <h2 class="lang-block" data-lang="fr">Limitation de responsabilité</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         To the maximum extent permitted by law, Link2Mat is not liable for any damages arising from
         the use of the app or external content.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
         法令で認められる範囲において、Link2Mat は本アプリの利用または外部コンテンツに起因する損害につき
         一切の責任を負いません。
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
         법이 허용하는 범위 내에서 Link2Mat은 앱 사용 또는 외부 콘텐츠로 인한 손해에 대해 책임을 지지 않습니다.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
         Na máxima extensão permitida por lei, o Link2Mat não se responsabiliza por quaisquer danos
         decorrentes do uso do app ou de conteúdo externo.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
         En la máxima medida permitida por la ley, Link2Mat no es responsable de daños derivados del uso
         de la app o de contenido externo.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
         Dans la mesure maximale permise par la loi, Link2Mat n’est pas responsable des dommages résultant
         de l’utilisation de l’app ou de contenu externe.
-      </p>
+      </p></div>
+      </div>
 
-      <h2>6. Changes / 変更 / 변경 / Alterações / Cambios / Modifications</h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">6. Changes</h2>
+      <h2 class="lang-block" data-lang="ja">変更</h2>
+      <h2 class="lang-block" data-lang="ko">변경</h2>
+      <h2 class="lang-block" data-lang="pt">Alterações</h2>
+      <h2 class="lang-block" data-lang="es">Cambios</h2>
+      <h2 class="lang-block" data-lang="fr">Modifications</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         We may update these terms when necessary. Updates will be posted on this page.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
         本規約は必要に応じて更新されることがあります。更新内容は本ページに掲載します。
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
         본 약관은 필요에 따라 변경될 수 있으며, 변경 내용은 본 페이지에 게시됩니다.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
         Estes termos podem ser atualizados quando necessário. As atualizações serão publicadas
         nesta página.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
         Estos términos pueden actualizarse cuando sea necesario. Las actualizaciones se publicarán
         en esta página.
-      </p>
-      <p>
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
         Ces conditions peuvent être mises à jour si nécessaire. Les mises à jour seront publiées
         sur cette page.
-      </p>
+      </p></div>
+      </div>
 
-      <h2>Contact / お問い合わせ / 문의 / Contato / Contacto / Contact</h2>
-      <p>
+      <h2 class="lang-block lang-visible" data-lang="en">Contact</h2>
+      <h2 class="lang-block" data-lang="ja">お問い合わせ</h2>
+      <h2 class="lang-block" data-lang="ko">문의</h2>
+      <h2 class="lang-block" data-lang="pt">Contato</h2>
+      <h2 class="lang-block" data-lang="es">Contacto</h2>
+      <h2 class="lang-block" data-lang="fr">Contact</h2>
+      <div class="lang-blocks-row">
+        <div class="lang-block lang-visible" data-lang="en"><p>
         <a href="mailto:support@link2mat.com">support@link2mat.com</a>
-      </p>
-      <p class="muted">© 2026 Link2Mat. All rights reserved.</p>
-      <p class="muted">© 2026 Link2Mat. 無断転載は禁止です。</p>
-      <p class="muted">© 2026 Link2Mat. 무단 전재 및 재배포 금지.</p>
-      <p class="muted">© 2026 Link2Mat. Todos os direitos reservados.</p>
-      <p class="muted">© 2026 Link2Mat. Todos los derechos reservados.</p>
-      <p class="muted">© 2026 Link2Mat. Tous droits réservés.</p>
+      </p></div>
+        <div class="lang-block" data-lang="ja"><p>
+        <a href="mailto:support@link2mat.com">support@link2mat.com</a>
+      </p></div>
+        <div class="lang-block" data-lang="ko"><p>
+        <a href="mailto:support@link2mat.com">support@link2mat.com</a>
+      </p></div>
+        <div class="lang-block" data-lang="pt"><p>
+        <a href="mailto:support@link2mat.com">support@link2mat.com</a>
+      </p></div>
+        <div class="lang-block" data-lang="es"><p>
+        <a href="mailto:support@link2mat.com">support@link2mat.com</a>
+      </p></div>
+        <div class="lang-block" data-lang="fr"><p>
+        <a href="mailto:support@link2mat.com">support@link2mat.com</a>
+      </p></div>
+      </div>
+      <p class="lang-block lang-visible muted" data-lang="en">© 2026 Link2Mat. All rights reserved.</p>
+      <p class="lang-block muted" data-lang="ja">© 2026 Link2Mat. 無断転載は禁止です。</p>
+      <p class="lang-block muted" data-lang="ko">© 2026 Link2Mat. 무단 전재 및 재배포 금지.</p>
+      <p class="lang-block muted" data-lang="pt">© 2026 Link2Mat. Todos os direitos reservados.</p>
+      <p class="lang-block muted" data-lang="es">© 2026 Link2Mat. Todos los derechos reservados.</p>
+      <p class="lang-block muted" data-lang="fr">© 2026 Link2Mat. Tous droits réservés.</p>
     </div>
+    <script>
+      (function initLangSwitcher() {
+        const STORAGE_KEY = "link2mat-support-lang";
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const langBlocks = document.querySelectorAll(".lang-block");
+        function setLang(lang) {
+          document.body.setAttribute("data-lang", lang);
+          langBlocks.forEach(function(el) {
+            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+          });
+          langButtons.forEach(function(btn) {
+            var on = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        }
+        langButtons.forEach(function(btn) {
+          btn.addEventListener("click", function() { setLang(btn.getAttribute("data-lang")); });
+        });
+        var supported = ["en", "ja", "ko", "pt", "es", "fr"];
+        function detectBrowserLang() {
+          var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
+          for (var i = 0; i < list.length; i++) {
+            var code = (list[i] || "").toLowerCase().split("-")[0];
+            if (supported.indexOf(code) !== -1) return code;
+          }
+          return "en";
+        }
+        var saved = localStorage.getItem(STORAGE_KEY);
+        var initial = (saved && supported.indexOf(saved) !== -1) ? saved : detectBrowserLang();
+        setLang(initial);
+      })();
+    </script>
   </body>
 </html>
