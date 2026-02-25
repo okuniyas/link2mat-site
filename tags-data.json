@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.1.1",
+  "version": "dict_v1.2.8",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -7,8 +7,8 @@
       "canonicalJa": "立ち",
       "canonicalEn": "Standing",
       "related": [
-        "act.wrestling.single_leg",
-        "act.wrestling.double_leg",
+        "act.wrestling.single_leg_takedown",
+        "act.wrestling.double_leg_takedown",
         "act.wrestling.snapdown",
         "act.guard.guard_pull"
       ],
@@ -95,7 +95,7 @@
         "act.sub.triangle",
         "act.sub.armbar",
         "pre.posture_break",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "クローズドガード",
@@ -138,7 +138,7 @@
       "related": [
         "pos.guard.closed",
         "act.guard.sweep",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "クロスガード",
@@ -285,8 +285,8 @@
       "canonicalEn": "Collar and Sleeve Guard",
       "related": [
         "pos.guard.open",
-        "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "片襟片袖ガード",
@@ -350,7 +350,7 @@
       "canonicalEn": "Double Sleeve Guard",
       "related": [
         "pos.guard.open",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "両袖ガード",
@@ -400,7 +400,7 @@
       "canonicalEn": "Cross Sleeve Guard",
       "related": [
         "pos.guard.open",
-        "pre.grip.sleeve",
+        "pre.body.sleeve",
         "pre.angle_created"
       ],
       "labels": {
@@ -1009,7 +1009,7 @@
       "related": [
         "pos.guard.spider",
         "pos.guard.slx",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "スパイダーX",
@@ -1171,7 +1171,8 @@
       "related": [
         "pos.guard.open",
         "act.guard.sweep",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "スクイッドガード",
@@ -1433,6 +1434,47 @@
         "norte-sul",
         "norte-sur",
         "nord-sud"
+      ]
+    },
+    {
+      "tagId": "pos.control.kimura_trap",
+      "category": "Position",
+      "canonicalJa": "キムラトラップ",
+      "canonicalEn": "Kimura Trap",
+      "related": [
+        "act.sub.kimura",
+        "pre.2on1",
+        "pre.control_elbow_line"
+      ],
+      "labels": {
+        "ja": "キムラトラップ",
+        "en": "Kimura Trap",
+        "ko": "키무라 트랩",
+        "pt": "Armadilha de Kimura",
+        "es": "Kimura Trap",
+        "fr": "Kimura Trap"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "kimura trap"
+        ],
+        "ko": [
+          "키무라 트랩"
+        ],
+        "pt": [
+          "armadilha de kimura"
+        ],
+        "es": [
+          "kimura trap"
+        ],
+        "fr": [
+          "kimura trap"
+        ]
+      },
+      "aliases": [
+        "kimura trap",
+        "키무라 트랩",
+        "armadilha de kimura"
       ]
     },
     {
@@ -1774,7 +1816,7 @@
       "canonicalEn": "Back Control",
       "related": [
         "act.sub.rnc",
-        "act.control.back_retention",
+        "pre.underhook_side",
         "pre.seatbelt"
       ],
       "labels": {
@@ -2244,7 +2286,7 @@
       "canonicalEn": "Spider Guard",
       "related": [
         "act.guard.sweep",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "スパイダーガード",
@@ -2286,7 +2328,7 @@
       "canonicalEn": "Lasso Guard",
       "related": [
         "act.guard.sweep",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ラッソーガード",
@@ -2329,7 +2371,7 @@
       "related": [
         "pos.guard.lasso",
         "act.guard.sweep",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ディープラッソーガード",
@@ -2376,7 +2418,7 @@
       "related": [
         "pos.guard.lasso",
         "act.guard.sweep",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "シャローラッソーガード",
@@ -2424,7 +2466,7 @@
         "pos.guard.dlr",
         "pos.guard.lasso",
         "act.guard.sweep",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "デラヒーバラッソーガード",
@@ -2656,7 +2698,7 @@
       "canonicalEn": "Body Triangle",
       "related": [
         "act.sub.rnc",
-        "act.control.back_retention",
+        "pre.underhook_side",
         "pre.seatbelt"
       ],
       "labels": {
@@ -2699,8 +2741,8 @@
       "related": [
         "pos.guard.closed",
         "pos.guard.open",
-        "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ガードプル",
@@ -3316,7 +3358,7 @@
       "related": [
         "pos.guard.open",
         "pre.off_balance",
-        "pre.grip.sleeve"
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "袖流し",
@@ -3722,6 +3764,40 @@
         "raspagem de scoop de perna",
         "leg scoop barrido",
         "leg scoop balayage"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.double_ankle",
+      "category": "Action",
+      "canonicalJa": "ダブルアンクルスイープ",
+      "canonicalEn": "Double Ankle Sweep",
+      "related": [
+        "act.guard.sweep",
+        "pre.double_ankle"
+      ],
+      "labels": {
+        "ja": "ダブルアンクルスイープ",
+        "en": "Double Ankle Sweep",
+        "ko": "더블 앵클 스윕",
+        "pt": "Raspagem de Dois Tornozelos",
+        "es": "Doble Tobillo Barrido",
+        "fr": "Double Cheville Balayage"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "double ankle sweep"
+        ],
+        "ja": [
+          "ダブルアンクルスイープ"
+        ],
+        "ko": [
+          "더블 앵클 스윕"
+        ]
+      },
+      "aliases": [
+        "double ankle sweep",
+        "ダブルアンクルスイープ",
+        "더블 앵클 스윕"
       ]
     },
     {
@@ -4264,8 +4340,8 @@
     {
       "tagId": "act.pass.knee_cut",
       "category": "Action",
-      "canonicalJa": "ニーカット（ニアサイド）",
-      "canonicalEn": "Knee Cut (Near Side)",
+      "canonicalJa": "ニーカット",
+      "canonicalEn": "Knee Cut",
       "related": [
         "pre.underhook",
         "pre.crossface",
@@ -4273,12 +4349,12 @@
         "pos.guard.half"
       ],
       "labels": {
-        "ja": "ニーカット（ニアサイド）",
-        "en": "Knee Cut (Near Side)",
-        "ko": "니 컷 (니어 사이드)",
-        "pt": "Passagem de Joelho (Lado Próximo)",
-        "es": "Corte de Rodilla (Near Lado)",
-        "fr": "Coupe de Genou (Near Côté)"
+        "ja": "ニーカット",
+        "en": "Knee Cut",
+        "ko": "니 컷",
+        "pt": "Passagem de Joelho",
+        "es": "Corte de Rodilla",
+        "fr": "Coupe de Genou"
       },
       "aliasesByLocale": {
         "en": [
@@ -4315,50 +4391,6 @@
         "coupe de genou",
         "genou slice",
         "genou cut passe"
-      ]
-    },
-    {
-      "tagId": "act.pass.knee_cut.far_side",
-      "category": "Action",
-      "canonicalJa": "ニーカット（ファーサイド）",
-      "canonicalEn": "Knee Cut (Far Side)",
-      "related": [
-        "pre.underhook",
-        "pre.crossface",
-        "pre.pressure",
-        "pos.guard.half"
-      ],
-      "labels": {
-        "ja": "ニーカット（ファーサイド）",
-        "en": "Knee Cut (Far Side)",
-        "ko": "니 컷 (파 사이드)",
-        "pt": "Passagem de Joelho (Lado Oposto)",
-        "es": "Corte de Rodilla (Far Lado)",
-        "fr": "Coupe de Genou (Far Côté)"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "knee cut far side"
-        ],
-        "ko": [
-          "니 컷 패스"
-        ],
-        "pt": [
-          "passagem de joelho"
-        ],
-        "es": [
-          "rodilla cut far lateral"
-        ],
-        "fr": [
-          "genou cut far côté"
-        ]
-      },
-      "aliases": [
-        "knee cut far side",
-        "니 컷 패스",
-        "passagem de joelho",
-        "rodilla cut far lateral",
-        "genou cut far côté"
       ]
     },
     {
@@ -4412,99 +4444,13 @@
       ]
     },
     {
-      "tagId": "act.pass.knee_through.near_side",
-      "category": "Action",
-      "canonicalJa": "ニースルーパス（ニアサイド）",
-      "canonicalEn": "Knee Through Pass (Near Side)",
-      "related": [
-        "act.pass.knee_through",
-        "pre.underhook",
-        "pre.crossface"
-      ],
-      "labels": {
-        "ja": "ニースルーパス（ニアサイド）",
-        "en": "Knee Through Pass (Near Side)",
-        "ko": "니 스루 패스 (니어 사이드)",
-        "pt": "Passagem de Joelho por Dentro (Lado Próximo)",
-        "es": "Rodilla Through Pase (Near Lado)",
-        "fr": "Genou Through Passe (Near Côté)"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "knee through near side"
-        ],
-        "ko": [
-          "니 스루 패스"
-        ],
-        "pt": [
-          "passagem de joelho por dentro"
-        ],
-        "es": [
-          "rodilla through near lateral"
-        ],
-        "fr": [
-          "genou through near côté"
-        ]
-      },
-      "aliases": [
-        "knee through near side",
-        "니 스루 패스",
-        "passagem de joelho por dentro",
-        "rodilla through near lateral",
-        "genou through near côté"
-      ]
-    },
-    {
-      "tagId": "act.pass.knee_through.far_side",
-      "category": "Action",
-      "canonicalJa": "ニースルーパス（ファーサイド）",
-      "canonicalEn": "Knee Through Pass (Far Side)",
-      "related": [
-        "act.pass.knee_through",
-        "pre.underhook",
-        "pre.crossface"
-      ],
-      "labels": {
-        "ja": "ニースルーパス（ファーサイド）",
-        "en": "Knee Through Pass (Far Side)",
-        "ko": "니 스루 패스 (파 사이드)",
-        "pt": "Passagem de Joelho por Dentro (Lado Oposto)",
-        "es": "Rodilla Through Pase (Far Lado)",
-        "fr": "Genou Through Passe (Far Côté)"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "knee through far side"
-        ],
-        "ko": [
-          "니 스루 패스"
-        ],
-        "pt": [
-          "passagem de joelho por dentro"
-        ],
-        "es": [
-          "rodilla through far lateral"
-        ],
-        "fr": [
-          "genou through far côté"
-        ]
-      },
-      "aliases": [
-        "knee through far side",
-        "니 스루 패스",
-        "passagem de joelho por dentro",
-        "rodilla through far lateral",
-        "genou through far côté"
-      ]
-    },
-    {
       "tagId": "act.pass.torreando",
       "category": "Action",
       "canonicalJa": "トレアンドパス",
       "canonicalEn": "Toreando Pass",
       "related": [
         "pre.distance_management",
-        "pre.grip.ankle",
+        "pre.body.ankle",
         "pre.angle_created"
       ],
       "labels": {
@@ -4567,6 +4513,9 @@
         "en": [
           "long step"
         ],
+        "ja": [
+          "ロングステップ"
+        ],
         "ko": [
           "롱 스텝 패스"
         ],
@@ -4582,8 +4531,114 @@
       },
       "aliases": [
         "long step",
+        "ロングステップ",
         "롱 스텝 패스",
         "passagem passo longo"
+      ]
+    },
+    {
+      "tagId": "act.pass.high_step",
+      "category": "Action",
+      "canonicalJa": "ハイステップパス",
+      "canonicalEn": "High Step Pass",
+      "related": [
+        "scn.phase.passing",
+        "pre.angle_created"
+      ],
+      "labels": {
+        "ja": "ハイステップパス",
+        "en": "High Step Pass",
+        "ko": "하이 스텝 패스",
+        "pt": "Passagem Passo Alto",
+        "es": "High Step Pase",
+        "fr": "High Step Passe"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "high step pass",
+          "high step"
+        ],
+        "ja": [
+          "ハイステップ"
+        ],
+        "ko": [
+          "하이 스텝 패스",
+          "하이 스텝"
+        ],
+        "pt": [
+          "passagem passo alto"
+        ],
+        "es": [
+          "high step pase",
+          "high step"
+        ],
+        "fr": [
+          "high step passe",
+          "high step"
+        ]
+      },
+      "aliases": [
+        "high step pass",
+        "high step",
+        "ハイステップ",
+        "하이 스텝 패스",
+        "하이 스텝",
+        "passagem passo alto",
+        "high step pase",
+        "high step passe"
+      ]
+    },
+    {
+      "tagId": "act.pass.leg_weave",
+      "category": "Action",
+      "canonicalJa": "レッグウィーブパス",
+      "canonicalEn": "Leg Weave Pass",
+      "related": [
+        "scn.phase.passing"
+      ],
+      "labels": {
+        "ja": "レッグウィーブパス",
+        "en": "Leg Weave Pass",
+        "ko": "레그 위브 패스",
+        "pt": "Passagem Entrelaçar Pernas",
+        "es": "Leg Weave Pase",
+        "fr": "Leg Weave Passe"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "leg weave pass",
+          "leg weave"
+        ],
+        "ja": [
+          "レッグウィーブ"
+        ],
+        "ko": [
+          "레그 위브 패스",
+          "레그 위브"
+        ],
+        "pt": [
+          "passagem entrelaçar pernas",
+          "entrelaçar pernas"
+        ],
+        "es": [
+          "leg weave pase",
+          "leg weave"
+        ],
+        "fr": [
+          "leg weave passe",
+          "leg weave"
+        ]
+      },
+      "aliases": [
+        "leg weave pass",
+        "leg weave",
+        "レッグウィーブ",
+        "레그 위브 패스",
+        "레그 위브",
+        "passagem entrelaçar pernas",
+        "entrelaçar pernas",
+        "leg weave pase",
+        "leg weave passe"
       ]
     },
     {
@@ -4816,7 +4871,7 @@
         "act.movement.lying_down",
         "pre.knee_line_control",
         "pre.hip_line_control",
-        "pre.grip.cross_collar_low"
+        "pre.grip.cross_grip"
       ],
       "labels": {
         "ja": "ライイングレッグドラッグ",
@@ -4911,8 +4966,8 @@
       "canonicalJa": "バインディングパス",
       "canonicalEn": "Binding Pass",
       "related": [
-        "pre.grip.collar",
-        "pre.grip.sleeve",
+        "pre.body.collar",
+        "pre.body.sleeve",
         "pre.pressure"
       ],
       "labels": {
@@ -5102,47 +5157,112 @@
       ]
     },
     {
-      "tagId": "act.control.armpit_cup",
+      "tagId": "act.control.cup",
       "category": "Action",
-      "canonicalJa": "脇カップ",
-      "canonicalEn": "Armpit Cup",
+      "canonicalJa": "カップ",
+      "canonicalEn": "Cup",
       "related": [
         "act.transition.take_back",
-        "pre.control.elbow_line"
+        "pre.control.elbow_line",
+        "pre.grip.c_grip"
       ],
       "labels": {
-        "ja": "脇カップ",
-        "en": "Armpit Cup",
-        "ko": "겨드랑이 컵",
-        "pt": "Concha na axila",
-        "es": "Armpit Cup",
-        "fr": "Armpit Cup"
+        "ja": "カップ",
+        "en": "Cup",
+        "ko": "컵",
+        "pt": "Copa",
+        "es": "Copa",
+        "fr": "Coupe"
       },
       "aliasesByLocale": {
         "en": [
-          "armpit cup",
-          "underarm cup"
+          "cup",
+          "cup control"
+        ],
+        "ja": [
+          "握らずに当てる"
         ],
         "ko": [
-          "겨드랑이 컵"
+          "컵"
         ],
         "pt": [
-          "concha na axila"
+          "copa"
         ],
         "es": [
-          "armpit cup",
-          "underarm cup"
+          "copa"
         ],
         "fr": [
-          "armpit cup",
-          "underarm cup"
+          "coupe"
         ]
       },
       "aliases": [
-        "armpit cup",
-        "underarm cup",
-        "겨드랑이 컵",
-        "concha na axila"
+        "cup",
+        "cup control",
+        "握らずに当てる",
+        "컵",
+        "copa",
+        "coupe"
+      ]
+    },
+    {
+      "tagId": "act.control.chop",
+      "category": "Action",
+      "canonicalJa": "チョップ",
+      "canonicalEn": "Chop",
+      "related": [
+        "pre.head_position",
+        "act.transition.take_back"
+      ],
+      "labels": {
+        "ja": "チョップ",
+        "en": "Chop",
+        "ko": "chop",
+        "pt": "Chop",
+        "es": "Chop",
+        "fr": "Chop"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "chop control"
+        ],
+        "ja": [
+          "チョップコントロール"
+        ]
+      },
+      "aliases": [
+        "chop control",
+        "チョップコントロール"
+      ]
+    },
+    {
+      "tagId": "act.control.foot_hook",
+      "category": "Action",
+      "canonicalJa": "足をかける",
+      "canonicalEn": "Foot Hook",
+      "related": [
+        "pre.body.neck"
+      ],
+      "labels": {
+        "ja": "足をかける",
+        "en": "Foot Hook",
+        "ko": "발 걸기",
+        "pt": "Gancho de Pé",
+        "es": "Gancho de Pie",
+        "fr": "Accrocher le pied"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "hook with foot",
+          "put foot on"
+        ],
+        "ja": [
+          "足でかける"
+        ]
+      },
+      "aliases": [
+        "hook with foot",
+        "put foot on",
+        "足でかける"
       ]
     },
     {
@@ -5289,9 +5409,9 @@
       "canonicalJa": "グリップブレイク",
       "canonicalEn": "Grip Break",
       "related": [
-        "pre.grip.collar",
-        "pre.grip.sleeve",
-        "pre.grip.ankle"
+        "pre.body.collar",
+        "pre.body.sleeve",
+        "pre.body.ankle"
       ],
       "labels": {
         "ja": "グリップブレイク",
@@ -5329,14 +5449,14 @@
     {
       "tagId": "act.transition.mount",
       "category": "Action",
-      "canonicalJa": "マウント移行",
+      "canonicalJa": "マウントトランジッション",
       "canonicalEn": "Mount Transition",
       "related": [
         "pos.top.mount",
         "pre.hip_line_control"
       ],
       "labels": {
-        "ja": "マウント移行",
+        "ja": "マウントトランジッション",
         "en": "Mount Transition",
         "ko": "마운트 트랜지션",
         "pt": "Transição para Montada",
@@ -5378,49 +5498,6 @@
         "transition to montée",
         "to montée",
         "montée transition"
-      ]
-    },
-    {
-      "tagId": "act.transition.mount.knee_through",
-      "category": "Action",
-      "canonicalJa": "マウントトランジション（ニースルー）",
-      "canonicalEn": "Mount Transition (Knee Through)",
-      "related": [
-        "act.transition.mount",
-        "act.pass.knee_through",
-        "pre.hip_line_control"
-      ],
-      "labels": {
-        "ja": "マウントトランジション（ニースルー）",
-        "en": "Mount Transition (Knee Through)",
-        "ko": "마운트 트랜지션 (니 스루)",
-        "pt": "Transição para Montada (Joelho por Dentro)",
-        "es": "Montada Transition (Rodilla Through)",
-        "fr": "Montée Transition (Genou Through)"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "mount transition knee through"
-        ],
-        "ko": [
-          "마운트 트랜지션"
-        ],
-        "pt": [
-          "transição para montada"
-        ],
-        "es": [
-          "montada transition rodilla through"
-        ],
-        "fr": [
-          "montée transition genou through"
-        ]
-      },
-      "aliases": [
-        "mount transition knee through",
-        "마운트 트랜지션",
-        "transição para montada",
-        "montada transition rodilla through",
-        "montée transition genou through"
       ]
     },
     {
@@ -5506,48 +5583,6 @@
         "gator roll",
         "게이터 롤",
         "rolamento gator"
-      ]
-    },
-    {
-      "tagId": "act.control.back_retention",
-      "category": "Action",
-      "canonicalJa": "バック保持",
-      "canonicalEn": "Back Retention",
-      "related": [
-        "pre.seatbelt",
-        "pre.hook_control"
-      ],
-      "labels": {
-        "ja": "バック保持",
-        "en": "Back Retention",
-        "ko": "백 리텐션",
-        "pt": "Retenção de Costas",
-        "es": "Espalda Retention",
-        "fr": "Dos Retention"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "back retention"
-        ],
-        "ko": [
-          "백 리텐션"
-        ],
-        "pt": [
-          "retenção de costas"
-        ],
-        "es": [
-          "espalda retention"
-        ],
-        "fr": [
-          "dos retention"
-        ]
-      },
-      "aliases": [
-        "back retention",
-        "백 리텐션",
-        "retenção de costas",
-        "espalda retention",
-        "dos retention"
       ]
     },
     {
@@ -5688,7 +5723,7 @@
     {
       "tagId": "act.control.front_headlock_stabilize",
       "category": "Action",
-      "canonicalJa": "フロントヘッド固定",
+      "canonicalJa": "フロントヘッドロック",
       "canonicalEn": "Front Headlock Control",
       "related": [
         "act.sub.guillotine",
@@ -5696,7 +5731,7 @@
         "pre.2on1"
       ],
       "labels": {
-        "ja": "フロントヘッド固定",
+        "ja": "フロントヘッドロック",
         "en": "Front Headlock Control",
         "ko": "프론트 헤드락 컨트롤",
         "pt": "Controle de Chave de Cabeça Frontal",
@@ -5917,8 +5952,8 @@
       "canonicalJa": "ラペルチョーク",
       "canonicalEn": "Lapel Choke",
       "related": [
-        "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ラペルチョーク",
@@ -6116,7 +6151,7 @@
     {
       "tagId": "act.sub.arm_triangle",
       "category": "Submission",
-      "canonicalJa": "腕三角",
+      "canonicalJa": "うで三角",
       "canonicalEn": "Arm Triangle",
       "related": [
         "pos.top.side_control",
@@ -6125,7 +6160,7 @@
         "pre.shoulder_line_control"
       ],
       "labels": {
-        "ja": "腕三角",
+        "ja": "うで三角",
         "en": "Arm Triangle",
         "ko": "암 트라이앵글",
         "pt": "Triângulo de Braço",
@@ -6136,6 +6171,9 @@
         "en": [
           "arm triangle",
           "kata gatame"
+        ],
+        "ja": [
+          "腕三角"
         ],
         "ko": [
           "암 트라이앵글"
@@ -6155,6 +6193,7 @@
       "aliases": [
         "arm triangle",
         "kata gatame",
+        "腕三角",
         "암 트라이앵글",
         "triângulo de braço",
         "arm triángulo"
@@ -6163,7 +6202,7 @@
     {
       "tagId": "act.sub.armbar",
       "category": "Submission",
-      "canonicalJa": "腕十字",
+      "canonicalJa": "うで十字",
       "canonicalEn": "Armbar",
       "related": [
         "pos.top.mount",
@@ -6171,7 +6210,7 @@
         "pre.control_elbow_line"
       ],
       "labels": {
-        "ja": "腕十字",
+        "ja": "うで十字",
         "en": "Armbar",
         "ko": "암바",
         "pt": "Armbar",
@@ -6187,6 +6226,9 @@
           "straight armlock",
           "straight arm lock",
           "straight al"
+        ],
+        "ja": [
+          "腕十字"
         ],
         "ko": [
           "암바"
@@ -6222,6 +6264,7 @@
         "straight armlock",
         "straight arm lock",
         "straight al",
+        "腕十字",
         "암바",
         "chave de braço",
         "llave de brazo",
@@ -6368,8 +6411,7 @@
       "related": [
         "act.sub.armbar",
         "pre.control_elbow_line",
-        "pre.arm_control.near_side",
-        "pre.arm_control.far_side",
+        "pre.arm_control",
         "pre.spinning"
       ],
       "labels": {
@@ -6481,9 +6523,9 @@
       "related": [
         "pos.guard.closed",
         "pos.guard.high",
-        "pre.grip.collar",
-        "pre.grip.sleeve",
-        "pre.grip.cross_collar"
+        "pre.body.collar",
+        "pre.body.sleeve",
+        "pre.grip.cross_grip"
       ],
       "labels": {
         "ja": "クロスチョーク",
@@ -6543,8 +6585,9 @@
       "canonicalEn": "Canto Choke",
       "related": [
         "pos.guard.closed",
-        "pre.grip.cross_collar",
-        "pre.grip.collar"
+        "pre.grip.cross_grip",
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "カントチョーク",
@@ -6591,7 +6634,8 @@
       "related": [
         "pos.guard.closed",
         "pos.guard.high",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ループチョーク",
@@ -6634,7 +6678,8 @@
       "related": [
         "pos.guard.closed",
         "pos.guard.high",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "プッシュチョーク",
@@ -6677,8 +6722,8 @@
       "related": [
         "pos.top.mount",
         "pos.top.back_control",
-        "pre.grip.sleeve",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "エゼキエルチョーク",
@@ -6727,8 +6772,8 @@
       "canonicalJa": "カラーチョーク",
       "canonicalEn": "Collar Choke",
       "related": [
-        "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "カラーチョーク",
@@ -6782,7 +6827,8 @@
       "canonicalEn": "Bow and Arrow Choke",
       "related": [
         "pos.top.back_control",
-        "pre.grip.collar",
+        "pre.body.collar",
+        "pre.body.sleeve",
         "pre.seatbelt"
       ],
       "labels": {
@@ -6841,7 +6887,8 @@
       "canonicalEn": "Baseball Choke",
       "related": [
         "pos.top.side_control",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ベースボールチョーク",
@@ -6886,8 +6933,8 @@
       "canonicalJa": "ブラボーチョーク",
       "canonicalEn": "Bravo Choke",
       "related": [
-        "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ブラボーチョーク",
@@ -6929,7 +6976,8 @@
       "canonicalEn": "Clock Choke",
       "related": [
         "pos.turtle",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "クロックチョーク",
@@ -7948,42 +7996,56 @@
     {
       "tagId": "act.escape.back_roll",
       "category": "Action",
-      "canonicalJa": "バックロール",
-      "canonicalEn": "Back Roll",
+      "canonicalJa": "バックロールエスケープ",
+      "canonicalEn": "Back Roll Escape",
       "related": [
         "act.escape.overhead_roll",
         "pre.base"
       ],
       "labels": {
-        "ja": "バックロール",
-        "en": "Back Roll",
-        "ko": "백 롤",
-        "pt": "Rolamento para Trás",
-        "es": "Espalda Roll",
-        "fr": "Dos Roll"
+        "ja": "バックロールエスケープ",
+        "en": "Back Roll Escape",
+        "ko": "백 롤 이스케이프",
+        "pt": "Escape Rolamento para Trás",
+        "es": "Espalda Roll Escape",
+        "fr": "Dos Roll Escape"
       },
       "aliasesByLocale": {
         "en": [
+          "back roll escape",
           "back roll"
         ],
+        "ja": [
+          "バックロール"
+        ],
         "ko": [
+          "백 롤 이스케이프",
           "백 롤"
         ],
         "pt": [
+          "escape rolamento para trás",
           "rolamento para trás"
         ],
         "es": [
+          "espalda roll escape",
           "espalda roll"
         ],
         "fr": [
+          "dos roll escape",
           "dos roll"
         ]
       },
       "aliases": [
+        "back roll escape",
         "back roll",
+        "バックロール",
+        "백 롤 이스케이프",
         "백 롤",
+        "escape rolamento para trás",
         "rolamento para trás",
+        "espalda roll escape",
         "espalda roll",
+        "dos roll escape",
         "dos roll"
       ]
     },
@@ -7994,6 +8056,7 @@
       "canonicalEn": "Hip Escape",
       "related": [
         "act.escape.elbow_escape",
+        "act.movement.shrimp",
         "pre.frame"
       ],
       "labels": {
@@ -8027,90 +8090,6 @@
         "escape de quadril",
         "cadera escape",
         "hanche escape"
-      ]
-    },
-    {
-      "tagId": "act.escape.shrimp",
-      "category": "Action",
-      "canonicalJa": "エビ",
-      "canonicalEn": "Shrimping",
-      "related": [
-        "act.escape.hip_escape",
-        "pre.frame"
-      ],
-      "labels": {
-        "ja": "エビ",
-        "en": "Shrimping",
-        "ko": "쉬림핑",
-        "pt": "Encolhimento",
-        "es": "Shrimping",
-        "fr": "Shrimping"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "shrimp",
-          "shrimping"
-        ],
-        "ko": [
-          "쉬림핑"
-        ],
-        "pt": [
-          "encolhimento"
-        ],
-        "es": [
-          "shrimp",
-          "shrimping"
-        ],
-        "fr": [
-          "shrimp",
-          "shrimping"
-        ]
-      },
-      "aliases": [
-        "shrimp",
-        "shrimping",
-        "쉬림핑",
-        "encolhimento"
-      ]
-    },
-    {
-      "tagId": "act.escape.reverse_shrimp",
-      "category": "Action",
-      "canonicalJa": "逆エビ",
-      "canonicalEn": "Reverse Shrimp",
-      "related": [
-        "act.escape.hip_escape",
-        "pre.frame"
-      ],
-      "labels": {
-        "ja": "逆エビ",
-        "en": "Reverse Shrimp",
-        "ko": "리버스 쉬림프",
-        "pt": "Encolhimento Reverso",
-        "es": "Reverse Shrimp",
-        "fr": "Reverse Shrimp"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "reverse shrimp"
-        ],
-        "ko": [
-          "리버스 쉬림프"
-        ],
-        "pt": [
-          "encolhimento reverso"
-        ],
-        "es": [
-          "reverse shrimp"
-        ],
-        "fr": [
-          "reverse shrimp"
-        ]
-      },
-      "aliases": [
-        "reverse shrimp",
-        "리버스 쉬림프",
-        "encolhimento reverso"
       ]
     },
     {
@@ -8240,40 +8219,52 @@
     {
       "tagId": "act.escape.overhead_roll",
       "category": "Action",
-      "canonicalJa": "オーバーヘッドロール",
-      "canonicalEn": "Overhead Roll",
+      "canonicalJa": "オーバーヘッドロールエスケープ",
+      "canonicalEn": "Overhead Roll Escape",
       "related": [
         "pre.hip_escape",
         "pre.base"
       ],
       "labels": {
-        "ja": "オーバーヘッドロール",
-        "en": "Overhead Roll",
-        "ko": "오버헤드 롤",
-        "pt": "Rolamento por Cima",
-        "es": "Overhead Roll",
-        "fr": "Overhead Roll"
+        "ja": "オーバーヘッドロールエスケープ",
+        "en": "Overhead Roll Escape",
+        "ko": "오버헤드 롤 이스케이프",
+        "pt": "Escape Rolamento por Cima",
+        "es": "Overhead Roll Escape",
+        "fr": "Overhead Roll Escape"
       },
       "aliasesByLocale": {
         "en": [
+          "overhead roll escape",
           "overhead roll"
         ],
+        "ja": [
+          "オーバーヘッドロール"
+        ],
         "ko": [
+          "오버헤드 롤 이스케이프",
           "오버헤드 롤"
         ],
         "pt": [
+          "escape rolamento por cima",
           "rolamento por cima"
         ],
         "es": [
+          "overhead roll escape",
           "overhead roll"
         ],
         "fr": [
+          "overhead roll escape",
           "overhead roll"
         ]
       },
       "aliases": [
+        "overhead roll escape",
         "overhead roll",
+        "オーバーヘッドロール",
+        "오버헤드 롤 이스케이프",
         "오버헤드 롤",
+        "escape rolamento por cima",
         "rolamento por cima"
       ]
     },
@@ -8318,54 +8309,11 @@
       ]
     },
     {
-      "tagId": "act.wrestling.single_leg",
-      "category": "Action",
-      "canonicalJa": "シングルレッグ",
-      "canonicalEn": "Single Leg",
-      "related": [
-        "pre.head_position",
-        "pre.inside_position",
-        "pre.2on1"
-      ],
-      "labels": {
-        "ja": "シングルレッグ",
-        "en": "Single Leg",
-        "ko": "싱글 레그",
-        "pt": "Queda de Uma Perna",
-        "es": "Simple Leg",
-        "fr": "Simple Leg"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "single leg"
-        ],
-        "ko": [
-          "싱글 레그"
-        ],
-        "pt": [
-          "queda de uma perna"
-        ],
-        "es": [
-          "simple leg"
-        ],
-        "fr": [
-          "simple leg"
-        ]
-      },
-      "aliases": [
-        "single leg",
-        "싱글 레그",
-        "queda de uma perna",
-        "simple leg"
-      ]
-    },
-    {
       "tagId": "act.wrestling.single_leg_takedown",
       "category": "Action",
       "canonicalJa": "シングルレッグテイクダウン",
       "canonicalEn": "Single Leg Takedown",
       "related": [
-        "act.wrestling.single_leg",
         "pre.head_position",
         "pre.inside_position"
       ],
@@ -8380,73 +8328,44 @@
       "aliasesByLocale": {
         "en": [
           "single leg takedown",
-          "single leg TD"
+          "single leg TD",
+          "single leg"
+        ],
+        "ja": [
+          "シングルレッグ",
+          "シングルレッグTD"
         ],
         "ko": [
-          "싱글 레그 테이크다운"
+          "싱글 레그 테이크다운",
+          "싱글 레그"
         ],
         "pt": [
           "queda de uma perna"
         ],
         "es": [
           "simple leg derribo",
-          "simple leg TD"
+          "simple leg TD",
+          "simple leg"
         ],
         "fr": [
           "simple leg amenée",
-          "simple leg TD"
+          "simple leg TD",
+          "simple leg"
         ]
       },
       "aliases": [
         "single leg takedown",
         "single leg TD",
+        "single leg",
+        "シングルレッグ",
+        "シングルレッグTD",
         "싱글 레그 테이크다운",
+        "싱글 레그",
         "queda de uma perna",
         "simple leg derribo",
         "simple leg TD",
+        "simple leg",
         "simple leg amenée"
-      ]
-    },
-    {
-      "tagId": "act.wrestling.double_leg",
-      "category": "Action",
-      "canonicalJa": "ダブルレッグ",
-      "canonicalEn": "Double Leg",
-      "related": [
-        "pre.level_change",
-        "pre.head_position",
-        "pre.off_balance"
-      ],
-      "labels": {
-        "ja": "ダブルレッグ",
-        "en": "Double Leg",
-        "ko": "더블 레그",
-        "pt": "Queda de Duas Pernas",
-        "es": "Doble Leg",
-        "fr": "Double Leg"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "double leg"
-        ],
-        "ko": [
-          "더블 레그"
-        ],
-        "pt": [
-          "queda de duas pernas"
-        ],
-        "es": [
-          "doble leg"
-        ],
-        "fr": [
-          "double leg"
-        ]
-      },
-      "aliases": [
-        "double leg",
-        "더블 레그",
-        "queda de duas pernas",
-        "doble leg"
       ]
     },
     {
@@ -8455,7 +8374,6 @@
       "canonicalJa": "ダブルレッグテイクダウン",
       "canonicalEn": "Double Leg Takedown",
       "related": [
-        "act.wrestling.double_leg",
         "pre.level_change",
         "pre.head_position"
       ],
@@ -8470,30 +8388,43 @@
       "aliasesByLocale": {
         "en": [
           "double leg takedown",
-          "double leg TD"
+          "double leg TD",
+          "double leg"
+        ],
+        "ja": [
+          "ダブルレッグ",
+          "ダブルレッグTD"
         ],
         "ko": [
-          "더블 레그 테イク다운"
+          "더블 레그 테イク다운",
+          "더블 레그"
         ],
         "pt": [
           "queda de duas pernas"
         ],
         "es": [
           "doble leg derribo",
-          "doble leg TD"
+          "doble leg TD",
+          "doble leg"
         ],
         "fr": [
           "double leg amenée",
-          "double leg TD"
+          "double leg TD",
+          "double leg"
         ]
       },
       "aliases": [
         "double leg takedown",
         "double leg TD",
+        "double leg",
+        "ダブルレッグ",
+        "ダブルレッグTD",
         "더블 레그 테イク다운",
+        "더블 레그",
         "queda de duas pernas",
         "doble leg derribo",
         "doble leg TD",
+        "doble leg",
         "double leg amenée"
       ]
     },
@@ -9251,40 +9182,57 @@
     {
       "tagId": "act.wrestling.high_crotch",
       "category": "Action",
-      "canonicalJa": "ハイクロッチ",
-      "canonicalEn": "High Crotch",
+      "canonicalJa": "ハイクロッチテイクダウン",
+      "canonicalEn": "High Crotch Takedown",
       "related": [
         "pre.level_change",
         "pre.head_position"
       ],
       "labels": {
-        "ja": "ハイクロッチ",
-        "en": "High Crotch",
-        "ko": "하이 크로치",
-        "pt": "High Crotch",
-        "es": "High Crotch",
-        "fr": "High Crotch"
+        "ja": "ハイクロッチテイクダウン",
+        "en": "High Crotch Takedown",
+        "ko": "하이 크로치 테이크다운",
+        "pt": "High Crotch Takedown",
+        "es": "High Crotch Derribo",
+        "fr": "High Crotch Amenée"
       },
       "aliasesByLocale": {
         "en": [
+          "high crotch takedown",
+          "high crotch TD",
           "high crotch"
         ],
+        "ja": [
+          "ハイクロッチ",
+          "ハイクロッチTD"
+        ],
         "ko": [
+          "하이 크로치 테이크다운",
           "하이 크로치"
         ],
         "pt": [
+          "high crotch takedown",
           "high crotch"
         ],
         "es": [
+          "high crotch derribo",
           "high crotch"
         ],
         "fr": [
+          "high crotch amenée",
           "high crotch"
         ]
       },
       "aliases": [
+        "high crotch takedown",
+        "high crotch TD",
         "high crotch",
-        "하이 크로치"
+        "ハイクロッチ",
+        "ハイクロッチTD",
+        "하이 크로치 테이크다운",
+        "하이 크로치",
+        "high crotch derribo",
+        "high crotch amenée"
       ]
     },
     {
@@ -9449,6 +9397,57 @@
       ]
     },
     {
+      "tagId": "act.movement.body_spin",
+      "category": "Action",
+      "canonicalJa": "体をスピン",
+      "canonicalEn": "Body Spin",
+      "related": [
+        "act.sub.armbar",
+        "act.sub.triangle",
+        "act.guard.sweep.pendulum",
+        "act.guard.sweep.flower",
+        "pre.frame"
+      ],
+      "labels": {
+        "ja": "体をスピン",
+        "en": "Body Spin",
+        "ko": "바디 스핀",
+        "pt": "Giro de Corpo",
+        "es": "Giro de Cuerpo",
+        "fr": "Rotation du Corps"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "body spin",
+          "spin on back"
+        ],
+        "ja": [
+          "背中を軸にスピン"
+        ],
+        "ko": [
+          "바디 스핀"
+        ],
+        "pt": [
+          "giro de corpo"
+        ],
+        "es": [
+          "giro de cuerpo"
+        ],
+        "fr": [
+          "rotation du corps"
+        ]
+      },
+      "aliases": [
+        "body spin",
+        "spin on back",
+        "背中を軸にスピン",
+        "바디 스핀",
+        "giro de corpo",
+        "giro de cuerpo",
+        "rotation du corps"
+      ]
+    },
+    {
       "tagId": "act.movement.shoulder_roll",
       "category": "Action",
       "canonicalJa": "ショルダーロール",
@@ -9495,6 +9494,90 @@
         "lateral roll",
         "épaule roll",
         "côté roll"
+      ]
+    },
+    {
+      "tagId": "act.movement.shrimp",
+      "category": "Action",
+      "canonicalJa": "エビ",
+      "canonicalEn": "Shrimping",
+      "related": [
+        "act.escape.hip_escape",
+        "pre.frame"
+      ],
+      "labels": {
+        "ja": "エビ",
+        "en": "Shrimping",
+        "ko": "쉬림핑",
+        "pt": "Encolhimento",
+        "es": "Shrimping",
+        "fr": "Shrimping"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "shrimp",
+          "shrimping"
+        ],
+        "ko": [
+          "쉬림핑"
+        ],
+        "pt": [
+          "encolhimento"
+        ],
+        "es": [
+          "shrimp",
+          "shrimping"
+        ],
+        "fr": [
+          "shrimp",
+          "shrimping"
+        ]
+      },
+      "aliases": [
+        "shrimp",
+        "shrimping",
+        "쉬림핑",
+        "encolhimento"
+      ]
+    },
+    {
+      "tagId": "act.movement.reverse_shrimp",
+      "category": "Action",
+      "canonicalJa": "逆エビ",
+      "canonicalEn": "Reverse Shrimp",
+      "related": [
+        "act.escape.hip_escape",
+        "pre.frame"
+      ],
+      "labels": {
+        "ja": "逆エビ",
+        "en": "Reverse Shrimp",
+        "ko": "리버스 쉬림프",
+        "pt": "Encolhimento Reverso",
+        "es": "Reverse Shrimp",
+        "fr": "Reverse Shrimp"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "reverse shrimp"
+        ],
+        "ko": [
+          "리버스 쉬림프"
+        ],
+        "pt": [
+          "encolhimento reverso"
+        ],
+        "es": [
+          "reverse shrimp"
+        ],
+        "fr": [
+          "reverse shrimp"
+        ]
+      },
+      "aliases": [
+        "reverse shrimp",
+        "리버스 쉬림프",
+        "encolhimento reverso"
       ]
     },
     {
@@ -9552,7 +9635,8 @@
       "canonicalEn": "Technical Stand Up",
       "related": [
         "pre.base",
-        "pre.hip_escape"
+        "pre.hip_escape",
+        "pos.phase.standing"
       ],
       "labels": {
         "ja": "テクニカルスタンドアップ",
@@ -9565,28 +9649,79 @@
       "aliasesByLocale": {
         "en": [
           "technical stand up",
-          "technical stand-up"
+          "technical stand-up",
+          "bjj standing",
+          "standing"
+        ],
+        "ja": [
+          "柔術立ち",
+          "立ち"
         ],
         "ko": [
-          "테크니컬 스탠드업"
+          "테크니컬 스탠드업",
+          "주짓수 스탠딩"
         ],
         "pt": [
-          "levantada técnica"
+          "levantada técnica",
+          "em pé (BJJ)"
         ],
         "es": [
           "technical stand up",
-          "technical stand-up"
+          "technical stand-up",
+          "de pie (BJJ)"
         ],
         "fr": [
           "technical stand up",
-          "technical stand-up"
+          "technical stand-up",
+          "debout (BJJ)"
         ]
       },
       "aliases": [
         "technical stand up",
         "technical stand-up",
+        "bjj standing",
+        "standing",
+        "柔術立ち",
+        "立ち",
         "테크니컬 스탠드업",
-        "levantada técnica"
+        "주짓수 스탠딩",
+        "levantada técnica",
+        "em pé (BJJ)",
+        "de pie (BJJ)",
+        "debout (BJJ)"
+      ]
+    },
+    {
+      "tagId": "act.movement.hanmi",
+      "category": "Action",
+      "canonicalJa": "半身になる",
+      "canonicalEn": "Turn to Side (Hanmi)",
+      "related": [
+        "pre.angle_created"
+      ],
+      "labels": {
+        "ja": "半身になる",
+        "en": "Turn to Side (Hanmi)",
+        "ko": "한미",
+        "pt": "Hanmi",
+        "es": "Hanmi",
+        "fr": "Hanmi"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "hanmi",
+          "turn to side",
+          "half body"
+        ],
+        "ja": [
+          "半身"
+        ]
+      },
+      "aliases": [
+        "hanmi",
+        "turn to side",
+        "half body",
+        "半身"
       ]
     },
     {
@@ -9642,14 +9777,14 @@
     {
       "tagId": "act.movement.knee_walking",
       "category": "Action",
-      "canonicalJa": "脛立ち",
+      "canonicalJa": "すね立ち",
       "canonicalEn": "Knee Walking",
       "related": [
         "pre.base",
         "pre.connection"
       ],
       "labels": {
-        "ja": "脛立ち",
+        "ja": "すね立ち",
         "en": "Knee Walking",
         "ko": "니 워킹",
         "pt": "Caminhar de Joelhos",
@@ -9660,6 +9795,9 @@
         "en": [
           "knee walking",
           "shin walk"
+        ],
+        "ja": [
+          "脛立ち"
         ],
         "ko": [
           "니 워킹"
@@ -9679,6 +9817,7 @@
       "aliases": [
         "knee walking",
         "shin walk",
+        "脛立ち",
         "니 워킹",
         "caminhar de joelhos",
         "rodilla walking",
@@ -9786,8 +9925,8 @@
       "canonicalJa": "Gi",
       "canonicalEn": "Gi",
       "related": [
-        "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "Gi",
@@ -10738,275 +10877,14 @@
       ]
     },
     {
-      "tagId": "pre.grip.collar",
-      "category": "Prerequisite",
-      "canonicalJa": "襟グリップ",
-      "canonicalEn": "Collar Grip",
-      "related": [
-        "scn.attire.gi"
-      ],
-      "labels": {
-        "ja": "襟グリップ",
-        "en": "Collar Grip",
-        "ko": "칼라 그립",
-        "pt": "Pegada na Gola",
-        "es": "Cuello Agarre",
-        "fr": "Col Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "collar grip"
-        ],
-        "ja": [
-          "カラーグリップ",
-          "カラー"
-        ],
-        "ko": [
-          "칼라 그립"
-        ],
-        "pt": [
-          "pegada na gola"
-        ],
-        "es": [
-          "cuello agarre"
-        ],
-        "fr": [
-          "col prise"
-        ]
-      },
-      "aliases": [
-        "collar grip",
-        "カラーグリップ",
-        "カラー",
-        "칼라 그립",
-        "pegada na gola",
-        "cuello agarre",
-        "col prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.collar_front",
-      "category": "Prerequisite",
-      "canonicalJa": "前襟グリップ",
-      "canonicalEn": "Front Collar Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.sub.cross_choke"
-      ],
-      "labels": {
-        "ja": "前襟グリップ",
-        "en": "Front Collar Grip",
-        "ko": "프론트 칼라 그립",
-        "pt": "Pegada na Gola Frontal",
-        "es": "Frontal Cuello Agarre",
-        "fr": "Avant Col Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "front collar grip"
-        ],
-        "ja": [
-          "前カラーグリップ",
-          "フロントカラーグリップ"
-        ],
-        "ko": [
-          "프론트 칼라 그립"
-        ],
-        "pt": [
-          "pegada na gola frontal"
-        ],
-        "es": [
-          "frontal cuello agarre"
-        ],
-        "fr": [
-          "avant col prise"
-        ]
-      },
-      "aliases": [
-        "front collar grip",
-        "前カラーグリップ",
-        "フロントカラーグリップ",
-        "프론트 칼라 그립",
-        "pegada na gola frontal",
-        "frontal cuello agarre",
-        "avant col prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.collar_back",
-      "category": "Prerequisite",
-      "canonicalJa": "奥襟グリップ",
-      "canonicalEn": "Back Collar Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.sub.collar_choke"
-      ],
-      "labels": {
-        "ja": "奥襟グリップ",
-        "en": "Back Collar Grip",
-        "ko": "백 칼라 그립",
-        "pt": "Pegada na Gola de Costas",
-        "es": "Espalda Cuello Agarre",
-        "fr": "Dos Col Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "back collar grip"
-        ],
-        "ja": [
-          "奥カラーグリップ",
-          "バックカラーグリップ"
-        ],
-        "ko": [
-          "백 칼라 그립"
-        ],
-        "pt": [
-          "pegada na gola de costas"
-        ],
-        "es": [
-          "espalda cuello agarre"
-        ],
-        "fr": [
-          "dos col prise"
-        ]
-      },
-      "aliases": [
-        "back collar grip",
-        "奥カラーグリップ",
-        "バックカラーグリップ",
-        "백 칼라 그립",
-        "pegada na gola de costas",
-        "espalda cuello agarre",
-        "dos col prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.cross_collar",
-      "category": "Prerequisite",
-      "canonicalJa": "クロス襟グリップ",
-      "canonicalEn": "Cross Collar Grip",
-      "related": [
-        "scn.attire.gi",
-        "pos.guard.closed",
-        "act.sub.cross_choke"
-      ],
-      "labels": {
-        "ja": "クロス襟グリップ",
-        "en": "Cross Collar Grip",
-        "ko": "크로스 칼라 그립",
-        "pt": "Pegada na Gola Cruzada",
-        "es": "Cruzado Cuello Agarre",
-        "fr": "Croisé Col Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "cross collar",
-          "cross collar grip"
-        ],
-        "ja": [
-          "クロスカラーグリップ",
-          "クロスカラー"
-        ],
-        "ko": [
-          "크로스 칼라"
-        ],
-        "pt": [
-          "gola cruzada"
-        ],
-        "es": [
-          "cruzado cuello",
-          "cruzado cuello agarre"
-        ],
-        "fr": [
-          "croisé col",
-          "croisé col prise"
-        ]
-      },
-      "aliases": [
-        "cross collar",
-        "cross collar grip",
-        "クロスカラーグリップ",
-        "クロスカラー",
-        "크로스 칼라",
-        "gola cruzada",
-        "cruzado cuello",
-        "cruzado cuello agarre",
-        "croisé col",
-        "croisé col prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.cross_collar_low",
-      "category": "Prerequisite",
-      "canonicalJa": "クロス襟下グリップ",
-      "canonicalEn": "Low Cross Collar Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.pass.stack_guard",
-        "act.pass.lying_leg_drag",
-        "pre.pressure"
-      ],
-      "labels": {
-        "ja": "クロス襟下グリップ",
-        "en": "Low Cross Collar Grip",
-        "ko": "로우 크로스 칼라 그립",
-        "pt": "Pegada Baixa na Gola Cruzada",
-        "es": "Low Cruzado Cuello Agarre",
-        "fr": "Low Croisé Col Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "low cross collar",
-          "cross collar low",
-          "low cross collar grip"
-        ],
-        "ja": [
-          "クロス襟下",
-          "クロスカラー下",
-          "クロスカラーグリップ下"
-        ],
-        "ko": [
-          "로우 크로스 칼라"
-        ],
-        "pt": [
-          "gola cruzada baixa"
-        ],
-        "es": [
-          "low cruzado cuello",
-          "cruzado cuello low",
-          "low cruzado cuello agarre"
-        ],
-        "fr": [
-          "low croisé col",
-          "croisé col low",
-          "low croisé col prise"
-        ]
-      },
-      "aliases": [
-        "low cross collar",
-        "cross collar low",
-        "low cross collar grip",
-        "クロス襟下",
-        "クロスカラー下",
-        "クロスカラーグリップ下",
-        "로우 크로스 칼라",
-        "gola cruzada baixa",
-        "low cruzado cuello",
-        "cruzado cuello low",
-        "low cruzado cuello agarre",
-        "low croisé col",
-        "croisé col low",
-        "low croisé col prise"
-      ]
-    },
-    {
       "tagId": "pre.lapel_wrap",
       "category": "Prerequisite",
       "canonicalJa": "ラペルを巻き付ける",
       "canonicalEn": "Lapel Wrap",
       "related": [
         "scn.attire.gi",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ラペルを巻き付ける",
@@ -11056,7 +10934,8 @@
       "canonicalEn": "Lapel Feed",
       "related": [
         "scn.attire.gi",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ラペルを送り込む",
@@ -11097,49 +10976,6 @@
         "ラペル送り",
         "라펠 피드",
         "alimentar lapela"
-      ]
-    },
-    {
-      "tagId": "pre.grip.sleeve",
-      "category": "Prerequisite",
-      "canonicalJa": "袖グリップ",
-      "canonicalEn": "Sleeve Grip",
-      "related": [
-        "scn.attire.gi",
-        "pos.guard.spider",
-        "pos.guard.lasso"
-      ],
-      "labels": {
-        "ja": "袖グリップ",
-        "en": "Sleeve Grip",
-        "ko": "슬리브 그립",
-        "pt": "Pegada na Manga",
-        "es": "Manga Agarre",
-        "fr": "Manche Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "sleeve grip"
-        ],
-        "ko": [
-          "슬리브 그립"
-        ],
-        "pt": [
-          "pegada na manga"
-        ],
-        "es": [
-          "manga agarre"
-        ],
-        "fr": [
-          "manche prise"
-        ]
-      },
-      "aliases": [
-        "sleeve grip",
-        "슬리브 그립",
-        "pegada na manga",
-        "manga agarre",
-        "manche prise"
       ]
     },
     {
@@ -11200,105 +11036,10 @@
       ]
     },
     {
-      "tagId": "pre.grip.sleeve_pistol",
+      "tagId": "pre.grip.hug",
       "category": "Prerequisite",
-      "canonicalJa": "ピストルグリップ",
-      "canonicalEn": "Pistol Grip",
-      "related": [
-        "scn.attire.gi",
-        "pos.guard.spider",
-        "pos.guard.lasso"
-      ],
-      "labels": {
-        "ja": "ピストルグリップ",
-        "en": "Pistol Grip",
-        "ko": "피스톨 그립",
-        "pt": "Pegada Pistola",
-        "es": "Pistol Agarre",
-        "fr": "Pistol Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "pistol grip"
-        ],
-        "ko": [
-          "피스톨 그립"
-        ],
-        "pt": [
-          "pegada pistola"
-        ],
-        "es": [
-          "pistol agarre"
-        ],
-        "fr": [
-          "pistol prise"
-        ]
-      },
-      "aliases": [
-        "pistol grip",
-        "피스톨 그립",
-        "pegada pistola",
-        "pistol agarre",
-        "pistol prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.armpit_lapel",
-      "category": "Prerequisite",
-      "canonicalJa": "脇襟グリップ",
-      "canonicalEn": "Armpit Lapel Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.sub.collar_choke"
-      ],
-      "labels": {
-        "ja": "脇襟グリップ",
-        "en": "Armpit Lapel Grip",
-        "ko": "암핏 라펠 그립",
-        "pt": "Pegada na Lapela da Axila",
-        "es": "Armpit Lapel Agarre",
-        "fr": "Armpit Lapel Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "armpit lapel grip",
-          "armpit grip"
-        ],
-        "ja": [
-          "脇カラーグリップ"
-        ],
-        "ko": [
-          "암핏 라펠 그립"
-        ],
-        "pt": [
-          "pegada na lapela da axila"
-        ],
-        "es": [
-          "armpit lapel agarre",
-          "armpit agarre"
-        ],
-        "fr": [
-          "armpit lapel prise",
-          "armpit prise"
-        ]
-      },
-      "aliases": [
-        "armpit lapel grip",
-        "armpit grip",
-        "脇カラーグリップ",
-        "암핏 라펠 그립",
-        "pegada na lapela da axila",
-        "armpit lapel agarre",
-        "armpit agarre",
-        "armpit lapel prise",
-        "armpit prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.shoulder_hug",
-      "category": "Prerequisite",
-      "canonicalJa": "肩抱えグリップ",
-      "canonicalEn": "Shoulder Hug Grip",
+      "canonicalJa": "抱える",
+      "canonicalEn": "Hug / Hold",
       "related": [
         "act.pass.smash_pass",
         "act.pass.over_under",
@@ -11306,8 +11047,8 @@
         "pre.shoulder_line_control"
       ],
       "labels": {
-        "ja": "肩抱えグリップ",
-        "en": "Shoulder Hug Grip",
+        "ja": "抱える",
+        "en": "Hug / Hold",
         "ko": "숄더 허그 그립",
         "pt": "Pegada de Abraço no Ombro",
         "es": "Hombro Hug Agarre",
@@ -11320,7 +11061,8 @@
           "shoulder clamp"
         ],
         "ja": [
-          "肩抱え"
+          "肩抱え",
+          "抱え"
         ],
         "ko": [
           "숄더 허그"
@@ -11344,6 +11086,7 @@
         "shoulder hug grip",
         "shoulder clamp",
         "肩抱え",
+        "抱え",
         "숄더 허그",
         "abraço no ombro",
         "hombro hug",
@@ -11352,330 +11095,6 @@
         "épaule hug",
         "épaule hug prise",
         "épaule clamp"
-      ]
-    },
-    {
-      "tagId": "pre.grip.pant_cuff",
-      "category": "Prerequisite",
-      "canonicalJa": "裾グリップ",
-      "canonicalEn": "Pant Cuff Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.guard.sweep",
-        "act.pass.torreando"
-      ],
-      "labels": {
-        "ja": "裾グリップ",
-        "en": "Pant Cuff Grip",
-        "ko": "팬트 커프 그립",
-        "pt": "Pegada na Barra da Calça",
-        "es": "Pant Cuff Agarre",
-        "fr": "Pant Cuff Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "pant cuff grip",
-          "pant grip"
-        ],
-        "ko": [
-          "팬트 커프 그립"
-        ],
-        "pt": [
-          "pegada na barra da calça"
-        ],
-        "es": [
-          "pant cuff agarre",
-          "pant agarre"
-        ],
-        "fr": [
-          "pant cuff prise",
-          "pant prise"
-        ]
-      },
-      "aliases": [
-        "pant cuff grip",
-        "pant grip",
-        "팬트 커프 그립",
-        "pegada na barra da calça",
-        "pant cuff agarre",
-        "pant agarre",
-        "pant cuff prise",
-        "pant prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.back_pants",
-      "category": "Prerequisite",
-      "canonicalJa": "バックパンツグリップ",
-      "canonicalEn": "Back Pants Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.guard.sweep",
-        "act.pass.torreando"
-      ],
-      "labels": {
-        "ja": "バックパンツグリップ",
-        "en": "Back Pants Grip",
-        "ko": "백 팬츠 그립",
-        "pt": "Pegada na Calça por Trás",
-        "es": "Espalda Pants Agarre",
-        "fr": "Dos Pants Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "back pants grip",
-          "hip grip"
-        ],
-        "ko": [
-          "백 팬츠 그립"
-        ],
-        "pt": [
-          "pegada na calça por trás"
-        ],
-        "es": [
-          "espalda pants agarre",
-          "cadera agarre"
-        ],
-        "fr": [
-          "dos pants prise",
-          "hanche prise"
-        ]
-      },
-      "aliases": [
-        "back pants grip",
-        "hip grip",
-        "백 팬츠 그립",
-        "pegada na calça por trás",
-        "espalda pants agarre",
-        "cadera agarre",
-        "dos pants prise",
-        "hanche prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.belt_front",
-      "category": "Prerequisite",
-      "canonicalJa": "ベルトグリップ",
-      "canonicalEn": "Belt Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.guard.sweep",
-        "act.pass.torreando"
-      ],
-      "labels": {
-        "ja": "ベルトグリップ",
-        "en": "Belt Grip",
-        "ko": "벨트 그립",
-        "pt": "Pegada no Cinto",
-        "es": "Belt Agarre",
-        "fr": "Belt Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "belt grip",
-          "front belt grip"
-        ],
-        "ko": [
-          "벨트 그립"
-        ],
-        "pt": [
-          "pegada no cinto"
-        ],
-        "es": [
-          "belt agarre",
-          "frontal belt agarre"
-        ],
-        "fr": [
-          "belt prise",
-          "avant belt prise"
-        ]
-      },
-      "aliases": [
-        "belt grip",
-        "front belt grip",
-        "벨트 그립",
-        "pegada no cinto",
-        "belt agarre",
-        "frontal belt agarre",
-        "belt prise",
-        "avant belt prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.knee",
-      "category": "Prerequisite",
-      "canonicalJa": "膝グリップ",
-      "canonicalEn": "Knee Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.guard.sweep",
-        "act.pass.leg_drag"
-      ],
-      "labels": {
-        "ja": "膝グリップ",
-        "en": "Knee Grip",
-        "ko": "니 그립",
-        "pt": "Pegada no Joelho",
-        "es": "Rodilla Agarre",
-        "fr": "Genou Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "knee grip"
-        ],
-        "ko": [
-          "니 그립"
-        ],
-        "pt": [
-          "pegada no joelho"
-        ],
-        "es": [
-          "rodilla agarre"
-        ],
-        "fr": [
-          "genou prise"
-        ]
-      },
-      "aliases": [
-        "knee grip",
-        "니 그립",
-        "pegada no joelho",
-        "rodilla agarre",
-        "genou prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.below_knee",
-      "category": "Prerequisite",
-      "canonicalJa": "膝下グリップ",
-      "canonicalEn": "Below Knee Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.guard.sweep",
-        "act.pass.leg_drag"
-      ],
-      "labels": {
-        "ja": "膝下グリップ",
-        "en": "Below Knee Grip",
-        "ko": "비로우 니 그립",
-        "pt": "Pegada Abaixo do Joelho",
-        "es": "Below Rodilla Agarre",
-        "fr": "Below Genou Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "below knee grip"
-        ],
-        "ko": [
-          "비로우 니 그립"
-        ],
-        "pt": [
-          "pegada abaixo do joelho"
-        ],
-        "es": [
-          "below rodilla agarre"
-        ],
-        "fr": [
-          "below genou prise"
-        ]
-      },
-      "aliases": [
-        "below knee grip",
-        "비로우 니 그립",
-        "pegada abaixo do joelho",
-        "below rodilla agarre",
-        "below genou prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.knee_side",
-      "category": "Prerequisite",
-      "canonicalJa": "膝横グリップ",
-      "canonicalEn": "Knee-Side Grip",
-      "related": [
-        "scn.attire.gi",
-        "act.guard.sweep",
-        "act.pass.leg_drag"
-      ],
-      "labels": {
-        "ja": "膝横グリップ",
-        "en": "Knee-Side Grip",
-        "ko": "니-사이드 그립",
-        "pt": "Pegada Lateral do Joelho",
-        "es": "Rodilla-Lado Agarre",
-        "fr": "Genou-Côté Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "knee side grip",
-          "knee-side grip"
-        ],
-        "ko": [
-          "니-사이드 그립"
-        ],
-        "pt": [
-          "pegada lateral do joelho"
-        ],
-        "es": [
-          "rodilla lateral agarre",
-          "rodilla-lateral agarre"
-        ],
-        "fr": [
-          "genou côté prise",
-          "genou-côté prise"
-        ]
-      },
-      "aliases": [
-        "knee side grip",
-        "knee-side grip",
-        "니-사이드 그립",
-        "pegada lateral do joelho",
-        "rodilla lateral agarre",
-        "rodilla-lateral agarre",
-        "genou côté prise",
-        "genou-côté prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.ankle",
-      "category": "Prerequisite",
-      "canonicalJa": "足首コントロール",
-      "canonicalEn": "Ankle Control",
-      "related": [
-        "act.pass.torreando",
-        "act.pass.leg_drag"
-      ],
-      "labels": {
-        "ja": "足首コントロール",
-        "en": "Ankle Control",
-        "ko": "앵클 컨트롤",
-        "pt": "Controle do Tornozelo",
-        "es": "Tobillo Control",
-        "fr": "Cheville Contrôle"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "ankle control"
-        ],
-        "ko": [
-          "앵클 컨트롤"
-        ],
-        "pt": [
-          "controle do tornozelo"
-        ],
-        "es": [
-          "tobillo control"
-        ],
-        "fr": [
-          "cheville contrôle"
-        ]
-      },
-      "aliases": [
-        "ankle control",
-        "앵클 컨트롤",
-        "controle do tornozelo",
-        "tobillo control",
-        "cheville contrôle"
       ]
     },
     {
@@ -11841,8 +11260,8 @@
       "canonicalEn": "C Grip",
       "related": [
         "act.control.stabilize",
-        "pre.grip.collar",
-        "pre.grip.sleeve"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "Cグリップ",
@@ -11901,8 +11320,8 @@
       "canonicalJa": "サムレスグリップ",
       "canonicalEn": "Thumbless Grip",
       "related": [
-        "pre.grip.collar",
-        "pre.grip.sleeve",
+        "pre.body.collar",
+        "pre.body.sleeve",
         "act.control.stabilize"
       ],
       "labels": {
@@ -11942,48 +11361,6 @@
         "thumb-less agarre",
         "thumbless prise",
         "thumb-less prise"
-      ]
-    },
-    {
-      "tagId": "pre.grip.pocket",
-      "category": "Prerequisite",
-      "canonicalJa": "ポケットグリップ",
-      "canonicalEn": "Pocket Grip",
-      "related": [
-        "pre.grip.collar",
-        "act.control.stabilize"
-      ],
-      "labels": {
-        "ja": "ポケットグリップ",
-        "en": "Pocket Grip",
-        "ko": "포켓 그립",
-        "pt": "Pegada no Bolso",
-        "es": "Pocket Agarre",
-        "fr": "Pocket Prise"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "pocket grip"
-        ],
-        "ko": [
-          "포켓 그립"
-        ],
-        "pt": [
-          "pegada no bolso"
-        ],
-        "es": [
-          "pocket agarre"
-        ],
-        "fr": [
-          "pocket prise"
-        ]
-      },
-      "aliases": [
-        "pocket grip",
-        "포켓 그립",
-        "pegada no bolso",
-        "pocket agarre",
-        "pocket prise"
       ]
     },
     {
@@ -12081,7 +11458,7 @@
       "canonicalJa": "オーバーフック",
       "canonicalEn": "Overhook",
       "related": [
-        "act.wrestling.single_leg",
+        "act.wrestling.single_leg_takedown",
         "act.guard.sweep"
       ],
       "labels": {
@@ -12126,13 +11503,76 @@
       ]
     },
     {
+      "tagId": "pre.underhook_side",
+      "category": "Prerequisite",
+      "canonicalJa": "アンダーフックサイド(バック)",
+      "canonicalEn": "Underhook Side (Back)",
+      "related": [
+        "pre.underhook",
+        "pos.top.back_control"
+      ],
+      "labels": {
+        "ja": "アンダーフックサイド(バック)",
+        "en": "Underhook Side (Back)",
+        "ko": "언더훅 사이드(백)",
+        "pt": "Lado Underhook (Costas)",
+        "es": "Lado Underhook (Espalda)",
+        "fr": "Côté Underhook (Dos)"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "underhook side"
+        ],
+        "ja": [
+          "アンダーフック側",
+          "アンダーフックサイド"
+        ]
+      },
+      "aliases": [
+        "underhook side",
+        "アンダーフック側",
+        "アンダーフックサイド"
+      ]
+    },
+    {
+      "tagId": "pre.overhook_side",
+      "category": "Prerequisite",
+      "canonicalJa": "オーバーフックサイド(バック)",
+      "canonicalEn": "Overhook Side (Back)",
+      "related": [
+        "pre.overhook"
+      ],
+      "labels": {
+        "ja": "オーバーフックサイド(バック)",
+        "en": "Overhook Side (Back)",
+        "ko": "오버훅 사이드(백)",
+        "pt": "Lado Overhook (Costas)",
+        "es": "Lado Overhook (Espalda)",
+        "fr": "Côté Overhook (Dos)"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "overhook side"
+        ],
+        "ja": [
+          "オーバーフック側",
+          "オーバーフックサイド"
+        ]
+      },
+      "aliases": [
+        "overhook side",
+        "オーバーフック側",
+        "オーバーフックサイド"
+      ]
+    },
+    {
       "tagId": "pre.2on1",
       "category": "Prerequisite",
       "canonicalJa": "2on1",
       "canonicalEn": "2-on-1 Control",
       "related": [
         "act.guard.wrestle_up",
-        "act.wrestling.single_leg"
+        "act.wrestling.single_leg_takedown"
       ],
       "labels": {
         "ja": "2on1",
@@ -12171,52 +11611,6 @@
         "Russian tie",
         "2대1",
         "2-por-1"
-      ]
-    },
-    {
-      "tagId": "pre.grip.kimura",
-      "category": "Prerequisite",
-      "canonicalJa": "キムラグリップ",
-      "canonicalEn": "Kimura Grip",
-      "related": [
-        "act.sub.kimura",
-        "pre.2on1",
-        "pre.control_elbow_line",
-        "pre.reverse_kimura"
-      ],
-      "labels": {
-        "ja": "キムラグリップ",
-        "en": "Kimura Grip",
-        "ko": "키무라 그립",
-        "pt": "Kimura Grip",
-        "es": "Kimura Grip",
-        "fr": "Kimura Grip"
-      },
-      "aliasesByLocale": {
-        "ja": [
-          "キムラトラップ"
-        ],
-        "en": [
-          "kimura trap"
-        ],
-        "ko": [
-          "키무라 트랩"
-        ],
-        "pt": [
-          "armadilha de kimura"
-        ],
-        "es": [
-          "kimura trap"
-        ],
-        "fr": [
-          "kimura trap"
-        ]
-      },
-      "aliases": [
-        "キムラトラップ",
-        "kimura trap",
-        "키무라 트랩",
-        "armadilha de kimura"
       ]
     },
     {
@@ -12263,14 +11657,14 @@
     {
       "tagId": "pre.wrist_control",
       "category": "Prerequisite",
-      "canonicalJa": "手首コントロール",
+      "canonicalJa": "てくびコントロール",
       "canonicalEn": "Wrist Control",
       "related": [
         "scn.attire.no_gi",
         "act.sub.guillotine"
       ],
       "labels": {
-        "ja": "手首コントロール",
+        "ja": "てくびコントロール",
         "en": "Wrist Control",
         "ko": "리스트 컨트롤",
         "pt": "Controle do Punho",
@@ -12280,6 +11674,9 @@
       "aliasesByLocale": {
         "en": [
           "wrist control"
+        ],
+        "ja": [
+          "手首コントロール"
         ],
         "ko": [
           "리스트 컨트롤"
@@ -12296,6 +11693,7 @@
       },
       "aliases": [
         "wrist control",
+        "手首コントロール",
         "리스트 컨트롤",
         "controle do punho",
         "muñeca control",
@@ -12305,23 +11703,27 @@
     {
       "tagId": "pre.seatbelt",
       "category": "Prerequisite",
-      "canonicalJa": "シートベルト",
-      "canonicalEn": "Seatbelt",
+      "canonicalJa": "シートベルトグリップ",
+      "canonicalEn": "Seatbelt Grip",
       "related": [
         "pos.top.back_control",
         "act.sub.rnc"
       ],
       "labels": {
-        "ja": "シートベルト",
-        "en": "Seatbelt",
-        "ko": "시트벨트",
-        "pt": "Cinto de Segurança",
-        "es": "Seatbelt",
-        "fr": "Seatbelt"
+        "ja": "シートベルトグリップ",
+        "en": "Seatbelt Grip",
+        "ko": "시트벨트 그립",
+        "pt": "Pegada Cinto",
+        "es": "Agarre Seatbelt",
+        "fr": "Prise Seatbelt"
       },
       "aliasesByLocale": {
         "en": [
-          "seatbelt"
+          "seatbelt",
+          "seatbelt grip"
+        ],
+        "ja": [
+          "シートベルト"
         ],
         "ko": [
           "시트벨트"
@@ -12338,105 +11740,55 @@
       },
       "aliases": [
         "seatbelt",
+        "seatbelt grip",
+        "シートベルト",
         "시트벨트",
         "cinto de segurança"
       ]
     },
     {
-      "tagId": "pre.back_control.underhook_side",
+      "tagId": "pre.gift_wrap",
       "category": "Prerequisite",
-      "canonicalJa": "バックコントロール（アンダーフックサイド）",
-      "canonicalEn": "Back Control (Underhook Side)",
+      "canonicalJa": "ギフトラップ",
+      "canonicalEn": "Gift Wrap",
       "related": [
         "pos.top.back_control",
-        "pre.underhook"
+        "pos.top.side_control",
+        "pos.top.mount",
+        "act.transition.take_back"
       ],
       "labels": {
-        "ja": "バックコントロール（アンダーフックサイド）",
-        "en": "Back Control (Underhook Side)",
-        "ko": "백 컨트롤 (언더훅 사이드)",
-        "pt": "Controle de Costas (Lado Underhook)",
-        "es": "Espalda Control (Underhook Lado)",
-        "fr": "Dos Contrôle (Underhook Côté)"
+        "ja": "ギフトラップ",
+        "en": "Gift Wrap",
+        "ko": "기프트 랩",
+        "pt": "Gift Wrap",
+        "es": "Gift Wrap",
+        "fr": "Gift Wrap"
       },
       "aliasesByLocale": {
         "en": [
-          "back control underhook side"
+          "gift wrap"
         ],
-        "ko": [
-          "백 컨트롤 언더훅 사이드"
-        ],
-        "pt": [
-          "controle de costas lado underhook"
-        ],
-        "es": [
-          "espalda control underhook lateral"
-        ],
-        "fr": [
-          "dos contrôle underhook côté"
+        "ja": [
+          "ギフトラップ"
         ]
       },
       "aliases": [
-        "back control underhook side",
-        "백 컨트롤 언더훅 사이드",
-        "controle de costas lado underhook",
-        "espalda control underhook lateral",
-        "dos contrôle underhook côté"
-      ]
-    },
-    {
-      "tagId": "pre.back_control.overhook_side",
-      "category": "Prerequisite",
-      "canonicalJa": "バックコントロール（オーバーフックサイド）",
-      "canonicalEn": "Back Control (Overhook Side)",
-      "related": [
-        "pos.top.back_control",
-        "pre.overhook"
-      ],
-      "labels": {
-        "ja": "バックコントロール（オーバーフックサイド）",
-        "en": "Back Control (Overhook Side)",
-        "ko": "백 컨트롤 (오버훅 사이드)",
-        "pt": "Controle de Costas (Lado Overhook)",
-        "es": "Espalda Control (Overhook Lado)",
-        "fr": "Dos Contrôle (Overhook Côté)"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "back control overhook side"
-        ],
-        "ko": [
-          "백 컨트롤 오버훅 사이드"
-        ],
-        "pt": [
-          "controle de costas lado overhook"
-        ],
-        "es": [
-          "espalda control overhook lateral"
-        ],
-        "fr": [
-          "dos contrôle overhook côté"
-        ]
-      },
-      "aliases": [
-        "back control overhook side",
-        "백 컨트롤 오버훅 사이드",
-        "controle de costas lado overhook",
-        "espalda control overhook lateral",
-        "dos contrôle overhook côté"
+        "gift wrap",
+        "ギフトラップ"
       ]
     },
     {
       "tagId": "pre.chin_control",
       "category": "Prerequisite",
-      "canonicalJa": "顎コントロール",
+      "canonicalJa": "あごコントロール",
       "canonicalEn": "Chin Control",
       "related": [
         "act.sub.rnc",
         "act.escape.back"
       ],
       "labels": {
-        "ja": "顎コントロール",
+        "ja": "あごコントロール",
         "en": "Chin Control",
         "ko": "턱 컨트롤",
         "pt": "Controle do Queixo",
@@ -12446,6 +11798,9 @@
       "aliasesByLocale": {
         "en": [
           "chin control"
+        ],
+        "ja": [
+          "顎コントロール"
         ],
         "ko": [
           "턱 컨트롤"
@@ -12462,6 +11817,7 @@
       },
       "aliases": [
         "chin control",
+        "顎コントロール",
         "턱 컨트롤",
         "controle do queixo",
         "chin contrôle"
@@ -12470,7 +11826,7 @@
     {
       "tagId": "pre.control_elbow_line",
       "category": "Prerequisite",
-      "canonicalJa": "肘ライン管理",
+      "canonicalJa": "ひじラインコントロール",
       "canonicalEn": "Elbow Line Control",
       "related": [
         "act.sub.armbar",
@@ -12478,7 +11834,7 @@
         "act.sub.americana"
       ],
       "labels": {
-        "ja": "肘ライン管理",
+        "ja": "ひじラインコントロール",
         "en": "Elbow Line Control",
         "ko": "엘보 라인 컨트롤",
         "pt": "Controle da Linha do Cotovelo",
@@ -12488,6 +11844,9 @@
       "aliasesByLocale": {
         "en": [
           "elbow line"
+        ],
+        "ja": [
+          "肘ラインコントロール"
         ],
         "ko": [
           "엘보 라인"
@@ -12504,92 +11863,209 @@
       },
       "aliases": [
         "elbow line",
+        "肘ラインコントロール",
         "엘보 라인",
         "linha do cotovelo"
       ]
     },
     {
-      "tagId": "pre.arm_control.near_side",
+      "tagId": "pre.position.near_side",
       "category": "Prerequisite",
-      "canonicalJa": "アームコントロール（ニアサイド）",
-      "canonicalEn": "Arm Control (Near Side)",
-      "related": [
-        "pre.control_elbow_line",
-        "act.sub.straight_armbar_near"
-      ],
+      "canonicalJa": "ニアサイド",
+      "canonicalEn": "Near Side",
       "labels": {
-        "ja": "アームコントロール（ニアサイド）",
-        "en": "Arm Control (Near Side)",
-        "ko": "암 컨트롤 (니어 사이드)",
-        "pt": "Controle de Braço (Lado Próximo)",
-        "es": "Arm Control (Near Lado)",
-        "fr": "Arm Contrôle (Near Côté)"
+        "ja": "ニアサイド",
+        "en": "Near Side",
+        "ko": "니어 사이드",
+        "pt": "Lado Próximo",
+        "es": "Lado Cercano",
+        "fr": "Côté Proche"
       },
       "aliasesByLocale": {
         "en": [
-          "arm control near side"
+          "near side"
         ],
         "ko": [
-          "암 컨트롤 니어 사이드"
+          "니어 사이드"
         ],
         "pt": [
-          "controle de braço lado próximo"
-        ],
-        "es": [
-          "arm control near lateral"
-        ],
-        "fr": [
-          "arm contrôle near côté"
+          "lado próximo"
         ]
       },
       "aliases": [
-        "arm control near side",
-        "암 컨트롤 니어 사이드",
-        "controle de braço lado próximo",
-        "arm control near lateral",
-        "arm contrôle near côté"
+        "near side",
+        "니어 사이드",
+        "lado próximo"
       ]
     },
     {
-      "tagId": "pre.arm_control.far_side",
+      "tagId": "pre.position.far_side",
       "category": "Prerequisite",
-      "canonicalJa": "アームコントロール（ファーサイド）",
-      "canonicalEn": "Arm Control (Far Side)",
-      "related": [
-        "pre.control_elbow_line",
-        "act.sub.straight_armbar_near"
-      ],
+      "canonicalJa": "ファーサイド",
+      "canonicalEn": "Far Side",
       "labels": {
-        "ja": "アームコントロール（ファーサイド）",
-        "en": "Arm Control (Far Side)",
-        "ko": "암 컨트롤 (파 사이드)",
-        "pt": "Controle de Braço (Lado Oposto)",
-        "es": "Arm Control (Far Lado)",
-        "fr": "Arm Contrôle (Far Côté)"
+        "ja": "ファーサイド",
+        "en": "Far Side",
+        "ko": "파 사이드",
+        "pt": "Lado Oposto",
+        "es": "Lado Lejano",
+        "fr": "Côté Opposé"
       },
       "aliasesByLocale": {
         "en": [
-          "arm control far side"
+          "far side"
         ],
         "ko": [
-          "암 컨트롤 파 사이드"
+          "파 사이드"
         ],
         "pt": [
-          "controle de braço lado oposto"
-        ],
-        "es": [
-          "arm control far lateral"
-        ],
-        "fr": [
-          "arm contrôle far côté"
+          "lado oposto"
         ]
       },
       "aliases": [
-        "arm control far side",
-        "암 컨트롤 파 사이드",
-        "controle de braço lado oposto",
-        "arm control far lateral",
-        "arm contrôle far côté"
+        "far side",
+        "파 사이드",
+        "lado oposto"
+      ]
+    },
+    {
+      "tagId": "pre.position.inside",
+      "category": "Prerequisite",
+      "canonicalJa": "インサイド",
+      "canonicalEn": "Inside",
+      "labels": {
+        "ja": "インサイド",
+        "en": "Inside",
+        "ko": "인사이드",
+        "pt": "Interior",
+        "es": "Interior",
+        "fr": "Intérieur"
+      }
+    },
+    {
+      "tagId": "pre.position.outside",
+      "category": "Prerequisite",
+      "canonicalJa": "アウトサイド",
+      "canonicalEn": "Outside",
+      "labels": {
+        "ja": "アウトサイド",
+        "en": "Outside",
+        "ko": "아웃사이드",
+        "pt": "Exterior",
+        "es": "Exterior",
+        "fr": "Extérieur"
+      }
+    },
+    {
+      "tagId": "pre.position.front_side",
+      "category": "Prerequisite",
+      "canonicalJa": "正面側",
+      "canonicalEn": "Front Side",
+      "labels": {
+        "ja": "正面側",
+        "en": "Front Side",
+        "ko": "정면 측",
+        "pt": "Lado Frontal",
+        "es": "Lado Frontal",
+        "fr": "Côté Frontal"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "front side"
+        ],
+        "ja": [
+          "正面側"
+        ]
+      },
+      "aliases": [
+        "front side",
+        "正面側"
+      ]
+    },
+    {
+      "tagId": "pre.position.back_side",
+      "category": "Prerequisite",
+      "canonicalJa": "せなか側",
+      "canonicalEn": "Back Side",
+      "labels": {
+        "ja": "せなか側",
+        "en": "Back Side",
+        "ko": "등 측",
+        "pt": "Lado Costas",
+        "es": "Lado Espalda",
+        "fr": "Côté Dos"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "back side"
+        ],
+        "ja": [
+          "せなか側",
+          "背中側"
+        ]
+      },
+      "aliases": [
+        "back side",
+        "せなか側",
+        "背中側"
+      ]
+    },
+    {
+      "tagId": "pre.position.self",
+      "category": "Prerequisite",
+      "canonicalJa": "自分",
+      "canonicalEn": "Self",
+      "related": [],
+      "labels": {
+        "ja": "自分",
+        "en": "Self",
+        "ko": "자기",
+        "pt": "Eu",
+        "es": "Yo",
+        "fr": "Soi"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "me",
+          "my"
+        ],
+        "ja": [
+          "自分"
+        ]
+      },
+      "aliases": [
+        "me",
+        "my",
+        "自分"
+      ]
+    },
+    {
+      "tagId": "pre.position.opponent",
+      "category": "Prerequisite",
+      "canonicalJa": "相手",
+      "canonicalEn": "Opponent",
+      "related": [],
+      "labels": {
+        "ja": "相手",
+        "en": "Opponent",
+        "ko": "상대",
+        "pt": "Oponente",
+        "es": "Oponente",
+        "fr": "Adversaire"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "partner",
+          "them"
+        ],
+        "ja": [
+          "相手"
+        ]
+      },
+      "aliases": [
+        "partner",
+        "them",
+        "相手"
       ]
     },
     {
@@ -12721,7 +12197,8 @@
       "canonicalEn": "Half Nelson",
       "related": [
         "act.sub.collar_choke",
-        "pre.grip.collar"
+        "pre.body.collar",
+        "pre.body.sleeve"
       ],
       "labels": {
         "ja": "ハーフネルソン",
@@ -12800,7 +12277,7 @@
       "canonicalJa": "ヘッドポジション",
       "canonicalEn": "Head Position",
       "related": [
-        "act.wrestling.single_leg",
+        "act.wrestling.single_leg_takedown",
         "act.wrestling.snapdown",
         "pos.neutral.front_headlock"
       ],
@@ -12840,7 +12317,7 @@
     {
       "tagId": "pre.head_pull",
       "category": "Prerequisite",
-      "canonicalJa": "顔を下に向かせる",
+      "canonicalJa": "かおを下に向かせる",
       "canonicalEn": "Head Down",
       "related": [
         "act.wrestling.snapdown",
@@ -12848,7 +12325,7 @@
         "pre.head_position"
       ],
       "labels": {
-        "ja": "顔を下に向かせる",
+        "ja": "かおを下に向かせる",
         "en": "Head Down",
         "ko": "머리를 아래로",
         "pt": "Cabeça para Baixo",
@@ -12862,8 +12339,12 @@
           "snap down"
         ],
         "ja": [
-          "頭を下げる",
+          "あたまを下げる",
           "ヘッドダウン",
+          "あたまのうしろを押す",
+          "あたまのうしろを引く",
+          "顔を下に向かせる",
+          "頭を下げる",
           "後頭部を押す",
           "後頭部を引く"
         ],
@@ -12891,8 +12372,12 @@
         "head pull",
         "head down",
         "snap down",
-        "頭を下げる",
+        "あたまを下げる",
         "ヘッドダウン",
+        "あたまのうしろを押す",
+        "あたまのうしろを引く",
+        "顔を下に向かせる",
+        "頭を下げる",
         "後頭部を押す",
         "後頭部を引く",
         "헤드 다운",
@@ -12955,7 +12440,7 @@
       "canonicalEn": "Off-balance",
       "related": [
         "act.guard.sweep",
-        "act.wrestling.double_leg"
+        "act.wrestling.double_leg_takedown"
       ],
       "labels": {
         "ja": "崩し",
@@ -13205,7 +12690,7 @@
     {
       "tagId": "pre.foot_on_hip",
       "category": "Prerequisite",
-      "canonicalJa": "腰踏み",
+      "canonicalJa": "こし踏み",
       "canonicalEn": "Foot on Hip",
       "related": [
         "act.sub.triangle",
@@ -13213,7 +12698,7 @@
         "pre.off_balance"
       ],
       "labels": {
-        "ja": "腰踏み",
+        "ja": "こし踏み",
         "en": "Foot on Hip",
         "ko": "힙에 발",
         "pt": "Pé no Quadril",
@@ -13226,6 +12711,8 @@
           "hip post"
         ],
         "ja": [
+          "こしを踏む",
+          "腰踏み",
           "腰を踏む"
         ],
         "ko": [
@@ -13246,6 +12733,8 @@
       "aliases": [
         "foot on hip",
         "hip post",
+        "こしを踏む",
+        "腰踏み",
         "腰を踏む",
         "힙 포스트",
         "pé no quadril",
@@ -13258,7 +12747,7 @@
     {
       "tagId": "pre.hip_turn",
       "category": "Prerequisite",
-      "canonicalJa": "腰を切る",
+      "canonicalJa": "こしを切る",
       "canonicalEn": "Hip Turn (Top Pressure)",
       "related": [
         "pre.pressure",
@@ -13266,7 +12755,7 @@
         "act.pass.knee_cut"
       ],
       "labels": {
-        "ja": "腰を切る",
+        "ja": "こしを切る",
         "en": "Hip Turn (Top Pressure)",
         "ko": "힙 턴 (탑 프레셔)",
         "pt": "Giro de Quadril (Pressão por Cima)",
@@ -13274,6 +12763,9 @@
         "fr": "Hanche Turn (Dessus Pressure)"
       },
       "aliasesByLocale": {
+        "ja": [
+          "腰を切る"
+        ],
         "ko": [
           "힙 턴"
         ],
@@ -13282,6 +12774,7 @@
         ]
       },
       "aliases": [
+        "腰を切る",
         "힙 턴",
         "giro de quadril"
       ]
@@ -13289,14 +12782,14 @@
     {
       "tagId": "pre.hip_line_control",
       "category": "Prerequisite",
-      "canonicalJa": "ヒップライン管理",
+      "canonicalJa": "ヒップラインコントロール",
       "canonicalEn": "Hip Line Control",
       "related": [
         "act.pass.leg_drag",
         "act.transition.mount"
       ],
       "labels": {
-        "ja": "ヒップライン管理",
+        "ja": "ヒップラインコントロール",
         "en": "Hip Line Control",
         "ko": "힙 라인 컨트롤",
         "pt": "Controle da Linha do Quadril",
@@ -13331,14 +12824,14 @@
     {
       "tagId": "pre.shoulder_line_control",
       "category": "Prerequisite",
-      "canonicalJa": "ショルダーライン管理",
+      "canonicalJa": "ショルダーラインコントロール",
       "canonicalEn": "Shoulder Line Control",
       "related": [
         "act.sub.arm_triangle",
         "act.pass.over_under"
       ],
       "labels": {
-        "ja": "ショルダーライン管理",
+        "ja": "ショルダーラインコントロール",
         "en": "Shoulder Line Control",
         "ko": "숄더 라인 컨트롤",
         "pt": "Controle da Linha do Ombro",
@@ -13373,7 +12866,7 @@
     {
       "tagId": "pre.knee_line_control",
       "category": "Prerequisite",
-      "canonicalJa": "膝ライン管理",
+      "canonicalJa": "ひざラインコントロール",
       "canonicalEn": "Knee Line Control",
       "related": [
         "act.sub.heel_hook",
@@ -13381,7 +12874,7 @@
         "act.pass.leg_drag"
       ],
       "labels": {
-        "ja": "膝ライン管理",
+        "ja": "ひざラインコントロール",
         "en": "Knee Line Control",
         "ko": "니 라인 컨트롤",
         "pt": "Controle da Linha do Joelho",
@@ -13391,6 +12884,9 @@
       "aliasesByLocale": {
         "en": [
           "knee line"
+        ],
+        "ja": [
+          "膝ラインコントロール"
         ],
         "ko": [
           "니 라인"
@@ -13407,6 +12903,7 @@
       },
       "aliases": [
         "knee line",
+        "膝ラインコントロール",
         "니 라인",
         "linha do joelho",
         "rodilla line",
@@ -13416,14 +12913,14 @@
     {
       "tagId": "pre.heel_exposure_control",
       "category": "Prerequisite",
-      "canonicalJa": "ヒール管理",
+      "canonicalJa": "ヒールコントロール",
       "canonicalEn": "Heel Exposure Control",
       "related": [
         "act.sub.heel_hook",
         "act.sub.ankle_lock"
       ],
       "labels": {
-        "ja": "ヒール管理",
+        "ja": "ヒールコントロール",
         "en": "Heel Exposure Control",
         "ko": "힐 익스포저 컨트롤",
         "pt": "Controle de Exposição do Calcanhar",
@@ -13490,6 +12987,47 @@
       "aliases": [
         "frame",
         "프레임"
+      ]
+    },
+    {
+      "tagId": "pre.frame_s",
+      "category": "Prerequisite",
+      "canonicalJa": "S-フレーム",
+      "canonicalEn": "S-Frame",
+      "related": [
+        "pre.frame",
+        "act.guard.retention"
+      ],
+      "labels": {
+        "ja": "S-フレーム",
+        "en": "S-Frame",
+        "ko": "S-프레임",
+        "pt": "S-Frame",
+        "es": "S-Frame",
+        "fr": "S-Frame"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "s frame",
+          "s-frame"
+        ],
+        "ko": [
+          "s 프레임"
+        ],
+        "pt": [
+          "s frame"
+        ],
+        "es": [
+          "s frame"
+        ],
+        "fr": [
+          "s frame"
+        ]
+      },
+      "aliases": [
+        "s frame",
+        "s-frame",
+        "s 프레임"
       ]
     },
     {
@@ -13827,13 +13365,13 @@
     {
       "tagId": "pre.knee_elbow_connection",
       "category": "Prerequisite",
-      "canonicalJa": "膝肘の接続",
+      "canonicalJa": "ひざとひじの接続",
       "canonicalEn": "Knee-Elbow Connection",
       "related": [
         "act.escape.elbow_escape"
       ],
       "labels": {
-        "ja": "膝肘の接続",
+        "ja": "ひざとひじの接続",
         "en": "Knee-Elbow Connection",
         "ko": "니-엘보 커넥션",
         "pt": "Conexão Joelho-Cotovelo",
@@ -13843,6 +13381,9 @@
       "aliasesByLocale": {
         "en": [
           "knee elbow"
+        ],
+        "ja": [
+          "膝肘の接続"
         ],
         "ko": [
           "니-엘보 커넥션"
@@ -13859,6 +13400,7 @@
       },
       "aliases": [
         "knee elbow",
+        "膝肘の接続",
         "니-엘보 커넥션",
         "conexão joelho-cotovelo",
         "rodilla elbow",
@@ -13868,14 +13410,14 @@
     {
       "tagId": "pre.posture_break",
       "category": "Prerequisite",
-      "canonicalJa": "姿勢を崩す",
+      "canonicalJa": "ポスチャーブレイク",
       "canonicalEn": "Break Posture",
       "related": [
         "act.sub.triangle",
         "act.pass.stack_guard"
       ],
       "labels": {
-        "ja": "姿勢を崩す",
+        "ja": "ポスチャーブレイク",
         "en": "Break Posture",
         "ko": "포스처 브레이크",
         "pt": "Quebrar Postura",
@@ -13885,6 +13427,9 @@
       "aliasesByLocale": {
         "en": [
           "posture break"
+        ],
+        "ja": [
+          "姿勢を崩す"
         ],
         "ko": [
           "포스처 브레이크"
@@ -13901,6 +13446,7 @@
       },
       "aliases": [
         "posture break",
+        "姿勢を崩す",
         "포스처 브레이크",
         "quebrar postura"
       ]
@@ -13951,8 +13497,8 @@
       "canonicalJa": "レベルチェンジ",
       "canonicalEn": "Level Change",
       "related": [
-        "act.wrestling.double_leg",
-        "act.wrestling.single_leg"
+        "act.wrestling.double_leg_takedown",
+        "act.wrestling.single_leg_takedown"
       ],
       "labels": {
         "ja": "レベルチェンジ",
@@ -14107,47 +13653,6 @@
       ]
     },
     {
-      "tagId": "pre.back_roll",
-      "category": "Prerequisite",
-      "canonicalJa": "バックロール",
-      "canonicalEn": "Back Roll",
-      "related": [
-        "act.guard.sweep"
-      ],
-      "labels": {
-        "ja": "バックロール",
-        "en": "Back Roll",
-        "ko": "백 롤",
-        "pt": "Rolamento para Trás",
-        "es": "Espalda Roll",
-        "fr": "Dos Roll"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "back roll"
-        ],
-        "ko": [
-          "백 롤"
-        ],
-        "pt": [
-          "rolamento para trás"
-        ],
-        "es": [
-          "espalda roll"
-        ],
-        "fr": [
-          "dos roll"
-        ]
-      },
-      "aliases": [
-        "back roll",
-        "백 롤",
-        "rolamento para trás",
-        "espalda roll",
-        "dos roll"
-      ]
-    },
-    {
       "tagId": "pre.waiter",
       "category": "Prerequisite",
       "canonicalJa": "ウェイターポジション",
@@ -14238,7 +13743,8 @@
       "canonicalEn": "Leg Hook",
       "related": [
         "act.guard.recovery.leg_hook",
-        "act.control.back_retention"
+        "pos.top.back_control",
+        "pre.underhook_side"
       ],
       "labels": {
         "ja": "レッグフック",
@@ -14530,45 +14036,6 @@
       ]
     },
     {
-      "tagId": "pre.leg_weave",
-      "category": "Prerequisite",
-      "canonicalJa": "レッグウィーブ",
-      "canonicalEn": "Leg Weave",
-      "related": [
-        "scn.phase.passing"
-      ],
-      "labels": {
-        "ja": "レッグウィーブ",
-        "en": "Leg Weave",
-        "ko": "레그 위브",
-        "pt": "Entrelaçar Pernas",
-        "es": "Leg Weave",
-        "fr": "Leg Weave"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "leg weave"
-        ],
-        "ko": [
-          "레그 위브"
-        ],
-        "pt": [
-          "entrelaçar pernas"
-        ],
-        "es": [
-          "leg weave"
-        ],
-        "fr": [
-          "leg weave"
-        ]
-      },
-      "aliases": [
-        "leg weave",
-        "레그 위브",
-        "entrelaçar pernas"
-      ]
-    },
-    {
       "tagId": "pre.leg_pin",
       "category": "Prerequisite",
       "canonicalJa": "レッグピン",
@@ -14686,46 +14153,6 @@
         "pressão com ombro",
         "hombro drive",
         "épaule drive"
-      ]
-    },
-    {
-      "tagId": "pre.high_step",
-      "category": "Prerequisite",
-      "canonicalJa": "ハイステップ",
-      "canonicalEn": "High Step",
-      "related": [
-        "scn.phase.passing",
-        "pre.angle_created"
-      ],
-      "labels": {
-        "ja": "ハイステップ",
-        "en": "High Step",
-        "ko": "하이 스텝",
-        "pt": "Passo Alto",
-        "es": "High Step",
-        "fr": "High Step"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "high step"
-        ],
-        "ko": [
-          "하이 스텝"
-        ],
-        "pt": [
-          "passo alto"
-        ],
-        "es": [
-          "high step"
-        ],
-        "fr": [
-          "high step"
-        ]
-      },
-      "aliases": [
-        "high step",
-        "하이 스텝",
-        "passo alto"
       ]
     },
     {
@@ -14905,6 +14332,1397 @@
         "passagem de triângulo de braço",
         "arm triángulo pase",
         "arm triangle passe"
+      ]
+    },
+    {
+      "tagId": "pre.body.collar",
+      "category": "Prerequisite",
+      "canonicalJa": "えり",
+      "canonicalEn": "Collar",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "えり",
+        "en": "Collar",
+        "ko": "칼라",
+        "pt": "Gola",
+        "es": "Cuello",
+        "fr": "Col"
+      }
+    },
+    {
+      "tagId": "pre.body.collar_front",
+      "category": "Prerequisite",
+      "canonicalJa": "まええり",
+      "canonicalEn": "Front Collar",
+      "related": [
+        "scn.attire.gi",
+        "act.sub.collar_choke"
+      ],
+      "labels": {
+        "ja": "まええり",
+        "en": "Front Collar",
+        "ko": "앞 칼라",
+        "pt": "Gola Frente",
+        "es": "Cuello Frente",
+        "fr": "Col Devant"
+      }
+    },
+    {
+      "tagId": "pre.body.collar_back",
+      "category": "Prerequisite",
+      "canonicalJa": "おくえり",
+      "canonicalEn": "Back Collar",
+      "related": [
+        "scn.attire.gi",
+        "act.sub.collar_choke"
+      ],
+      "labels": {
+        "ja": "おくえり",
+        "en": "Back Collar",
+        "ko": "뒤 칼라",
+        "pt": "Gola de Costas",
+        "es": "Cuello Espalda",
+        "fr": "Col Dos"
+      }
+    },
+    {
+      "tagId": "pre.body.collar_low",
+      "category": "Prerequisite",
+      "canonicalJa": "したえり",
+      "canonicalEn": "Low Collar",
+      "related": [
+        "pre.body.collar",
+        "pre.body.collar_front",
+        "pre.body.collar_back"
+      ],
+      "labels": {
+        "ja": "したえり",
+        "en": "Low Collar",
+        "ko": "로우 칼라",
+        "pt": "Gola Baixa",
+        "es": "Cuello Bajo",
+        "fr": "Col Bas"
+      }
+    },
+    {
+      "tagId": "pre.body.sleeve",
+      "category": "Prerequisite",
+      "canonicalJa": "そで",
+      "canonicalEn": "Sleeve",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "そで",
+        "en": "Sleeve",
+        "ko": "소매",
+        "pt": "Manga",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "袖"
+        ]
+      },
+      "aliases": [
+        "袖"
+      ]
+    },
+    {
+      "tagId": "pre.body.knee",
+      "category": "Prerequisite",
+      "canonicalJa": "ひざ",
+      "canonicalEn": "Knee",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "ひざ",
+        "en": "Knee",
+        "ko": "무릎",
+        "pt": "Joelho",
+        "es": "Rodilla",
+        "fr": "Genou"
+      }
+    },
+    {
+      "tagId": "pre.body.knee_side",
+      "category": "Prerequisite",
+      "canonicalJa": "ひざよこ",
+      "canonicalEn": "Knee Side",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "ひざよこ",
+        "en": "Knee Side",
+        "ko": "무릎 옆",
+        "pt": "Joelho Lateral",
+        "es": "Rodilla Lateral",
+        "fr": "Genou Côté"
+      }
+    },
+    {
+      "tagId": "pre.body.below_knee",
+      "category": "Prerequisite",
+      "canonicalJa": "ひざした",
+      "canonicalEn": "Below Knee",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "ひざした",
+        "en": "Below Knee",
+        "ko": "무릎 아래",
+        "pt": "Abaixo do Joelho",
+        "es": "Debajo Rodilla",
+        "fr": "Dessous Genou"
+      }
+    },
+    {
+      "tagId": "pre.body.ankle",
+      "category": "Prerequisite",
+      "canonicalJa": "足首",
+      "canonicalEn": "Ankle",
+      "related": [],
+      "labels": {
+        "ja": "足首",
+        "en": "Ankle",
+        "ko": "발목",
+        "pt": "Tornozelo",
+        "es": "Tobillo",
+        "fr": "Cheville"
+      }
+    },
+    {
+      "tagId": "pre.body.ankle_inside",
+      "category": "Prerequisite",
+      "canonicalJa": "くるぶし（うち）",
+      "canonicalEn": "Ankle Inside",
+      "related": [
+        "pre.body.ankle"
+      ],
+      "labels": {
+        "ja": "くるぶし（うち）",
+        "en": "Ankle Inside",
+        "ko": "발목 안쪽",
+        "pt": "Tornozelo Interno",
+        "es": "Tobillo Interno",
+        "fr": "Cheville Intérieur"
+      }
+    },
+    {
+      "tagId": "pre.body.ankle_outside",
+      "category": "Prerequisite",
+      "canonicalJa": "くるぶし（そと）",
+      "canonicalEn": "Ankle Outside",
+      "related": [
+        "pre.body.ankle"
+      ],
+      "labels": {
+        "ja": "くるぶし（そと）",
+        "en": "Ankle Outside",
+        "ko": "발목 바깥",
+        "pt": "Tornozelo Externo",
+        "es": "Tobillo Externo",
+        "fr": "Cheville Extérieur"
+      }
+    },
+    {
+      "tagId": "pre.body.belt_front",
+      "category": "Prerequisite",
+      "canonicalJa": "まえおび",
+      "canonicalEn": "Belt Front",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "まえおび",
+        "en": "Belt Front",
+        "ko": "벨트 앞",
+        "pt": "Cinto Frente",
+        "es": "Cinturón Frente",
+        "fr": "Ceinture Avant"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "帯前"
+        ]
+      },
+      "aliases": [
+        "帯前"
+      ]
+    },
+    {
+      "tagId": "pre.body.belt_back",
+      "category": "Prerequisite",
+      "canonicalJa": "うしろおび",
+      "canonicalEn": "Belt Back",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "うしろおび",
+        "en": "Belt Back",
+        "ko": "벨트 뒤",
+        "pt": "Cinto Costas",
+        "es": "Cinturón Atrás",
+        "fr": "Ceinture Arrière"
+      }
+    },
+    {
+      "tagId": "pre.body.belt_side",
+      "category": "Prerequisite",
+      "canonicalJa": "よこおび",
+      "canonicalEn": "Belt Side",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "よこおび",
+        "en": "Belt Side",
+        "ko": "벨트 옆",
+        "pt": "Cinto Lateral",
+        "es": "Cinturón Lado",
+        "fr": "Ceinture Côté"
+      }
+    },
+    {
+      "tagId": "pre.body.waist",
+      "category": "Prerequisite",
+      "canonicalJa": "こし",
+      "canonicalEn": "Waist",
+      "related": [],
+      "labels": {
+        "ja": "こし",
+        "en": "Waist",
+        "ko": "허리",
+        "pt": "Cintura",
+        "es": "Cintura",
+        "fr": "Taille"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "腰"
+        ]
+      },
+      "aliases": [
+        "腰"
+      ]
+    },
+    {
+      "tagId": "pre.body.pant_cuff",
+      "category": "Prerequisite",
+      "canonicalJa": "すそ",
+      "canonicalEn": "Pant Cuff",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "すそ",
+        "en": "Pant Cuff",
+        "ko": "바지 밑단",
+        "pt": "Barra da Calça",
+        "es": "Bajo Pantalón",
+        "fr": "Bas Pantalon"
+      }
+    },
+    {
+      "tagId": "pre.body.back_pants",
+      "category": "Prerequisite",
+      "canonicalJa": "パンツ後ろ",
+      "canonicalEn": "Back Pants",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "パンツ後ろ",
+        "en": "Back Pants",
+        "ko": "뒤 팬츠",
+        "pt": "Calça por Trás",
+        "es": "Pants Espalda",
+        "fr": "Pants Dos"
+      }
+    },
+    {
+      "tagId": "pre.body.pocket",
+      "category": "Prerequisite",
+      "canonicalJa": "ひも通しあな",
+      "canonicalEn": "Pocket",
+      "related": [],
+      "labels": {
+        "ja": "ひも通しあな",
+        "en": "Pocket",
+        "ko": "포켓",
+        "pt": "Bolso",
+        "es": "Bolsillo",
+        "fr": "Poche"
+      }
+    },
+    {
+      "tagId": "pre.body.arm",
+      "category": "Prerequisite",
+      "canonicalJa": "うで",
+      "canonicalEn": "Arm",
+      "related": [],
+      "labels": {
+        "ja": "うで",
+        "en": "Arm",
+        "ko": "팔",
+        "pt": "Braço",
+        "es": "Brazo",
+        "fr": "Bras"
+      }
+    },
+    {
+      "tagId": "pre.body.upper_arm_inner",
+      "category": "Prerequisite",
+      "canonicalJa": "じょうわん（うち）",
+      "canonicalEn": "Upper Arm Inner",
+      "related": [
+        "pre.body.arm"
+      ],
+      "labels": {
+        "ja": "じょうわん（うち）",
+        "en": "Upper Arm Inner",
+        "ko": "위팔 안쪽",
+        "pt": "Parte Interna Braço",
+        "es": "Parte Interna Brazo",
+        "fr": "Partie Intérieure Bras"
+      }
+    },
+    {
+      "tagId": "pre.body.upper_arm_outer",
+      "category": "Prerequisite",
+      "canonicalJa": "じょうわん（そと）",
+      "canonicalEn": "Upper Arm Outer",
+      "related": [
+        "pre.body.arm"
+      ],
+      "labels": {
+        "ja": "じょうわん（そと）",
+        "en": "Upper Arm Outer",
+        "ko": "위팔 바깥",
+        "pt": "Parte Externa Braço",
+        "es": "Parte Externa Brazo",
+        "fr": "Partie Extérieure Bras"
+      }
+    },
+    {
+      "tagId": "pre.body.elbow",
+      "category": "Prerequisite",
+      "canonicalJa": "ひじ",
+      "canonicalEn": "Elbow",
+      "related": [],
+      "labels": {
+        "ja": "ひじ",
+        "en": "Elbow",
+        "ko": "팔꿈치",
+        "pt": "Cotovelo",
+        "es": "Codo",
+        "fr": "Coude"
+      }
+    },
+    {
+      "tagId": "pre.body.elbow_back",
+      "category": "Prerequisite",
+      "canonicalJa": "ひじうちがわ",
+      "canonicalEn": "Back of Elbow",
+      "related": [
+        "pre.body.elbow"
+      ],
+      "labels": {
+        "ja": "ひじうちがわ",
+        "en": "Back of Elbow",
+        "ko": "팔꿈치 뒤",
+        "pt": "Parte de Trás Cotovelo",
+        "es": "Parte Atrás Codo",
+        "fr": "Arrière Coude"
+      }
+    },
+    {
+      "tagId": "pre.body.elbow_side",
+      "category": "Prerequisite",
+      "canonicalJa": "ひじよこ（そと）",
+      "canonicalEn": "Elbow Side",
+      "related": [
+        "pre.body.elbow"
+      ],
+      "labels": {
+        "ja": "ひじよこ（そと）",
+        "en": "Elbow Side",
+        "ko": "팔꿈치 옆",
+        "pt": "Cotovelo Lateral",
+        "es": "Codo Lateral",
+        "fr": "Coude Côté"
+      }
+    },
+    {
+      "tagId": "pre.body.elbow_side_inner",
+      "category": "Prerequisite",
+      "canonicalJa": "ひじよこ（なか）",
+      "canonicalEn": "Inner Elbow Side",
+      "related": [
+        "pre.body.elbow",
+        "pre.body.elbow_side"
+      ],
+      "labels": {
+        "ja": "ひじよこ（なか）",
+        "en": "Inner Elbow Side",
+        "ko": "팔꿈치 안쪽",
+        "pt": "Cotovelo Lateral Interno",
+        "es": "Codo Lateral Interno",
+        "fr": "Coude Côté Intérieur"
+      }
+    },
+    {
+      "tagId": "pre.body.forearm_inner",
+      "category": "Prerequisite",
+      "canonicalJa": "ぜんわん（うちがわ）",
+      "canonicalEn": "Forearm Inner",
+      "related": [
+        "pre.body.elbow"
+      ],
+      "labels": {
+        "ja": "ぜんわん（うちがわ）",
+        "en": "Forearm Inner",
+        "ko": "앞팔 안쪽",
+        "pt": "Antebraço Interno",
+        "es": "Antebrazo Interno",
+        "fr": "Avant-bras Intérieur"
+      }
+    },
+    {
+      "tagId": "pre.body.forearm_outer",
+      "category": "Prerequisite",
+      "canonicalJa": "ぜんわん（そとがわ）",
+      "canonicalEn": "Forearm Outer",
+      "related": [
+        "pre.body.elbow"
+      ],
+      "labels": {
+        "ja": "ぜんわん（そとがわ）",
+        "en": "Forearm Outer",
+        "ko": "앞팔 바깥",
+        "pt": "Antebraço Externo",
+        "es": "Antebrazo Externo",
+        "fr": "Avant-bras Extérieur"
+      }
+    },
+    {
+      "tagId": "pre.body.forearm_blade",
+      "category": "Prerequisite",
+      "canonicalJa": "ぜんわん（ブレード）",
+      "canonicalEn": "Forearm Blade",
+      "related": [
+        "pre.body.elbow"
+      ],
+      "labels": {
+        "ja": "ぜんわん（ブレード）",
+        "en": "Forearm Blade",
+        "ko": "앞팔 날",
+        "pt": "Lâmina Antebraço",
+        "es": "Filo Antebrazo",
+        "fr": "Lame Avant-bras"
+      }
+    },
+    {
+      "tagId": "pre.body.chest",
+      "category": "Prerequisite",
+      "canonicalJa": "むね",
+      "canonicalEn": "Chest",
+      "related": [],
+      "labels": {
+        "ja": "むね",
+        "en": "Chest",
+        "ko": "가슴",
+        "pt": "Peito",
+        "es": "Pecho",
+        "fr": "Poitrine"
+      }
+    },
+    {
+      "tagId": "pre.body.shoulder",
+      "category": "Prerequisite",
+      "canonicalJa": "かた",
+      "canonicalEn": "Shoulder",
+      "related": [],
+      "labels": {
+        "ja": "かた",
+        "en": "Shoulder",
+        "ko": "어깨",
+        "pt": "Ombro",
+        "es": "Hombro",
+        "fr": "Épaule"
+      }
+    },
+    {
+      "tagId": "pre.body.armpit_below",
+      "category": "Prerequisite",
+      "canonicalJa": "わきのした",
+      "canonicalEn": "Below Armpit",
+      "related": [
+        "pre.body.armpit",
+        "pre.body.chest"
+      ],
+      "labels": {
+        "ja": "わきのした",
+        "en": "Below Armpit",
+        "ko": "겨드랑이 아래",
+        "pt": "Abaixo da Axila",
+        "es": "Debajo de la Axila",
+        "fr": "Sous l'Aisselle"
+      }
+    },
+    {
+      "tagId": "pre.body.sternum",
+      "category": "Prerequisite",
+      "canonicalJa": "みぞうち",
+      "canonicalEn": "Sternum",
+      "related": [
+        "pre.body.chest"
+      ],
+      "labels": {
+        "ja": "みぞうち",
+        "en": "Sternum",
+        "ko": "명치",
+        "pt": "Esterno",
+        "es": "Esternón",
+        "fr": "Sternum"
+      }
+    },
+    {
+      "tagId": "pre.body.armpit",
+      "category": "Prerequisite",
+      "canonicalJa": "わき",
+      "canonicalEn": "Armpit",
+      "related": [],
+      "labels": {
+        "ja": "わき",
+        "en": "Armpit",
+        "ko": "겨드랑이",
+        "pt": "Axila",
+        "es": "Axila",
+        "fr": "Aisselle"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "脇袖",
+          "脇"
+        ]
+      },
+      "aliases": [
+        "脇袖",
+        "脇"
+      ]
+    },
+    {
+      "tagId": "pre.body.back",
+      "category": "Prerequisite",
+      "canonicalJa": "せなか",
+      "canonicalEn": "Back",
+      "related": [],
+      "labels": {
+        "ja": "せなか",
+        "en": "Back",
+        "ko": "등",
+        "pt": "Costas",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "背中"
+        ]
+      },
+      "aliases": [
+        "背中"
+      ]
+    },
+    {
+      "tagId": "pre.body.belly",
+      "category": "Prerequisite",
+      "canonicalJa": "おなか",
+      "canonicalEn": "Belly",
+      "related": [
+        "pre.body.chest"
+      ],
+      "labels": {
+        "ja": "おなか",
+        "en": "Belly",
+        "ko": "배",
+        "pt": "Barriga",
+        "es": "Barriga",
+        "fr": "Ventre"
+      }
+    },
+    {
+      "tagId": "pre.body.side_ribs",
+      "category": "Prerequisite",
+      "canonicalJa": "わきばら",
+      "canonicalEn": "Side Ribs",
+      "related": [
+        "pre.body.armpit",
+        "pre.body.chest"
+      ],
+      "labels": {
+        "ja": "わきばら",
+        "en": "Side Ribs",
+        "ko": "옆구리",
+        "pt": "Costelas Laterais",
+        "es": "Costillas Laterales",
+        "fr": "Côtes Latérales"
+      }
+    },
+    {
+      "tagId": "pre.body.wrist",
+      "category": "Prerequisite",
+      "canonicalJa": "てくび",
+      "canonicalEn": "Wrist",
+      "related": [],
+      "labels": {
+        "ja": "てくび",
+        "en": "Wrist",
+        "ko": "손목",
+        "pt": "Pulso",
+        "es": "Muñeca",
+        "fr": "Poignet"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "手首"
+        ]
+      },
+      "aliases": [
+        "手首"
+      ]
+    },
+    {
+      "tagId": "pre.body.hand_thumb_side",
+      "category": "Prerequisite",
+      "canonicalJa": "手の親指がわ",
+      "canonicalEn": "Hand Thumb Side",
+      "related": [
+        "pre.body.palm",
+        "pre.body.fingers"
+      ],
+      "labels": {
+        "ja": "手の親指がわ",
+        "en": "Hand Thumb Side",
+        "ko": "손 엄지쪽",
+        "pt": "Lado Polegar Mão",
+        "es": "Lado Pulgar Mano",
+        "fr": "Côté Pouce Main"
+      }
+    },
+    {
+      "tagId": "pre.body.hand_pinky_side",
+      "category": "Prerequisite",
+      "canonicalJa": "手の小指がわ",
+      "canonicalEn": "Hand Pinky Side",
+      "related": [
+        "pre.body.palm",
+        "pre.body.fingers"
+      ],
+      "labels": {
+        "ja": "手の小指がわ",
+        "en": "Hand Pinky Side",
+        "ko": "손 새끼쪽",
+        "pt": "Lado Mindinho Mão",
+        "es": "Lado Meñique Mano",
+        "fr": "Côté Auriculaire Main"
+      }
+    },
+    {
+      "tagId": "pre.body.palm",
+      "category": "Prerequisite",
+      "canonicalJa": "手のひら",
+      "canonicalEn": "Palm",
+      "related": [],
+      "labels": {
+        "ja": "手のひら",
+        "en": "Palm",
+        "ko": "손바닥",
+        "pt": "Palma",
+        "es": "Palma",
+        "fr": "Paume"
+      }
+    },
+    {
+      "tagId": "pre.body.back_of_hand",
+      "category": "Prerequisite",
+      "canonicalJa": "手のこう",
+      "canonicalEn": "Back of Hand",
+      "related": [],
+      "labels": {
+        "ja": "手のこう",
+        "en": "Back of Hand",
+        "ko": "손등",
+        "pt": "Dorso da Mão",
+        "es": "Dorso de la Mano",
+        "fr": "Dos de la Main"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "てのこう"
+        ]
+      },
+      "aliases": [
+        "てのこう"
+      ]
+    },
+    {
+      "tagId": "pre.body.fist",
+      "category": "Prerequisite",
+      "canonicalJa": "こぶし",
+      "canonicalEn": "Fist",
+      "related": [
+        "pre.body.palm",
+        "pre.body.back_of_hand",
+        "pre.body.fingers"
+      ],
+      "labels": {
+        "ja": "こぶし",
+        "en": "Fist",
+        "ko": "주먹",
+        "pt": "Punho",
+        "es": "Puño",
+        "fr": "Poing"
+      }
+    },
+    {
+      "tagId": "pre.body.fingers",
+      "category": "Prerequisite",
+      "canonicalJa": "ゆび",
+      "canonicalEn": "Fingers",
+      "related": [],
+      "labels": {
+        "ja": "ゆび",
+        "en": "Fingers",
+        "ko": "손가락",
+        "pt": "Dedos",
+        "es": "Dedos",
+        "fr": "Doigts"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "指"
+        ]
+      },
+      "aliases": [
+        "指"
+      ]
+    },
+    {
+      "tagId": "pre.body.forehead",
+      "category": "Prerequisite",
+      "canonicalJa": "ひたい",
+      "canonicalEn": "Forehead",
+      "related": [],
+      "labels": {
+        "ja": "ひたい",
+        "en": "Forehead",
+        "ko": "이마",
+        "pt": "Testa",
+        "es": "Frente",
+        "fr": "Front"
+      }
+    },
+    {
+      "tagId": "pre.body.philtrum",
+      "category": "Prerequisite",
+      "canonicalJa": "とうちょうぶ",
+      "canonicalEn": "Philtrum",
+      "related": [
+        "pre.body.forehead",
+        "pre.body.chin"
+      ],
+      "labels": {
+        "ja": "とうちょうぶ",
+        "en": "Philtrum",
+        "ko": "인중",
+        "pt": "Filtro",
+        "es": "Surco nasolabial",
+        "fr": "Philtrum"
+      }
+    },
+    {
+      "tagId": "pre.body.back_of_head",
+      "category": "Prerequisite",
+      "canonicalJa": "あたまのうしろ",
+      "canonicalEn": "Back of Head",
+      "related": [],
+      "labels": {
+        "ja": "あたまのうしろ",
+        "en": "Back of Head",
+        "ko": "뒤통수",
+        "pt": "Nuca",
+        "es": "Nuca",
+        "fr": "Nuque"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "後頭部"
+        ]
+      },
+      "aliases": [
+        "後頭部"
+      ]
+    },
+    {
+      "tagId": "pre.body.ear",
+      "category": "Prerequisite",
+      "canonicalJa": "みみ",
+      "canonicalEn": "Ear",
+      "related": [],
+      "labels": {
+        "ja": "みみ",
+        "en": "Ear",
+        "ko": "귀",
+        "pt": "Orelha",
+        "es": "Oreja",
+        "fr": "Oreille"
+      }
+    },
+    {
+      "tagId": "pre.body.cheek",
+      "category": "Prerequisite",
+      "canonicalJa": "ほほ",
+      "canonicalEn": "Cheek",
+      "related": [],
+      "labels": {
+        "ja": "ほほ",
+        "en": "Cheek",
+        "ko": "뺨",
+        "pt": "Bochecha",
+        "es": "Mejilla",
+        "fr": "Joue"
+      }
+    },
+    {
+      "tagId": "pre.body.chin",
+      "category": "Prerequisite",
+      "canonicalJa": "あご",
+      "canonicalEn": "Chin",
+      "related": [],
+      "labels": {
+        "ja": "あご",
+        "en": "Chin",
+        "ko": "턱",
+        "pt": "Queixo",
+        "es": "Barbilla",
+        "fr": "Menton"
+      }
+    },
+    {
+      "tagId": "pre.body.neck",
+      "category": "Prerequisite",
+      "canonicalJa": "くび",
+      "canonicalEn": "Neck",
+      "related": [],
+      "labels": {
+        "ja": "くび",
+        "en": "Neck",
+        "ko": "목",
+        "pt": "Pescoço",
+        "es": "Cuello",
+        "fr": "Cou"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "首"
+        ]
+      },
+      "aliases": [
+        "首"
+      ]
+    },
+    {
+      "tagId": "pre.body.shin",
+      "category": "Prerequisite",
+      "canonicalJa": "すね",
+      "canonicalEn": "Shin",
+      "related": [],
+      "labels": {
+        "ja": "すね",
+        "en": "Shin",
+        "ko": "정강이",
+        "pt": "Canela",
+        "es": "Espinilla",
+        "fr": "Tibia"
+      }
+    },
+    {
+      "tagId": "pre.body.calf",
+      "category": "Prerequisite",
+      "canonicalJa": "ふくらはぎ",
+      "canonicalEn": "Calf",
+      "related": [],
+      "labels": {
+        "ja": "ふくらはぎ",
+        "en": "Calf",
+        "ko": "종아리",
+        "pt": "Panturrilha",
+        "es": "Gemelo",
+        "fr": "Mollet"
+      }
+    },
+    {
+      "tagId": "pre.body.thigh_front",
+      "category": "Prerequisite",
+      "canonicalJa": "もものまえ",
+      "canonicalEn": "Front of Thigh",
+      "related": [],
+      "labels": {
+        "ja": "もものまえ",
+        "en": "Front of Thigh",
+        "ko": "허벅지 앞",
+        "pt": "Frente da Coxa",
+        "es": "Frente del Muslo",
+        "fr": "Avant Cuisse"
+      }
+    },
+    {
+      "tagId": "pre.body.thigh_back",
+      "category": "Prerequisite",
+      "canonicalJa": "もものうら",
+      "canonicalEn": "Back of Thigh",
+      "related": [],
+      "labels": {
+        "ja": "もものうら",
+        "en": "Back of Thigh",
+        "ko": "허벅지 뒤",
+        "pt": "Costas da Coxa",
+        "es": "Parte Atrás Muslo",
+        "fr": "Arrière Cuisse"
+      }
+    },
+    {
+      "tagId": "pre.body.thigh_side",
+      "category": "Prerequisite",
+      "canonicalJa": "うちもも",
+      "canonicalEn": "Side of Thigh",
+      "related": [],
+      "labels": {
+        "ja": "うちもも",
+        "en": "Side of Thigh",
+        "ko": "허벅지 옆",
+        "pt": "Lado da Coxa",
+        "es": "Lado del Muslo",
+        "fr": "Côté Cuisse"
+      }
+    },
+    {
+      "tagId": "pre.body.thigh_side_outer",
+      "category": "Prerequisite",
+      "canonicalJa": "そともも",
+      "canonicalEn": "Outer Thigh",
+      "related": [
+        "pre.body.thigh_side",
+        "pre.body.thigh_front",
+        "pre.body.thigh_back"
+      ],
+      "labels": {
+        "ja": "そともも",
+        "en": "Outer Thigh",
+        "ko": "허벅지 바깥",
+        "pt": "Coxa Externa",
+        "es": "Muslo Externo",
+        "fr": "Cuisse Externe"
+      }
+    },
+    {
+      "tagId": "pre.body.hip_buttock",
+      "category": "Prerequisite",
+      "canonicalJa": "おしり",
+      "canonicalEn": "Hip / Buttock",
+      "related": [],
+      "labels": {
+        "ja": "おしり",
+        "en": "Hip / Buttock",
+        "ko": "엉덩이",
+        "pt": "Quadril / Nádegas",
+        "es": "Cadera / Nalga",
+        "fr": "Hanche / Fesse"
+      }
+    },
+    {
+      "tagId": "pre.body.groin",
+      "category": "Prerequisite",
+      "canonicalJa": "そけいぶ",
+      "canonicalEn": "Groin",
+      "related": [],
+      "labels": {
+        "ja": "そけいぶ",
+        "en": "Groin",
+        "ko": "서혜부",
+        "pt": "Virilha",
+        "es": "Ingle",
+        "fr": "Aine"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "鼠蹊部"
+        ]
+      },
+      "aliases": [
+        "鼠蹊部"
+      ]
+    },
+    {
+      "tagId": "pre.body.above_knee",
+      "category": "Prerequisite",
+      "canonicalJa": "ひざうえ",
+      "canonicalEn": "Above Knee",
+      "related": [
+        "pre.body.knee"
+      ],
+      "labels": {
+        "ja": "ひざうえ",
+        "en": "Above Knee",
+        "ko": "무릎 위",
+        "pt": "Acima do Joelho",
+        "es": "Encima de la Rodilla",
+        "fr": "Au-dessus du Genou"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "膝上"
+        ]
+      },
+      "aliases": [
+        "膝上"
+      ]
+    },
+    {
+      "tagId": "pre.body.instep",
+      "category": "Prerequisite",
+      "canonicalJa": "あしのこう",
+      "canonicalEn": "Instep",
+      "related": [],
+      "labels": {
+        "ja": "あしのこう",
+        "en": "Instep",
+        "ko": "발등",
+        "pt": "Peito do Pé",
+        "es": "Empeine",
+        "fr": "Cou-de-pied"
+      }
+    },
+    {
+      "tagId": "pre.body.sole",
+      "category": "Prerequisite",
+      "canonicalJa": "あしのひら",
+      "canonicalEn": "Sole",
+      "related": [],
+      "labels": {
+        "ja": "あしのひら",
+        "en": "Sole",
+        "ko": "발바닥",
+        "pt": "Sola do Pé",
+        "es": "Planta del Pie",
+        "fr": "Plante du Pied"
+      }
+    },
+    {
+      "tagId": "pre.body.heel",
+      "category": "Prerequisite",
+      "canonicalJa": "かかと",
+      "canonicalEn": "Heel",
+      "related": [],
+      "labels": {
+        "ja": "かかと",
+        "en": "Heel",
+        "ko": "발뒤꿈치",
+        "pt": "Calcanhar",
+        "es": "Talón",
+        "fr": "Talon"
+      }
+    },
+    {
+      "tagId": "pre.body.foot_thumb_side",
+      "category": "Prerequisite",
+      "canonicalJa": "足の親指がわ",
+      "canonicalEn": "Foot Thumb Side",
+      "related": [
+        "pre.body.ankle",
+        "pre.body.sole"
+      ],
+      "labels": {
+        "ja": "足の親指がわ",
+        "en": "Foot Thumb Side",
+        "ko": "발 엄지쪽",
+        "pt": "Lado Polegar Pé",
+        "es": "Lado Pulgar Pie",
+        "fr": "Côté Pouce Pied"
+      }
+    },
+    {
+      "tagId": "pre.body.foot_pinky_side",
+      "category": "Prerequisite",
+      "canonicalJa": "足の小指がわ",
+      "canonicalEn": "Foot Pinky Side",
+      "related": [
+        "pre.body.ankle",
+        "pre.body.sole"
+      ],
+      "labels": {
+        "ja": "足の小指がわ",
+        "en": "Foot Pinky Side",
+        "ko": "발 새끼쪽",
+        "pt": "Lado Mindinho Pé",
+        "es": "Lado Meñique Pie",
+        "fr": "Côté Auriculaire Pied"
+      }
+    },
+    {
+      "tagId": "pre.grip.standard",
+      "category": "Prerequisite",
+      "canonicalJa": "標準グリップ",
+      "canonicalEn": "Standard Grip",
+      "related": [
+        "scn.attire.gi"
+      ],
+      "labels": {
+        "ja": "標準グリップ",
+        "en": "Standard Grip",
+        "ko": "일반 그립",
+        "pt": "Pegada Padrão",
+        "es": "Agarre Estándar",
+        "fr": "Prise Standard"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "normal grip",
+          "regular grip"
+        ],
+        "ja": [
+          "通常グリップ",
+          "フロントグリップ"
+        ]
+      },
+      "aliases": [
+        "normal grip",
+        "regular grip",
+        "通常グリップ",
+        "フロントグリップ"
+      ]
+    },
+    {
+      "tagId": "pre.grip.pistol",
+      "category": "Prerequisite",
+      "canonicalJa": "ピストルグリップ",
+      "canonicalEn": "Pistol Grip",
+      "related": [
+        "scn.attire.gi",
+        "pos.guard.spider",
+        "pos.guard.lasso"
+      ],
+      "labels": {
+        "ja": "ピストルグリップ",
+        "en": "Pistol Grip",
+        "ko": "피스톨 그립",
+        "pt": "Pegada Pistola",
+        "es": "Pistol Agarre",
+        "fr": "Pistol Prise"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "pistol grip"
+        ],
+        "ja": [
+          "ピストルグリップ"
+        ]
+      },
+      "aliases": [
+        "pistol grip",
+        "ピストルグリップ"
+      ]
+    },
+    {
+      "tagId": "pre.grip.pocket_grip",
+      "category": "Prerequisite",
+      "canonicalJa": "ポケットグリップ",
+      "canonicalEn": "Pocket Grip",
+      "related": [
+        "scn.attire.gi",
+        "pre.body.pant_cuff"
+      ],
+      "labels": {
+        "ja": "ポケットグリップ",
+        "en": "Pocket Grip",
+        "ko": "포켓 그립",
+        "pt": "Pegada Bolso",
+        "es": "Pocket Agarre",
+        "fr": "Pocket Prise"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "pocket grip"
+        ],
+        "ja": [
+          "ポケットグリップ",
+          "袋取り"
+        ]
+      },
+      "aliases": [
+        "pocket grip",
+        "ポケットグリップ",
+        "袋取り"
+      ]
+    },
+    {
+      "tagId": "pre.grip.gokor",
+      "category": "Prerequisite",
+      "canonicalJa": "ゴコールグリップ",
+      "canonicalEn": "Gokor Grip",
+      "related": [
+        "pre.grip.gable",
+        "act.control.seatbelt"
+      ],
+      "labels": {
+        "ja": "ゴコールグリップ",
+        "en": "Gokor Grip",
+        "ko": "고코어 그립",
+        "pt": "Pegada Gokor",
+        "es": "Gokor Agarre",
+        "fr": "Gokor Prise"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "gokor grip"
+        ],
+        "ja": [
+          "ゴコールグリップ"
+        ]
+      },
+      "aliases": [
+        "gokor grip",
+        "ゴコールグリップ"
+      ]
+    },
+    {
+      "tagId": "pre.grip.butterfly_grip",
+      "category": "Prerequisite",
+      "canonicalJa": "バタフライグリップ",
+      "canonicalEn": "Butterfly Grip",
+      "related": [
+        "pre.grip.gable",
+        "act.sub.armbar",
+        "act.sub.heel_hook"
+      ],
+      "labels": {
+        "ja": "バタフライグリップ",
+        "en": "Butterfly Grip",
+        "ko": "버터플라이 그립",
+        "pt": "Pegada Borboleta",
+        "es": "Butterfly Agarre",
+        "fr": "Butterfly Prise"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "butterfly grip"
+        ],
+        "ja": [
+          "バタフライグリップ"
+        ]
+      },
+      "aliases": [
+        "butterfly grip",
+        "バタフライグリップ"
+      ]
+    },
+    {
+      "tagId": "pre.butterfly_hook",
+      "category": "Prerequisite",
+      "canonicalJa": "バタフライフック",
+      "canonicalEn": "Butterfly Hook",
+      "related": [
+        "pos.guard.butterfly",
+        "act.sub.armbar",
+        "act.sub.heel_hook"
+      ],
+      "labels": {
+        "ja": "バタフライフック",
+        "en": "Butterfly Hook",
+        "ko": "버터플라이 훅",
+        "pt": "Gancho Borboleta",
+        "es": "Gancho Mariposa",
+        "fr": "Crochet Butterfly"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "butterfly hook"
+        ],
+        "ja": [
+          "バタフライフック"
+        ]
+      },
+      "aliases": [
+        "butterfly hook",
+        "バタフライフック"
+      ]
+    },
+    {
+      "tagId": "pre.grip.pretzel",
+      "category": "Prerequisite",
+      "canonicalJa": "プレッツェルグリップ",
+      "canonicalEn": "Pretzel Grip",
+      "related": [
+        "act.sub.guillotine"
+      ],
+      "labels": {
+        "ja": "プレッツェルグリップ",
+        "en": "Pretzel Grip",
+        "ko": "프레첼 그립",
+        "pt": "Pegada Pretzel",
+        "es": "Pretzel Agarre",
+        "fr": "Pretzel Prise"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "pretzel grip"
+        ],
+        "ja": [
+          "プレッツェルグリップ"
+        ]
+      },
+      "aliases": [
+        "pretzel grip",
+        "プレッツェルグリップ"
+      ]
+    },
+    {
+      "tagId": "pre.grip.kimura",
+      "category": "Prerequisite",
+      "canonicalJa": "キムラグリップ",
+      "canonicalEn": "Kimura Grip",
+      "related": [
+        "act.sub.kimura",
+        "pos.control.kimura_trap"
+      ],
+      "labels": {
+        "ja": "キムラグリップ",
+        "en": "Kimura Grip",
+        "ko": "기무라 그립",
+        "pt": "Pegada Kimura",
+        "es": "Kimura Agarre",
+        "fr": "Kimura Prise"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "kimura grip"
+        ],
+        "ja": [
+          "キムラグリップ"
+        ]
+      },
+      "aliases": [
+        "kimura grip",
+        "キムラグリップ"
       ]
     }
   ]
