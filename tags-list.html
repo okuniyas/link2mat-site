@@ -350,6 +350,9 @@
         ankle: ["pre.body.pant_cuff", "pre.body.ankle", "pre.body.ankle_inside", "pre.body.ankle_outside", "pre.body.heel", "pre.body.instep", "pre.body.sole", "pre.body.foot_thumb_side", "pre.body.foot_pinky_side"],
       };
       const BODY_REGION_ORDER = ["face_head", "collar", "torso", "waist", "elbow", "hand_below", "lower_body", "knee", "ankle"];
+      // アプリの bodyParts.ts BODY_PART_ELEMENT_TAG_KEYS.other と同じ。部位の「その他」に表示し、アプローチには出さない。
+      const BODY_PART_OTHER_TAG_IDS = ["pre.position.front_side", "pre.position.back_side", "pre.position.near_side", "pre.position.far_side", "pre.position.inside", "pre.position.outside", "pre.position.self", "pre.position.opponent", "pre.underhook_side", "pre.overhook_side"];
+      const bodyPartOtherSet = new Set(BODY_PART_OTHER_TAG_IDS);
       const SETUP_SUBSECTION_LABELS = {
         ja: { approach: "アプローチ", body_part: "部位", other_setup: "セットアップ（その他）" },
         en: { approach: "Approach", body_part: "Body part", other_setup: "Setup (other)" },
@@ -359,12 +362,12 @@
         fr: { approach: "Approche", body_part: "Partie du corps", other_setup: "Préparation (autre)" },
       };
       const BODY_REGION_LABELS = {
-        ja: { face_head: "くびから上", collar: "えり周り", torso: "胴体周り", waist: "こし周り", elbow: "うで・ひじ周り", hand_below: "手首から先", lower_body: "下半身", knee: "ひざ周り", ankle: "足首から先" },
-        en: { face_head: "Head & Neck", collar: "Collar", torso: "Torso", waist: "Waist", elbow: "Arm & Elbow", hand_below: "Hand / Wrist", lower_body: "Lower body", knee: "Knee", ankle: "Ankle / Foot" },
-        ko: { face_head: "머리·목", collar: "칼라", torso: "몸통", waist: "허리", elbow: "팔·팔꿈치", hand_below: "손목부터", lower_body: "하체", knee: "무릎", ankle: "발목부터" },
-        pt: { face_head: "Cabeça e pescoço", collar: "Gola", torso: "Tronco", waist: "Cintura", elbow: "Braço e cotovelo", hand_below: "Mão / punho", lower_body: "Parte inferior", knee: "Joelho", ankle: "Tornozelo / pé" },
-        es: { face_head: "Cabeza y cuello", collar: "Cuello", torso: "Tronco", waist: "Cintura", elbow: "Brazo y codo", hand_below: "Mano / muñeca", lower_body: "Parte inferior", knee: "Rodilla", ankle: "Tobillo / pie" },
-        fr: { face_head: "Tête et cou", collar: "Col", torso: "Torse", waist: "Taille", elbow: "Bras et coude", hand_below: "Main / poignet", lower_body: "Bas du corps", knee: "Genou", ankle: "Cheville / pied" },
+        ja: { face_head: "くびから上", collar: "えり周り", torso: "胴体周り", waist: "こし周り", elbow: "うで・ひじ周り", hand_below: "手首から先", lower_body: "下半身", knee: "ひざ周り", ankle: "足首から先", other: "その他" },
+        en: { face_head: "Head & Neck", collar: "Collar", torso: "Torso", waist: "Waist", elbow: "Arm & Elbow", hand_below: "Hand / Wrist", lower_body: "Lower body", knee: "Knee", ankle: "Ankle / Foot", other: "Other" },
+        ko: { face_head: "머리·목", collar: "칼라", torso: "몸통", waist: "허리", elbow: "팔·팔꿈치", hand_below: "손목부터", lower_body: "하체", knee: "무릎", ankle: "발목부터", other: "기타" },
+        pt: { face_head: "Cabeça e pescoço", collar: "Gola", torso: "Tronco", waist: "Cintura", elbow: "Braço e cotovelo", hand_below: "Mão / punho", lower_body: "Parte inferior", knee: "Joelho", ankle: "Tornozelo / pé", other: "Outro" },
+        es: { face_head: "Cabeza y cuello", collar: "Cuello", torso: "Tronco", waist: "Cintura", elbow: "Brazo y codo", hand_below: "Mano / muñeca", lower_body: "Parte inferior", knee: "Rodilla", ankle: "Tobillo / pie", other: "Otro" },
+        fr: { face_head: "Tête et cou", collar: "Col", torso: "Torse", waist: "Taille", elbow: "Bras et coude", hand_below: "Main / poignet", lower_body: "Bas du corps", knee: "Genou", ankle: "Cheville / pied", other: "Autre" },
       };
       const tagIdToBodyRegion = new Map();
       BODY_REGION_ORDER.forEach((rid) => {
@@ -610,7 +613,13 @@
           const preTags = byCategory.get(key);
           if (key === "Prerequisite") {
             const bodyTags = preTags.filter((t) => String(t.tagId).startsWith("pre.body.") && tagIdToBodyRegion.has(t.tagId));
-            const otherPreTags = preTags.filter((t) => !String(t.tagId).startsWith("pre.body."));
+            const bodyPartOtherTags = preTags.filter((t) => bodyPartOtherSet.has(String(t.tagId)));
+            const otherPreTags = preTags.filter((t) => {
+              const tid = String(t.tagId);
+              if (tid.startsWith("pre.body.")) return false;
+              if (bodyPartOtherSet.has(tid)) return false;
+              return true;
+            });
             const byRegion = new Map();
             for (const t of bodyTags) {
               const rid = tagIdToBodyRegion.get(t.tagId);
@@ -672,6 +681,12 @@
               h4Region.textContent = regionLabels[rid] || rid;
               section.appendChild(h4Region);
               for (const tag of byRegion.get(rid)) appendTag(section, tag);
+            }
+            if (bodyPartOtherTags.length) {
+              const h4Other = document.createElement("h4");
+              h4Other.textContent = regionLabels.other || "Other";
+              section.appendChild(h4Other);
+              for (const tag of bodyPartOtherTags) appendTag(section, tag);
             }
           } else {
             for (const tag of preTags) appendTag(section, tag);
