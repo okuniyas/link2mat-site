@@ -30,6 +30,18 @@
         color: #374151;
         font-weight: 600;
       }
+      h4 {
+        font-size: 14px;
+        margin: 12px 0 4px;
+        color: #4b5563;
+        font-weight: 600;
+      }
+      h5 {
+        font-size: 13px;
+        margin: 10px 0 4px;
+        color: #6b7280;
+        font-weight: 600;
+      }
       p {
         line-height: 1.6;
         margin: 12px 0;
@@ -338,18 +350,75 @@
         ankle: ["pre.body.pant_cuff", "pre.body.ankle", "pre.body.ankle_inside", "pre.body.ankle_outside", "pre.body.heel", "pre.body.instep", "pre.body.sole", "pre.body.foot_thumb_side", "pre.body.foot_pinky_side"],
       };
       const BODY_REGION_ORDER = ["face_head", "collar", "torso", "waist", "elbow", "hand_below", "lower_body", "knee", "ankle"];
+      const SETUP_SUBSECTION_LABELS = {
+        ja: { approach: "アプローチ", body_part: "部位", other_setup: "セットアップ（その他）" },
+        en: { approach: "Approach", body_part: "Body part", other_setup: "Setup (other)" },
+        ko: { approach: "어프로치", body_part: "부위", other_setup: "셋업(기타)" },
+        pt: { approach: "Abordagem", body_part: "Parte do corpo", other_setup: "Preparação (outros)" },
+        es: { approach: "Enfoque", body_part: "Parte del cuerpo", other_setup: "Preparación (otros)" },
+        fr: { approach: "Approche", body_part: "Partie du corps", other_setup: "Préparation (autre)" },
+      };
       const BODY_REGION_LABELS = {
-        ja: { face_head: "くびから上", collar: "えり周り", torso: "胴体周り", waist: "こし周り", elbow: "うで・ひじ周り", hand_below: "手首から先", lower_body: "下半身", knee: "ひざ周り", ankle: "足首から先", other: "その他", other_setup: "セットアップ（その他）" },
-        en: { face_head: "Head & Neck", collar: "Collar", torso: "Torso", waist: "Waist", elbow: "Arm & Elbow", hand_below: "Hand / Wrist", lower_body: "Lower body", knee: "Knee", ankle: "Ankle / Foot", other: "Other", other_setup: "Setup (other)" },
-        ko: { face_head: "머리·목", collar: "칼라", torso: "몸통", waist: "허리", elbow: "팔·팔꿈치", hand_below: "손목부터", lower_body: "하체", knee: "무릎", ankle: "발목부터", other: "기타", other_setup: "셋업(기타)" },
-        pt: { face_head: "Cabeça e pescoço", collar: "Gola", torso: "Tronco", waist: "Cintura", elbow: "Braço e cotovelo", hand_below: "Mão / punho", lower_body: "Parte inferior", knee: "Joelho", ankle: "Tornozelo / pé", other: "Outro", other_setup: "Preparação (outros)" },
-        es: { face_head: "Cabeza y cuello", collar: "Cuello", torso: "Tronco", waist: "Cintura", elbow: "Brazo y codo", hand_below: "Mano / muñeca", lower_body: "Parte inferior", knee: "Rodilla", ankle: "Tobillo / pie", other: "Otro", other_setup: "Preparación (otros)" },
-        fr: { face_head: "Tête et cou", collar: "Col", torso: "Torse", waist: "Taille", elbow: "Bras et coude", hand_below: "Main / poignet", lower_body: "Bas du corps", knee: "Genou", ankle: "Cheville / pied", other: "Autre", other_setup: "Préparation (autre)" },
+        ja: { face_head: "くびから上", collar: "えり周り", torso: "胴体周り", waist: "こし周り", elbow: "うで・ひじ周り", hand_below: "手首から先", lower_body: "下半身", knee: "ひざ周り", ankle: "足首から先" },
+        en: { face_head: "Head & Neck", collar: "Collar", torso: "Torso", waist: "Waist", elbow: "Arm & Elbow", hand_below: "Hand / Wrist", lower_body: "Lower body", knee: "Knee", ankle: "Ankle / Foot" },
+        ko: { face_head: "머리·목", collar: "칼라", torso: "몸통", waist: "허리", elbow: "팔·팔꿈치", hand_below: "손목부터", lower_body: "하체", knee: "무릎", ankle: "발목부터" },
+        pt: { face_head: "Cabeça e pescoço", collar: "Gola", torso: "Tronco", waist: "Cintura", elbow: "Braço e cotovelo", hand_below: "Mão / punho", lower_body: "Parte inferior", knee: "Joelho", ankle: "Tornozelo / pé" },
+        es: { face_head: "Cabeza y cuello", collar: "Cuello", torso: "Tronco", waist: "Cintura", elbow: "Brazo y codo", hand_below: "Mano / muñeca", lower_body: "Parte inferior", knee: "Rodilla", ankle: "Tobillo / pie" },
+        fr: { face_head: "Tête et cou", collar: "Col", torso: "Torse", waist: "Taille", elbow: "Bras et coude", hand_below: "Main / poignet", lower_body: "Bas du corps", knee: "Genou", ankle: "Cheville / pied" },
       };
       const tagIdToBodyRegion = new Map();
       BODY_REGION_ORDER.forEach((rid) => {
         (BODY_REGION_TAG_IDS[rid] || []).forEach((tid) => tagIdToBodyRegion.set(tid, rid));
       });
+
+      // アプリの bodyParts.ts と同じアプローチフィルターカテゴリ（グリップ・コントロール等）。h4 用。
+      const APPROACH_FILTER_CATEGORIES = [
+        { id: "grip", tagKeyPrefixes: ["pre.grip.", "pre.seatbelt"] },
+        { id: "control", tagKeyPrefixes: ["pre.control", "pre.arm_control", "pre.hip_control", "pre.hip_line_control", "pre.foot_on_hip", "pre.hip_turn", "pre.shoulder_line_control", "pre.knee_line_control", "pre.heel_exposure_control", "pre.head_position", "pre.chin_control", "pre.crossface", "pre.head_pull", "pre.wrist_control", "pre.gift_wrap", "act.control.seatbelt"] },
+        { id: "guard", tagKeyPrefixes: ["pos.guard."] },
+        { id: "pass", tagKeyPrefixes: ["act.pass.", "pre.arm_triangle_pass", "act.wrestling.body_lock", "pre.reverse_half_guard_pass"] },
+        { id: "sweep", tagKeyPrefixes: ["act.guard.sweep.", "pre.shin_sweep"] },
+        { id: "escape", tagKeyPrefixes: ["act.escape."] },
+        { id: "submission", tagKeyPrefixes: ["act.sub."] },
+        { id: "other", tagKeyPrefixes: [] },
+      ];
+      const APPROACH_CATEGORY_LABELS = {
+        ja: { grip: "グリップ", control: "コントロール", guard: "ガード", pass: "パス", sweep: "スイープ", escape: "エスケープ", submission: "サブミッション", other: "その他" },
+        en: { grip: "Grip", control: "Control", guard: "Guard", pass: "Pass", sweep: "Sweep", escape: "Escape", submission: "Submission", other: "Other" },
+        ko: { grip: "그립", control: "컨트롤", guard: "가드", pass: "패스", sweep: "스윕", escape: "이스케이프", submission: "서브미션", other: "기타" },
+        pt: { grip: "Pegada", control: "Controle", guard: "Guarda", pass: "Passagem", sweep: "Varrida", escape: "Fuga", submission: "Finalização", other: "Outro" },
+        es: { grip: "Agarre", control: "Control", guard: "Guardia", pass: "Pase", sweep: "Barrida", escape: "Escape", submission: "Finalización", other: "Otro" },
+        fr: { grip: "Prise", control: "Contrôle", guard: "Garde", pass: "Passe", sweep: "Balayage", escape: "Évasion", submission: "Soumission", other: "Autre" },
+      };
+      const PERSPECTIVE_LABELS = {
+        ja: { top: "トップから", bottom: "ボトムから", other: "それ以外" },
+        en: { top: "From top", bottom: "From bottom", other: "Other" },
+        ko: { top: "탑에서", bottom: "바텀에서", other: "기타" },
+        pt: { top: "Do topo", bottom: "De baixo", other: "Outros" },
+        es: { top: "Desde arriba", bottom: "Desde abajo", other: "Otros" },
+        fr: { top: "Du dessus", bottom: "Du dessous", other: "Autres" },
+      };
+      const APPROACH_PERSPECTIVE_TOP_PREFIXES = ["pre.hip_control", "pre.hip_line_control", "pre.hip_turn", "pre.foot_on_hip", "pre.crossface", "pre.head_position", "pre.chin_control", "pre.head_pull", "pre.control_elbow_line", "pre.control.pin", "pre.shoulder_line_control", "pre.knee_line_control", "pre.heel_exposure_control", "pre.shoulder_drive", "pre.leg_pin", "pre.gift_wrap", "pre.side_switch", "pre.x_pass", "pre.combat_base", "pre.sitting_pass", "act.control.kneeling_base", "act.wrestling.inside_trip", "act.guard.guard_pull", "act.wrestling.cow_catcher", "act.transition.take_back.gator_roll", "act.wrestling.corner_cut", "pre.step_over", "act.movement.step_back", "act.wrestling.snapdown", "act.wrestling.sprawl", "act.control.turtle_breakdown", "act.control.twisting_arm", "act.movement.top_spin", "pre.tripod", "pre.knee_split", "pre.half_nelson", "act.wrestling.high_crotch", "act.wrestling.back_clinch", "act.wrestling.hip_throw", "act.wrestling.fireman_carry", "act.control.head_post", "act.wrestling.body_lock", "act.transition.mount", "act.wrestling.rear_takedown", "pre.level_change", "act.wrestling.arm_throw", "act.wrestling.uchi_mata", "act.wrestling.osoto_gari", "act.wrestling.ouchi_gari", "act.wrestling.kouchi_gari", "act.wrestling.kosoto_gari", "act.control.cross_body", "act.wrestling.spinning_arm_throw"];
+      const APPROACH_PERSPECTIVE_BOTTOM_PREFIXES = ["pre.frame", "pre.frame_s", "pre.hip_escape", "pre.posture_break", "pre.waiter", "pre.leg_lasso", "pre.handlebar", "pre.butterfly_hook", "pre.shin_sweep", "pre.cross_hook", "act.guard.inversion", "act.guard.kiss_of_the_dragon", "act.guard.granby_roll", "act.wrestling.cross_over_lift", "act.escape.elbow_escape", "act.escape.overhead", "act.escape.overhead_roll", "act.escape.underhook", "act.guard.sweep", "act.wrestling.switch_sit_out", "act.movement.technical_stand_up", "act.guard.entry", "act.guard.recovery", "act.guard.retention", "act.escape.turtle", "act.movement.shrimp", "act.movement.reverse_shrimp", "act.movement.body_spin", "act.movement.bridge", "act.guard.berimbolo", "act.guard.wrestle_up", "act.guard.leg_scoop", "pre.knee_elbow_connection"];
+      function approachFilterCategoryMatches(categoryId, tagKey) {
+        const cat = APPROACH_FILTER_CATEGORIES.find(function (c) { return c.id === categoryId; });
+        if (!cat) return false;
+        if (categoryId === "other") {
+          const others = APPROACH_FILTER_CATEGORIES.filter(function (c) { return c.id !== "other" && (c.tagKeyPrefixes || []).length; });
+          const inAny = others.some(function (c) {
+            return (c.tagKeyPrefixes || []).some(function (p) { return tagKey.startsWith(p); });
+          });
+          return !inAny;
+        }
+        return (cat.tagKeyPrefixes || []).some(function (p) { return tagKey.startsWith(p); });
+      }
+      function getApproachPerspectiveExclusive(tagKey) {
+        var top = APPROACH_PERSPECTIVE_TOP_PREFIXES.some(function (p) { return tagKey.startsWith(p) || tagKey === p; });
+        var bottom = APPROACH_PERSPECTIVE_BOTTOM_PREFIXES.some(function (p) { return tagKey.startsWith(p) || tagKey === p; });
+        if (top && !bottom) return "top";
+        if (bottom && !top) return "bottom";
+        return "other";
+      }
 
       const categoryLabels =
         lang === "ja"
@@ -540,27 +609,69 @@
 
           const preTags = byCategory.get(key);
           if (key === "Prerequisite") {
-            const bodyTags = preTags.filter((t) => String(t.tagId).startsWith("pre.body."));
+            const bodyTags = preTags.filter((t) => String(t.tagId).startsWith("pre.body.") && tagIdToBodyRegion.has(t.tagId));
             const otherPreTags = preTags.filter((t) => !String(t.tagId).startsWith("pre.body."));
             const byRegion = new Map();
             for (const t of bodyTags) {
-              const rid = tagIdToBodyRegion.get(t.tagId) || "other";
+              const rid = tagIdToBodyRegion.get(t.tagId);
               if (!byRegion.has(rid)) byRegion.set(rid, []);
               byRegion.get(rid).push(t);
             }
             const regionLabels = BODY_REGION_LABELS[lang] || BODY_REGION_LABELS.en;
-            for (const rid of [...BODY_REGION_ORDER, "other"]) {
-              if (!byRegion.has(rid)) continue;
-              const subTitle = document.createElement("h3");
-              subTitle.textContent = regionLabels[rid] || rid;
-              section.appendChild(subTitle);
-              for (const tag of byRegion.get(rid)) appendTag(section, tag);
-            }
+            const subsectionLabels = SETUP_SUBSECTION_LABELS[lang] || SETUP_SUBSECTION_LABELS.en;
+            const approachCatLabels = APPROACH_CATEGORY_LABELS[lang] || APPROACH_CATEGORY_LABELS.en;
+            const perspectiveLabels = PERSPECTIVE_LABELS[lang] || PERSPECTIVE_LABELS.en;
+            // h3: アプローチ → h4: グリップ/コントロール/ガード/パス/スイープ/エスケープ/サブミッション/その他 → タグ。その他だけ h5: トップから/ボトムから/それ以外
             if (otherPreTags.length) {
-              const subTitle = document.createElement("h3");
-              subTitle.textContent = regionLabels.other_setup || "Setup (other)";
-              section.appendChild(subTitle);
-              for (const tag of otherPreTags) appendTag(section, tag);
+              const h3Approach = document.createElement("h3");
+              h3Approach.textContent = subsectionLabels.approach || "Approach";
+              section.appendChild(h3Approach);
+              const byApproachCat = new Map();
+              APPROACH_FILTER_CATEGORIES.forEach(function (c) { byApproachCat.set(c.id, []); });
+              otherPreTags.forEach(function (tag) {
+                var tid = tag.tagId || "";
+                for (var i = 0; i < APPROACH_FILTER_CATEGORIES.length; i++) {
+                  if (approachFilterCategoryMatches(APPROACH_FILTER_CATEGORIES[i].id, tid)) {
+                    byApproachCat.get(APPROACH_FILTER_CATEGORIES[i].id).push(tag);
+                    break;
+                  }
+                }
+              });
+              APPROACH_FILTER_CATEGORIES.forEach(function (c) {
+                const tagsInCat = byApproachCat.get(c.id) || [];
+                if (tagsInCat.length === 0) return;
+                const h4Cat = document.createElement("h4");
+                h4Cat.textContent = approachCatLabels[c.id] || c.id;
+                section.appendChild(h4Cat);
+                if (c.id === "other") {
+                  const byPerspective = { top: [], bottom: [], other: [] };
+                  tagsInCat.forEach(function (tag) {
+                    const p = getApproachPerspectiveExclusive(tag.tagId || "");
+                    byPerspective[p].push(tag);
+                  });
+                  ["top", "bottom", "other"].forEach(function (perspective) {
+                    const list = byPerspective[perspective];
+                    if (list.length === 0) return;
+                    const h5Perspective = document.createElement("h5");
+                    h5Perspective.textContent = perspectiveLabels[perspective] || perspective;
+                    section.appendChild(h5Perspective);
+                    list.forEach(function (tag) { appendTag(section, tag); });
+                  });
+                } else {
+                  tagsInCat.forEach(function (tag) { appendTag(section, tag); });
+                }
+              });
+            }
+            // h3: 部位 → h4: 各部位名 → タグ（BODY_REGION_TAG_IDS に含まれるもののみ表示。未マップの pre.body.* は辞書から削除済みのため表示しない）
+            const h3Body = document.createElement("h3");
+            h3Body.textContent = subsectionLabels.body_part || "Body part";
+            section.appendChild(h3Body);
+            for (const rid of BODY_REGION_ORDER) {
+              if (!byRegion.has(rid)) continue;
+              const h4Region = document.createElement("h4");
+              h4Region.textContent = regionLabels[rid] || rid;
+              section.appendChild(h4Region);
+              for (const tag of byRegion.get(rid)) appendTag(section, tag);
             }
           } else {
             for (const tag of preTags) appendTag(section, tag);

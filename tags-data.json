@@ -14761,24 +14761,6 @@
       }
     },
     {
-      "tagId": "pre.body.elbow_side_inner",
-      "category": "Prerequisite",
-      "canonicalJa": "ひじよこ（なか）",
-      "canonicalEn": "Inner Elbow Side",
-      "related": [
-        "pre.body.elbow",
-        "pre.body.elbow_side"
-      ],
-      "labels": {
-        "ja": "ひじよこ（なか）",
-        "en": "Inner Elbow Side",
-        "ko": "팔꿈치 안쪽",
-        "pt": "Cotovelo Lateral Interno",
-        "es": "Codo Lateral Interno",
-        "fr": "Coude Côté Intérieur"
-      }
-    },
-    {
       "tagId": "pre.body.forearm_inner",
       "category": "Prerequisite",
       "canonicalJa": "ぜんわん（うちがわ）",
@@ -14857,24 +14839,6 @@
         "pt": "Ombro",
         "es": "Hombro",
         "fr": "Épaule"
-      }
-    },
-    {
-      "tagId": "pre.body.armpit_below",
-      "category": "Prerequisite",
-      "canonicalJa": "わきのした",
-      "canonicalEn": "Below Armpit",
-      "related": [
-        "pre.body.armpit",
-        "pre.body.chest"
-      ],
-      "labels": {
-        "ja": "わきのした",
-        "en": "Below Armpit",
-        "ko": "겨드랑이 아래",
-        "pt": "Abaixo da Axila",
-        "es": "Debajo de la Axila",
-        "fr": "Sous l'Aisselle"
       }
     },
     {
