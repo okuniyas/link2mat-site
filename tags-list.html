@@ -376,10 +376,10 @@
 
       // アプリの bodyParts.ts と同じアプローチフィルターカテゴリ（グリップ・コントロール等）。h4 用。
       const APPROACH_FILTER_CATEGORIES = [
-        { id: "grip", tagKeyPrefixes: ["pre.grip.", "pre.seatbelt"] },
-        { id: "control", tagKeyPrefixes: ["pre.control", "pre.arm_control", "pre.hip_control", "pre.hip_line_control", "pre.foot_on_hip", "pre.hip_turn", "pre.shoulder_line_control", "pre.knee_line_control", "pre.heel_exposure_control", "pre.head_position", "pre.chin_control", "pre.crossface", "pre.head_pull", "pre.wrist_control", "pre.gift_wrap", "act.control.seatbelt"] },
+        { id: "grip", tagKeyPrefixes: ["pre.grip.", "pre.seatbelt", "pre.reverse_kimura"] },
+        { id: "control", tagKeyPrefixes: ["pre.control", "pre.arm_control", "pre.ankle_control", "pre.hip_control", "pre.hip_line_control", "pre.shoulder_line_control", "pre.knee_line_control", "pre.heel_exposure_control", "pre.chin_control", "pre.crossface", "pre.head_pull", "pre.wrist_control", "pre.gift_wrap", "act.control.seatbelt", "act.wrestling.body_lock"] },
         { id: "guard", tagKeyPrefixes: ["pos.guard."] },
-        { id: "pass", tagKeyPrefixes: ["act.pass.", "pre.arm_triangle_pass", "act.wrestling.body_lock", "pre.reverse_half_guard_pass"] },
+        { id: "pass", tagKeyPrefixes: ["act.pass.", "pre.arm_triangle_pass", "pre.reverse_half_guard_pass"] },
         { id: "sweep", tagKeyPrefixes: ["act.guard.sweep.", "pre.shin_sweep"] },
         { id: "escape", tagKeyPrefixes: ["act.escape."] },
         { id: "submission", tagKeyPrefixes: ["act.sub."] },
@@ -390,8 +390,8 @@
         en: { grip: "Grip", control: "Control", guard: "Guard", pass: "Pass", sweep: "Sweep", escape: "Escape", submission: "Submission", other: "Other" },
         ko: { grip: "그립", control: "컨트롤", guard: "가드", pass: "패스", sweep: "스윕", escape: "이스케이프", submission: "서브미션", other: "기타" },
         pt: { grip: "Pegada", control: "Controle", guard: "Guarda", pass: "Passagem", sweep: "Varrida", escape: "Fuga", submission: "Finalização", other: "Outro" },
-        es: { grip: "Agarre", control: "Control", guard: "Guardia", pass: "Pase", sweep: "Barrida", escape: "Escape", submission: "Finalización", other: "Otro" },
-        fr: { grip: "Prise", control: "Contrôle", guard: "Garde", pass: "Passe", sweep: "Balayage", escape: "Évasion", submission: "Soumission", other: "Autre" },
+        es: { grip: "Agarre", control: "Control", guard: "Guardia", pass: "Pase", sweep: "Barrido", escape: "Escape", submission: "Sumisión", other: "Otro" },
+        fr: { grip: "Prise", control: "Contrôle", guard: "Gard", pass: "Passe", sweep: "Balayage", escape: "Échappement", submission: "Soumission", other: "Autre" },
       };
       const PERSPECTIVE_LABELS = {
         ja: { top: "トップから", bottom: "ボトムから", other: "それ以外" },
@@ -401,9 +401,12 @@
         es: { top: "Desde arriba", bottom: "Desde abajo", other: "Otros" },
         fr: { top: "Du dessus", bottom: "Du dessous", other: "Autres" },
       };
-      const APPROACH_PERSPECTIVE_TOP_PREFIXES = ["pre.hip_control", "pre.hip_line_control", "pre.hip_turn", "pre.foot_on_hip", "pre.crossface", "pre.head_position", "pre.chin_control", "pre.head_pull", "pre.control_elbow_line", "pre.control.pin", "pre.shoulder_line_control", "pre.knee_line_control", "pre.heel_exposure_control", "pre.shoulder_drive", "pre.leg_pin", "pre.gift_wrap", "pre.side_switch", "pre.x_pass", "pre.combat_base", "pre.sitting_pass", "act.control.kneeling_base", "act.wrestling.inside_trip", "act.guard.guard_pull", "act.wrestling.cow_catcher", "act.transition.take_back.gator_roll", "act.wrestling.corner_cut", "pre.step_over", "act.movement.step_back", "act.wrestling.snapdown", "act.wrestling.sprawl", "act.control.turtle_breakdown", "act.control.twisting_arm", "act.movement.top_spin", "pre.tripod", "pre.knee_split", "pre.half_nelson", "act.wrestling.high_crotch", "act.wrestling.back_clinch", "act.wrestling.hip_throw", "act.wrestling.fireman_carry", "act.control.head_post", "act.wrestling.body_lock", "act.transition.mount", "act.wrestling.rear_takedown", "pre.level_change", "act.wrestling.arm_throw", "act.wrestling.uchi_mata", "act.wrestling.osoto_gari", "act.wrestling.ouchi_gari", "act.wrestling.kouchi_gari", "act.wrestling.kosoto_gari", "act.control.cross_body", "act.wrestling.spinning_arm_throw"];
-      const APPROACH_PERSPECTIVE_BOTTOM_PREFIXES = ["pre.frame", "pre.frame_s", "pre.hip_escape", "pre.posture_break", "pre.waiter", "pre.leg_lasso", "pre.handlebar", "pre.butterfly_hook", "pre.shin_sweep", "pre.cross_hook", "act.guard.inversion", "act.guard.kiss_of_the_dragon", "act.guard.granby_roll", "act.wrestling.cross_over_lift", "act.escape.elbow_escape", "act.escape.overhead", "act.escape.overhead_roll", "act.escape.underhook", "act.guard.sweep", "act.wrestling.switch_sit_out", "act.movement.technical_stand_up", "act.guard.entry", "act.guard.recovery", "act.guard.retention", "act.escape.turtle", "act.movement.shrimp", "act.movement.reverse_shrimp", "act.movement.body_spin", "act.movement.bridge", "act.guard.berimbolo", "act.guard.wrestle_up", "act.guard.leg_scoop", "pre.knee_elbow_connection"];
+      const APPROACH_PERSPECTIVE_TOP_PREFIXES = ["pre.hip_control", "pre.hip_line_control", "pre.hip_turn", "pre.crossface", "pre.head_position", "pre.chin_control", "pre.head_pull", "pre.control_elbow_line", "pre.control.pin", "pre.shoulder_line_control", "pre.knee_line_control", "pre.heel_exposure_control", "pre.shoulder_drive", "pre.leg_pin", "pre.gift_wrap", "pre.side_switch", "pre.x_pass", "pre.combat_base", "pre.sitting_pass", "act.control.kneeling_base", "act.wrestling.inside_trip", "act.guard.guard_pull", "act.wrestling.cow_catcher", "act.transition.take_back.gator_roll", "act.wrestling.corner_cut", "pre.step_over", "act.movement.step_back", "act.wrestling.snapdown", "act.wrestling.sprawl", "act.control.turtle_breakdown", "act.control.twisting_arm", "act.movement.top_spin", "pre.tripod", "pre.knee_split", "pre.half_nelson", "act.wrestling.high_crotch", "act.wrestling.back_clinch", "act.wrestling.hip_throw", "act.wrestling.fireman_carry", "act.control.head_post", "act.wrestling.body_lock", "act.transition.mount", "act.wrestling.rear_takedown", "pre.level_change", "act.wrestling.arm_throw", "act.wrestling.uchi_mata", "act.wrestling.osoto_gari", "act.wrestling.ouchi_gari", "act.wrestling.kouchi_gari", "act.wrestling.kosoto_gari", "act.control.cross_body", "act.wrestling.spinning_arm_throw"];
+      const APPROACH_PERSPECTIVE_BOTTOM_PREFIXES = ["pre.frame", "pre.frame_s", "pre.foot_on_hip", "pre.hip_escape", "pre.posture_break", "pre.waiter", "pre.leg_lasso", "pre.handlebar", "pre.butterfly_hook", "pre.shin_sweep", "pre.cross_hook", "act.guard.inversion", "act.guard.kiss_of_the_dragon", "act.guard.granby_roll", "act.wrestling.cross_over_lift", "act.escape.elbow_escape", "act.escape.overhead", "act.escape.overhead_roll", "act.escape.underhook", "act.guard.sweep", "act.wrestling.switch_sit_out", "act.movement.technical_stand_up", "act.guard.entry", "act.guard.recovery", "act.guard.retention", "act.escape.turtle", "act.movement.shrimp", "act.movement.reverse_shrimp", "act.movement.body_spin", "act.movement.bridge", "act.guard.berimbolo", "act.guard.wrestle_up", "act.guard.leg_scoop", "pre.knee_elbow_connection"];
+      const APPROACH_CATEGORY_OVERRIDE = { "pre.grip.arm_wrap": "control" };
       function approachFilterCategoryMatches(categoryId, tagKey) {
+        var override = APPROACH_CATEGORY_OVERRIDE[tagKey];
+        if (override !== undefined) return override === categoryId;
         const cat = APPROACH_FILTER_CATEGORIES.find(function (c) { return c.id === categoryId; });
         if (!cat) return false;
         if (categoryId === "other") {
@@ -430,7 +433,7 @@
               Scenario: "シナリオ",
               Prerequisite: "セットアップ",
               Action: "アクション",
-              Submission: "極め",
+              Submission: "サブミッション",
               Source: "ソース",
             }
           : lang === "ko"
@@ -457,7 +460,7 @@
                     Scenario: "Escenario",
                     Prerequisite: "Preparación",
                     Action: "Acción",
-                    Submission: "Finalización",
+                    Submission: "Sumisión",
                     Source: "Fuente",
                   }
                 : lang === "fr"

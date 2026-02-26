@@ -12951,6 +12951,51 @@
       ]
     },
     {
+      "tagId": "pre.ankle_control",
+      "category": "Prerequisite",
+      "canonicalJa": "足首コントロール",
+      "canonicalEn": "Ankle Control",
+      "related": [
+        "act.pass.torreando",
+        "act.pass.leg_drag",
+        "act.sub.ankle_lock"
+      ],
+      "labels": {
+        "ja": "足首コントロール",
+        "en": "Ankle Control",
+        "ko": "발목 컨트롤",
+        "pt": "Controle de Tornozelo",
+        "es": "Ankle Control",
+        "fr": "Cheville Contrôle"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "ankle control"
+        ],
+        "ja": [
+          "足首持ち"
+        ],
+        "ko": [
+          "발목 컨트롤"
+        ],
+        "pt": [
+          "controle de tornozelo"
+        ],
+        "es": [
+          "ankle control"
+        ],
+        "fr": [
+          "ankle control"
+        ]
+      },
+      "aliases": [
+        "ankle control",
+        "足首持ち",
+        "발목 컨트롤",
+        "controle de tornozelo"
+      ]
+    },
+    {
       "tagId": "pre.frame",
       "category": "Prerequisite",
       "canonicalJa": "フレーム",
