@@ -633,14 +633,16 @@
             const subsectionLabels = SETUP_SUBSECTION_LABELS[lang] || SETUP_SUBSECTION_LABELS.en;
             const approachCatLabels = APPROACH_CATEGORY_LABELS[lang] || APPROACH_CATEGORY_LABELS.en;
             const perspectiveLabels = PERSPECTIVE_LABELS[lang] || PERSPECTIVE_LABELS.en;
-            // h3: アプローチ → h4: グリップ/コントロール/ガード/パス/スイープ/エスケープ/サブミッション/その他 → タグ。その他だけ h5: トップから/ボトムから/それ以外
-            if (otherPreTags.length) {
+            // アプリと同様に、Prerequisite に加え Action もアプローチで分類（act.escape.* 等は辞書で Action のためここでエスケープに含める）
+            const actionTags = byCategory.get("Action") || [];
+            const approachTagPool = otherPreTags.length + actionTags.length;
+            if (approachTagPool > 0) {
               const h3Approach = document.createElement("h3");
               h3Approach.textContent = subsectionLabels.approach || "Approach";
               section.appendChild(h3Approach);
               const byApproachCat = new Map();
               APPROACH_FILTER_CATEGORIES.forEach(function (c) { byApproachCat.set(c.id, []); });
-              otherPreTags.forEach(function (tag) {
+              function assignToApproachCat(tag) {
                 var tid = tag.tagId || "";
                 for (var i = 0; i < APPROACH_FILTER_CATEGORIES.length; i++) {
                   if (approachFilterCategoryMatches(APPROACH_FILTER_CATEGORIES[i].id, tid)) {
@@ -648,7 +650,9 @@
                     break;
                   }
                 }
-              });
+              }
+              otherPreTags.forEach(assignToApproachCat);
+              actionTags.forEach(assignToApproachCat);
               APPROACH_FILTER_CATEGORIES.forEach(function (c) {
                 const tagsInCat = byApproachCat.get(c.id) || [];
                 if (tagsInCat.length === 0) return;
