@@ -317,6 +317,10 @@
           return detectBrowserLang();
         }
 
+        function getCurrentLang() {
+          return document.body.getAttribute("data-lang") || "en";
+        }
+
         function setLang(lang) {
           document.body.setAttribute("data-lang", lang);
           langBlocks.forEach(function (el) {
@@ -328,14 +332,14 @@
             btn.setAttribute("aria-pressed", on ? "true" : "false");
           });
           try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+          if (typeof window.rerenderTagList === "function") window.rerenderTagList();
         }
 
         langButtons.forEach(function (btn) {
           btn.addEventListener("click", function () { setLang(btn.getAttribute("data-lang")); });
         });
 
-        const lang = resolveLang();
-        setLang(lang);
+        setLang(resolveLang());
 
       // アプリの bodyParts.ts と同じ部位グループ（pre.body.* のみ）。サブカテゴリ表示用。
       const BODY_REGION_TAG_IDS = {
@@ -427,60 +431,19 @@
       }
 
       // セットアップに Action も含めて表示するため見出しは「セットアップ・アクション」。Action は別セクションにせず重複を避ける。
-      const categoryLabels =
-        lang === "ja"
-          ? {
-              Position: "ポジション",
-              Scenario: "シナリオ",
-              Prerequisite: "セットアップ・アクション",
-              Action: "アクション",
-              Submission: "サブミッション",
-              Source: "ソース",
-            }
+      function getCategoryLabels(lang) {
+        return lang === "ja"
+          ? { Position: "ポジション", Scenario: "シナリオ", Prerequisite: "セットアップ・アクション", Action: "アクション", Submission: "サブミッション", Source: "ソース" }
           : lang === "ko"
-            ? {
-                Position: "포지션",
-                Scenario: "시나리오",
-                Prerequisite: "셋업・액션",
-                Action: "액션",
-                Submission: "서브미션",
-                Source: "소스",
-              }
+            ? { Position: "포지션", Scenario: "시나리오", Prerequisite: "셋업・액션", Action: "액션", Submission: "서브미션", Source: "소스" }
             : lang === "pt"
-              ? {
-                  Position: "Posição",
-                  Scenario: "Cenário",
-                  Prerequisite: "Preparação / Ação",
-                  Action: "Ação",
-                  Submission: "Finalização",
-                  Source: "Fonte",
-                }
+              ? { Position: "Posição", Scenario: "Cenário", Prerequisite: "Preparação / Ação", Action: "Ação", Submission: "Finalização", Source: "Fonte" }
               : lang === "es"
-                ? {
-                    Position: "Posición",
-                    Scenario: "Escenario",
-                    Prerequisite: "Preparación / Acción",
-                    Action: "Acción",
-                    Submission: "Sumisión",
-                    Source: "Fuente",
-                  }
+                ? { Position: "Posición", Scenario: "Escenario", Prerequisite: "Preparación / Acción", Action: "Acción", Submission: "Sumisión", Source: "Fuente" }
                 : lang === "fr"
-                  ? {
-                      Position: "Position",
-                      Scenario: "Scénario",
-                      Prerequisite: "Préparation / Action",
-                      Action: "Action",
-                      Submission: "Soumission",
-                      Source: "Source",
-                    }
-                  : {
-                      Position: "Position",
-                      Scenario: "Scenario",
-                      Prerequisite: "Setup / Action",
-                      Action: "Action",
-                      Submission: "Submission",
-                      Source: "Source",
-                    };
+                  ? { Position: "Position", Scenario: "Scénario", Prerequisite: "Préparation / Action", Action: "Action", Submission: "Soumission", Source: "Source" }
+                  : { Position: "Position", Scenario: "Scenario", Prerequisite: "Setup / Action", Action: "Action", Submission: "Submission", Source: "Source" };
+      }
 
       const list = document.getElementById("list");
       const count = document.getElementById("count");
@@ -501,13 +464,13 @@
         es: "etiquetas",
         fr: "tags",
       };
-      input.placeholder = `${placeholders[lang] || placeholders.en} / Tag`;
 
       const normalize = (value) => value.toLowerCase().trim();
       const getLabels = (tag) => (tag.labels && typeof tag.labels === "object" ? tag.labels : {});
       const getAliasesByLocale = (tag) =>
         tag.aliasesByLocale && typeof tag.aliasesByLocale === "object" ? tag.aliasesByLocale : {};
       const resolveLabel = (tag) => {
+        const lang = getCurrentLang();
         const labels = getLabels(tag);
         return (
           labels[lang] ||
@@ -518,6 +481,7 @@
         );
       };
       const resolveAltLabel = (tag, primary) => {
+        const lang = getCurrentLang();
         const labels = getLabels(tag);
         const alt =
           lang === "ja"
@@ -527,6 +491,7 @@
         return alt;
       };
       const resolveAliases = (tag) => {
+        const lang = getCurrentLang();
         const byLocale = getAliasesByLocale(tag);
         if (Array.isArray(byLocale[lang]) && byLocale[lang].length) return byLocale[lang];
         if (Array.isArray(tag.aliases) && tag.aliases.length) return tag.aliases;
@@ -547,7 +512,13 @@
           .join(" ");
       };
 
+      let currentTags = [];
+
       const render = (tags, query) => {
+        const lang = getCurrentLang();
+        const categoryLabels = getCategoryLabels(lang);
+        input.placeholder = `${placeholders[lang] || placeholders.en} / Tag`;
+
         list.innerHTML = "";
         const q = normalize(query || "");
         const filtered = tags.filter((tag) => {
@@ -710,8 +681,12 @@
         .then((res) => res.json())
         .then((data) => {
           const tags = data.tags || [];
+          currentTags = tags;
           render(tags, "");
-          input.addEventListener("input", () => render(tags, input.value));
+          input.addEventListener("input", () => render(currentTags, input.value));
+          window.rerenderTagList = function () {
+            render(currentTags, input.value);
+          };
         })
         .catch(() => {
           list.innerHTML = "<p>Failed to load tag list.</p>";
