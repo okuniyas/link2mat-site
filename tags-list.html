@@ -426,12 +426,13 @@
         return "other";
       }
 
+      // セットアップに Action も含めて表示するため見出しは「セットアップ・アクション」。Action は別セクションにせず重複を避ける。
       const categoryLabels =
         lang === "ja"
           ? {
               Position: "ポジション",
               Scenario: "シナリオ",
-              Prerequisite: "セットアップ",
+              Prerequisite: "セットアップ・アクション",
               Action: "アクション",
               Submission: "サブミッション",
               Source: "ソース",
@@ -440,7 +441,7 @@
             ? {
                 Position: "포지션",
                 Scenario: "시나리오",
-                Prerequisite: "셋업",
+                Prerequisite: "셋업・액션",
                 Action: "액션",
                 Submission: "서브미션",
                 Source: "소스",
@@ -449,7 +450,7 @@
               ? {
                   Position: "Posição",
                   Scenario: "Cenário",
-                  Prerequisite: "Preparação",
+                  Prerequisite: "Preparação / Ação",
                   Action: "Ação",
                   Submission: "Finalização",
                   Source: "Fonte",
@@ -458,7 +459,7 @@
                 ? {
                     Position: "Posición",
                     Scenario: "Escenario",
-                    Prerequisite: "Preparación",
+                    Prerequisite: "Preparación / Acción",
                     Action: "Acción",
                     Submission: "Sumisión",
                     Source: "Fuente",
@@ -467,7 +468,7 @@
                   ? {
                       Position: "Position",
                       Scenario: "Scénario",
-                      Prerequisite: "Préparation",
+                      Prerequisite: "Préparation / Action",
                       Action: "Action",
                       Submission: "Soumission",
                       Source: "Source",
@@ -475,7 +476,7 @@
                   : {
                       Position: "Position",
                       Scenario: "Scenario",
-                      Prerequisite: "Setup",
+                      Prerequisite: "Setup / Action",
                       Action: "Action",
                       Submission: "Submission",
                       Source: "Source",
@@ -607,6 +608,8 @@
 
         for (const key of order) {
           if (!byCategory.has(key)) continue;
+          // Action は Prerequisite とまとめて「セットアップ・アクション」で表示済みのため、別セクションにしない（重複防止）
+          if (key === "Action") continue;
           const section = document.createElement("div");
           section.className = "section";
           const title = document.createElement("h2");
