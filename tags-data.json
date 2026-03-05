@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.8",
+  "version": "dict_v1.2.9",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -1660,6 +1660,117 @@
         "hq",
         "headquarters position",
         "헤드쿼터"
+      ]
+    },
+    {
+      "tagId": "pos.top.camping_inside",
+      "category": "Position",
+      "canonicalJa": "インサイドキャンピングポジション",
+      "canonicalEn": "Inside Camping Position",
+      "related": [
+        "act.pass.leg_drag",
+        "act.pass.long_step",
+        "act.pass.knee_cut",
+        "pos.top.knee_on_belly",
+        "pos.guard.half",
+        "pos.top.side_control"
+      ],
+      "labels": {
+        "ja": "インサイドキャンピングポジション",
+        "en": "Inside Camping Position",
+        "ko": "인사이드 캠핑 포지션",
+        "pt": "Posição de camping por dentro",
+        "es": "Posición de camping por dentro",
+        "fr": "Position camping intérieure"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "inside camping position",
+          "J-point camping inside",
+          "camping inside"
+        ],
+        "ja": [
+          "インサイドキャンピング",
+          "キャンピングポジション（インサイド）"
+        ],
+        "ko": [
+          "인사이드 캠핑"
+        ],
+        "pt": [
+          "camping por dentro"
+        ],
+        "es": [
+          "camping por dentro"
+        ],
+        "fr": [
+          "camping intérieure"
+        ]
+      },
+      "aliases": [
+        "inside camping position",
+        "J-point camping inside",
+        "camping inside",
+        "インサイドキャンピング",
+        "キャンピングポジション（インサイド）",
+        "인사이드 캠핑",
+        "camping por dentro",
+        "camping intérieure"
+      ]
+    },
+    {
+      "tagId": "pos.top.camping_outside",
+      "category": "Position",
+      "canonicalJa": "アウトサイドキャンピングポジション",
+      "canonicalEn": "Outside Camping Position",
+      "related": [
+        "act.pass.leg_drag",
+        "act.pass.long_step",
+        "act.pass.knee_cut",
+        "pos.top.knee_on_belly",
+        "pos.guard.half",
+        "pos.top.side_control"
+      ],
+      "labels": {
+        "ja": "アウトサイドキャンピングポジション",
+        "en": "Outside Camping Position",
+        "ko": "아웃사이드 캠핑 포지션",
+        "pt": "Posição de camping por fora",
+        "es": "Posición de camping por fuera",
+        "fr": "Position camping extérieure"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "outside camping position",
+          "J-point camping outside",
+          "camping outside"
+        ],
+        "ja": [
+          "アウトサイドキャンピング",
+          "キャンピングポジション（アウトサイド）"
+        ],
+        "ko": [
+          "아웃사이드 캠핑"
+        ],
+        "pt": [
+          "camping por fora"
+        ],
+        "es": [
+          "camping por fuera"
+        ],
+        "fr": [
+          "camping extérieure"
+        ]
+      },
+      "aliases": [
+        "outside camping position",
+        "J-point camping outside",
+        "camping outside",
+        "アウトサイドキャンピング",
+        "キャンピングポジション（アウトサイド）",
+        "아웃사이드 캠핑",
+        "camping por fora",
+        "camping por fuera",
+        "camping extérieure"
       ]
     },
     {
