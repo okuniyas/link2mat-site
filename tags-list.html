@@ -480,23 +480,22 @@
           tag.tagId
         );
       };
+      // 英語選択時は括弧を出さない（日本語の読みを外す）。それ以外では英語を括弧に表示する。
       const resolveAltLabel = (tag, primary) => {
         const lang = getCurrentLang();
+        if (lang === "en") return "";
         const labels = getLabels(tag);
-        const alt =
-          lang === "ja"
-            ? labels.en || tag.canonicalEn
-            : labels.ja || tag.canonicalJa;
+        const alt = labels.en || tag.canonicalEn;
         if (!alt || alt === primary) return "";
         return alt;
       };
+      // 選択中の言語のエイリアスのみ表示する（他言語を混ぜない）。日本語選択時は他言語のエイリアスを出さない。
       const resolveAliases = (tag) => {
         const lang = getCurrentLang();
         const byLocale = getAliasesByLocale(tag);
         if (Array.isArray(byLocale[lang]) && byLocale[lang].length) return byLocale[lang];
         if (Array.isArray(tag.aliases) && tag.aliases.length) return tag.aliases;
-        const merged = Object.values(byLocale).flat();
-        return merged.filter((value) => typeof value === "string" && value.trim());
+        return [];
       };
       const collectSearchText = (tag) => {
         const labels = Object.values(getLabels(tag));
