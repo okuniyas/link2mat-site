@@ -12237,28 +12237,42 @@
         "fr": "Step Sur"
       },
       "aliasesByLocale": {
+        "ja": [
+          "またぐ"
+        ],
         "en": [
-          "step over"
+          "step over",
+          "straddle"
         ],
         "ko": [
-          "스텝 오버"
+          "스텝 오버",
+          "넘다"
         ],
         "pt": [
-          "passo por cima"
+          "passo por cima",
+          "cavalgar"
         ],
         "es": [
-          "step sobre"
+          "step sobre",
+          "montar"
         ],
         "fr": [
-          "step sur"
+          "step sur",
+          "enjamber"
         ]
       },
       "aliases": [
+        "またぐ",
         "step over",
+        "straddle",
         "스텝 오버",
+        "넘다",
         "passo por cima",
+        "cavalgar",
         "step sobre",
-        "step sur"
+        "montar",
+        "step sur",
+        "enjamber"
       ]
     },
     {
