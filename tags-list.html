@@ -489,12 +489,11 @@
         if (!alt || alt === primary) return "";
         return alt;
       };
-      // 選択中の言語のエイリアスのみ表示する（他言語を混ぜない）。日本語選択時は他言語のエイリアスを出さない。
+      // 選択中の言語のエイリアスのみ表示する（他言語を混ぜない）。tag.aliases は全言語マージのためフォールバックに使わない。
       const resolveAliases = (tag) => {
         const lang = getCurrentLang();
         const byLocale = getAliasesByLocale(tag);
         if (Array.isArray(byLocale[lang]) && byLocale[lang].length) return byLocale[lang];
-        if (Array.isArray(tag.aliases) && tag.aliases.length) return tag.aliases;
         return [];
       };
       const collectSearchText = (tag) => {
