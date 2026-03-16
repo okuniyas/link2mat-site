@@ -310,10 +310,7 @@
         title.textContent = `${display} / ${titleSuffix}`;
 
         const byLocale = tag.aliasesByLocale || {};
-        const aliasText = (byLocale[lang] && byLocale[lang].length
-          ? byLocale[lang]
-          : tag.aliases || []
-        )
+        const aliasText = (Array.isArray(byLocale[lang]) && byLocale[lang].length ? byLocale[lang] : [])
           .filter(Boolean)
           .join(", ");
         const related = (tag.related || []).map(

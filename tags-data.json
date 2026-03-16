@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.10",
+  "version": "dict_v1.2.15",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -224,7 +224,6 @@
       "related": [
         "act.guard.retention",
         "act.guard.wrestle_up",
-        "act.pass.torreando",
         "pre.distance_management"
       ],
       "labels": {
@@ -466,9 +465,8 @@
       "canonicalEn": "Half Guard",
       "related": [
         "act.guard.sweep",
-        "act.pass.knee_cut",
         "pre.underhook",
-        "pre.knee_shield"
+        "pos.guard.knee_shield"
       ],
       "labels": {
         "ja": "ハーフガード",
@@ -540,9 +538,8 @@
       "canonicalEn": "Deep Half Guard",
       "related": [
         "act.guard.sweep",
-        "act.pass.knee_cut",
         "pre.underhook",
-        "pre.knee_shield"
+        "pos.guard.knee_shield"
       ],
       "labels": {
         "ja": "ディープハーフガード",
@@ -691,6 +688,7 @@
       "canonicalEn": "Butterfly Guard",
       "related": [
         "act.guard.sweep",
+        "act.guard.sweep.hikikomi_gaeshi",
         "act.guard.wrestle_up",
         "pre.underhook",
         "pre.off_balance"
@@ -834,7 +832,6 @@
       "canonicalEn": "De La Riva",
       "related": [
         "act.guard.sweep",
-        "act.pass.leg_drag",
         "pre.knee_line_control"
       ],
       "labels": {
@@ -925,7 +922,7 @@
       "related": [
         "act.guard.sweep",
         "act.sub.triangle",
-        "pre.control.wrist"
+        "pre.wrist_control"
       ],
       "labels": {
         "ja": "ラバーガード",
@@ -1972,7 +1969,7 @@
         "act.control.turtle_breakdown",
         "act.transition.take_back",
         "act.escape.turtle",
-        "act.wrestling.wrestle_up",
+        "act.guard.wrestle_up",
         "pre.hip_control",
         "pre.frame"
       ],
@@ -2356,7 +2353,7 @@
       "canonicalJa": "スクランブル",
       "canonicalEn": "Scramble",
       "related": [
-        "act.wrestling.wrestle_up",
+        "act.guard.wrestle_up",
         "act.control.stabilize",
         "pre.connection"
       ],
@@ -3589,6 +3586,52 @@
         "raspagem de tesoura",
         "scissor barrido",
         "scissor balayage"
+      ]
+    },
+    {
+      "tagId": "act.guard.sweep.hikikomi_gaeshi",
+      "category": "Action",
+      "canonicalJa": "引き込み返し",
+      "canonicalEn": "Hikikomi Gaeshi",
+      "related": [
+        "pos.guard.butterfly",
+        "act.guard.sweep",
+        "pre.off_balance"
+      ],
+      "labels": {
+        "ja": "引き込み返し",
+        "en": "Hikikomi Gaeshi",
+        "ko": "끌어넣기 되치기",
+        "pt": "Hikikomi Gaeshi",
+        "es": "Hikikomi Gaeshi",
+        "fr": "Hikikomi Gaeshi"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "hikikomi gaeshi",
+          "pull-in sweep"
+        ],
+        "ja": [
+          "ひきこみがえし"
+        ],
+        "ko": [
+          "히키코미 가에시"
+        ],
+        "pt": [
+          "hikikomi gaeshi"
+        ],
+        "es": [
+          "hikikomi gaeshi"
+        ],
+        "fr": [
+          "hikikomi gaeshi"
+        ]
+      },
+      "aliases": [
+        "hikikomi gaeshi",
+        "pull-in sweep",
+        "ひきこみがえし",
+        "히키코미 가에시"
       ]
     },
     {
@@ -5274,7 +5317,7 @@
       "canonicalEn": "Cup",
       "related": [
         "act.transition.take_back",
-        "pre.control.elbow_line",
+        "pre.control_elbow_line",
         "pre.grip.c_grip"
       ],
       "labels": {
@@ -7260,7 +7303,7 @@
       "canonicalJa": "リストロック",
       "canonicalEn": "Wrist Lock",
       "related": [
-        "pre.control.wrist",
+        "pre.wrist_control",
         "pre.control.pin"
       ],
       "labels": {
@@ -8252,7 +8295,7 @@
       "canonicalJa": "タートルエスケープ",
       "canonicalEn": "Turtle Escape",
       "related": [
-        "act.wrestling.wrestle_up",
+        "act.guard.wrestle_up",
         "pre.base",
         "pre.head_position"
       ],
@@ -11569,7 +11612,6 @@
       "canonicalJa": "オーバーフック",
       "canonicalEn": "Overhook",
       "related": [
-        "act.wrestling.single_leg_takedown",
         "act.guard.sweep"
       ],
       "labels": {
@@ -11980,6 +12022,29 @@
       ]
     },
     {
+      "tagId": "pre.arm_control",
+      "category": "Prerequisite",
+      "canonicalJa": "腕コントロール",
+      "canonicalEn": "Arm Control",
+      "related": [],
+      "labels": {
+        "ja": "腕コントロール",
+        "en": "Arm Control"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "腕のコントロール"
+        ],
+        "en": [
+          "arm control"
+        ]
+      },
+      "aliases": [
+        "腕のコントロール",
+        "arm control"
+      ]
+    },
+    {
       "tagId": "pre.position.near_side",
       "category": "Prerequisite",
       "canonicalJa": "ニアサイド",
@@ -12180,6 +12245,31 @@
       ]
     },
     {
+      "tagId": "pre.distance_management",
+      "category": "Prerequisite",
+      "canonicalJa": "間合いの調整",
+      "canonicalEn": "Distance Management",
+      "related": [],
+      "labels": {
+        "ja": "間合いの調整",
+        "en": "Distance Management"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "間合い",
+          "距離の管理"
+        ],
+        "en": [
+          "distance management"
+        ]
+      },
+      "aliases": [
+        "間合い",
+        "距離の管理",
+        "distance management"
+      ]
+    },
+    {
       "tagId": "pre.elbow_cup",
       "category": "Prerequisite",
       "canonicalJa": "エルボーカップ",
@@ -12363,7 +12453,7 @@
       "related": [
         "act.control.stabilize",
         "pre.control_elbow_line",
-        "pre.control.wrist"
+        "pre.wrist_control"
       ],
       "labels": {
         "ja": "ピン（固定）",
@@ -12736,6 +12826,7 @@
       "canonicalJa": "クロスフェイス",
       "canonicalEn": "Crossface",
       "related": [
+        "pre.pillow",
         "act.pass.knee_cut",
         "act.sub.arm_triangle",
         "act.control.stabilize"
@@ -12768,6 +12859,65 @@
       "aliases": [
         "crossface",
         "크로스페이스"
+      ]
+    },
+    {
+      "tagId": "pre.pillow",
+      "category": "Prerequisite",
+      "canonicalJa": "まくら",
+      "canonicalEn": "Pillow",
+      "related": [
+        "pre.crossface"
+      ],
+      "labels": {
+        "ja": "まくら",
+        "en": "Pillow",
+        "ko": "베개",
+        "pt": "Travesseiro",
+        "es": "Almohada",
+        "fr": "Oreiller"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "pillow (head)",
+          "head pillow"
+        ],
+        "ja": [
+          "枕",
+          "枕側",
+          "腕で枕を作る"
+        ],
+        "ko": [
+          "베개",
+          "목 베개"
+        ],
+        "pt": [
+          "travesseiro",
+          "braço travesseiro"
+        ],
+        "es": [
+          "almohada",
+          "brazo almohada"
+        ],
+        "fr": [
+          "oreiller",
+          "bras oreiller"
+        ]
+      },
+      "aliases": [
+        "pillow (head)",
+        "head pillow",
+        "枕",
+        "枕側",
+        "腕で枕を作る",
+        "베개",
+        "목 베개",
+        "travesseiro",
+        "braço travesseiro",
+        "almohada",
+        "brazo almohada",
+        "oreiller",
+        "bras oreiller"
       ]
     },
     {
@@ -12867,6 +13017,105 @@
         "cadera post",
         "pied on hanche",
         "hanche post"
+      ]
+    },
+    {
+      "tagId": "pre.feint",
+      "category": "Prerequisite",
+      "canonicalJa": "フェイント",
+      "canonicalEn": "Feint",
+      "related": [
+        "pre.fake"
+      ],
+      "labels": {
+        "ja": "フェイント",
+        "en": "Feint",
+        "ko": "페인트",
+        "pt": "Finta",
+        "es": "Finta",
+        "fr": "Feinte"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "feint",
+          "small feint"
+        ],
+        "ja": [
+          "少しの見せかけの動き",
+          "フェイク"
+        ],
+        "ko": [
+          "페인트"
+        ],
+        "pt": [
+          "finta"
+        ],
+        "es": [
+          "finta"
+        ],
+        "fr": [
+          "feinte"
+        ]
+      },
+      "aliases": [
+        "feint",
+        "small feint",
+        "少しの見せかけの動き",
+        "フェイク",
+        "페인트",
+        "finta",
+        "feinte"
+      ]
+    },
+    {
+      "tagId": "pre.fake",
+      "category": "Prerequisite",
+      "canonicalJa": "フェイク",
+      "canonicalEn": "Fake",
+      "related": [
+        "pre.feint"
+      ],
+      "labels": {
+        "ja": "フェイク",
+        "en": "Fake",
+        "ko": "페이크",
+        "pt": "Finta (com risco)",
+        "es": "Finta (con riesgo)",
+        "fr": "Feinte (à risque)"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "fake",
+          "committed fake"
+        ],
+        "ja": [
+          "見せかけ",
+          "本気に見せる動き",
+          "フェイント"
+        ],
+        "ko": [
+          "페이크"
+        ],
+        "pt": [
+          "finta com risco"
+        ],
+        "es": [
+          "finta con riesgo"
+        ],
+        "fr": [
+          "feinte à risque"
+        ]
+      },
+      "aliases": [
+        "fake",
+        "committed fake",
+        "見せかけ",
+        "本気に見せる動き",
+        "フェイント",
+        "페이크",
+        "finta com risco",
+        "finta con riesgo",
+        "feinte à risque"
       ]
     },
     {
@@ -13619,6 +13868,67 @@
         "姿勢を崩す",
         "포스처 브레이크",
         "quebrar postura"
+      ]
+    },
+    {
+      "tagId": "pre.posture.stand",
+      "category": "Prerequisite",
+      "canonicalJa": "立てる",
+      "canonicalEn": "Stand on mat",
+      "related": [],
+      "labels": {
+        "ja": "立てる",
+        "en": "Stand on mat",
+        "ko": "세우기",
+        "pt": "Erguer no chão",
+        "es": "Poner en el suelo",
+        "fr": "Dresser au sol"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "post",
+          "stand (body part)",
+          "knee up",
+          "elbow post"
+        ],
+        "ja": [
+          "膝を立てる",
+          "肘を立てる",
+          "腕を立てる"
+        ],
+        "ko": [
+          "무릎 세우기",
+          "포스팅"
+        ],
+        "pt": [
+          "postar",
+          "joelho no chão"
+        ],
+        "es": [
+          "posturar",
+          "rodilla arriba"
+        ],
+        "fr": [
+          "poster",
+          "genou dressé"
+        ]
+      },
+      "aliases": [
+        "post",
+        "stand (body part)",
+        "knee up",
+        "elbow post",
+        "膝を立てる",
+        "肘を立てる",
+        "腕を立てる",
+        "무릎 세우기",
+        "포스팅",
+        "postar",
+        "joelho no chão",
+        "posturar",
+        "rodilla arriba",
+        "poster",
+        "genou dressé"
       ]
     },
     {
