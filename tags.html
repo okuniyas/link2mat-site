@@ -100,12 +100,12 @@
       <h1 class="lang-block" data-lang="pt">Ajuda com tags</h1>
       <h1 class="lang-block" data-lang="es">Ayuda con etiquetas</h1>
       <h1 class="lang-block" data-lang="fr">Aide sur les tags</h1>
-      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-01-29</p>
-      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-01-29</p>
-      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-01-29</p>
-      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-01-29</p>
-      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-01-29</p>
-      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-01-29</p>
+      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-02-26</p>
+      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-02-26</p>
+      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-02-26</p>
+      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-02-26</p>
+      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-02-26</p>
+      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-02-26</p>
 
       <div class="lang-switcher" role="group" aria-label="Language / 言語">
         <span class="lang-label">Language / 言語:</span>
@@ -397,12 +397,8 @@
           try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
         }
 
-        langButtons.forEach(function (btn) {
-          btn.addEventListener("click", function () { setLang(btn.getAttribute("data-lang")); });
-        });
-
-        const lang = resolveLang();
-        setLang(lang);
+        let currentLang = resolveLang();
+        setLang(currentLang);
 
         const input = document.getElementById("tagInput");
         const link = document.getElementById("searchLink");
@@ -423,12 +419,11 @@
           fr: 'jiu-jitsu "%s"',
         };
 
-        if (input) input.placeholder = ui[lang]?.placeholder ?? ui.en.placeholder;
-        if (link) link.textContent = ui[lang]?.search ?? ui.en.search;
-
-        const params = new URLSearchParams(window.location.search);
-        const initial = params.get("tag");
-        if (initial && input) input.value = initial;
+        function updateSearchUi() {
+          if (input) input.placeholder = ui[currentLang]?.placeholder ?? ui.en.placeholder;
+          if (link) link.textContent = ui[currentLang]?.search ?? ui.en.search;
+          updateLink();
+        }
 
         function updateLink() {
           if (!link) return;
@@ -437,12 +432,26 @@
             link.href = "https://www.google.com";
             return;
           }
-          const template = phrasePrefix[lang] || phrasePrefix.en;
+          const template = phrasePrefix[currentLang] || phrasePrefix.en;
           const phrase = template.replace("%s", query);
           link.href = "https://www.google.com/search?q=" + encodeURIComponent(phrase);
         }
 
-        updateLink();
+        langButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            const lang = btn.getAttribute("data-lang");
+            setLang(lang);
+            currentLang = lang;
+            updateSearchUi();
+          });
+        });
+
+        updateSearchUi();
+
+        const params = new URLSearchParams(window.location.search);
+        const initial = params.get("tag");
+        if (initial && input) input.value = initial;
+
         if (input) input.addEventListener("input", updateLink);
       })();
     </script>

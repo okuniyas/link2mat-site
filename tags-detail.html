@@ -81,12 +81,12 @@
   <body>
     <div class="container">
       <h1 id="title">Tag Detail / タグ詳細</h1>
-      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-02-01</p>
-      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-02-01</p>
-      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-02-01</p>
-      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-02-01</p>
-      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-02-01</p>
-      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-02-01</p>
+      <p class="lang-block lang-visible muted" data-lang="en"><strong>Last updated:</strong> 2026-03-18</p>
+      <p class="lang-block muted" data-lang="ja"><strong>更新日:</strong> 2026-03-18</p>
+      <p class="lang-block muted" data-lang="ko"><strong>최종 업데이트:</strong> 2026-03-18</p>
+      <p class="lang-block muted" data-lang="pt"><strong>Última atualização:</strong> 2026-03-18</p>
+      <p class="lang-block muted" data-lang="es"><strong>Última actualización:</strong> 2026-03-18</p>
+      <p class="lang-block muted" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-03-18</p>
 
       <div class="lang-switcher" role="group" aria-label="Language / 言語">
         <span class="lang-label">Language / 言語:</span>
@@ -173,21 +173,36 @@
           try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
         }
 
+        function reflowContent() {
+          if (currentTag) {
+            renderTag(currentTag, allTagsList);
+          } else {
+            renderNotFound();
+          }
+        }
+
         langButtons.forEach(function (btn) {
-          btn.addEventListener("click", function () { setLang(btn.getAttribute("data-lang")); });
+          btn.addEventListener("click", function () {
+            const lang = btn.getAttribute("data-lang");
+            setLang(lang);
+            currentLang = lang;
+            reflowContent();
+          });
         });
 
-        const lang = resolveLang();
-        setLang(lang);
+        let currentLang = resolveLang();
+        setLang(currentLang);
 
       const normalize = (value) => String(value || "").toLowerCase().trim();
 
       const params = new URLSearchParams(window.location.search);
       const tagId = params.get("id");
       const tagQuery = params.get("tag");
-      const isJapanese = lang === "ja";
-      const categoryLabels =
-        lang === "ja"
+      let currentTag = null;
+      let allTagsList = [];
+
+      const getCategoryLabels = (langCode) =>
+        langCode === "ja"
           ? {
               Position: "ポジション",
               Scenario: "シナリオ",
@@ -196,7 +211,7 @@
               Submission: "極め",
               Source: "ソース",
             }
-          : lang === "ko"
+          : langCode === "ko"
             ? {
                 Position: "포지션",
                 Scenario: "시나리오",
@@ -205,7 +220,7 @@
                 Submission: "서브미션",
                 Source: "소스",
               }
-            : lang === "pt"
+            : langCode === "pt"
               ? {
                   Position: "Posição",
                   Scenario: "Cenário",
@@ -214,7 +229,7 @@
                   Submission: "Finalização",
                   Source: "Fonte",
                 }
-              : lang === "es"
+              : langCode === "es"
                 ? {
                     Position: "Posición",
                     Scenario: "Escenario",
@@ -223,7 +238,7 @@
                     Submission: "Finalización",
                     Source: "Fuente",
                   }
-                : lang === "fr"
+                : langCode === "fr"
                   ? {
                       Position: "Position",
                       Scenario: "Scénario",
@@ -282,7 +297,7 @@
           <p class="lang-block" data-lang="es"><a href="tags-list.html">Lista de etiquetas</a></p>
           <p class="lang-block" data-lang="fr"><a href="tags-list.html">Liste des tags</a></p>
         `;
-        setLang(lang);
+        setLang(currentLang);
       };
 
       const getTagLabel = (t, langCode) => {
@@ -301,41 +316,43 @@
       const renderTag = (tag, allTags) => {
         const content = document.getElementById("content");
         const title = document.getElementById("title");
+        const langCode = currentLang;
+        const categoryLabels = getCategoryLabels(langCode);
         const labels = tag.labels || {};
         const display =
-          labels[lang] ||
-          (lang === "ja" ? tag.canonicalJa : tag.canonicalEn) ||
+          labels[langCode] ||
+          (langCode === "ja" ? tag.canonicalJa : tag.canonicalEn) ||
           tag.canonicalJa ||
           tag.canonicalEn ||
           tag.tagId;
         const titleSuffix =
-          lang === "ja"
+          langCode === "ja"
             ? "タグ詳細"
-            : lang === "ko"
+            : langCode === "ko"
             ? "태그 상세"
-            : lang === "pt"
+            : langCode === "pt"
             ? "Detalhe da tag"
-            : lang === "es"
+            : langCode === "es"
             ? "Detalle de la etiqueta"
-            : lang === "fr"
+            : langCode === "fr"
             ? "Détail du tag"
             : "Tag Detail";
         title.textContent = `${display} / ${titleSuffix}`;
 
         const byLocale = tag.aliasesByLocale || {};
-        const aliasText = (Array.isArray(byLocale[lang]) && byLocale[lang].length ? byLocale[lang] : [])
+        const aliasText = (Array.isArray(byLocale[langCode]) && byLocale[langCode].length ? byLocale[langCode] : [])
           .filter(Boolean)
           .join(", ");
         const tagById = Object.fromEntries((allTags || []).map((t) => [t.tagId, t]));
         const related = (tag.related || []).map((id) => {
           const relatedTag = tagById[id];
-          const label = relatedTag ? getTagLabel(relatedTag, lang) : id;
+          const label = relatedTag ? getTagLabel(relatedTag, langCode) : id;
           const safeLabel = label
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;")
             .replace(/"/g, "&quot;");
-          return `<li><a href="tags-detail.html?id=${encodeURIComponent(id)}&lang=${encodeURIComponent(lang)}">${safeLabel}</a></li>`;
+          return `<li><a href="tags-detail.html?id=${encodeURIComponent(id)}&lang=${encodeURIComponent(langCode)}">${safeLabel}</a></li>`;
         });
         const category = categoryLabels[tag.category] || tag.category || "Other";
 
@@ -344,29 +361,29 @@
           display ||
           tag.tagId;
         const phrase =
-          lang === "ja"
+          langCode === "ja"
             ? `柔術で "${query}" とは`
-            : lang === "ko"
+            : langCode === "ko"
             ? `주짓수 "${query}"`
-            : lang === "pt"
+            : langCode === "pt"
             ? `jiu-jitsu "${query}"`
-            : lang === "es"
+            : langCode === "es"
             ? `jiu-jitsu "${query}"`
-            : lang === "fr"
+            : langCode === "fr"
             ? `jiu-jitsu "${query}"`
             : `jiu jitsu "${query}"`;
         const webSearch = `https://www.google.com/search?q=${encodeURIComponent(phrase)}`;
 
         const searchLabel =
-          lang === "ja"
+          langCode === "ja"
             ? "Webで検索"
-            : lang === "ko"
+            : langCode === "ko"
             ? "웹에서 검색"
-            : lang === "pt"
+            : langCode === "pt"
             ? "Pesquisar na web"
-            : lang === "es"
+            : langCode === "es"
             ? "Buscar en la web"
-            : lang === "fr"
+            : langCode === "fr"
             ? "Rechercher sur le web"
             : "Search the web";
         content.innerHTML = `
@@ -391,14 +408,20 @@
         .then((res) => res.json())
         .then((data) => {
           const tags = data.tags || [];
+          allTagsList = tags;
           const tag = findTag(tags);
           if (!tag) {
+            currentTag = null;
             renderNotFound();
           } else {
+            currentTag = tag;
             renderTag(tag, tags);
           }
         })
-        .catch(() => renderNotFound());
+        .catch(() => {
+          currentTag = null;
+          renderNotFound();
+        });
 
       })();
     </script>
