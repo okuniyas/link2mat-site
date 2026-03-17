@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.15",
+  "version": "dict_v1.2.16",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -2040,6 +2040,10 @@
         "fr": "Avant Headlock"
       },
       "aliasesByLocale": {
+        "ja": [
+          "がぶり",
+          "ガブリ"
+        ],
         "en": [
           "FHL",
           "front headlock"
@@ -2060,6 +2064,8 @@
         ]
       },
       "aliases": [
+        "がぶり",
+        "ガブリ",
         "FHL",
         "front headlock",
         "프론트 헤드락",
@@ -4061,6 +4067,9 @@
         "fr": "Wrestle-up"
       },
       "aliasesByLocale": {
+        "ja": [
+          "レッスルアップ"
+        ],
         "en": [
           "wrestle up"
         ],
@@ -4078,6 +4087,7 @@
         ]
       },
       "aliases": [
+        "レッスルアップ",
         "wrestle up",
         "레슬업",
         "wrestle-up"
@@ -4210,9 +4220,6 @@
           "kiss of dragon",
           "kotd"
         ],
-        "ja": [
-          "キスオブザドラゴン"
-        ],
         "ko": [
           "키스 오브 더 드래곤"
         ],
@@ -4234,7 +4241,6 @@
         "kiss of the dragon",
         "kiss of dragon",
         "kotd",
-        "キスオブザドラゴン",
         "키스 오브 더 드래곤",
         "beijo do dragão"
       ]
@@ -5438,6 +5444,9 @@
         "fr": "Croisé Body Contrôle"
       },
       "aliasesByLocale": {
+        "ja": [
+          "クロスボディコントロール"
+        ],
         "en": [
           "cross body control",
           "crossbody"
@@ -5458,6 +5467,7 @@
         ]
       },
       "aliases": [
+        "クロスボディコントロール",
         "cross body control",
         "crossbody",
         "크로스 바디 컨트롤",
@@ -9809,7 +9819,7 @@
         ],
         "ja": [
           "柔術立ち",
-          "立ち"
+          "立ち上がる"
         ],
         "ko": [
           "테크니컬 스탠드업",
@@ -9836,7 +9846,7 @@
         "bjj standing",
         "standing",
         "柔術立ち",
-        "立ち",
+        "立ち上がる",
         "테크니컬 스탠드업",
         "주짓수 스탠딩",
         "levantada técnica",
@@ -11625,7 +11635,7 @@
       "aliasesByLocale": {
         "ja": [
           "脇抱え",
-          "脇を抱える"
+          "脇で抱える"
         ],
         "en": [
           "overhook",
@@ -11648,7 +11658,7 @@
       },
       "aliases": [
         "脇抱え",
-        "脇を抱える",
+        "脇で抱える",
         "overhook",
         "whizzer",
         "오버훅",
@@ -12757,6 +12767,9 @@
         "fr": "Connection"
       },
       "aliasesByLocale": {
+        "ja": [
+          "くっつける"
+        ],
         "en": [
           "connection"
         ],
@@ -12774,6 +12787,7 @@
         ]
       },
       "aliases": [
+        "くっつける",
         "connection",
         "커넥션",
         "conexão"
@@ -14375,6 +14389,9 @@
         "fr": "Kick"
       },
       "aliasesByLocale": {
+        "ja": [
+          "ける"
+        ],
         "en": [
           "kick"
         ],
@@ -14392,6 +14409,7 @@
         ]
       },
       "aliases": [
+        "ける",
         "kick",
         "킥",
         "chute"

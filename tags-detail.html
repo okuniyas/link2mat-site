@@ -285,7 +285,20 @@
         setLang(lang);
       };
 
-      const renderTag = (tag) => {
+      const getTagLabel = (t, langCode) => {
+        if (!t) return "";
+        const labels = t.labels || {};
+        return (
+          labels[langCode] ||
+          (langCode === "ja" ? t.canonicalJa : t.canonicalEn) ||
+          t.canonicalJa ||
+          t.canonicalEn ||
+          t.tagId ||
+          ""
+        );
+      };
+
+      const renderTag = (tag, allTags) => {
         const content = document.getElementById("content");
         const title = document.getElementById("title");
         const labels = tag.labels || {};
@@ -313,12 +326,17 @@
         const aliasText = (Array.isArray(byLocale[lang]) && byLocale[lang].length ? byLocale[lang] : [])
           .filter(Boolean)
           .join(", ");
-        const related = (tag.related || []).map(
-          (id) =>
-            `<li><a href="tags-detail.html?id=${encodeURIComponent(
-              id
-            )}&lang=${encodeURIComponent(lang)}">${id}</a></li>`
-        );
+        const tagById = Object.fromEntries((allTags || []).map((t) => [t.tagId, t]));
+        const related = (tag.related || []).map((id) => {
+          const relatedTag = tagById[id];
+          const label = relatedTag ? getTagLabel(relatedTag, lang) : id;
+          const safeLabel = label
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+          return `<li><a href="tags-detail.html?id=${encodeURIComponent(id)}&lang=${encodeURIComponent(lang)}">${safeLabel}</a></li>`;
+        });
         const category = categoryLabels[tag.category] || tag.category || "Other";
 
         const query =
@@ -377,7 +395,7 @@
           if (!tag) {
             renderNotFound();
           } else {
-            renderTag(tag);
+            renderTag(tag, tags);
           }
         })
         .catch(() => renderNotFound());
