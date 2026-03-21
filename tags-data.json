@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.16",
+  "version": "dict_v1.2.17",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -1970,6 +1970,7 @@
         "act.transition.take_back",
         "act.escape.turtle",
         "act.guard.wrestle_up",
+        "pre.twister_hook",
         "pre.hip_control",
         "pre.frame"
       ],
@@ -4253,7 +4254,8 @@
       "related": [
         "act.guard.inversion",
         "act.transition.take_back",
-        "pos.guard.open"
+        "pos.guard.open",
+        "pre.twister_hook"
       ],
       "labels": {
         "ja": "ベリンボロ",
@@ -7903,6 +7905,61 @@
         "chave de pé",
         "dedo hold",
         "orteil hold"
+      ]
+    },
+    {
+      "tagId": "pre.twister_hook",
+      "category": "Prerequisite",
+      "canonicalJa": "ツイスターフック",
+      "canonicalEn": "Twister Hook",
+      "related": [
+        "pos.turtle",
+        "act.guard.berimbolo",
+        "pos.leg_entanglement.ashi",
+        "pre.knee_line_control",
+        "act.sub.calf_slicer"
+      ],
+      "labels": {
+        "ja": "ツイスターフック",
+        "en": "Twister Hook",
+        "ko": "트위스터 훅",
+        "pt": "Twister Hook",
+        "es": "Twister Hook",
+        "fr": "Twister Hook"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "ツイスターフック",
+          "ツイスター"
+        ],
+        "en": [
+          "twister hook",
+          "twister"
+        ],
+        "ko": [
+          "트위스터 훅",
+          "트위스터"
+        ],
+        "pt": [
+          "twister hook",
+          "twister"
+        ],
+        "es": [
+          "twister hook",
+          "twister"
+        ],
+        "fr": [
+          "twister hook",
+          "twister"
+        ]
+      },
+      "aliases": [
+        "ツイスターフック",
+        "ツイスター",
+        "twister hook",
+        "twister",
+        "트위스터 훅",
+        "트위스터"
       ]
     },
     {
