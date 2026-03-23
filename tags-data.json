@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.17",
+  "version": "dict_v1.2.20",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -175,10 +175,11 @@
     },
     {
       "tagId": "pos.guard.high",
-      "category": "Position",
+      "category": "Prerequisite",
       "canonicalJa": "ハイガード",
       "canonicalEn": "High Guard",
       "related": [
+        "pos.guard.closed",
         "act.sub.armbar",
         "act.sub.triangle",
         "pre.posture_break",
@@ -955,7 +956,7 @@
     },
     {
       "tagId": "pos.guard.k_guard",
-      "category": "Position",
+      "category": "Prerequisite",
       "canonicalJa": "Kガード",
       "canonicalEn": "K-Guard",
       "related": [
@@ -1043,7 +1044,7 @@
     },
     {
       "tagId": "pos.guard.matrix",
-      "category": "Position",
+      "category": "Prerequisite",
       "canonicalJa": "マトリックス",
       "canonicalEn": "Matrix",
       "related": [
@@ -1076,45 +1077,6 @@
       "aliases": [
         "matrix",
         "매트릭스"
-      ]
-    },
-    {
-      "tagId": "pos.guard.waiter",
-      "category": "Position",
-      "canonicalJa": "ウェイターガード",
-      "canonicalEn": "Waiter Guard",
-      "related": [
-        "pos.leg_entanglement.ashi",
-        "act.guard.leg_entanglement_entry",
-        "pre.knee_line_control"
-      ],
-      "labels": {
-        "ja": "ウェイターガード",
-        "en": "Waiter Guard",
-        "ko": "웨이터 가드",
-        "pt": "Waiter Guard",
-        "es": "Waiter Guardia",
-        "fr": "Waiter Garde"
-      },
-      "aliasesByLocale": {
-        "en": [
-          "waiter guard"
-        ],
-        "ko": [
-          "웨이터 가드"
-        ],
-        "es": [
-          "waiter guardia"
-        ],
-        "fr": [
-          "waiter garde"
-        ]
-      },
-      "aliases": [
-        "waiter guard",
-        "웨이터 가드",
-        "waiter guardia",
-        "waiter garde"
       ]
     },
     {
@@ -2648,7 +2610,9 @@
         ],
         "ja": [
           "襟ラッソーガード",
-          "襟ラッソガード"
+          "襟ラッソガード",
+          "ラペララッソーガード",
+          "ラペララッソガード"
         ],
         "ko": [
           "라펠 라쏘 가드"
@@ -2670,6 +2634,8 @@
         "lapel lasso guard",
         "襟ラッソーガード",
         "襟ラッソガード",
+        "ラペララッソーガード",
+        "ラペララッソガード",
         "라펠 라쏘 가드",
         "guarda laço de lapela",
         "lapel lasso guardia",
@@ -2678,7 +2644,7 @@
     },
     {
       "tagId": "pos.guard.inverted",
-      "category": "Position",
+      "category": "Prerequisite",
       "canonicalJa": "インバーテッドガード",
       "canonicalEn": "Inverted Guard",
       "related": [
@@ -6135,7 +6101,9 @@
         ],
         "ja": [
           "襟チョーク",
-          "襟絞め"
+          "襟絞め",
+          "ラペラチョーク",
+          "ラペラ絞め"
         ],
         "ko": [
           "라펠 초크"
@@ -6154,6 +6122,8 @@
         "lapel choke",
         "襟チョーク",
         "襟絞め",
+        "ラペラチョーク",
+        "ラペラ絞め",
         "라펠 초크",
         "estrangulamento de lapela",
         "lapel estrangulación",
@@ -7288,6 +7258,9 @@
         "en": [
           "head scissors"
         ],
+        "ja": [
+          "洗濯バサミ"
+        ],
         "ko": [
           "헤드 시저스"
         ],
@@ -7303,6 +7276,7 @@
       },
       "aliases": [
         "head scissors",
+        "洗濯バサミ",
         "헤드 시저스",
         "tesoura de cabeça",
         "cabeza scissors",
@@ -11105,6 +11079,7 @@
       "related": [
         "scn.attire.gi",
         "pre.body.collar",
+        "pre.body.lapel",
         "pre.body.sleeve"
       ],
       "labels": {
@@ -11122,7 +11097,9 @@
         ],
         "ja": [
           "襟を巻き付ける",
-          "ラペル巻き付け"
+          "ラペル巻き付け",
+          "ラペラを巻き付ける",
+          "ラペラ巻き付け"
         ],
         "ko": [
           "라펠 랩"
@@ -11144,6 +11121,8 @@
         "lepel wrap",
         "襟を巻き付ける",
         "ラペル巻き付け",
+        "ラペラを巻き付ける",
+        "ラペラ巻き付け",
         "라펠 랩",
         "enrolar lapela"
       ]
@@ -11156,6 +11135,7 @@
       "related": [
         "scn.attire.gi",
         "pre.body.collar",
+        "pre.body.lapel",
         "pre.body.sleeve"
       ],
       "labels": {
@@ -11173,7 +11153,9 @@
         ],
         "ja": [
           "襟を送り込む",
-          "ラペル送り"
+          "ラペル送り",
+          "ラペラを送り込む",
+          "ラペラ送り"
         ],
         "ko": [
           "라펠 피드"
@@ -11195,8 +11177,61 @@
         "lepel feed",
         "襟を送り込む",
         "ラペル送り",
+        "ラペラを送り込む",
+        "ラペラ送り",
         "라펠 피드",
         "alimentar lapela"
+      ]
+    },
+    {
+      "tagId": "pre.lapel_pull",
+      "category": "Prerequisite",
+      "canonicalJa": "ラペルを引き出す",
+      "canonicalEn": "Lapel Pull",
+      "related": [
+        "scn.attire.gi",
+        "pre.body.collar",
+        "pre.body.lapel",
+        "pre.lapel_wrap",
+        "pre.lapel_feed"
+      ],
+      "labels": {
+        "ja": "ラペルを引き出す",
+        "en": "Lapel Pull",
+        "ko": "라펠 풀",
+        "pt": "Puxar Lapela",
+        "es": "Lapel Pull",
+        "fr": "Lapel Pull"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "lapel pull",
+          "pull lapel"
+        ],
+        "ja": [
+          "ラペラを引き出す",
+          "ラペル引き出し"
+        ],
+        "ko": [
+          "라펠 풀"
+        ],
+        "pt": [
+          "puxar lapela"
+        ],
+        "es": [
+          "lapel pull"
+        ],
+        "fr": [
+          "lapel pull"
+        ]
+      },
+      "aliases": [
+        "lapel pull",
+        "pull lapel",
+        "ラペラを引き出す",
+        "ラペル引き出し",
+        "라펠 풀",
+        "puxar lapela"
       ]
     },
     {
@@ -14209,7 +14244,10 @@
       "canonicalJa": "ウェイターポジション",
       "canonicalEn": "Waiter Position",
       "related": [
-        "act.guard.sweep"
+        "act.guard.sweep",
+        "pos.leg_entanglement.ashi",
+        "act.guard.leg_entanglement_entry",
+        "pre.knee_line_control"
       ],
       "labels": {
         "ja": "ウェイターポジション",
@@ -14222,28 +14260,36 @@
       "aliasesByLocale": {
         "en": [
           "waiter",
-          "waiter position"
+          "waiter position",
+          "waiter guard"
         ],
         "ko": [
-          "웨이터 포지션"
+          "웨이터 포지션",
+          "웨이터 가드"
         ],
         "pt": [
           "posição de waiter"
         ],
         "es": [
           "waiter",
-          "waiter position"
+          "waiter position",
+          "waiter guardia"
         ],
         "fr": [
           "waiter",
-          "waiter position"
+          "waiter position",
+          "waiter garde"
         ]
       },
       "aliases": [
         "waiter",
         "waiter position",
+        "waiter guard",
         "웨이터 포지션",
-        "posição de waiter"
+        "웨이터 가드",
+        "posição de waiter",
+        "waiter guardia",
+        "waiter garde"
       ]
     },
     {
@@ -14895,7 +14941,12 @@
       "canonicalJa": "えり",
       "canonicalEn": "Collar",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "pos.guard.closed",
+        "pos.guard.collar_sleeve",
+        "act.sub.cross_choke",
+        "pre.lapel_wrap",
+        "pre.body.lapel"
       ],
       "labels": {
         "ja": "えり",
@@ -14950,7 +15001,10 @@
       "related": [
         "pre.body.collar",
         "pre.body.collar_front",
-        "pre.body.collar_back"
+        "pre.body.collar_back",
+        "act.sub.cross_choke",
+        "pos.guard.closed",
+        "pre.lapel_feed"
       ],
       "labels": {
         "ja": "したえり",
@@ -14967,7 +15021,10 @@
       "canonicalJa": "そで",
       "canonicalEn": "Sleeve",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "pos.guard.open",
+        "pos.guard.spider",
+        "act.guard.sweep"
       ],
       "labels": {
         "ja": "そで",
@@ -14992,7 +15049,11 @@
       "canonicalJa": "ひざ",
       "canonicalEn": "Knee",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "pos.guard.knee_shield",
+        "pos.guard.half",
+        "pre.knee_line_control",
+        "act.pass.knee_cut"
       ],
       "labels": {
         "ja": "ひざ",
@@ -15009,7 +15070,11 @@
       "canonicalJa": "ひざよこ",
       "canonicalEn": "Knee Side",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "pos.guard.knee_shield",
+        "pos.guard.half",
+        "pre.knee_line_control",
+        "act.pass.knee_cut"
       ],
       "labels": {
         "ja": "ひざよこ",
@@ -15026,7 +15091,11 @@
       "canonicalJa": "ひざした",
       "canonicalEn": "Below Knee",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "pos.guard.half",
+        "pre.knee_line_control",
+        "act.pass.knee_cut",
+        "act.pass.torreando"
       ],
       "labels": {
         "ja": "ひざした",
@@ -15042,7 +15111,12 @@
       "category": "Prerequisite",
       "canonicalJa": "足首",
       "canonicalEn": "Ankle",
-      "related": [],
+      "related": [
+        "act.sub.ankle_lock",
+        "pos.leg_entanglement.ashi",
+        "pre.ankle_control",
+        "act.pass.torreando"
+      ],
       "labels": {
         "ja": "足首",
         "en": "Ankle",
@@ -15058,7 +15132,10 @@
       "canonicalJa": "くるぶし（うち）",
       "canonicalEn": "Ankle Inside",
       "related": [
-        "pre.body.ankle"
+        "pre.body.ankle",
+        "act.sub.ankle_lock",
+        "pos.leg_entanglement.ashi",
+        "pre.ankle_control"
       ],
       "labels": {
         "ja": "くるぶし（うち）",
@@ -15075,7 +15152,10 @@
       "canonicalJa": "くるぶし（そと）",
       "canonicalEn": "Ankle Outside",
       "related": [
-        "pre.body.ankle"
+        "pre.body.ankle",
+        "act.sub.ankle_lock",
+        "pos.leg_entanglement.ashi",
+        "pre.heel_exposure_control"
       ],
       "labels": {
         "ja": "くるぶし（そと）",
@@ -15092,7 +15172,10 @@
       "canonicalJa": "まえおび",
       "canonicalEn": "Belt Front",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "act.sub.ezekiel_choke",
+        "pos.top.mount",
+        "pre.pressure"
       ],
       "labels": {
         "ja": "まえおび",
@@ -15117,7 +15200,10 @@
       "canonicalJa": "うしろおび",
       "canonicalEn": "Belt Back",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "act.sub.ezekiel_choke",
+        "pos.top.mount",
+        "pre.pressure"
       ],
       "labels": {
         "ja": "うしろおび",
@@ -15134,7 +15220,10 @@
       "canonicalJa": "よこおび",
       "canonicalEn": "Belt Side",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "act.sub.ezekiel_choke",
+        "pos.top.side_control",
+        "pre.pressure"
       ],
       "labels": {
         "ja": "よこおび",
@@ -15150,7 +15239,12 @@
       "category": "Prerequisite",
       "canonicalJa": "こし",
       "canonicalEn": "Waist",
-      "related": [],
+      "related": [
+        "act.wrestling.body_lock",
+        "pre.hip_line_control",
+        "pos.top.side_control",
+        "pre.connection"
+      ],
       "labels": {
         "ja": "こし",
         "en": "Waist",
@@ -15169,12 +15263,45 @@
       ]
     },
     {
+      "tagId": "pre.body.lapel",
+      "category": "Prerequisite",
+      "canonicalJa": "ラペル",
+      "canonicalEn": "Lapel",
+      "related": [
+        "scn.attire.gi",
+        "pre.body.collar",
+        "pre.body.waist",
+        "pre.lapel_wrap",
+        "pre.lapel_feed",
+        "pre.lapel_pull"
+      ],
+      "labels": {
+        "ja": "ラペル",
+        "en": "Lapel",
+        "ko": "라펠",
+        "pt": "Lapela",
+        "es": "Lapel",
+        "fr": "Lapel"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "ラペラ"
+        ]
+      },
+      "aliases": [
+        "ラペラ"
+      ]
+    },
+    {
       "tagId": "pre.body.pant_cuff",
       "category": "Prerequisite",
       "canonicalJa": "すそ",
       "canonicalEn": "Pant Cuff",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "act.pass.stack_guard",
+        "pos.guard.closed",
+        "act.pass.torreando"
       ],
       "labels": {
         "ja": "すそ",
@@ -15191,7 +15318,10 @@
       "canonicalJa": "パンツ後ろ",
       "canonicalEn": "Back Pants",
       "related": [
-        "scn.attire.gi"
+        "scn.attire.gi",
+        "act.pass.stack_guard",
+        "pos.guard.closed",
+        "pre.pressure"
       ],
       "labels": {
         "ja": "パンツ後ろ",
@@ -15207,7 +15337,12 @@
       "category": "Prerequisite",
       "canonicalJa": "ひも通しあな",
       "canonicalEn": "Pocket",
-      "related": [],
+      "related": [
+        "pos.guard.spider",
+        "pre.lapel_wrap",
+        "act.guard.sweep",
+        "scn.attire.gi"
+      ],
       "labels": {
         "ja": "ひも通しあな",
         "en": "Pocket",
@@ -15222,7 +15357,12 @@
       "category": "Prerequisite",
       "canonicalJa": "うで",
       "canonicalEn": "Arm",
-      "related": [],
+      "related": [
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "pos.top.mount",
+        "act.sub.kimura"
+      ],
       "labels": {
         "ja": "うで",
         "en": "Arm",
@@ -15238,7 +15378,10 @@
       "canonicalJa": "じょうわん（うち）",
       "canonicalEn": "Upper Arm Inner",
       "related": [
-        "pre.body.arm"
+        "pre.body.arm",
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "act.sub.kimura"
       ],
       "labels": {
         "ja": "じょうわん（うち）",
@@ -15255,7 +15398,10 @@
       "canonicalJa": "じょうわん（そと）",
       "canonicalEn": "Upper Arm Outer",
       "related": [
-        "pre.body.arm"
+        "pre.body.arm",
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "act.sub.kimura"
       ],
       "labels": {
         "ja": "じょうわん（そと）",
@@ -15271,7 +15417,11 @@
       "category": "Prerequisite",
       "canonicalJa": "ひじ",
       "canonicalEn": "Elbow",
-      "related": [],
+      "related": [
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "pre.elbow_cup"
+      ],
       "labels": {
         "ja": "ひじ",
         "en": "Elbow",
@@ -15287,7 +15437,10 @@
       "canonicalJa": "ひじうちがわ",
       "canonicalEn": "Back of Elbow",
       "related": [
-        "pre.body.elbow"
+        "pre.body.elbow",
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "pre.elbow_cup"
       ],
       "labels": {
         "ja": "ひじうちがわ",
@@ -15304,7 +15457,10 @@
       "canonicalJa": "ひじよこ（そと）",
       "canonicalEn": "Elbow Side",
       "related": [
-        "pre.body.elbow"
+        "pre.body.elbow",
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "act.sub.kimura"
       ],
       "labels": {
         "ja": "ひじよこ（そと）",
@@ -15321,7 +15477,10 @@
       "canonicalJa": "ぜんわん（うちがわ）",
       "canonicalEn": "Forearm Inner",
       "related": [
-        "pre.body.elbow"
+        "pre.body.elbow",
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "pre.wrist_control"
       ],
       "labels": {
         "ja": "ぜんわん（うちがわ）",
@@ -15338,7 +15497,10 @@
       "canonicalJa": "ぜんわん（そとがわ）",
       "canonicalEn": "Forearm Outer",
       "related": [
-        "pre.body.elbow"
+        "pre.body.elbow",
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "pre.grip.c_grip"
       ],
       "labels": {
         "ja": "ぜんわん（そとがわ）",
@@ -15355,7 +15517,10 @@
       "canonicalJa": "ぜんわん（ブレード）",
       "canonicalEn": "Forearm Blade",
       "related": [
-        "pre.body.elbow"
+        "pre.body.elbow",
+        "act.sub.armbar",
+        "pre.control_elbow_line",
+        "pre.pressure"
       ],
       "labels": {
         "ja": "ぜんわん（ブレード）",
@@ -15371,7 +15536,12 @@
       "category": "Prerequisite",
       "canonicalJa": "むね",
       "canonicalEn": "Chest",
-      "related": [],
+      "related": [
+        "act.sub.arm_triangle",
+        "pos.top.side_control",
+        "pre.crossface",
+        "pos.top.mount"
+      ],
       "labels": {
         "ja": "むね",
         "en": "Chest",
@@ -15386,7 +15556,12 @@
       "category": "Prerequisite",
       "canonicalJa": "かた",
       "canonicalEn": "Shoulder",
-      "related": [],
+      "related": [
+        "act.sub.kimura",
+        "pos.control.kimura_trap",
+        "pre.shoulder_line_control",
+        "pos.top.side_control"
+      ],
       "labels": {
         "ja": "かた",
         "en": "Shoulder",
@@ -15402,7 +15577,10 @@
       "canonicalJa": "みぞうち",
       "canonicalEn": "Sternum",
       "related": [
-        "pre.body.chest"
+        "pre.body.chest",
+        "act.sub.arm_triangle",
+        "pre.pressure",
+        "pos.top.mount"
       ],
       "labels": {
         "ja": "みぞうち",
@@ -15418,7 +15596,12 @@
       "category": "Prerequisite",
       "canonicalJa": "わき",
       "canonicalEn": "Armpit",
-      "related": [],
+      "related": [
+        "act.sub.kimura",
+        "pos.top.side_control",
+        "pre.shoulder_line_control",
+        "act.sub.arm_triangle"
+      ],
       "labels": {
         "ja": "わき",
         "en": "Armpit",
@@ -15443,7 +15626,12 @@
       "category": "Prerequisite",
       "canonicalJa": "せなか",
       "canonicalEn": "Back",
-      "related": [],
+      "related": [
+        "pos.top.back_control",
+        "act.sub.rnc",
+        "pre.seatbelt",
+        "act.escape.back"
+      ],
       "labels": {
         "ja": "せなか",
         "en": "Back",
@@ -15467,7 +15655,10 @@
       "canonicalJa": "おなか",
       "canonicalEn": "Belly",
       "related": [
-        "pre.body.chest"
+        "pre.body.chest",
+        "act.sub.armbar",
+        "pre.pressure",
+        "pos.top.mount"
       ],
       "labels": {
         "ja": "おなか",
@@ -15485,7 +15676,10 @@
       "canonicalEn": "Side Ribs",
       "related": [
         "pre.body.armpit",
-        "pre.body.chest"
+        "pre.body.chest",
+        "act.sub.arm_triangle",
+        "pre.crossface",
+        "pos.top.side_control"
       ],
       "labels": {
         "ja": "わきばら",
@@ -15501,7 +15695,12 @@
       "category": "Prerequisite",
       "canonicalJa": "てくび",
       "canonicalEn": "Wrist",
-      "related": [],
+      "related": [
+        "pre.wrist_control",
+        "act.sub.guillotine",
+        "act.sub.armbar",
+        "pre.grip.thumbless"
+      ],
       "labels": {
         "ja": "てくび",
         "en": "Wrist",
@@ -15526,7 +15725,10 @@
       "canonicalEn": "Hand Thumb Side",
       "related": [
         "pre.body.palm",
-        "pre.body.fingers"
+        "pre.body.fingers",
+        "pre.wrist_control",
+        "act.sub.armbar",
+        "pre.grip.c_grip"
       ],
       "labels": {
         "ja": "手の親指がわ",
@@ -15544,7 +15746,10 @@
       "canonicalEn": "Hand Pinky Side",
       "related": [
         "pre.body.palm",
-        "pre.body.fingers"
+        "pre.body.fingers",
+        "pre.wrist_control",
+        "act.sub.armbar",
+        "pre.grip.thumbless"
       ],
       "labels": {
         "ja": "手の小指がわ",
@@ -15560,7 +15765,12 @@
       "category": "Prerequisite",
       "canonicalJa": "手のひら",
       "canonicalEn": "Palm",
-      "related": [],
+      "related": [
+        "pre.wrist_control",
+        "act.control.stabilize",
+        "pre.grip.c_grip",
+        "pre.grip.thumbless"
+      ],
       "labels": {
         "ja": "手のひら",
         "en": "Palm",
@@ -15575,7 +15785,11 @@
       "category": "Prerequisite",
       "canonicalJa": "手のこう",
       "canonicalEn": "Back of Hand",
-      "related": [],
+      "related": [
+        "pre.wrist_control",
+        "act.sub.armbar",
+        "pre.grip.thumbless"
+      ],
       "labels": {
         "ja": "手のこう",
         "en": "Back of Hand",
@@ -15601,7 +15815,9 @@
       "related": [
         "pre.body.palm",
         "pre.body.back_of_hand",
-        "pre.body.fingers"
+        "pre.body.fingers",
+        "pre.2on1",
+        "act.wrestling.snapdown"
       ],
       "labels": {
         "ja": "こぶし",
@@ -15617,7 +15833,12 @@
       "category": "Prerequisite",
       "canonicalJa": "ゆび",
       "canonicalEn": "Fingers",
-      "related": [],
+      "related": [
+        "pre.wrist_control",
+        "act.sub.armbar",
+        "pre.grip.thumbless",
+        "act.control.stabilize"
+      ],
       "labels": {
         "ja": "ゆび",
         "en": "Fingers",
@@ -15640,7 +15861,12 @@
       "category": "Prerequisite",
       "canonicalJa": "ひたい",
       "canonicalEn": "Forehead",
-      "related": [],
+      "related": [
+        "act.sub.guillotine",
+        "pos.neutral.front_headlock",
+        "pre.head_position",
+        "act.wrestling.snapdown"
+      ],
       "labels": {
         "ja": "ひたい",
         "en": "Forehead",
@@ -15657,7 +15883,10 @@
       "canonicalEn": "Philtrum",
       "related": [
         "pre.body.forehead",
-        "pre.body.chin"
+        "pre.body.chin",
+        "act.sub.guillotine",
+        "pre.chin_control",
+        "pre.head_position"
       ],
       "labels": {
         "ja": "とうちょうぶ",
@@ -15673,7 +15902,12 @@
       "category": "Prerequisite",
       "canonicalJa": "あたまのうしろ",
       "canonicalEn": "Back of Head",
-      "related": [],
+      "related": [
+        "act.sub.rnc",
+        "pos.top.back_control",
+        "pre.seatbelt",
+        "pre.head_position"
+      ],
       "labels": {
         "ja": "あたまのうしろ",
         "en": "Back of Head",
@@ -15696,7 +15930,12 @@
       "category": "Prerequisite",
       "canonicalJa": "みみ",
       "canonicalEn": "Ear",
-      "related": [],
+      "related": [
+        "pre.head_position",
+        "pre.crossface",
+        "pos.top.side_control",
+        "pre.pressure"
+      ],
       "labels": {
         "ja": "みみ",
         "en": "Ear",
@@ -15711,7 +15950,12 @@
       "category": "Prerequisite",
       "canonicalJa": "ほほ",
       "canonicalEn": "Cheek",
-      "related": [],
+      "related": [
+        "pre.crossface",
+        "pre.pressure",
+        "pos.top.side_control",
+        "act.sub.guillotine"
+      ],
       "labels": {
         "ja": "ほほ",
         "en": "Cheek",
@@ -15726,7 +15970,12 @@
       "category": "Prerequisite",
       "canonicalJa": "あご",
       "canonicalEn": "Chin",
-      "related": [],
+      "related": [
+        "pre.chin_control",
+        "act.sub.guillotine",
+        "pos.neutral.front_headlock",
+        "pre.head_position"
+      ],
       "labels": {
         "ja": "あご",
         "en": "Chin",
@@ -15741,7 +15990,12 @@
       "category": "Prerequisite",
       "canonicalJa": "くび",
       "canonicalEn": "Neck",
-      "related": [],
+      "related": [
+        "act.sub.guillotine",
+        "act.sub.rnc",
+        "pre.chin_control",
+        "pos.top.back_control"
+      ],
       "labels": {
         "ja": "くび",
         "en": "Neck",
@@ -15764,7 +16018,12 @@
       "category": "Prerequisite",
       "canonicalJa": "すね",
       "canonicalEn": "Shin",
-      "related": [],
+      "related": [
+        "act.pass.stack_guard",
+        "pre.frame",
+        "pos.guard.butterfly",
+        "act.pass.torreando"
+      ],
       "labels": {
         "ja": "すね",
         "en": "Shin",
@@ -15779,7 +16038,12 @@
       "category": "Prerequisite",
       "canonicalJa": "ふくらはぎ",
       "canonicalEn": "Calf",
-      "related": [],
+      "related": [
+        "act.pass.stack_guard",
+        "pre.frame",
+        "pos.guard.butterfly",
+        "act.sub.heel_hook"
+      ],
       "labels": {
         "ja": "ふくらはぎ",
         "en": "Calf",
@@ -15794,7 +16058,12 @@
       "category": "Prerequisite",
       "canonicalJa": "もものまえ",
       "canonicalEn": "Front of Thigh",
-      "related": [],
+      "related": [
+        "pos.guard.half",
+        "act.pass.knee_cut",
+        "pre.knee_line_control",
+        "pos.leg_entanglement.ashi"
+      ],
       "labels": {
         "ja": "もものまえ",
         "en": "Front of Thigh",
@@ -15809,7 +16078,12 @@
       "category": "Prerequisite",
       "canonicalJa": "もものうら",
       "canonicalEn": "Back of Thigh",
-      "related": [],
+      "related": [
+        "act.sub.heel_hook",
+        "pos.leg_entanglement.ashi",
+        "pre.hip_control",
+        "pos.guard.half"
+      ],
       "labels": {
         "ja": "もものうら",
         "en": "Back of Thigh",
@@ -15824,7 +16098,12 @@
       "category": "Prerequisite",
       "canonicalJa": "うちもも",
       "canonicalEn": "Side of Thigh",
-      "related": [],
+      "related": [
+        "pos.guard.half",
+        "act.pass.knee_cut",
+        "pre.knee_line_control",
+        "act.pass.torreando"
+      ],
       "labels": {
         "ja": "うちもも",
         "en": "Side of Thigh",
@@ -15842,7 +16121,10 @@
       "related": [
         "pre.body.thigh_side",
         "pre.body.thigh_front",
-        "pre.body.thigh_back"
+        "pre.body.thigh_back",
+        "act.pass.knee_cut",
+        "pos.guard.half",
+        "pre.knee_line_control"
       ],
       "labels": {
         "ja": "そともも",
@@ -15858,7 +16140,12 @@
       "category": "Prerequisite",
       "canonicalJa": "おしり",
       "canonicalEn": "Hip / Buttock",
-      "related": [],
+      "related": [
+        "pos.guard.butterfly",
+        "act.guard.sweep",
+        "pre.hip_control",
+        "act.wrestling.body_lock"
+      ],
       "labels": {
         "ja": "おしり",
         "en": "Hip / Buttock",
@@ -15873,7 +16160,12 @@
       "category": "Prerequisite",
       "canonicalJa": "そけいぶ",
       "canonicalEn": "Groin",
-      "related": [],
+      "related": [
+        "act.wrestling.body_lock",
+        "pre.level_change",
+        "act.pass.over_under",
+        "pos.top.mount"
+      ],
       "labels": {
         "ja": "そけいぶ",
         "en": "Groin",
@@ -15897,7 +16189,10 @@
       "canonicalJa": "ひざうえ",
       "canonicalEn": "Above Knee",
       "related": [
-        "pre.body.knee"
+        "pre.body.knee",
+        "act.pass.knee_cut",
+        "pos.guard.half",
+        "pre.knee_line_control"
       ],
       "labels": {
         "ja": "ひざうえ",
@@ -15921,7 +16216,12 @@
       "category": "Prerequisite",
       "canonicalJa": "あしのこう",
       "canonicalEn": "Instep",
-      "related": [],
+      "related": [
+        "act.sub.ankle_lock",
+        "pos.leg_entanglement.ashi",
+        "pre.ankle_control",
+        "act.pass.torreando"
+      ],
       "labels": {
         "ja": "あしのこう",
         "en": "Instep",
@@ -15936,7 +16236,12 @@
       "category": "Prerequisite",
       "canonicalJa": "あしのひら",
       "canonicalEn": "Sole",
-      "related": [],
+      "related": [
+        "act.sub.ankle_lock",
+        "pos.leg_entanglement.ashi",
+        "pre.ankle_control",
+        "pre.heel_exposure_control"
+      ],
       "labels": {
         "ja": "あしのひら",
         "en": "Sole",
@@ -15951,7 +16256,12 @@
       "category": "Prerequisite",
       "canonicalJa": "かかと",
       "canonicalEn": "Heel",
-      "related": [],
+      "related": [
+        "act.sub.ankle_lock",
+        "pre.heel_exposure_control",
+        "pos.leg_entanglement.ashi",
+        "pre.ankle_control"
+      ],
       "labels": {
         "ja": "かかと",
         "en": "Heel",
@@ -15968,7 +16278,10 @@
       "canonicalEn": "Foot Thumb Side",
       "related": [
         "pre.body.ankle",
-        "pre.body.sole"
+        "pre.body.sole",
+        "act.sub.ankle_lock",
+        "pre.ankle_control",
+        "pos.leg_entanglement.ashi"
       ],
       "labels": {
         "ja": "足の親指がわ",
@@ -15986,7 +16299,10 @@
       "canonicalEn": "Foot Pinky Side",
       "related": [
         "pre.body.ankle",
-        "pre.body.sole"
+        "pre.body.sole",
+        "act.sub.ankle_lock",
+        "pre.heel_exposure_control",
+        "pos.leg_entanglement.ashi"
       ],
       "labels": {
         "ja": "足の小指がわ",
