@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.20",
+  "version": "dict_v1.2.22",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -10,6 +10,7 @@
         "act.wrestling.single_leg_takedown",
         "act.wrestling.double_leg_takedown",
         "act.wrestling.snapdown",
+        "act.wrestling.sumi_gaeshi",
         "act.guard.guard_pull"
       ],
       "labels": {
@@ -690,6 +691,7 @@
       "related": [
         "act.guard.sweep",
         "act.guard.sweep.hikikomi_gaeshi",
+        "act.wrestling.sumi_gaeshi",
         "act.guard.wrestle_up",
         "pre.underhook",
         "pre.off_balance"
@@ -1929,6 +1931,9 @@
       "canonicalEn": "Turtle",
       "related": [
         "act.control.turtle_breakdown",
+        "act.control.uchi_muso",
+        "act.control.truck",
+        "act.sub.banana_split",
         "act.transition.take_back",
         "act.escape.turtle",
         "act.guard.wrestle_up",
@@ -1992,6 +1997,8 @@
         "act.sub.guillotine",
         "act.wrestling.snapdown",
         "act.control.front_headlock_stabilize",
+        "act.control.uchi_muso",
+        "act.control.soto_muso",
         "pre.head_position"
       ],
       "labels": {
@@ -5763,6 +5770,7 @@
       "canonicalJa": "タートル崩し",
       "canonicalEn": "Turtle Breakdown",
       "related": [
+        "act.control.uchi_muso",
         "act.transition.take_back",
         "pre.hip_control",
         "pre.head_position"
@@ -5859,6 +5867,8 @@
       "canonicalEn": "Front Headlock Control",
       "related": [
         "act.sub.guillotine",
+        "act.control.uchi_muso",
+        "act.control.soto_muso",
         "pre.head_position",
         "pre.2on1"
       ],
@@ -5898,6 +5908,115 @@
         "frontal headlock control",
         "avant headlock contrôle",
         "FHL contrôle"
+      ]
+    },
+    {
+      "tagId": "act.control.uchi_muso",
+      "category": "Action",
+      "canonicalJa": "うちむそう",
+      "canonicalEn": "Uchi Muso",
+      "related": [
+        "act.control.soto_muso",
+        "pos.neutral.front_headlock",
+        "pre.grip.gable",
+        "act.control.front_headlock_stabilize",
+        "pos.turtle",
+        "act.control.turtle_breakdown"
+      ],
+      "labels": {
+        "ja": "うちむそう",
+        "en": "Uchi Muso",
+        "ko": "우치무소",
+        "pt": "Uchi Muso",
+        "es": "Uchi Muso",
+        "fr": "Uchi Muso"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "uchi muso",
+          "inner muso"
+        ],
+        "ja": [
+          "内無双",
+          "うち無双"
+        ]
+      },
+      "aliases": [
+        "uchi muso",
+        "inner muso",
+        "内無双",
+        "うち無双"
+      ]
+    },
+    {
+      "tagId": "act.control.soto_muso",
+      "category": "Action",
+      "canonicalJa": "そとむそう",
+      "canonicalEn": "Soto Muso",
+      "related": [
+        "act.control.uchi_muso",
+        "pos.neutral.front_headlock",
+        "pre.grip.gable",
+        "act.control.front_headlock_stabilize"
+      ],
+      "labels": {
+        "ja": "そとむそう",
+        "en": "Soto Muso",
+        "ko": "소토무소",
+        "pt": "Soto Muso",
+        "es": "Soto Muso",
+        "fr": "Soto Muso"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "soto muso",
+          "outer muso"
+        ],
+        "ja": [
+          "外無双",
+          "そと無双"
+        ]
+      },
+      "aliases": [
+        "soto muso",
+        "outer muso",
+        "外無双",
+        "そと無双"
+      ]
+    },
+    {
+      "tagId": "act.control.truck",
+      "category": "Action",
+      "canonicalJa": "トラックコントロール",
+      "canonicalEn": "Truck Control",
+      "related": [
+        "act.sub.banana_split",
+        "pre.twister_hook",
+        "pos.turtle"
+      ],
+      "labels": {
+        "ja": "トラックコントロール",
+        "en": "Truck Control",
+        "ko": "트럭 컨트롤",
+        "pt": "Truck Control",
+        "es": "Truck Control",
+        "fr": "Truck Contrôle"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "truck control",
+          "truck position"
+        ],
+        "ja": [
+          "トラックポジション",
+          "トラック"
+        ]
+      },
+      "aliases": [
+        "truck control",
+        "truck position",
+        "トラックポジション",
+        "トラック"
       ]
     },
     {
@@ -7839,6 +7958,38 @@
       ]
     },
     {
+      "tagId": "act.sub.banana_split",
+      "category": "Submission",
+      "canonicalJa": "バナナスプリット",
+      "canonicalEn": "Banana Split",
+      "related": [
+        "act.control.truck",
+        "pre.twister_hook",
+        "pos.turtle",
+        "pos.leg_entanglement.ashi"
+      ],
+      "labels": {
+        "ja": "バナナスプリット",
+        "en": "Banana Split",
+        "ko": "바나나 스플릿",
+        "pt": "Banana Split",
+        "es": "Banana Split",
+        "fr": "Banana Split"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "banana split"
+        ],
+        "ja": [
+          "またさき"
+        ]
+      },
+      "aliases": [
+        "banana split",
+        "またさき"
+      ]
+    },
+    {
       "tagId": "act.sub.toe_hold",
       "category": "Submission",
       "canonicalJa": "トーホールド",
@@ -7891,6 +8042,8 @@
         "act.guard.berimbolo",
         "pos.leg_entanglement.ashi",
         "pre.knee_line_control",
+        "act.control.truck",
+        "act.sub.banana_split",
         "act.sub.calf_slicer"
       ],
       "labels": {
@@ -9467,6 +9620,42 @@
       "aliases": [
         "cow catcher",
         "카우 캐처"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.sumi_gaeshi",
+      "category": "Action",
+      "canonicalJa": "隅返し",
+      "canonicalEn": "Sumi Gaeshi",
+      "related": [
+        "pos.phase.standing",
+        "pos.guard.butterfly",
+        "pre.off_balance",
+        "act.guard.sweep.hikikomi_gaeshi"
+      ],
+      "labels": {
+        "ja": "隅返し",
+        "en": "Sumi Gaeshi",
+        "ko": "스미가에시",
+        "pt": "Sumi Gaeshi",
+        "es": "Sumi Gaeshi",
+        "fr": "Sumi Gaeshi"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "sumi gaeshi",
+          "corner reversal"
+        ],
+        "ja": [
+          "すみがえし",
+          "スミガエシ"
+        ]
+      },
+      "aliases": [
+        "sumi gaeshi",
+        "corner reversal",
+        "すみがえし",
+        "スミガエシ"
       ]
     },
     {
@@ -11410,6 +11599,8 @@
       "related": [
         "act.control.stabilize",
         "act.control.seatbelt",
+        "act.control.uchi_muso",
+        "act.control.soto_muso",
         "pos.top.back_control"
       ],
       "labels": {
@@ -16490,15 +16681,19 @@
       },
       "aliasesByLocale": {
         "en": [
-          "butterfly hook"
+          "butterfly hook",
+          "inside hook"
         ],
         "ja": [
-          "バタフライフック"
+          "バタフライフック",
+          "バタフライアシ"
         ]
       },
       "aliases": [
         "butterfly hook",
-        "バタフライフック"
+        "inside hook",
+        "バタフライフック",
+        "バタフライアシ"
       ]
     },
     {
