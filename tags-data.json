@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.22",
+  "version": "dict_v1.2.24",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -2650,6 +2650,55 @@
       ]
     },
     {
+      "tagId": "pos.guard.tarantula",
+      "category": "Position",
+      "canonicalJa": "タランチュラガード",
+      "canonicalEn": "Tarantula Guard",
+      "related": [
+        "pos.guard.open",
+        "pos.guard.spider",
+        "pos.guard.lasso",
+        "act.guard.sweep",
+        "pre.body.sleeve"
+      ],
+      "labels": {
+        "ja": "タランチュラガード",
+        "en": "Tarantula Guard",
+        "ko": "타란툴라 가드",
+        "pt": "Guarda Tarântula",
+        "es": "Guardia Tarántula",
+        "fr": "Garde Tarentule"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "tarantula guard"
+        ],
+        "ko": [
+          "타란툴라 가드"
+        ],
+        "pt": [
+          "guarda tarântula"
+        ],
+        "es": [
+          "guardia tarántula",
+          "tarantula guardia"
+        ],
+        "fr": [
+          "garde tarentule",
+          "tarantula garde"
+        ]
+      },
+      "aliases": [
+        "tarantula guard",
+        "타란툴라 가드",
+        "guarda tarântula",
+        "guardia tarántula",
+        "tarantula guardia",
+        "garde tarentule",
+        "tarantula garde"
+      ]
+    },
+    {
       "tagId": "pos.guard.inverted",
       "category": "Prerequisite",
       "canonicalJa": "インバーテッドガード",
@@ -4262,6 +4311,58 @@
         "berimbolo",
         "bolo",
         "베림볼로"
+      ]
+    },
+    {
+      "tagId": "act.guard.imanari_roll",
+      "category": "Action",
+      "canonicalJa": "イマナリロール",
+      "canonicalEn": "Imanari Roll",
+      "related": [
+        "pos.phase.standing",
+        "pre.distance_management",
+        "act.guard.leg_entanglement_entry",
+        "act.guard.inversion"
+      ],
+      "labels": {
+        "ja": "イマナリロール",
+        "en": "Imanari Roll",
+        "ko": "이마나리 롤",
+        "pt": "Rolo Imanari",
+        "es": "Imanari Roll",
+        "fr": "Roulé Imanari"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "imanari roll",
+          "imanari"
+        ],
+        "ja": [
+          "イマナリ・ロール"
+        ],
+        "ko": [
+          "이마나리 롤"
+        ],
+        "pt": [
+          "rolo imanari",
+          "imanari roll"
+        ],
+        "es": [
+          "imanari roll",
+          "imanari"
+        ],
+        "fr": [
+          "roulé imanari",
+          "imanari roll"
+        ]
+      },
+      "aliases": [
+        "imanari roll",
+        "imanari",
+        "イマナリ・ロール",
+        "이마나리 롤",
+        "rolo imanari",
+        "roulé imanari"
       ]
     },
     {
@@ -10961,6 +11062,43 @@
       },
       "aliases": [
         "ibjjf"
+      ]
+    },
+    {
+      "tagId": "scn.rules.sjjif",
+      "category": "Source",
+      "canonicalJa": "SJJIF",
+      "canonicalEn": "SJJIF",
+      "related": [
+        "scn.context.competition"
+      ],
+      "labels": {
+        "ja": "SJJIF",
+        "en": "SJJIF",
+        "ko": "SJJIF",
+        "pt": "SJJIF",
+        "es": "SJJIF",
+        "fr": "SJJIF"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "sjjif"
+        ],
+        "ko": [
+          "sjjif"
+        ],
+        "pt": [
+          "sjjif"
+        ],
+        "es": [
+          "sjjif"
+        ],
+        "fr": [
+          "sjjif"
+        ]
+      },
+      "aliases": [
+        "sjjif"
       ]
     },
     {
