@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Link2Mat Release notes / リリースノート</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 32px 20px;
+        background: #ffffff;
+        color: #111111;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+      p {
+        line-height: 1.6;
+        margin: 12px 0;
+      }
+      .card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        background: #f9fafb;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 28px 0 10px;
+      }
+      ul {
+        margin: 8px 0 8px 20px;
+      }
+      .muted {
+        color: #4b5563;
+        font-size: 13px;
+      }
+      a {
+        color: #2563eb;
+      }
+      .lang-switcher {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0 20px;
+        align-items: center;
+      }
+      .lang-switcher span {
+        font-size: 13px;
+        color: #4b5563;
+        margin-right: 4px;
+      }
+      .lang-btn {
+        padding: 6px 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        color: #374151;
+      }
+      .lang-btn:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+      }
+      .lang-btn.active {
+        background: #2563eb;
+        border-color: #2563eb;
+        color: #fff;
+      }
+      .lang-block {
+        display: none;
+      }
+      .lang-block.lang-visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="muted lang-block lang-visible" data-lang="en"><a href="https://www.link2mat.com/">← Support home</a></p>
+      <p class="muted lang-block" data-lang="ja"><a href="https://www.link2mat.com/">← サポートトップへ</a></p>
+      <p class="muted lang-block" data-lang="ko"><a href="https://www.link2mat.com/">← 지원 홈</a></p>
+      <p class="muted lang-block" data-lang="pt"><a href="https://www.link2mat.com/">← Início do suporte</a></p>
+      <p class="muted lang-block" data-lang="es"><a href="https://www.link2mat.com/">← Inicio de soporte</a></p>
+      <p class="muted lang-block" data-lang="fr"><a href="https://www.link2mat.com/">← Accueil support</a></p>
+
+      <h1 class="lang-block lang-visible" data-lang="en">Release notes</h1>
+      <h1 class="lang-block" data-lang="ja">リリースノート</h1>
+      <h1 class="lang-block" data-lang="ko">릴리스 노트</h1>
+      <h1 class="lang-block" data-lang="pt">Notas de versão</h1>
+      <h1 class="lang-block" data-lang="es">Notas de la versión</h1>
+      <h1 class="lang-block" data-lang="fr">Notes de version</h1>
+
+      <div class="lang-switcher" role="group" aria-label="Language / 言語">
+        <span class="lang-label">Language / 言語:</span>
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+      </div>
+
+      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-04-01</p>
+      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-04-01</p>
+      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-04-01</p>
+      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-04-01</p>
+      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-04-01</p>
+      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-04-01</p>
+
+      <p class="muted lang-block lang-visible" data-lang="en">User-facing summaries by version. Older entries are kept for reference.</p>
+      <p class="muted lang-block" data-lang="ja">ユーザー向けの変更概要です。以前のバージョンは参考として残しています。</p>
+      <p class="muted lang-block" data-lang="ko">사용자를 위한 변경 요약입니다. 이전 버전은 참고용으로 남겨 두었습니다.</p>
+      <p class="muted lang-block" data-lang="pt">Resumos voltados ao usuário por versão. Entradas antigas ficam como referência.</p>
+      <p class="muted lang-block" data-lang="es">Resúmenes para usuarios por versión. Las entradas antiguas se conservan como referencia.</p>
+      <p class="muted lang-block" data-lang="fr">Résumés orientés utilisateur par version. Les entrées plus anciennes restent en référence.</p>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Version 1.4.0</h2>
+      <h2 class="lang-block" data-lang="ja">バージョン 1.4.0</h2>
+      <h2 class="lang-block" data-lang="ko">버전 1.4.0</h2>
+      <h2 class="lang-block" data-lang="pt">Versão 1.4.0</h2>
+      <h2 class="lang-block" data-lang="es">Versión 1.4.0</h2>
+      <h2 class="lang-block" data-lang="fr">Version 1.4.0</h2>
+      <div class="card">
+        <div class="lang-block lang-visible" data-lang="en">
+          <ul>
+            <li>Add videos from your device photo library—not only web links. Tag them, create time-based clips, and search together with YouTube and social saves in one library (great for instructionals you download from subscription services).</li>
+            <li>Edit clip title and start time in clip detail. Clip thumbnails in library item detail align with clip detail.</li>
+            <li>Thumbnail and preview improvements for a more consistent experience across lists.</li>
+            <li>Tag dictionary updates and stability improvements.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ja">
+          <ul>
+            <li>端末の写真ライブラリの動画も登録できます。教則をダウンロードできるサービスで保存した動画も含め、Web のリンクと同じライブラリでタグ・時間クリップ・検索を横串で使えます。</li>
+            <li>クリップ詳細でタイトルと開始位置を編集できます。ライブラリ詳細のクリップ一覧のサムネ表示をクリップ詳細と揃えました。</li>
+            <li>一覧まわりのサムネイル・プレビュー表示を改善しました。</li>
+            <li>タグ辞書の更新と安定性の改善を行いました。</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ko">
+          <ul>
+            <li>기기 사진 보관함의 영상도 등록할 수 있습니다. 구독으로 내려받은 교본 영상도 웹 링크와 같은 라이브러리에서 태그·시간 클립·검색을 함께 쓸 수 있습니다.</li>
+            <li>클립 상세에서 제목과 시작 시각을 편집할 수 있습니다. 라이브러리 상세의 클립 목록 썸네일이 클립 상세와 맞춰졌습니다.</li>
+            <li>목록의 썸네일·미리보기 표시를 개선했습니다.</li>
+            <li>태그 사전 업데이트와 안정성 개선을 했습니다.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <ul>
+            <li>Registre vídeos da biblioteca de fotos do aparelho, não só links da web. Marque com tags, crie clipes por tempo e busque junto com YouTube e redes no mesmo lugar (ideal para instrucionais baixados de serviços por assinatura).</li>
+            <li>Edite título e instante de início no detalhe do clipe. Miniaturas da lista de clipes no detalhe do item alinham com o detalhe do clipe.</li>
+            <li>Melhorias em miniaturas e prévias nas listas.</li>
+            <li>Atualizações do dicionário de tags e melhorias de estabilidade.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <ul>
+            <li>Añade vídeos desde la librería de fotos del dispositivo, no solo enlaces web. Pon etiquetas, crea clips por tiempo y búscalos junto con YouTube y redes en una sola biblioteca (ideal para instructivos que descargues de servicios por suscripción).</li>
+            <li>Edita el título y el momento de inicio en el detalle del clip. Las miniaturas de la lista de clips en el detalle del elemento coinciden con el detalle del clip.</li>
+            <li>Mejoras en miniaturas y vistas previas en listas.</li>
+            <li>Actualizaciones del diccionario de etiquetas y mejoras de estabilidad.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <ul>
+            <li>Ajoutez des vidéos depuis la photothèque de l’appareil, pas seulement des liens web. Même tags, clips horaires et recherche que pour YouTube et les réseaux, dans une seule bibliothèque (pratique pour les cours téléchargés depuis un service d’abonnement).</li>
+            <li>Modifiez le titre et le moment de début dans le détail d’un clip. Les miniatures de la liste de clips dans le détail d’un élément sont alignées sur le détail du clip.</li>
+            <li>Améliorations des miniatures et aperçus dans les listes.</li>
+            <li>Mise à jour du dictionnaire de tags et améliorations de stabilité.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Version 1.3.1</h2>
+      <h2 class="lang-block" data-lang="ja">バージョン 1.3.1</h2>
+      <h2 class="lang-block" data-lang="ko">버전 1.3.1</h2>
+      <h2 class="lang-block" data-lang="pt">Versão 1.3.1</h2>
+      <h2 class="lang-block" data-lang="es">Versión 1.3.1</h2>
+      <h2 class="lang-block" data-lang="fr">Version 1.3.1</h2>
+      <div class="card">
+        <div class="lang-block lang-visible" data-lang="en">
+          <ul>
+            <li>Improved thumbnail reliability for saved links, especially when social links are reloaded.</li>
+            <li>Added a "Refresh Preview" action in item detail so you can retry preview retrieval when needed.</li>
+            <li>Improved URL cleanup for social share links to reduce failures from tracking parameters.</li>
+            <li>Stability improvements and minor fixes.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ja">
+          <ul>
+            <li>保存したリンクのサムネイル表示の安定性を改善しました（SNS リンクの再取得時を含む）。</li>
+            <li>アイテム詳細に「プレビュー再取得」を追加し、必要なときに再試行しやすくしました。</li>
+            <li>SNS の共有リンクで、追跡パラメータによる失敗が起きにくいよう URL 処理を改善しました。</li>
+            <li>安定性の改善と細かな修正を行いました。</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ko">
+          <ul>
+            <li>저장한 링크 썸네일 표시 안정성을 개선했습니다(SNS 링크 재시도 포함).</li>
+            <li>항목 상세에 "미리보기 다시 가져오기"를 추가해 필요할 때 재시도하기 쉬워졌습니다.</li>
+            <li>SNS 공유 링크의 추적 파라미터로 인한 실패를 줄이도록 URL 처리를 개선했습니다.</li>
+            <li>안정성 개선 및 자잘한 수정을 했습니다.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <ul>
+            <li>Melhoramos a estabilidade das miniaturas de links salvos, inclusive ao tentar novamente links de redes sociais.</li>
+            <li>Adicionamos a ação "Atualizar prévia" no detalhe do item para refazer a tentativa quando necessário.</li>
+            <li>Melhoramos o tratamento de URLs de compartilhamento em redes sociais para reduzir falhas causadas por parâmetros de rastreamento.</li>
+            <li>Melhorias de estabilidade e pequenas correções.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <ul>
+            <li>Mejoramos la estabilidad de las miniaturas de enlaces guardados, también al reintentar enlaces de redes sociales.</li>
+            <li>Añadimos la acción "Actualizar vista previa" en el detalle para volver a intentar cuando haga falta.</li>
+            <li>Mejoramos el tratamiento de URLs compartidas en redes sociales para reducir fallos por parámetros de seguimiento.</li>
+            <li>Mejoras de estabilidad y pequeñas correcciones.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <ul>
+            <li>Amélioration de la stabilité des miniatures pour les liens enregistrés, y compris lors d’une nouvelle tentative sur des liens sociaux.</li>
+            <li>Ajout de l’action "Actualiser l’aperçu" dans le détail d’un élément pour relancer la récupération si besoin.</li>
+            <li>Amélioration du traitement des URL de partage social pour réduire les échecs dus aux paramètres de suivi.</li>
+            <li>Améliorations de stabilité et petites corrections.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Version 1.3</h2>
+      <h2 class="lang-block" data-lang="ja">バージョン 1.3</h2>
+      <h2 class="lang-block" data-lang="ko">버전 1.3</h2>
+      <h2 class="lang-block" data-lang="pt">Versão 1.3</h2>
+      <h2 class="lang-block" data-lang="es">Versión 1.3</h2>
+      <h2 class="lang-block" data-lang="fr">Version 1.3</h2>
+      <div class="card">
+        <div class="lang-block lang-visible" data-lang="en">
+          <ul>
+            <li>Share from YouTube, Safari, or other apps and pick Link2Mat to open the add screen with the link ready.</li>
+            <li>Tagging: clearer categories, body-region flow, and related tag suggestions from the built-in dictionary.</li>
+            <li>Library: easier previous/next between saved items.</li>
+            <li>Importing backup or export files uses one clear confirmation with on-screen progress; analyzing or adding many URLs also shows progress and lets you cancel if needed.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ja">
+          <ul>
+            <li>YouTube や Safari などから共有で「Link2Mat」を選ぶと、取り込み画面にリンクが入った状態から続けられます。</li>
+            <li>タグはカテゴリや部位の流れが分かりやすく、辞書に基づく関連タグの提案も利用できます。</li>
+            <li>ライブラリで保存項目の前後への移動がしやすくなりました。</li>
+            <li>バックアップ／エクスポートのファイル取り込みは「追加を確定」にそろえ進捗を表示します。複数 URL の解析・追加でも進捗が分かり、必要ならキャンセルできます。</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="ko">
+          <ul>
+            <li>YouTube, Safari 등에서 공유로 Link2Mat을 고르면 링크가 채워진 추가 화면으로 이어집니다.</li>
+            <li>태그는 카테고리·부위 흐름이 더 분명하고, 내장 사전 기반 관련 태그 제안을 씁니다.</li>
+            <li>라이브러리에서 이전·다음 이동이 더 쉬워졌습니다.</li>
+            <li>백업·보내기 파일 가져오기는 한 번에 확정하고 진행 상황을 보여 줍니다. URL 여러 개 분석·추가에서도 진행을 볼 수 있고 필요 시 취소할 수 있습니다.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="pt">
+          <ul>
+            <li>Compartilhe do YouTube, Safari ou outros apps e escolha Link2Mat para abrir a tela de adicionar com o link pronto.</li>
+            <li>Tags: categorias mais claras, fluxo por região do corpo e sugestões relacionadas do dicionário embutido.</li>
+            <li>Biblioteca: anterior/próximo entre itens salvos mais fácil.</li>
+            <li>Importar backup ou exportação: uma confirmação principal com progresso na tela; analisar ou adicionar muitos URLs também mostra progresso e permite cancelar.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="es">
+          <ul>
+            <li>Comparte desde YouTube, Safari u otras apps y elige Link2Mat para abrir el alta con el enlace listo.</li>
+            <li>Etiquetas: categorías más claras, flujo por zona del cuerpo y sugerencias del diccionario integrado.</li>
+            <li>Biblioteca: anterior/siguiente entre elementos guardados más sencillo.</li>
+            <li>Importar copia o exportación: un paso de confirmación claro con progreso en pantalla; analizar o añadir muchas URLs también muestra progreso y permite cancelar.</li>
+          </ul>
+        </div>
+        <div class="lang-block" data-lang="fr">
+          <ul>
+            <li>Partagez depuis YouTube, Safari ou une autre app et choisissez Link2Mat pour ouvrir l’ajout avec le lien prêt.</li>
+            <li>Tags : catégories plus lisibles, parcours par zone du corps et suggestions liées depuis le dictionnaire intégré.</li>
+            <li>Bibliothèque : précédent/suivant entre éléments enregistrés plus simple.</li>
+            <li>Import sauvegarde ou export : confirmation principale avec progression à l’écran ; analyser ou ajouter beaucoup d’URL affiche aussi la progression et permet d’annuler.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="muted lang-block lang-visible" data-lang="en">© 2026 Link2Mat. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+      <p class="muted lang-block" data-lang="ja">© 2026 Link2Mat. <a href="privacy.html">プライバシー</a> · <a href="terms.html">利用規約</a></p>
+      <p class="muted lang-block" data-lang="ko">© 2026 Link2Mat. <a href="privacy.html">개인정보</a> · <a href="terms.html">이용약관</a></p>
+      <p class="muted lang-block" data-lang="pt">© 2026 Link2Mat. <a href="privacy.html">Privacidade</a> · <a href="terms.html">Termos</a></p>
+      <p class="muted lang-block" data-lang="es">© 2026 Link2Mat. <a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a></p>
+      <p class="muted lang-block" data-lang="fr">© 2026 Link2Mat. <a href="privacy.html">Confidentialité</a> · <a href="terms.html">Conditions</a></p>
+    </div>
+
+    <script>
+      (function initLangSwitcher() {
+        const STORAGE_KEY = "link2mat-support-lang";
+        const langButtons = document.querySelectorAll(".lang-btn");
+        const langBlocks = document.querySelectorAll(".lang-block");
+        const SUPPORT_LANGS = ["en", "ja", "ko", "pt", "es", "fr"];
+
+        function setLang(lang) {
+          document.body.setAttribute("data-lang", lang);
+          langBlocks.forEach((el) => {
+            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+          });
+          langButtons.forEach((btn) => {
+            const on = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          try {
+            localStorage.setItem(STORAGE_KEY, lang);
+          } catch (e) {}
+        }
+
+        langButtons.forEach((btn) => {
+          btn.addEventListener("click", () => setLang(btn.getAttribute("data-lang")));
+        });
+
+        function detectBrowserLang() {
+          const list =
+            navigator.languages && navigator.languages.length
+              ? navigator.languages
+              : [navigator.language || navigator.userLanguage || "en"];
+          for (const raw of list) {
+            const code = (raw || "").toLowerCase().split("-")[0];
+            if (SUPPORT_LANGS.indexOf(code) !== -1) return code;
+          }
+          return "en";
+        }
+        const saved = localStorage.getItem(STORAGE_KEY);
+        const initial = saved && SUPPORT_LANGS.indexOf(saved) !== -1 ? saved : detectBrowserLang();
+        setLang(initial);
+      })();
+    </script>
+  </body>
+</html>
