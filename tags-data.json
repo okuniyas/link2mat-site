@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.24",
+  "version": "dict_v1.2.25",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -10,6 +10,7 @@
         "act.wrestling.single_leg_takedown",
         "act.wrestling.double_leg_takedown",
         "act.wrestling.snapdown",
+        "act.wrestling.arm_drag",
         "act.wrestling.sumi_gaeshi",
         "act.guard.guard_pull"
       ],
@@ -4079,6 +4080,7 @@
       "related": [
         "pos.phase.standing",
         "pre.2on1",
+        "act.wrestling.arm_drag",
         "pre.head_position"
       ],
       "labels": {
@@ -5747,6 +5749,7 @@
       "canonicalEn": "Back Take",
       "related": [
         "pos.top.back_control",
+        "act.wrestling.arm_drag",
         "pre.seatbelt",
         "pre.hip_control"
       ],
@@ -9154,6 +9157,63 @@
       ]
     },
     {
+      "tagId": "act.wrestling.arm_drag",
+      "category": "Action",
+      "canonicalJa": "アームドラッグ",
+      "canonicalEn": "Arm Drag",
+      "related": [
+        "pos.phase.standing",
+        "act.guard.wrestle_up",
+        "pre.2on1",
+        "act.transition.take_back",
+        "act.wrestling.single_leg_takedown",
+        "act.wrestling.double_leg_takedown"
+      ],
+      "labels": {
+        "ja": "アームドラッグ",
+        "en": "Arm Drag",
+        "ko": "암 드래그",
+        "pt": "Arrasto de Braço",
+        "es": "Arrastre de Brazo",
+        "fr": "Traînée de Bras"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "arm drag",
+          "single arm drag"
+        ],
+        "ja": [
+          "アームドラッグ"
+        ],
+        "ko": [
+          "암 드래그",
+          "팔 드래그"
+        ],
+        "pt": [
+          "arrasto de braço",
+          "arm drag"
+        ],
+        "es": [
+          "arrastre de brazo",
+          "arm drag"
+        ],
+        "fr": [
+          "traînée de bras",
+          "arm drag"
+        ]
+      },
+      "aliases": [
+        "arm drag",
+        "single arm drag",
+        "アームドラッグ",
+        "암 드래그",
+        "팔 드래그",
+        "arrasto de braço",
+        "arrastre de brazo",
+        "traînée de bras"
+      ]
+    },
+    {
       "tagId": "act.wrestling.sprawl",
       "category": "Action",
       "canonicalJa": "スプロール",
@@ -12156,6 +12216,7 @@
       "canonicalEn": "2-on-1 Control",
       "related": [
         "act.guard.wrestle_up",
+        "act.wrestling.arm_drag",
         "act.wrestling.single_leg_takedown"
       ],
       "labels": {
