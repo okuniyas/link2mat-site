@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.25",
+  "version": "dict_v1.2.26",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -14792,6 +14792,9 @@
         "en": [
           "push"
         ],
+        "ja": [
+          "押す"
+        ],
         "ko": [
           "푸시"
         ],
@@ -14807,6 +14810,7 @@
       },
       "aliases": [
         "push",
+        "押す",
         "푸시",
         "empurrar"
       ]
@@ -14836,7 +14840,8 @@
         ],
         "ja": [
           "引き付け",
-          "引く"
+          "引く",
+          "プル"
         ],
         "ko": [
           "풀인"
@@ -14861,6 +14866,7 @@
         "pull",
         "引き付け",
         "引く",
+        "プル",
         "풀인",
         "puxar"
       ]
@@ -14883,7 +14889,8 @@
       },
       "aliasesByLocale": {
         "ja": [
-          "ける"
+          "ける",
+          "蹴る"
         ],
         "en": [
           "kick"
@@ -14903,9 +14910,118 @@
       },
       "aliases": [
         "ける",
+        "蹴る",
         "kick",
         "킥",
         "chute"
+      ]
+    },
+    {
+      "tagId": "pre.insert_reach",
+      "category": "Prerequisite",
+      "canonicalJa": "差し込む",
+      "canonicalEn": "Reach-In / Insert",
+      "related": [
+        "pre.push",
+        "pre.knee_line_control",
+        "pos.guard.knee_shield",
+        "pre.underhook_side"
+      ],
+      "labels": {
+        "ja": "差し込む",
+        "en": "Reach-In / Insert",
+        "ko": "끼워 넣기",
+        "pt": "Encaixar / Introduzir",
+        "es": "Meter / Introducir",
+        "fr": "Insérer / Engager"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "差し入れる",
+          "差し込み"
+        ],
+        "en": [
+          "reach in",
+          "insert",
+          "thread in"
+        ],
+        "ko": [
+          "삽입"
+        ],
+        "pt": [
+          "encaixar"
+        ],
+        "es": [
+          "meter"
+        ],
+        "fr": [
+          "insérer"
+        ]
+      },
+      "aliases": [
+        "差し入れる",
+        "差し込み",
+        "reach in",
+        "insert",
+        "thread in",
+        "삽입",
+        "encaixar",
+        "meter",
+        "insérer"
+      ]
+    },
+    {
+      "tagId": "pre.open",
+      "category": "Prerequisite",
+      "canonicalJa": "開く",
+      "canonicalEn": "Open (limbs)",
+      "related": [
+        "pre.knee_line_control",
+        "act.guard.sweep",
+        "pos.guard.closed"
+      ],
+      "labels": {
+        "ja": "開く",
+        "en": "Open (limbs)",
+        "ko": "벌리기",
+        "pt": "Abrir",
+        "es": "Abrir",
+        "fr": "Ouvrir"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "膝を開く",
+          "足を開く",
+          "腕を開く"
+        ],
+        "en": [
+          "open knees",
+          "open legs",
+          "open arms"
+        ],
+        "ko": [
+          "벌리다"
+        ],
+        "pt": [
+          "abrir"
+        ],
+        "es": [
+          "abrir"
+        ],
+        "fr": [
+          "ouvrir"
+        ]
+      },
+      "aliases": [
+        "膝を開く",
+        "足を開く",
+        "腕を開く",
+        "open knees",
+        "open legs",
+        "open arms",
+        "벌리다",
+        "abrir",
+        "ouvrir"
       ]
     },
     {
@@ -15443,7 +15559,8 @@
         "pos.guard.knee_shield",
         "pos.guard.half",
         "pre.knee_line_control",
-        "act.pass.knee_cut"
+        "act.pass.knee_cut",
+        "pre.body.knee_pit"
       ],
       "labels": {
         "ja": "ひざ",
@@ -15474,6 +15591,42 @@
         "es": "Rodilla Lateral",
         "fr": "Genou Côté"
       }
+    },
+    {
+      "tagId": "pre.body.knee_pit",
+      "category": "Prerequisite",
+      "canonicalJa": "ひざうら",
+      "canonicalEn": "Back of Knee / Knee Pit",
+      "related": [
+        "pre.body.knee",
+        "pre.body.above_knee",
+        "pre.body.below_knee",
+        "act.sub.kneebar"
+      ],
+      "labels": {
+        "ja": "ひざうら",
+        "en": "Back of Knee / Knee Pit",
+        "ko": "무릎 뒤",
+        "pt": "Fossa Poplítea",
+        "es": "Hueco de Rodilla",
+        "fr": "Fosse du Genou"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "膝裏"
+        ],
+        "en": [
+          "knee pit",
+          "back of knee",
+          "popliteal"
+        ]
+      },
+      "aliases": [
+        "膝裏",
+        "knee pit",
+        "back of knee",
+        "popliteal"
+      ]
     },
     {
       "tagId": "pre.body.below_knee",
