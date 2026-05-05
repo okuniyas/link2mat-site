@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.26",
+  "version": "dict_v1.2.28",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -587,6 +587,7 @@
       "canonicalJa": "ニーシールド",
       "canonicalEn": "Knee Shield",
       "related": [
+        "pre.knee_shield_setup",
         "act.guard.sweep",
         "act.guard.wrestle_up",
         "pre.frame"
@@ -1000,6 +1001,271 @@
         "k-guardia",
         "garde k",
         "k-garde"
+      ]
+    },
+    {
+      "tagId": "pre.keymaster",
+      "category": "Prerequisite",
+      "canonicalJa": "キーマスター",
+      "canonicalEn": "Keymaster",
+      "related": [
+        "pos.guard.knee_shield",
+        "pre.knee_shield_setup",
+        "pos.guard.open",
+        "pos.guard.dlr",
+        "pos.guard.sitting",
+        "pos.guard.k_guard",
+        "act.guard.wrestle_up",
+        "act.guard.leg_entanglement_entry",
+        "pre.frame",
+        "pre.knee_line_control"
+      ],
+      "labels": {
+        "ja": "キーマスター",
+        "en": "Keymaster",
+        "ko": "키마스터",
+        "pt": "Keymaster",
+        "es": "Keymaster",
+        "fr": "Keymaster"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "きーますたー",
+          "キーマスターガード"
+        ],
+        "en": [
+          "keymaster"
+        ],
+        "ko": [
+          "키마스터"
+        ]
+      },
+      "aliases": [
+        "きーますたー",
+        "キーマスターガード",
+        "keymaster",
+        "키마스터"
+      ]
+    },
+    {
+      "tagId": "pre.knee_shield_setup",
+      "category": "Prerequisite",
+      "canonicalJa": "ニーシールド（セットアップ）",
+      "canonicalEn": "Knee Shield Setup",
+      "related": [
+        "pos.guard.knee_shield",
+        "pos.guard.half",
+        "pos.guard.open",
+        "pre.frame",
+        "pre.keymaster",
+        "act.pass.knee_cut",
+        "act.pass.long_step",
+        "act.guard.retention"
+      ],
+      "labels": {
+        "ja": "ニーシールド（セットアップ）",
+        "en": "Knee Shield Setup",
+        "ko": "니 실드 (셋업)",
+        "pt": "Escudo de joelho (setup)",
+        "es": "Escudo de rodilla (entrada)",
+        "fr": "Bouclier genou (mise en place)"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "途中のニーシールド",
+          "ニーシールドフレーム"
+        ],
+        "en": [
+          "knee shield frame",
+          "transient knee shield",
+          "knee shield during pass"
+        ],
+        "ko": [
+          "니 실드 프레임"
+        ],
+        "pt": [
+          "escudo de joelho no passe"
+        ],
+        "es": [
+          "rodilla en el pase"
+        ],
+        "fr": [
+          "genou pendant le passe"
+        ]
+      },
+      "aliases": [
+        "途中のニーシールド",
+        "ニーシールドフレーム",
+        "knee shield frame",
+        "transient knee shield",
+        "knee shield during pass",
+        "니 실드 프레임",
+        "escudo de joelho no passe",
+        "rodilla en el pase",
+        "genou pendant le passe"
+      ]
+    },
+    {
+      "tagId": "pre.camping_inside",
+      "category": "Prerequisite",
+      "canonicalJa": "インサイドキャンピング（セットアップ）",
+      "canonicalEn": "Inside Camping Setup",
+      "related": [
+        "pos.top.camping_inside",
+        "pos.top.headquarters",
+        "pos.guard.half",
+        "act.pass.leg_drag",
+        "act.pass.knee_cut",
+        "act.pass.long_step"
+      ],
+      "labels": {
+        "ja": "インサイドキャンピング（セットアップ）",
+        "en": "Inside Camping Setup",
+        "ko": "인사이드 캠핑 (셋업)",
+        "pt": "Camping por dentro (setup)",
+        "es": "Camping interior (entrada)",
+        "fr": "Camping intérieur (mise en place)"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "インサイドキャンピング（途中）",
+          "キャンピングインサイド（セットアップ）"
+        ],
+        "en": [
+          "inside camping frame",
+          "inside camping entry"
+        ],
+        "ko": [
+          "인사이드 캠핑 진입"
+        ],
+        "pt": [
+          "camping interno na passagem"
+        ],
+        "es": [
+          "camping dentro en el pase"
+        ],
+        "fr": [
+          "camping intérieur passage"
+        ]
+      },
+      "aliases": [
+        "インサイドキャンピング（途中）",
+        "キャンピングインサイド（セットアップ）",
+        "inside camping frame",
+        "inside camping entry",
+        "인사이드 캠핑 진입",
+        "camping interno na passagem",
+        "camping dentro en el pase",
+        "camping intérieur passage"
+      ]
+    },
+    {
+      "tagId": "pre.camping_outside",
+      "category": "Prerequisite",
+      "canonicalJa": "アウトサイドキャンピング（セットアップ）",
+      "canonicalEn": "Outside Camping Setup",
+      "related": [
+        "pos.top.camping_outside",
+        "pos.top.headquarters",
+        "pos.guard.half",
+        "act.pass.leg_drag",
+        "act.pass.knee_cut",
+        "act.pass.long_step"
+      ],
+      "labels": {
+        "ja": "アウトサイドキャンピング（セットアップ）",
+        "en": "Outside Camping Setup",
+        "ko": "아웃사이드 캠핑 (셋업)",
+        "pt": "Camping por fora (setup)",
+        "es": "Camping exterior (entrada)",
+        "fr": "Camping extérieur (mise en place)"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "アウトサイドキャンピング（途中）",
+          "キャンピングアウトサイド（セットアップ）"
+        ],
+        "en": [
+          "outside camping frame",
+          "outside camping entry"
+        ],
+        "ko": [
+          "아웃사이드 캠핑 진입"
+        ],
+        "pt": [
+          "camping externo na passagem"
+        ],
+        "es": [
+          "camping fuera en el pase"
+        ],
+        "fr": [
+          "camping extérieur passage"
+        ]
+      },
+      "aliases": [
+        "アウトサイドキャンピング（途中）",
+        "キャンピングアウトサイド（セットアップ）",
+        "outside camping frame",
+        "outside camping entry",
+        "아웃사이드 캠핑 진입",
+        "camping externo na passagem",
+        "camping fuera en el pase",
+        "camping extérieur passage"
+      ]
+    },
+    {
+      "tagId": "pre.headquarters_setup",
+      "category": "Prerequisite",
+      "canonicalJa": "ヘッドクオーター（セットアップ）",
+      "canonicalEn": "Headquarters Setup",
+      "related": [
+        "pos.top.headquarters",
+        "pos.guard.half",
+        "pos.guard.knee_shield",
+        "pre.knee_shield_setup",
+        "act.pass.knee_cut",
+        "act.pass.long_step",
+        "act.pass.leg_drag"
+      ],
+      "labels": {
+        "ja": "ヘッドクオーター（セットアップ）",
+        "en": "Headquarters Setup",
+        "ko": "헤드쿼터 (셋업)",
+        "pt": "Headquarters (setup)",
+        "es": "Headquarters (entrada)",
+        "fr": "Headquarters (mise en place)"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "ヘッドクオーター（途中）",
+          "HQセットアップ"
+        ],
+        "en": [
+          "hq setup",
+          "headquarters frame"
+        ],
+        "ko": [
+          "헤드쿼터 진입"
+        ],
+        "pt": [
+          "headquarters na passagem"
+        ],
+        "es": [
+          "hq en el pase"
+        ],
+        "fr": [
+          "hq passe"
+        ]
+      },
+      "aliases": [
+        "ヘッドクオーター（途中）",
+        "HQセットアップ",
+        "hq setup",
+        "headquarters frame",
+        "헤드쿼터 진입",
+        "headquarters na passagem",
+        "hq en el pase",
+        "hq passe"
       ]
     },
     {
@@ -1580,6 +1846,7 @@
       "canonicalJa": "ヘッドクオーター",
       "canonicalEn": "Headquarters",
       "related": [
+        "pre.headquarters_setup",
         "pos.guard.half",
         "pos.guard.knee_shield",
         "act.pass.knee_cut",
@@ -1630,6 +1897,7 @@
       "canonicalJa": "インサイドキャンピングポジション",
       "canonicalEn": "Inside Camping Position",
       "related": [
+        "pre.camping_inside",
         "act.pass.leg_drag",
         "act.pass.long_step",
         "act.pass.knee_cut",
@@ -1685,6 +1953,7 @@
       "canonicalJa": "アウトサイドキャンピングポジション",
       "canonicalEn": "Outside Camping Position",
       "related": [
+        "pre.camping_outside",
         "act.pass.leg_drag",
         "act.pass.long_step",
         "act.pass.knee_cut",
@@ -9817,6 +10086,105 @@
         "corner reversal",
         "すみがえし",
         "スミガエシ"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.tomoe_nage",
+      "category": "Action",
+      "canonicalJa": "巴投げ",
+      "canonicalEn": "Tomoe Nage",
+      "related": [
+        "pos.phase.standing",
+        "pos.guard.open",
+        "pre.off_balance",
+        "pre.body.collar",
+        "pre.body.sleeve",
+        "act.wrestling.sumi_gaeshi"
+      ],
+      "labels": {
+        "ja": "巴投げ",
+        "en": "Tomoe Nage",
+        "ko": "토모에 나게",
+        "pt": "Tomoe Nage",
+        "es": "Tomoe Nage",
+        "fr": "Tomoe Nage"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "ともえ",
+          "ともえ投げ"
+        ],
+        "en": [
+          "tomoe nage"
+        ],
+        "ko": [
+          "토모에 나게"
+        ],
+        "pt": [
+          "tomoe nage"
+        ],
+        "es": [
+          "tomoe nage"
+        ],
+        "fr": [
+          "tomoe nage"
+        ]
+      },
+      "aliases": [
+        "ともえ",
+        "ともえ投げ",
+        "tomoe nage",
+        "토모에 나게"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.yoko_tomoe_nage",
+      "category": "Action",
+      "canonicalJa": "横巴投げ",
+      "canonicalEn": "Yoko Tomoe Nage",
+      "related": [
+        "pos.phase.standing",
+        "pos.guard.open",
+        "pre.off_balance",
+        "pre.angle_created",
+        "act.wrestling.tomoe_nage"
+      ],
+      "labels": {
+        "ja": "横巴投げ",
+        "en": "Yoko Tomoe Nage",
+        "ko": "요코 토모에 나게",
+        "pt": "Yoko Tomoe Nage",
+        "es": "Yoko Tomoe Nage",
+        "fr": "Yoko Tomoe Nage"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "よこともえ",
+          "横ともえ"
+        ],
+        "en": [
+          "yoko tomoe nage",
+          "side tomoe nage"
+        ],
+        "ko": [
+          "요코 토모에 나게"
+        ],
+        "pt": [
+          "yoko tomoe nage"
+        ],
+        "es": [
+          "yoko tomoe nage"
+        ],
+        "fr": [
+          "yoko tomoe nage"
+        ]
+      },
+      "aliases": [
+        "よこともえ",
+        "横ともえ",
+        "yoko tomoe nage",
+        "side tomoe nage",
+        "요코 토모에 나게"
       ]
     },
     {
