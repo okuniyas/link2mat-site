@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.28",
+  "version": "dict_v1.2.30",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -462,6 +462,54 @@
       ]
     },
     {
+      "tagId": "pos.guard.double",
+      "category": "Position",
+      "canonicalJa": "ダブルガード",
+      "canonicalEn": "Double Guard",
+      "related": [
+        "pos.guard.open",
+        "pos.guard.half",
+        "act.guard.retention",
+        "act.guard.sweep"
+      ],
+      "labels": {
+        "ja": "ダブルガード",
+        "en": "Double Guard",
+        "ko": "더블 가드",
+        "pt": "Guarda Dupla",
+        "es": "Guardia Doble",
+        "fr": "Double Garde"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "double guard"
+        ],
+        "ja": [
+          "ダブルG"
+        ],
+        "ko": [
+          "더블 가드"
+        ],
+        "pt": [
+          "guarda dupla"
+        ],
+        "es": [
+          "guardia doble"
+        ],
+        "fr": [
+          "double garde"
+        ]
+      },
+      "aliases": [
+        "double guard",
+        "ダブルG",
+        "더블 가드",
+        "guarda dupla",
+        "guardia doble",
+        "double garde"
+      ]
+    },
+    {
       "tagId": "pos.guard.half",
       "category": "Position",
       "canonicalJa": "ハーフガード",
@@ -542,7 +590,8 @@
       "related": [
         "act.guard.sweep",
         "pre.underhook",
-        "pos.guard.knee_shield"
+        "pos.guard.knee_shield",
+        "act.sub.ankle_lock.eel"
       ],
       "labels": {
         "ja": "ディープハーフガード",
@@ -590,6 +639,7 @@
         "pre.knee_shield_setup",
         "act.guard.sweep",
         "act.guard.wrestle_up",
+        "act.movement.sit_up",
         "pre.frame"
       ],
       "labels": {
@@ -837,6 +887,8 @@
       "canonicalEn": "De La Riva",
       "related": [
         "act.guard.sweep",
+        "pre.shin_to_shin",
+        "act.movement.sit_up",
         "pre.knee_line_control"
       ],
       "labels": {
@@ -1103,6 +1155,110 @@
         "escudo de joelho no passe",
         "rodilla en el pase",
         "genou pendant le passe"
+      ]
+    },
+    {
+      "tagId": "pre.shin_to_shin",
+      "category": "Prerequisite",
+      "canonicalJa": "シントゥシン",
+      "canonicalEn": "Shin-to-Shin",
+      "related": [
+        "pos.guard.open",
+        "pos.guard.dlr",
+        "pos.guard.shin_control",
+        "pos.stance.split_squat",
+        "act.guard.entry"
+      ],
+      "labels": {
+        "ja": "シントゥシン",
+        "en": "Shin-to-Shin",
+        "ko": "신 투 신",
+        "pt": "Shin-to-Shin",
+        "es": "Shin-to-Shin",
+        "fr": "Shin-to-Shin"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "shin to shin",
+          "shin-on-shin"
+        ],
+        "ja": [
+          "シン・トゥ・シン",
+          "すね同士"
+        ],
+        "ko": [
+          "신 투 신"
+        ],
+        "pt": [
+          "shin to shin"
+        ],
+        "es": [
+          "shin to shin"
+        ],
+        "fr": [
+          "shin to shin"
+        ]
+      },
+      "aliases": [
+        "shin to shin",
+        "shin-on-shin",
+        "シン・トゥ・シン",
+        "すね同士",
+        "신 투 신"
+      ]
+    },
+    {
+      "tagId": "pre.split_squat_setup",
+      "category": "Prerequisite",
+      "canonicalJa": "スプリットスクワット（セットアップ）",
+      "canonicalEn": "Split Squat Setup",
+      "related": [
+        "pos.stance.split_squat",
+        "pos.guard.open",
+        "pos.top.headquarters",
+        "act.pass.knee_cut",
+        "act.pass.long_step",
+        "pre.shin_to_shin"
+      ],
+      "labels": {
+        "ja": "スプリットスクワット（セットアップ）",
+        "en": "Split Squat Setup",
+        "ko": "스플릿 스쿼트 (셋업)",
+        "pt": "Split Squat (setup)",
+        "es": "Split Squat (entrada)",
+        "fr": "Split squat (mise en place)"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "途中のスプリットスクワット",
+          "スプリットスクワットベース"
+        ],
+        "en": [
+          "split squat base",
+          "transient split squat",
+          "split squat stance setup"
+        ],
+        "ko": [
+          "스플릿 스쿼트 베이스"
+        ],
+        "pt": [
+          "base split squat"
+        ],
+        "es": [
+          "base split squat"
+        ],
+        "fr": [
+          "base split squat"
+        ]
+      },
+      "aliases": [
+        "途中のスプリットスクワット",
+        "スプリットスクワットベース",
+        "split squat base",
+        "transient split squat",
+        "split squat stance setup",
+        "스플릿 스쿼트 베이스",
+        "base split squat"
       ]
     },
     {
@@ -1889,6 +2045,58 @@
         "hq",
         "headquarters position",
         "헤드쿼터"
+      ]
+    },
+    {
+      "tagId": "pos.stance.split_squat",
+      "category": "Position",
+      "canonicalJa": "スプリットスクワット",
+      "canonicalEn": "Split Squat",
+      "related": [
+        "pre.split_squat_setup",
+        "pos.guard.open",
+        "pos.top.headquarters",
+        "pre.shin_to_shin",
+        "act.pass.knee_cut",
+        "act.pass.long_step"
+      ],
+      "labels": {
+        "ja": "スプリットスクワット",
+        "en": "Split Squat",
+        "ko": "스플릿 스쿼트",
+        "pt": "Split Squat",
+        "es": "Split Squat",
+        "fr": "Split Squat"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "split squat stance",
+          "split squat base",
+          "split squat position"
+        ],
+        "ja": [
+          "スプリットスクワット姿勢"
+        ],
+        "ko": [
+          "스플릿 스쿼트"
+        ],
+        "pt": [
+          "split squat"
+        ],
+        "es": [
+          "split squat"
+        ],
+        "fr": [
+          "split squat"
+        ]
+      },
+      "aliases": [
+        "split squat stance",
+        "split squat base",
+        "split squat position",
+        "スプリットスクワット姿勢",
+        "스플릿 스쿼트",
+        "split squat"
       ]
     },
     {
@@ -4388,6 +4596,72 @@
       ]
     },
     {
+      "tagId": "act.movement.sit_up",
+      "category": "Action",
+      "canonicalJa": "上体を起こす",
+      "canonicalEn": "Sit-up",
+      "related": [
+        "pos.guard.knee_shield",
+        "pos.guard.dlr",
+        "pos.guard.open",
+        "act.guard.wrestle_up",
+        "act.guard.sweep.kick",
+        "pre.off_balance"
+      ],
+      "labels": {
+        "ja": "上体を起こす",
+        "en": "Sit-up",
+        "ko": "상체 일으키기",
+        "pt": "Sentar",
+        "es": "Sentarse",
+        "fr": "Se redresser"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "sit up",
+          "sit-up",
+          "kick up to sit",
+          "sit up to base"
+        ],
+        "ja": [
+          "起き上がる",
+          "上体起こし",
+          "キックアップ"
+        ],
+        "ko": [
+          "상체 일으키기"
+        ],
+        "pt": [
+          "sentar",
+          "levantar tronco"
+        ],
+        "es": [
+          "sentarse",
+          "levantar el tronco"
+        ],
+        "fr": [
+          "se redresser",
+          "redresser le buste"
+        ]
+      },
+      "aliases": [
+        "sit up",
+        "sit-up",
+        "kick up to sit",
+        "sit up to base",
+        "起き上がる",
+        "上体起こし",
+        "キックアップ",
+        "상체 일으키기",
+        "sentar",
+        "levantar tronco",
+        "sentarse",
+        "levantar el tronco",
+        "se redresser",
+        "redresser le buste"
+      ]
+    },
+    {
       "tagId": "act.guard.inversion",
       "category": "Action",
       "canonicalJa": "インバーテッドムーブ",
@@ -6801,7 +7075,9 @@
           "kata gatame"
         ],
         "ja": [
-          "腕三角"
+          "腕三角",
+          "アームトライアングル",
+          "アームトライアングルチョーク"
         ],
         "ko": [
           "암 트라이앵글"
@@ -6822,6 +7098,8 @@
         "arm triangle",
         "kata gatame",
         "腕三角",
+        "アームトライアングル",
+        "アームトライアングルチョーク",
         "암 트라이앵글",
         "triângulo de braço",
         "arm triángulo"
@@ -7842,6 +8120,9 @@
         "en": [
           "shoulder lock"
         ],
+        "ja": [
+          "肩固め"
+        ],
         "ko": [
           "숄더 락"
         ],
@@ -7857,6 +8138,7 @@
       },
       "aliases": [
         "shoulder lock",
+        "肩固め",
         "숄더 락",
         "chave de ombro",
         "hombro luxación",
@@ -8205,6 +8487,9 @@
           "ude garami",
           "V1"
         ],
+        "ja": [
+          "肩固め"
+        ],
         "ko": [
           "아메리카나"
         ],
@@ -8227,6 +8512,7 @@
         "americana",
         "ude garami",
         "V1",
+        "肩固め",
         "아메리카나"
       ]
     },
@@ -8253,25 +8539,42 @@
           "ストレートアンクルロック",
           "ストレートフットロック",
           "フットロック",
-          "アンクルロック"
+          "アンクルロック",
+          "足関節ロック",
+          "足関節固め",
+          "ストレート足関節ロック",
+          "アキレスけん固め",
+          "アキレス腱固め"
         ],
         "en": [
           "straight ankle",
-          "ankle lock"
+          "ankle lock",
+          "straight foot lock",
+          "straight footlock",
+          "Achilles lock",
+          "Achilles crank"
         ],
         "ko": [
-          "스트레이트 앵클 락"
+          "스트레이트 앵클 락",
+          "스트레이트 풋 락",
+          "아킬레스 락"
         ],
         "pt": [
-          "chave de tornozelo"
+          "chave de tornozelo",
+          "chave reta no pé",
+          "straight foot lock"
         ],
         "es": [
           "straight tobillo",
-          "tobillo luxación"
+          "tobillo luxación",
+          "llave recta de pie",
+          "straight foot lock"
         ],
         "fr": [
           "straight cheville",
-          "cheville clé"
+          "cheville clé",
+          "clé droite du pied",
+          "straight foot lock"
         ]
       },
       "aliases": [
@@ -8279,14 +8582,82 @@
         "ストレートフットロック",
         "フットロック",
         "アンクルロック",
+        "足関節ロック",
+        "足関節固め",
+        "ストレート足関節ロック",
+        "アキレスけん固め",
+        "アキレス腱固め",
         "straight ankle",
         "ankle lock",
+        "straight foot lock",
+        "straight footlock",
+        "Achilles lock",
+        "Achilles crank",
         "스트레이트 앵클 락",
+        "스트레이트 풋 락",
+        "아킬레스 락",
         "chave de tornozelo",
+        "chave reta no pé",
         "straight tobillo",
         "tobillo luxación",
+        "llave recta de pie",
         "straight cheville",
-        "cheville clé"
+        "cheville clé",
+        "clé droite du pied"
+      ]
+    },
+    {
+      "tagId": "act.sub.ankle_lock.eel",
+      "category": "Submission",
+      "canonicalJa": "ウナギロック",
+      "canonicalEn": "Eel Lock",
+      "related": [
+        "act.sub.ankle_lock",
+        "pos.guard.deep_half",
+        "pos.leg_entanglement.ashi",
+        "pre.knee_line_control",
+        "pre.heel_exposure_control"
+      ],
+      "labels": {
+        "ja": "ウナギロック",
+        "en": "Eel Lock",
+        "ko": "이얼 락",
+        "pt": "Eel Lock",
+        "es": "Eel Lock",
+        "fr": "Eel Lock"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "イールロック",
+          "ディープハーフからのストレートアンクル"
+        ],
+        "en": [
+          "eel lock",
+          "straight ankle from deep half",
+          "deep half ankle lock"
+        ],
+        "ko": [
+          "일 락",
+          "딥 하프 스트레이트 앵클"
+        ],
+        "pt": [
+          "eel lock"
+        ],
+        "es": [
+          "eel lock"
+        ],
+        "fr": [
+          "eel lock"
+        ]
+      },
+      "aliases": [
+        "イールロック",
+        "ディープハーフからのストレートアンクル",
+        "eel lock",
+        "straight ankle from deep half",
+        "deep half ankle lock",
+        "일 락",
+        "딥 하프 스트레이트 앵클"
       ]
     },
     {
@@ -10185,6 +10556,114 @@
         "yoko tomoe nage",
         "side tomoe nage",
         "요코 토모에 나게"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.neck_throw",
+      "category": "Action",
+      "canonicalJa": "首投げ",
+      "canonicalEn": "Neck Throw",
+      "related": [
+        "pos.phase.standing",
+        "pos.phase.clinch",
+        "act.wrestling.hip_throw",
+        "act.wrestling.arm_throw",
+        "act.wrestling.throw"
+      ],
+      "labels": {
+        "ja": "首投げ",
+        "en": "Neck Throw",
+        "ko": "목 던지기",
+        "pt": "Neck Throw",
+        "es": "Neck Throw",
+        "fr": "Neck Throw"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "neck throw",
+          "kubi nage"
+        ],
+        "ja": [
+          "首投",
+          "クビナゲ"
+        ],
+        "ko": [
+          "목 던지기"
+        ],
+        "pt": [
+          "neck throw"
+        ],
+        "es": [
+          "neck throw"
+        ],
+        "fr": [
+          "neck throw"
+        ]
+      },
+      "aliases": [
+        "neck throw",
+        "kubi nage",
+        "首投",
+        "クビナゲ",
+        "목 던지기"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.throw",
+      "category": "Action",
+      "canonicalJa": "投げ",
+      "canonicalEn": "Throw",
+      "related": [
+        "pos.phase.standing",
+        "pos.phase.clinch",
+        "act.wrestling.hip_throw",
+        "act.wrestling.arm_throw",
+        "act.wrestling.single_leg_takedown",
+        "act.wrestling.double_leg_takedown",
+        "act.wrestling.tomoe_nage"
+      ],
+      "labels": {
+        "ja": "投げ",
+        "en": "Throw",
+        "ko": "던지기",
+        "pt": "Throw",
+        "es": "Throw",
+        "fr": "Throw"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "throw",
+          "throwing technique"
+        ],
+        "ja": [
+          "投げ技",
+          "投"
+        ],
+        "ko": [
+          "던지기"
+        ],
+        "pt": [
+          "throw",
+          "arremesso"
+        ],
+        "es": [
+          "throw",
+          "derribo"
+        ],
+        "fr": [
+          "throw",
+          "projection"
+        ]
+      },
+      "aliases": [
+        "throw",
+        "throwing technique",
+        "投げ技",
+        "投",
+        "던지기",
+        "arremesso",
+        "derribo",
+        "projection"
       ]
     },
     {
@@ -16765,6 +17244,57 @@
       },
       "aliases": [
         "指"
+      ]
+    },
+    {
+      "tagId": "pre.body.face",
+      "category": "Prerequisite",
+      "canonicalJa": "かお",
+      "canonicalEn": "Face",
+      "related": [
+        "pre.crossface",
+        "pre.head_position",
+        "pre.chin_control",
+        "pos.top.side_control",
+        "act.sub.guillotine"
+      ],
+      "labels": {
+        "ja": "かお",
+        "en": "Face",
+        "ko": "얼굴",
+        "pt": "Rosto",
+        "es": "Cara",
+        "fr": "Visage"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "顔"
+        ],
+        "en": [
+          "face",
+          "facial"
+        ],
+        "ko": [
+          "얼굴 전체"
+        ],
+        "pt": [
+          "rosto"
+        ],
+        "es": [
+          "cara"
+        ],
+        "fr": [
+          "visage"
+        ]
+      },
+      "aliases": [
+        "顔",
+        "face",
+        "facial",
+        "얼굴 전체",
+        "rosto",
+        "cara",
+        "visage"
       ]
     },
     {
