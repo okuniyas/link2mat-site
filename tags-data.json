@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.31",
+  "version": "dict_v1.2.32",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -7612,6 +7612,9 @@
         "fr": "Loop Étranglement"
       },
       "aliasesByLocale": {
+        "ja": [
+          "小手絞り"
+        ],
         "en": [
           "loop choke"
         ],
@@ -7629,6 +7632,7 @@
         ]
       },
       "aliases": [
+        "小手絞り",
         "loop choke",
         "루프 초크",
         "estrangulamento em laço",
