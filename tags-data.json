@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.30",
+  "version": "dict_v1.2.31",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -517,7 +517,8 @@
       "related": [
         "act.guard.sweep",
         "pre.underhook",
-        "pos.guard.knee_shield"
+        "pos.guard.knee_shield",
+        "pre.knee_twist_setup"
       ],
       "labels": {
         "ja": "ハーフガード",
@@ -1155,6 +1156,64 @@
         "escudo de joelho no passe",
         "rodilla en el pase",
         "genou pendant le passe"
+      ]
+    },
+    {
+      "tagId": "pre.knee_twist_setup",
+      "category": "Prerequisite",
+      "canonicalJa": "ニーツイスト（セットアップ）",
+      "canonicalEn": "Knee Twist Setup",
+      "related": [
+        "pos.guard.half",
+        "pre.underhook",
+        "pre.overhook",
+        "pre.frame",
+        "act.guard.sweep",
+        "act.guard.retention",
+        "act.guard.wrestle_up"
+      ],
+      "labels": {
+        "ja": "ニーツイスト（セットアップ）",
+        "en": "Knee Twist Setup",
+        "ko": "니 트위스트 (셋업)",
+        "pt": "Knee twist (setup)",
+        "es": "Knee twist (entrada)",
+        "fr": "Knee twist (mise en place)"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "ニーツイスト",
+          "膝ツイスト",
+          "ニーツイストセットアップ"
+        ],
+        "en": [
+          "knee twist",
+          "knee twist setup",
+          "half guard knee twist"
+        ],
+        "ko": [
+          "니 트위스트"
+        ],
+        "pt": [
+          "knee twist",
+          "meia guarda knee twist"
+        ],
+        "es": [
+          "knee twist"
+        ],
+        "fr": [
+          "knee twist"
+        ]
+      },
+      "aliases": [
+        "ニーツイスト",
+        "膝ツイスト",
+        "ニーツイストセットアップ",
+        "knee twist",
+        "knee twist setup",
+        "half guard knee twist",
+        "니 트위스트",
+        "meia guarda knee twist"
       ]
     },
     {
@@ -2005,6 +2064,7 @@
         "pre.headquarters_setup",
         "pos.guard.half",
         "pos.guard.knee_shield",
+        "pos.stance.split_squat",
         "act.pass.knee_cut",
         "act.pass.long_step",
         "act.pass.leg_drag"
