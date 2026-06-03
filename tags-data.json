@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.32",
+  "version": "dict_v1.2.34",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -9,8 +9,13 @@
       "related": [
         "act.wrestling.single_leg_takedown",
         "act.wrestling.double_leg_takedown",
+        "act.wrestling.knee_pick",
+        "act.wrestling.knee_tap",
         "act.wrestling.snapdown",
         "act.wrestling.arm_drag",
+        "pre.tie.collar",
+        "pre.tie.tricep",
+        "pre.tie.elbow",
         "act.wrestling.sumi_gaeshi",
         "act.guard.guard_pull"
       ],
@@ -55,6 +60,11 @@
       "related": [
         "act.wrestling.body_lock",
         "act.wrestling.inside_trip",
+        "act.wrestling.knee_pick",
+        "act.wrestling.knee_tap",
+        "pre.tie.collar",
+        "pre.tie.tricep",
+        "pre.tie.elbow",
         "pre.inside_position"
       ],
       "labels": {
@@ -516,6 +526,7 @@
       "canonicalEn": "Half Guard",
       "related": [
         "act.guard.sweep",
+        "act.guard.sweep.false_reap",
         "pre.underhook",
         "pos.guard.knee_shield",
         "pre.knee_twist_setup"
@@ -743,6 +754,7 @@
       "canonicalEn": "Butterfly Guard",
       "related": [
         "act.guard.sweep",
+        "act.guard.sweep.false_reap",
         "act.guard.sweep.hikikomi_gaeshi",
         "act.wrestling.sumi_gaeshi",
         "act.guard.wrestle_up",
@@ -934,6 +946,7 @@
       "canonicalEn": "Reverse De La Riva",
       "related": [
         "act.guard.sweep",
+        "act.guard.sweep.false_reap",
         "act.guard.leg_entanglement_entry",
         "pre.knee_line_control"
       ],
@@ -1019,6 +1032,7 @@
       "related": [
         "pos.guard.open",
         "act.guard.inversion",
+        "act.guard.sweep.false_reap",
         "act.guard.leg_entanglement_entry"
       ],
       "labels": {
@@ -1571,6 +1585,7 @@
       "related": [
         "pos.guard.half",
         "act.guard.sweep",
+        "act.guard.sweep.false_reap",
         "pre.underhook"
       ],
       "labels": {
@@ -2534,6 +2549,7 @@
       "related": [
         "act.sub.guillotine",
         "act.wrestling.snapdown",
+        "pre.tie.collar",
         "act.control.front_headlock_stabilize",
         "act.control.uchi_muso",
         "act.control.soto_muso",
@@ -2680,6 +2696,7 @@
       "canonicalEn": "Saddle",
       "related": [
         "pos.leg_entanglement.ashi",
+        "act.guard.sweep.false_reap",
         "act.sub.heel_hook",
         "pre.knee_line_control"
       ],
@@ -2819,6 +2836,7 @@
       "canonicalEn": "Cross Ashi",
       "related": [
         "pos.leg_entanglement.ashi",
+        "act.guard.sweep.false_reap",
         "act.sub.heel_hook",
         "pre.knee_line_control"
       ],
@@ -4080,8 +4098,17 @@
       "canonicalJa": "ファルスリープ",
       "canonicalEn": "False Reap",
       "related": [
-        "pos.guard.open",
-        "pre.off_balance"
+        "pos.guard.rdlr",
+        "pos.guard.reverse_half",
+        "pos.guard.half",
+        "pos.guard.butterfly",
+        "pos.guard.k_guard",
+        "act.guard.leg_entanglement_entry",
+        "pos.leg_entanglement.cross_ashi",
+        "pos.leg_entanglement.saddle",
+        "act.sub.heel_hook",
+        "pre.off_balance",
+        "pre.knee_line_control"
       ],
       "labels": {
         "ja": "ファルスリープ",
@@ -4093,7 +4120,11 @@
       },
       "aliasesByLocale": {
         "en": [
-          "false reap"
+          "false reap",
+          "false reap entry"
+        ],
+        "ja": [
+          "フォルスリープ"
         ],
         "ko": [
           "폴스 리프"
@@ -4110,6 +4141,8 @@
       },
       "aliases": [
         "false reap",
+        "false reap entry",
+        "フォルスリープ",
         "폴스 리프"
       ]
     },
@@ -5140,6 +5173,7 @@
       "canonicalJa": "足絡みエントリー",
       "canonicalEn": "Leg Entry",
       "related": [
+        "act.guard.sweep.false_reap",
         "pos.leg_entanglement.ashi",
         "pre.knee_line_control"
       ],
@@ -5762,6 +5796,7 @@
       "canonicalEn": "Duck Under",
       "related": [
         "act.pass.leg_drag",
+        "pre.tie.elbow",
         "pre.level_change",
         "pre.angle_created"
       ],
@@ -9827,6 +9862,9 @@
       "canonicalEn": "Snapdown",
       "related": [
         "pos.neutral.front_headlock",
+        "pre.tie.collar",
+        "pre.tie.tricep",
+        "act.wrestling.knee_pick",
         "act.sub.guillotine",
         "pre.head_position"
       ],
@@ -9867,6 +9905,8 @@
       "canonicalEn": "Arm Drag",
       "related": [
         "pos.phase.standing",
+        "pre.tie.elbow",
+        "pre.tie.tricep",
         "act.guard.wrestle_up",
         "pre.2on1",
         "act.transition.take_back",
@@ -10048,6 +10088,7 @@
       "canonicalJa": "アンクルピック",
       "canonicalEn": "Ankle Pick",
       "related": [
+        "pre.tie.elbow",
         "pre.level_change",
         "pre.off_balance",
         "pre.head_position"
@@ -10083,6 +10124,115 @@
         "pegada no tornozelo",
         "tobillo pick",
         "cheville pick"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.knee_pick",
+      "category": "Action",
+      "canonicalJa": "ニーピック",
+      "canonicalEn": "Knee Pick",
+      "related": [
+        "pos.phase.standing",
+        "pos.phase.clinch",
+        "pre.underhook",
+        "pre.head_position",
+        "act.wrestling.knee_tap",
+        "act.wrestling.snapdown",
+        "act.wrestling.high_crotch",
+        "act.wrestling.single_leg_takedown"
+      ],
+      "labels": {
+        "ja": "ニーピック",
+        "en": "Knee Pick",
+        "ko": "니 픽",
+        "pt": "Knee Pick",
+        "es": "Knee Pick",
+        "fr": "Knee Pick"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "knee pick",
+          "far knee pick",
+          "knee pick takedown"
+        ],
+        "ja": [
+          "ファー・ニーピック"
+        ],
+        "ko": [
+          "니 픽",
+          "파 니 픽"
+        ],
+        "pt": [
+          "knee pick",
+          "far knee pick"
+        ],
+        "es": [
+          "knee pick",
+          "far knee pick"
+        ],
+        "fr": [
+          "knee pick",
+          "far knee pick"
+        ]
+      },
+      "aliases": [
+        "knee pick",
+        "far knee pick",
+        "knee pick takedown",
+        "ファー・ニーピック",
+        "니 픽",
+        "파 니 픽"
+      ]
+    },
+    {
+      "tagId": "act.wrestling.knee_tap",
+      "category": "Action",
+      "canonicalJa": "ニータップ",
+      "canonicalEn": "Knee Tap",
+      "related": [
+        "pos.phase.standing",
+        "pos.phase.clinch",
+        "pre.head_position",
+        "act.wrestling.knee_pick",
+        "act.wrestling.single_leg_takedown",
+        "act.wrestling.snapdown"
+      ],
+      "labels": {
+        "ja": "ニータップ",
+        "en": "Knee Tap",
+        "ko": "니 탭",
+        "pt": "Knee Tap",
+        "es": "Knee Tap",
+        "fr": "Knee Tap"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "knee tap",
+          "knee tap takedown"
+        ],
+        "ja": [
+          "膝タップ"
+        ],
+        "ko": [
+          "니 탭",
+          "무릎 탭"
+        ],
+        "pt": [
+          "knee tap"
+        ],
+        "es": [
+          "knee tap"
+        ],
+        "fr": [
+          "knee tap"
+        ]
+      },
+      "aliases": [
+        "knee tap",
+        "knee tap takedown",
+        "膝タップ",
+        "니 탭",
+        "무릎 탭"
       ]
     },
     {
@@ -10398,6 +10548,7 @@
       "canonicalJa": "ハイクロッチテイクダウン",
       "canonicalEn": "High Crotch Takedown",
       "related": [
+        "act.wrestling.knee_pick",
         "pre.level_change",
         "pre.head_position"
       ],
@@ -12967,6 +13118,7 @@
       "canonicalJa": "アンダーフック",
       "canonicalEn": "Underhook",
       "related": [
+        "act.wrestling.knee_pick",
         "act.pass.knee_cut",
         "pos.guard.butterfly",
         "pos.guard.half"
@@ -13377,6 +13529,175 @@
         "턱 컨트롤",
         "controle do queixo",
         "chin contrôle"
+      ]
+    },
+    {
+      "tagId": "pre.tie.collar",
+      "category": "Prerequisite",
+      "canonicalJa": "カラータイ",
+      "canonicalEn": "Collar Tie",
+      "related": [
+        "pos.phase.standing",
+        "pos.phase.clinch",
+        "pre.tie.tricep",
+        "act.wrestling.snapdown",
+        "pos.neutral.front_headlock",
+        "pre.head_position"
+      ],
+      "labels": {
+        "ja": "カラータイ",
+        "en": "Collar Tie",
+        "ko": "칼라 타이",
+        "pt": "Collar Tie",
+        "es": "Collar Tie",
+        "fr": "Collar Tie"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "collar tie",
+          "neck tie",
+          "single collar tie"
+        ],
+        "ja": [
+          "カラータイ",
+          "ネックタイ"
+        ],
+        "ko": [
+          "칼라 타이"
+        ],
+        "pt": [
+          "collar tie",
+          "neck tie"
+        ],
+        "es": [
+          "collar tie",
+          "neck tie"
+        ],
+        "fr": [
+          "collar tie",
+          "neck tie"
+        ]
+      },
+      "aliases": [
+        "collar tie",
+        "neck tie",
+        "single collar tie",
+        "カラータイ",
+        "ネックタイ",
+        "칼라 타이"
+      ]
+    },
+    {
+      "tagId": "pre.tie.tricep",
+      "category": "Prerequisite",
+      "canonicalJa": "トライセップタイ",
+      "canonicalEn": "Tricep Tie",
+      "related": [
+        "pos.phase.standing",
+        "pos.phase.clinch",
+        "pre.tie.collar",
+        "pre.tie.elbow",
+        "act.wrestling.arm_drag",
+        "act.wrestling.snapdown"
+      ],
+      "labels": {
+        "ja": "トライセップタイ",
+        "en": "Tricep Tie",
+        "ko": "트라이셉 타이",
+        "pt": "Tricep Tie",
+        "es": "Tricep Tie",
+        "fr": "Tricep Tie"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "tricep tie",
+          "triceps control",
+          "biceps tie"
+        ],
+        "ja": [
+          "トライセップタイ",
+          "トライセップコントロール"
+        ],
+        "ko": [
+          "트라이셉 타이"
+        ],
+        "pt": [
+          "tricep tie",
+          "triceps control"
+        ],
+        "es": [
+          "tricep tie",
+          "triceps control"
+        ],
+        "fr": [
+          "tricep tie",
+          "triceps control"
+        ]
+      },
+      "aliases": [
+        "tricep tie",
+        "triceps control",
+        "biceps tie",
+        "トライセップタイ",
+        "トライセップコントロール",
+        "트라이셉 타이"
+      ]
+    },
+    {
+      "tagId": "pre.tie.elbow",
+      "category": "Prerequisite",
+      "canonicalJa": "エルボータイ",
+      "canonicalEn": "Elbow Tie",
+      "related": [
+        "pos.phase.standing",
+        "pos.phase.clinch",
+        "pre.tie.collar",
+        "pre.tie.tricep",
+        "act.wrestling.arm_drag",
+        "act.wrestling.ankle_pick",
+        "act.pass.duck_under"
+      ],
+      "labels": {
+        "ja": "エルボータイ",
+        "en": "Elbow Tie",
+        "ko": "엘보 타이",
+        "pt": "Elbow Tie",
+        "es": "Elbow Tie",
+        "fr": "Elbow Tie"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "elbow tie",
+          "elbow control",
+          "elbow post"
+        ],
+        "ja": [
+          "エルボータイ",
+          "エルボーコントロール"
+        ],
+        "ko": [
+          "엘보 타이"
+        ],
+        "pt": [
+          "elbow tie",
+          "elbow control"
+        ],
+        "es": [
+          "elbow tie",
+          "elbow control"
+        ],
+        "fr": [
+          "elbow tie",
+          "elbow control"
+        ]
+      },
+      "aliases": [
+        "elbow tie",
+        "elbow control",
+        "elbow post",
+        "エルボータイ",
+        "エルボーコントロール",
+        "엘보 타이"
       ]
     },
     {
@@ -13896,6 +14217,8 @@
       "canonicalEn": "Head Position",
       "related": [
         "act.wrestling.single_leg_takedown",
+        "act.wrestling.knee_pick",
+        "act.wrestling.knee_tap",
         "act.wrestling.snapdown",
         "pos.neutral.front_headlock"
       ],
