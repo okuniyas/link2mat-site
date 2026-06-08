@@ -49,10 +49,77 @@
         color: #2563eb;
       }
       .hero {
+        display: grid;
+        grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
         border: 1px solid #e5e7eb;
         border-radius: 16px;
         padding: 20px;
         background: #f8fafc;
+      }
+      .hero > p:first-child {
+        grid-column: 1 / -1;
+      }
+      .hero > .support-illustration {
+        margin: 0;
+        max-width: none;
+      }
+      .hero > .bilingual {
+        max-width: 620px;
+      }
+      .support-illustration {
+        max-width: 560px;
+        margin: 16px auto 20px;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #ffffff;
+      }
+      .support-illustration img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+      .support-video-embed {
+        max-width: 360px;
+        margin: 16px auto 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #000000;
+      }
+      .support-video-embed iframe {
+        display: block;
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        border: 0;
+      }
+      .support-section {
+        margin: 16px 0 28px;
+      }
+      .support-section-text {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      .support-section-text > .card {
+        max-width: 720px !important;
+      }
+      .support-section-media .support-illustration {
+        max-width: 560px;
+        margin: 16px auto 20px;
+      }
+      .support-section-standalone-figure > h3,
+      .support-section-standalone-figure > p {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .support-section-standalone-figure > .card {
+        max-width: 720px !important;
+        margin-left: auto;
+        margin-right: auto;
       }
       .pill {
         display: inline-block;
@@ -132,6 +199,17 @@
       @media (max-width: 720px) {
         .bilingual {
           grid-template-columns: 1fr;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero > p:first-child {
+          grid-column: auto;
+          grid-row: auto;
+        }
+        .support-section-text,
+        .hero > .bilingual {
+          max-width: none;
         }
       }
       .tab-btn {
@@ -290,12 +368,12 @@
         <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
         <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
       </div>
-      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-05-19</p>
-      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-05-19</p>
-      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-05-19</p>
-      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-05-19</p>
-      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-05-19</p>
-      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-05-19</p>
+      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-05-20</p>
+      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-05-20</p>
+      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-05-20</p>
+      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-05-20</p>
+      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-05-20</p>
+      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-05-20</p>
 
       <p class="muted lang-block lang-visible" data-lang="en"><a href="release-notes.html">Release notes</a> (version history)</p>
       <p class="muted lang-block" data-lang="ja"><a href="release-notes.html">リリースノート</a>（バージョン別の概要）</p>
@@ -316,6 +394,9 @@
           <span class="pill">Clips</span>
           <span class="pill">Tags</span>
         </p>
+        <figure class="support-illustration">
+          <img src="support-illustrations/why-link2mat.png" alt="Organizing Jiu-Jitsu links, clips, notes, and tags in Link2Mat" loading="lazy" />
+        </figure>
         <div class="bilingual">
           <div class="lang-block lang-visible" data-lang="en">
             <p>
@@ -545,6 +626,7 @@
             </p>
           </div>
         </div>
+      </div>
 
       <h2 class="lang-block lang-visible" data-lang="en">Getting Started</h2>
       <h2 class="lang-block" data-lang="ja">はじめに</h2>
@@ -558,6 +640,13 @@
       <p class="muted lang-block" data-lang="pt">Três passos para começar.</p>
       <p class="muted lang-block" data-lang="es">Tres pasos para empezar.</p>
       <p class="muted lang-block" data-lang="fr">Trois étapes pour commencer.</p>
+      <div class="support-section support-section-media-right">
+        <div class="support-section-media">
+          <figure class="support-illustration">
+            <img src="support-illustrations/getting-started.png" alt="Three steps for getting started with Link2Mat" loading="lazy" />
+          </figure>
+        </div>
+        <div class="support-section-text">
       <div class="card" style="max-width: 720px;">
         <div class="bilingual lang-blocks-row">
           <div class="lang-block lang-visible" data-lang="en">
@@ -635,6 +724,45 @@
             <p>Sur <strong>YouTube</strong> (et vidéos web similaires), vous pouvez aller à un moment depuis le début et l’enregistrer comme <strong>clip</strong>. Les <strong>vidéos ajoutées depuis votre bibliothèque Photos</strong> prennent aussi des clips par temps—pratique pour de longs enregistrements (entraînement, journée entière, etc.). Chaque clip peut avoir un titre, une note et des tags. Utile quand une vidéo mélange plusieurs techniques ou sujets—enregistrez chaque partie en clip et retrouvez-la dans l’onglet Shorts et clips.</p>
           </div>
         </div>
+        <figure class="support-video-embed">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/0hgcCLOmrcc"
+            title="Link2Mat — Clips and tags (YouTube Shorts)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </figure>
+        <p class="muted lang-block lang-visible" data-lang="en" style="margin-top: 8px;">
+          <strong>Video guide (YouTube Shorts):</strong>
+          <a href="https://www.youtube.com/shorts/0hgcCLOmrcc" rel="noopener noreferrer">Clips and tags — keep only the moments you need from long videos</a>
+          (Japanese audio).
+        </p>
+        <p class="muted lang-block" data-lang="ja" style="margin-top: 8px;">
+          <strong>解説動画（YouTube Shorts）:</strong>
+          <a href="https://www.youtube.com/shorts/0hgcCLOmrcc" rel="noopener noreferrer">長い動画から必要な場面だけ｜Clipとタグで整理</a>
+        </p>
+        <p class="muted lang-block" data-lang="ko" style="margin-top: 8px;">
+          <strong>동영상 가이드(YouTube Shorts):</strong>
+          <a href="https://www.youtube.com/shorts/0hgcCLOmrcc" rel="noopener noreferrer">긴 영상에서 필요한 장면만｜클립과 태그로 정리</a>
+          (일본어).
+        </p>
+        <p class="muted lang-block" data-lang="pt" style="margin-top: 8px;">
+          <strong>Guia em vídeo (YouTube Shorts):</strong>
+          <a href="https://www.youtube.com/shorts/0hgcCLOmrcc" rel="noopener noreferrer">Só os momentos que você precisa｜Clipes e tags</a>
+          (áudio em japonês).
+        </p>
+        <p class="muted lang-block" data-lang="es" style="margin-top: 8px;">
+          <strong>Guía en vídeo (YouTube Shorts):</strong>
+          <a href="https://www.youtube.com/shorts/0hgcCLOmrcc" rel="noopener noreferrer">Solo los momentos que necesitas｜Clips y etiquetas</a>
+          (audio en japonés).
+        </p>
+        <p class="muted lang-block" data-lang="fr" style="margin-top: 8px;">
+          <strong>Guide vidéo (YouTube Shorts) :</strong>
+          <a href="https://www.youtube.com/shorts/0hgcCLOmrcc" rel="noopener noreferrer">Les moments utiles seulement｜Clips et tags</a>
+          (audio en japonais).
+        </p>
         <p class="muted lang-block lang-visible" data-lang="en" style="margin-top: 12px;">That's it. No account required; everything stays on your device.</p>
         <p class="muted lang-block" data-lang="ja" style="margin-top: 12px;">以上。アカウント不要で、データは端末内に保存されます。</p>
         <p class="muted lang-block" data-lang="ko" style="margin-top: 12px;">계정 없이 사용 가능하며, 모든 데이터는 기기에만 저장됩니다.</p>
@@ -642,19 +770,234 @@
         <p class="muted lang-block" data-lang="es" style="margin-top: 12px;">Listo. No hace falta cuenta; todo se queda en tu dispositivo.</p>
         <p class="muted lang-block" data-lang="fr" style="margin-top: 12px;">C'est tout. Aucun compte requis ; tout reste sur votre appareil.</p>
       </div>
+        </div>
+      </div>
 
-      <h2 class="lang-block lang-visible" data-lang="en">Retention study (spaced learning)</h2>
-      <h2 class="lang-block" data-lang="ja">定着学習（間隔復習）</h2>
-      <h2 class="lang-block" data-lang="ko">정착 학습(간격 복습)</h2>
-      <h2 class="lang-block" data-lang="pt">Estudo de retenção (revisão espaçada)</h2>
-      <h2 class="lang-block" data-lang="es">Estudio de retención (repaso espaciado)</h2>
-      <h2 class="lang-block" data-lang="fr">Étude de mémorisation (révision espacée)</h2>
+      <h2 class="lang-block lang-visible" data-lang="en">Use cases</h2>
+      <h2 class="lang-block" data-lang="ja">使い方の例</h2>
+      <h2 class="lang-block" data-lang="ko">사용 예</h2>
+      <h2 class="lang-block" data-lang="pt">Casos de uso</h2>
+      <h2 class="lang-block" data-lang="es">Casos de uso</h2>
+      <h2 class="lang-block" data-lang="fr">Exemples d’utilisation</h2>
+      <p class="muted lang-block lang-visible" data-lang="en">Start from a problem, then choose the smallest useful action.</p>
+      <p class="muted lang-block" data-lang="ja">困りごとから入り、まず小さく使える操作を選びます。</p>
+      <p class="muted lang-block" data-lang="ko">문제에서 시작해 가장 작은 유용한 작업을 선택합니다.</p>
+      <p class="muted lang-block" data-lang="pt">Comece pelo problema e escolha a menor ação útil.</p>
+      <p class="muted lang-block" data-lang="es">Empieza por el problema y elige la acción útil más pequeña.</p>
+      <p class="muted lang-block" data-lang="fr">Partez d’un problème, puis choisissez la plus petite action utile.</p>
+      <div class="support-section support-section-media-right">
+        <div class="support-section-media">
+          <figure class="support-illustration">
+            <img src="support-illustrations/use-cases.png" alt="Use cases for organizing Jiu-Jitsu learning materials" loading="lazy" />
+          </figure>
+        </div>
+        <div class="support-section-text">
+      <div class="card" style="max-width: 720px;">
+        <div class="bilingual lang-blocks-row">
+          <div class="lang-block lang-visible" data-lang="en">
+            <p><strong>I want to collect only my own match videos.</strong></p>
+            <p><strong>Can Link2Mat do this?</strong> Yes. You can find match videos by tags or by keywords in titles and notes, then add them to a List such as "My Matches".</p>
+            <p><strong>How:</strong> Add match videos, tag them when useful, search for words such as ASJJF, IBJJF, JBJJF, Championship, tournament, or your event name, then add the results to a List. Create Clips for the exact moments you want to revisit.</p>
+            <p><strong>First step:</strong> Add one match video and create one List named "My Matches".</p>
+            <p class="muted"><strong>Video guide:</strong> Coming soon.</p>
+          </div>
+          <div class="lang-block" data-lang="ja">
+            <p><strong>自分の試合動画だけをまとめて見返したい。</strong></p>
+            <p><strong>できますか:</strong> できます。試合タグや、タイトル/メモのキーワードで探し、見つけた動画を「自分の試合」などの List にまとめられます。</p>
+            <p><strong>やり方:</strong> 試合動画を追加し、必要に応じて試合タグを付けます。ASJJF、IBJJF、JBJJF、Championship、大会、選手権、イベント名などで検索し、検索結果を List に追加します。見返したい場面だけ Clip にできます。</p>
+            <p><strong>まず最初の一歩:</strong> 試合動画を 1 本だけ追加し、「自分の試合」という List を 1 つ作ります。</p>
+            <p class="muted"><strong>解説動画:</strong> 準備中です。</p>
+          </div>
+          <div class="lang-block" data-lang="ko">
+            <p><strong>내 경기 영상만 모아 보고 싶습니다.</strong></p>
+            <p><strong>가능한가요?</strong> 가능합니다. 경기 태그나 제목/메모의 키워드로 찾은 뒤 "My Matches" 같은 List에 추가할 수 있습니다.</p>
+            <p><strong>방법:</strong> 경기 영상을 추가하고 필요하면 태그를 붙입니다. ASJJF, IBJJF, JBJJF, Championship, 대회, 선수권, 이벤트 이름 등으로 검색한 뒤 결과를 List에 추가합니다. 다시 보고 싶은 장면은 Clip으로 만듭니다.</p>
+            <p><strong>첫 단계:</strong> 경기 영상 하나를 추가하고 "My Matches" List 하나를 만듭니다.</p>
+            <p class="muted"><strong>동영상 가이드:</strong> 준비 중입니다.</p>
+          </div>
+          <div class="lang-block" data-lang="pt">
+            <p><strong>Quero reunir apenas meus vídeos de luta.</strong></p>
+            <p><strong>O Link2Mat faz isso?</strong> Sim. Você pode encontrar vídeos por tags ou palavras em títulos e notas, depois adicioná-los a uma lista como "My Matches".</p>
+            <p><strong>Como:</strong> Adicione vídeos de luta, marque com tags quando útil, procure por ASJJF, IBJJF, JBJJF, Championship, torneio ou o nome do evento, e adicione os resultados a uma lista. Crie clipes para os momentos exatos que quer rever.</p>
+            <p><strong>Primeiro passo:</strong> Adicione um vídeo de luta e crie uma lista chamada "My Matches".</p>
+            <p class="muted"><strong>Guia em vídeo:</strong> Em breve.</p>
+          </div>
+          <div class="lang-block" data-lang="es">
+            <p><strong>Quiero reunir solo mis vídeos de competición.</strong></p>
+            <p><strong>¿Link2Mat puede hacerlo?</strong> Sí. Puedes encontrarlos por etiquetas o por palabras en títulos y notas, y añadirlos a una lista como "My Matches".</p>
+            <p><strong>Cómo:</strong> Añade vídeos de competición, etiqueta cuando sea útil, busca ASJJF, IBJJF, JBJJF, Championship, torneo o el nombre del evento, y añade los resultados a una lista. Crea clips para los momentos exactos que quieras revisar.</p>
+            <p><strong>Primer paso:</strong> Añade un vídeo de competición y crea una lista llamada "My Matches".</p>
+            <p class="muted"><strong>Guía en vídeo:</strong> Próximamente.</p>
+          </div>
+          <div class="lang-block" data-lang="fr">
+            <p><strong>Je veux regrouper uniquement mes vidéos de compétition.</strong></p>
+            <p><strong>Link2Mat peut le faire ?</strong> Oui. Vous pouvez les retrouver par tags ou par mots dans les titres et notes, puis les ajouter à une liste comme "My Matches".</p>
+            <p><strong>Comment faire :</strong> Ajoutez des vidéos de compétition, taguez-les si utile, cherchez ASJJF, IBJJF, JBJJF, Championship, tournoi ou le nom de l’événement, puis ajoutez les résultats à une liste. Créez des clips pour les moments précis à revoir.</p>
+            <p><strong>Premier pas :</strong> Ajoutez une vidéo de compétition et créez une liste nommée "My Matches".</p>
+            <p class="muted"><strong>Guide vidéo :</strong> Bientôt disponible.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="max-width: 720px; margin-top: 16px;">
+        <div class="bilingual lang-blocks-row">
+          <div class="lang-block lang-visible" data-lang="en">
+            <p><strong>More use cases to add next</strong></p>
+            <ul>
+              <li>Separate what you want to watch before a match and before training.</li>
+              <li>Prepare material to discuss in a private lesson.</li>
+              <li>Keep only the techniques you actually use from an instructional.</li>
+              <li>Review short Clips in order.</li>
+              <li>Start from a tagged reference sample.</li>
+            </ul>
+          </div>
+          <div class="lang-block" data-lang="ja">
+            <p><strong>次に追加する使い方の例</strong></p>
+            <ul>
+              <li>試合前に見るものと、練習前に見るものを分けたい。</li>
+              <li>プライベートレッスンで先生に相談する材料を作りたい。</li>
+              <li>教則の中で、自分が実際に使う技だけを残したい。</li>
+              <li>短い Clip を順番に見返したい。</li>
+              <li>タグ付け済みの参考サンプルから始めたい。</li>
+            </ul>
+          </div>
+          <div class="lang-block" data-lang="ko">
+            <p><strong>다음에 추가할 사용 예</strong></p>
+            <ul>
+              <li>시합 전과 연습 전에 볼 영상을 나누고 싶습니다.</li>
+              <li>개인 레슨에서 선생님과 상담할 자료를 만들고 싶습니다.</li>
+              <li>교본에서 실제로 사용할 기술만 남기고 싶습니다.</li>
+              <li>짧은 Clip을 순서대로 다시 보고 싶습니다.</li>
+              <li>태그가 붙은 참고 샘플에서 시작하고 싶습니다.</li>
+            </ul>
+          </div>
+          <div class="lang-block" data-lang="pt">
+            <p><strong>Próximos casos de uso</strong></p>
+            <ul>
+              <li>Separar o que assistir antes de uma luta e antes do treino.</li>
+              <li>Preparar material para conversar em uma aula particular.</li>
+              <li>Guardar só as técnicas que você realmente usa de um instrucional.</li>
+              <li>Rever Clips curtos em ordem.</li>
+              <li>Começar por uma amostra de referência já marcada com tags.</li>
+            </ul>
+          </div>
+          <div class="lang-block" data-lang="es">
+            <p><strong>Próximos casos de uso</strong></p>
+            <ul>
+              <li>Separar lo que quieres ver antes de competir y antes de entrenar.</li>
+              <li>Preparar material para hablarlo en una clase privada.</li>
+              <li>Guardar solo las técnicas que realmente usas de un instructional.</li>
+              <li>Revisar Clips cortos en orden.</li>
+              <li>Empezar desde una muestra de referencia ya etiquetada.</li>
+            </ul>
+          </div>
+          <div class="lang-block" data-lang="fr">
+            <p><strong>Prochains exemples d’utilisation</strong></p>
+            <ul>
+              <li>Séparer ce que vous voulez regarder avant une compétition et avant l’entraînement.</li>
+              <li>Préparer des éléments à discuter en cours privé.</li>
+              <li>Garder seulement les techniques que vous utilisez vraiment dans une instruction.</li>
+              <li>Revoir de courts Clips dans l’ordre.</li>
+              <li>Commencer avec un exemple de référence déjà tagué.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Reference samples</h2>
+      <h2 class="lang-block" data-lang="ja">参考サンプル</h2>
+      <h2 class="lang-block" data-lang="ko">참고 샘플</h2>
+      <h2 class="lang-block" data-lang="pt">Amostras de referência</h2>
+      <h2 class="lang-block" data-lang="es">Muestras de referencia</h2>
+      <h2 class="lang-block" data-lang="fr">Exemples de référence</h2>
+      <p class="muted lang-block lang-visible" data-lang="en">Small sample Lists that show one way to organize study material.</p>
+      <p class="muted lang-block" data-lang="ja">学習素材を整理する一例として、小さなサンプル List を用意します。</p>
+      <p class="muted lang-block" data-lang="ko">학습 자료를 정리하는 한 가지 예로 작은 샘플 List를 제공합니다.</p>
+      <p class="muted lang-block" data-lang="pt">Pequenas listas de exemplo para mostrar uma forma de organizar material de estudo.</p>
+      <p class="muted lang-block" data-lang="es">Pequeñas listas de ejemplo que muestran una forma de organizar material de estudio.</p>
+      <p class="muted lang-block" data-lang="fr">De petites listes exemples montrant une façon d’organiser le matériel d’étude.</p>
+      <div class="support-section support-section-media-right">
+        <div class="support-section-media">
+          <figure class="support-illustration">
+            <img src="support-illustrations/reference-samples.png" alt="Importing a tagged reference sample list" loading="lazy" />
+          </figure>
+        </div>
+        <div class="support-section-text">
+      <div class="card" style="max-width: 720px;">
+        <div class="bilingual lang-blocks-row">
+          <div class="lang-block lang-visible" data-lang="en">
+            <p><strong>Triforce Online reference sample</strong></p>
+            <p>This sample is being prepared as a small Link2Mat List with three Triforce Online technique URLs, example notes, and tags.</p>
+            <p>The videos open on Triforce Online. Link2Mat does not host or redistribute the videos.</p>
+            <p>For the full curriculum and access conditions, visit Triforce Online: <a href="https://triforce-online.com/" rel="noopener noreferrer">https://triforce-online.com/</a></p>
+            <p class="muted">Download link: preparing after wording and permission are confirmed.</p>
+          </div>
+          <div class="lang-block" data-lang="ja">
+            <p><strong>Triforce Online 参考サンプル</strong></p>
+            <p>Triforce Online のテクニック動画 URL 3 件を使い、メモとタグ付け例を入れた小さな Link2Mat List として準備しています。</p>
+            <p>動画は Triforce Online で開きます。Link2Mat が動画ファイルをホストしたり再配布したりするものではありません。</p>
+            <p>カリキュラム全体や視聴条件は Triforce Online をご確認ください: <a href="https://triforce-online.com/" rel="noopener noreferrer">https://triforce-online.com/</a></p>
+            <p class="muted">ダウンロードリンク: 文言と掲載範囲の確認後に準備します。</p>
+          </div>
+          <div class="lang-block" data-lang="ko">
+            <p><strong>Triforce Online 참고 샘플</strong></p>
+            <p>Triforce Online 기술 URL 3개에 예시 메모와 태그를 넣은 작은 Link2Mat List로 준비 중입니다.</p>
+            <p>동영상은 Triforce Online에서 열립니다. Link2Mat은 동영상 파일을 호스팅하거나 재배포하지 않습니다.</p>
+            <p>전체 커리큘럼과 시청 조건은 Triforce Online에서 확인하세요: <a href="https://triforce-online.com/" rel="noopener noreferrer">https://triforce-online.com/</a></p>
+            <p class="muted">다운로드 링크: 문구와 게시 범위 확인 후 준비합니다.</p>
+          </div>
+          <div class="lang-block" data-lang="pt">
+            <p><strong>Amostra de referência Triforce Online</strong></p>
+            <p>Estamos preparando uma pequena lista Link2Mat com três URLs de técnicas da Triforce Online, notas e tags de exemplo.</p>
+            <p>Os vídeos abrem na Triforce Online. O Link2Mat não hospeda nem redistribui os vídeos.</p>
+            <p>Para o currículo completo e condições de acesso, visite a Triforce Online: <a href="https://triforce-online.com/" rel="noopener noreferrer">https://triforce-online.com/</a></p>
+            <p class="muted">Link de download: em preparação após confirmar texto e permissão.</p>
+          </div>
+          <div class="lang-block" data-lang="es">
+            <p><strong>Muestra de referencia Triforce Online</strong></p>
+            <p>Estamos preparando una pequeña lista de Link2Mat con tres URL de técnicas de Triforce Online, notas y etiquetas de ejemplo.</p>
+            <p>Los vídeos se abren en Triforce Online. Link2Mat no aloja ni redistribuye los vídeos.</p>
+            <p>Para el currículo completo y las condiciones de acceso, visita Triforce Online: <a href="https://triforce-online.com/" rel="noopener noreferrer">https://triforce-online.com/</a></p>
+            <p class="muted">Enlace de descarga: en preparación tras confirmar texto y permiso.</p>
+          </div>
+          <div class="lang-block" data-lang="fr">
+            <p><strong>Exemple de référence Triforce Online</strong></p>
+            <p>Nous préparons une petite liste Link2Mat avec trois URL de techniques Triforce Online, des notes et des tags exemples.</p>
+            <p>Les vidéos s’ouvrent sur Triforce Online. Link2Mat n’héberge ni ne redistribue les vidéos.</p>
+            <p>Pour le curriculum complet et les conditions d’accès, consultez Triforce Online : <a href="https://triforce-online.com/" rel="noopener noreferrer">https://triforce-online.com/</a></p>
+            <p class="muted">Lien de téléchargement : en préparation après confirmation du texte et de l’autorisation.</p>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Main features</h2>
+      <h2 class="lang-block" data-lang="ja">主な機能</h2>
+      <h2 class="lang-block" data-lang="ko">주요 기능</h2>
+      <h2 class="lang-block" data-lang="pt">Principais recursos</h2>
+      <h2 class="lang-block" data-lang="es">Funciones principales</h2>
+      <h2 class="lang-block" data-lang="fr">Fonctions principales</h2>
+      <figure class="support-illustration">
+        <img src="support-illustrations/main-features.png" alt="Main features of Link2Mat" loading="lazy" />
+      </figure>
+      <div class="support-section support-section-standalone-figure">
+      <h3 class="lang-block lang-visible" data-lang="en">Retention study (spaced learning)</h3>
+      <h3 class="lang-block" data-lang="ja">定着学習（間隔復習）</h3>
+      <h3 class="lang-block" data-lang="ko">정착 학습(간격 복습)</h3>
+      <h3 class="lang-block" data-lang="pt">Estudo de retenção (revisão espaçada)</h3>
+      <h3 class="lang-block" data-lang="es">Estudio de retención (repaso espaciado)</h3>
+      <h3 class="lang-block" data-lang="fr">Étude de mémorisation (révision espacée)</h3>
       <p class="muted lang-block lang-visible" data-lang="en">Come back to saved links and clips on a rhythm—helps moves and details stick (optional).</p>
       <p class="muted lang-block" data-lang="ja">忘れそうな頃に見返しをガイドします。反復によって記憶に定着しやすくします。</p>
       <p class="muted lang-block" data-lang="ko">한 번 보고 끝내지 않고, 저장한 내용을 여러 번 돌아보며 기억에 남기기 쉽게 합니다(선택).</p>
       <p class="muted lang-block" data-lang="pt">Volte a links e clipes salvos em ritmo—ajuda a fixar movimentos e detalhes (opcional).</p>
       <p class="muted lang-block" data-lang="es">Vuelve a enlaces y clips guardados con un ritmo: ayuda a fijar movimientos y detalles (opcional).</p>
       <p class="muted lang-block" data-lang="fr">Revenez à vos liens et clips enregistrés sur un rythme—pour mieux ancrer gestes et détails (facultatif).</p>
+      <figure class="support-illustration">
+        <img src="support-illustrations/retention-study.png" alt="Spaced review for retention study" loading="lazy" />
+      </figure>
       <div class="card" style="max-width: 720px;">
         <div class="bilingual lang-blocks-row">
           <div class="lang-block lang-visible" data-lang="en">
@@ -770,13 +1113,14 @@
           </div>
         </div>
       </div>
+      </div>
 
-      <h2 class="lang-block lang-visible" data-lang="en">Quick overview</h2>
-      <h2 class="lang-block" data-lang="ja">まずは概要</h2>
-      <h2 class="lang-block" data-lang="ko">개요</h2>
-      <h2 class="lang-block" data-lang="pt">Visão geral</h2>
-      <h2 class="lang-block" data-lang="es">Resumen</h2>
-      <h2 class="lang-block" data-lang="fr">Vue d’ensemble</h2>
+      <h3 class="lang-block lang-visible" data-lang="en">Feature summary</h3>
+      <h3 class="lang-block" data-lang="ja">機能の概要</h3>
+      <h3 class="lang-block" data-lang="ko">기능 요약</h3>
+      <h3 class="lang-block" data-lang="pt">Resumo dos recursos</h3>
+      <h3 class="lang-block" data-lang="es">Resumen de funciones</h3>
+      <h3 class="lang-block" data-lang="fr">Résumé des fonctions</h3>
       <div class="lang-blocks-row">
         <div class="lang-block lang-visible two-col" data-lang="en">
           <div class="card">
@@ -1058,6 +1402,13 @@
       <h2 class="lang-block" data-lang="pt">Contato</h2>
       <h2 class="lang-block" data-lang="es">Contacto</h2>
       <h2 class="lang-block" data-lang="fr">Contact</h2>
+      <div class="support-section support-section-media-right">
+        <div class="support-section-media">
+          <figure class="support-illustration">
+            <img src="support-illustrations/help.png" alt="Support, contact, and FAQ help" loading="lazy" />
+          </figure>
+        </div>
+        <div class="support-section-text">
       <div class="lang-blocks-row">
         <div class="lang-block lang-visible card" data-lang="en">
           <p><strong>Support email</strong></p>
@@ -1114,87 +1465,6 @@
           <p class="muted">Website: <a href="https://link2mat.com">https://link2mat.com</a></p>
         </div>
       </div>
-
-      <h2 class="lang-block lang-visible" data-lang="en">Rights & Disclaimer</h2>
-      <h2 class="lang-block" data-lang="ja">権利と免責</h2>
-      <h2 class="lang-block" data-lang="ko">권리와 면책</h2>
-      <h2 class="lang-block" data-lang="pt">Direitos e isenção</h2>
-      <h2 class="lang-block" data-lang="es">Derechos y exención</h2>
-      <h2 class="lang-block" data-lang="fr">Droits et responsabilité</h2>
-      <div class="card">
-        <div class="bilingual">
-          <div class="lang-block lang-visible" data-lang="en">
-            <p><strong>Rights and ownership</strong></p>
-            <p>
-              Link2Mat stores links and your notes. It does not host or distribute video content.
-              All third-party content remains the property of its respective owners.
-            </p>
-            <p><strong>Use of images and content</strong></p>
-            <p>
-              Please use images and content you have the right to use. Personal use within the app is
-              generally acceptable, but redistribution is not permitted.
-            </p>
-          </div>
-          <div class="lang-block" data-lang="ja">
-            <p><strong>権利と所有権</strong></p>
-            <p>
-              Link2Mat はリンクとメモを管理するためのアプリで、動画コンテンツの配信は行いません。
-              第三者のコンテンツに関する権利は、各権利者に帰属します。
-            </p>
-            <p><strong>画像・コンテンツの利用</strong></p>
-            <p>
-              利用権限のある画像・コンテンツをご利用ください。アプリ内での個人利用は概ね問題ありませんが、
-              再配布はお控えください。
-            </p>
-          </div>
-          <div class="lang-block" data-lang="ko">
-            <p><strong>권리와 소유권</strong></p>
-            <p>
-              Link2Mat은 링크와 메모를 저장합니다. 영상 콘텐츠를 호스팅하거나 배포하지 않습니다.
-              제3자 콘텐츠의 권리는 각 권리자에게 있습니다.
-            </p>
-            <p><strong>이미지/콘텐츠 사용</strong></p>
-            <p>
-              사용 권한이 있는 이미지와 콘텐츠만 이용해주세요. 앱 내 개인 사용은 일반적으로 허용되지만,
-              재배포는 금지됩니다.
-            </p>
-          </div>
-          <div class="lang-block" data-lang="pt">
-            <p><strong>Direitos e propriedade</strong></p>
-            <p>
-              O Link2Mat armazena links e suas notas. Ele não hospeda nem distribui vídeos.
-              Todo conteúdo de terceiros pertence aos seus respectivos proprietários.
-            </p>
-            <p><strong>Uso de imagens e conteúdo</strong></p>
-            <p>
-              Use apenas imagens e conteúdos para os quais você tem direito de uso. O uso pessoal
-              dentro do app é geralmente aceitável, mas a redistribuição não é permitida.
-            </p>
-          </div>
-          <div class="lang-block" data-lang="es">
-            <p><strong>Derechos y propiedad</strong></p>
-            <p>
-              Link2Mat almacena enlaces y tus notas. No aloja ni distribuye contenido de vídeo.
-              Todo contenido de terceros pertenece a sus respectivos propietarios.
-            </p>
-            <p><strong>Uso de imágenes y contenido</strong></p>
-            <p>
-              Usa solo imágenes y contenido con derecho de uso. El uso personal en la app suele
-              ser aceptable, pero la redistribución no está permitida.
-            </p>
-          </div>
-          <div class="lang-block" data-lang="fr">
-            <p><strong>Droits et propriété</strong></p>
-            <p>
-              Link2Mat stocke des liens et vos notes. Il n’héberge ni ne distribue de contenu vidéo.
-              Tout contenu tiers reste la propriété de ses détenteurs.
-            </p>
-            <p><strong>Utilisation des images et du contenu</strong></p>
-            <p>
-              Utilisez uniquement des images et du contenu pour lesquels vous avez les droits.
-              L’usage personnel dans l’app est généralement acceptable, mais la redistribution est interdite.
-            </p>
-          </div>
         </div>
       </div>
 
@@ -1539,6 +1809,89 @@
       <p class="muted lang-block" data-lang="fr">
         Les demandes de tags spécifiques sont acceptées dans l’app. Pour les politiques générales, écrivez au support.
       </p>
+
+      <h2 class="lang-block lang-visible" data-lang="en">Rights & Disclaimer</h2>
+      <h2 class="lang-block" data-lang="ja">権利と免責</h2>
+      <h2 class="lang-block" data-lang="ko">권리와 면책</h2>
+      <h2 class="lang-block" data-lang="pt">Direitos e isenção</h2>
+      <h2 class="lang-block" data-lang="es">Derechos y exención</h2>
+      <h2 class="lang-block" data-lang="fr">Droits et responsabilité</h2>
+      <div class="card">
+        <div class="bilingual">
+          <div class="lang-block lang-visible" data-lang="en">
+            <p><strong>Rights and ownership</strong></p>
+            <p>
+              Link2Mat stores links and your notes. It does not host or distribute video content.
+              All third-party content remains the property of its respective owners.
+            </p>
+            <p><strong>Use of images and content</strong></p>
+            <p>
+              Please use images and content you have the right to use. Personal use within the app is
+              generally acceptable, but redistribution is not permitted.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="ja">
+            <p><strong>権利と所有権</strong></p>
+            <p>
+              Link2Mat はリンクとメモを管理するためのアプリで、動画コンテンツの配信は行いません。
+              第三者のコンテンツに関する権利は、各権利者に帰属します。
+            </p>
+            <p><strong>画像・コンテンツの利用</strong></p>
+            <p>
+              利用権限のある画像・コンテンツをご利用ください。アプリ内での個人利用は概ね問題ありませんが、
+              再配布はお控えください。
+            </p>
+          </div>
+          <div class="lang-block" data-lang="ko">
+            <p><strong>권리와 소유권</strong></p>
+            <p>
+              Link2Mat은 링크와 메모를 저장합니다. 영상 콘텐츠를 호스팅하거나 배포하지 않습니다.
+              제3자 콘텐츠의 권리는 각 권리자에게 있습니다.
+            </p>
+            <p><strong>이미지/콘텐츠 사용</strong></p>
+            <p>
+              사용 권한이 있는 이미지와 콘텐츠만 이용해주세요. 앱 내 개인 사용은 일반적으로 허용되지만,
+              재배포는 금지됩니다.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="pt">
+            <p><strong>Direitos e propriedade</strong></p>
+            <p>
+              O Link2Mat armazena links e suas notas. Ele não hospeda nem distribui vídeos.
+              Todo conteúdo de terceiros pertence aos seus respectivos proprietários.
+            </p>
+            <p><strong>Uso de imagens e conteúdo</strong></p>
+            <p>
+              Use apenas imagens e conteúdos para os quais você tem direito de uso. O uso pessoal
+              dentro do app é geralmente aceitável, mas a redistribuição não é permitida.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="es">
+            <p><strong>Derechos y propiedad</strong></p>
+            <p>
+              Link2Mat almacena enlaces y tus notas. No aloja ni distribuye contenido de vídeo.
+              Todo contenido de terceros pertenece a sus respectivos propietarios.
+            </p>
+            <p><strong>Uso de imágenes y contenido</strong></p>
+            <p>
+              Usa solo imágenes y contenido con derecho de uso. El uso personal en la app suele
+              ser aceptable, pero la redistribución no está permitida.
+            </p>
+          </div>
+          <div class="lang-block" data-lang="fr">
+            <p><strong>Droits et propriété</strong></p>
+            <p>
+              Link2Mat stocke des liens et vos notes. Il n’héberge ni ne distribue de contenu vidéo.
+              Tout contenu tiers reste la propriété de ses détenteurs.
+            </p>
+            <p><strong>Utilisation des images et du contenu</strong></p>
+            <p>
+              Utilisez uniquement des images et du contenu pour lesquels vous avez les droits.
+              L’usage personnel dans l’app est généralement acceptable, mais la redistribution est interdite.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <h2 class="lang-block lang-visible" data-lang="en">Privacy</h2>
       <h2 class="lang-block" data-lang="ja">プライバシー</h2>
