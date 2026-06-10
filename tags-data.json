@@ -4044,6 +4044,70 @@
       ]
     },
     {
+      "tagId": "act.guard.sweep.back_roll",
+      "category": "Action",
+      "canonicalJa": "バックロールスイープ",
+      "canonicalEn": "Back Roll Sweep",
+      "related": [
+        "act.guard.sweep",
+        "act.movement.shoulder_roll",
+        "pre.off_balance",
+        "pos.guard.half",
+        "pos.guard.knee_shield",
+        "pos.guard.x_guard",
+        "pos.guard.reverse_half",
+        "scn.role.bottom"
+      ],
+      "labels": {
+        "ja": "バックロールスイープ",
+        "en": "Back Roll Sweep",
+        "ko": "백 롤 스윕",
+        "pt": "Raspagem de Rolamento para Trás",
+        "es": "Back Roll Barrido",
+        "fr": "Back Roll Balayage"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "back roll sweep",
+          "rear roll sweep"
+        ],
+        "ja": [
+          "後転スイープ",
+          "バックロールスイープ"
+        ],
+        "ko": [
+          "백 롤 스윕",
+          "후전 스윕"
+        ],
+        "pt": [
+          "raspagem de rolamento para trás",
+          "raspagem back roll"
+        ],
+        "es": [
+          "back roll barrido",
+          "barrido back roll"
+        ],
+        "fr": [
+          "back roll balayage",
+          "balayage back roll"
+        ]
+      },
+      "aliases": [
+        "back roll sweep",
+        "rear roll sweep",
+        "後転スイープ",
+        "バックロールスイープ",
+        "백 롤 스윕",
+        "후전 스윕",
+        "raspagem de rolamento para trás",
+        "raspagem back roll",
+        "back roll barrido",
+        "barrido back roll",
+        "back roll balayage",
+        "balayage back roll"
+      ]
+    },
+    {
       "tagId": "act.guard.sweep.sleeve_drag",
       "category": "Action",
       "canonicalJa": "袖流し",
@@ -11059,7 +11123,9 @@
       "category": "Action",
       "canonicalJa": "ショルダーロール",
       "canonicalEn": "Shoulder Roll",
-      "related": [],
+      "related": [
+        "act.guard.sweep.back_roll"
+      ],
       "labels": {
         "ja": "ショルダーロール",
         "en": "Shoulder Roll",
