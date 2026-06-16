@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.35",
+  "version": "dict_v1.2.36",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -7285,6 +7285,7 @@
       "aliasesByLocale": {
         "en": [
           "armbar",
+          "arm bar",
           "juji gatame",
           "armlock",
           "arm lock",
@@ -7293,7 +7294,8 @@
           "straight al"
         ],
         "ja": [
-          "腕十字"
+          "腕十字",
+          "アームバー"
         ],
         "ko": [
           "암바"
@@ -7323,6 +7325,7 @@
       },
       "aliases": [
         "armbar",
+        "arm bar",
         "juji gatame",
         "armlock",
         "arm lock",
@@ -7330,6 +7333,7 @@
         "straight arm lock",
         "straight al",
         "腕十字",
+        "アームバー",
         "암바",
         "chave de braço",
         "llave de brazo",
@@ -9174,6 +9178,8 @@
       "canonicalJa": "ロールエスケープ",
       "canonicalEn": "Roll Escape",
       "related": [
+        "act.movement.bridge",
+        "act.movement.side_roll",
         "pre.hip_escape",
         "pre.frame"
       ],
@@ -10986,7 +10992,9 @@
       "category": "Action",
       "canonicalJa": "ブリッジ",
       "canonicalEn": "Bridge",
-      "related": [],
+      "related": [
+        "act.movement.side_roll"
+      ],
       "labels": {
         "ja": "ブリッジ",
         "en": "Bridge",
@@ -11136,11 +11144,7 @@
       },
       "aliasesByLocale": {
         "en": [
-          "shoulder roll",
-          "side roll"
-        ],
-        "ja": [
-          "サイドロール"
+          "shoulder roll"
         ],
         "ko": [
           "숄더 롤"
@@ -11149,23 +11153,73 @@
           "rolamento de ombro"
         ],
         "es": [
-          "hombro roll",
-          "lateral roll"
+          "hombro roll"
         ],
         "fr": [
-          "épaule roll",
-          "côté roll"
+          "épaule roll"
         ]
       },
       "aliases": [
         "shoulder roll",
-        "side roll",
-        "サイドロール",
         "숄더 롤",
         "rolamento de ombro",
         "hombro roll",
+        "épaule roll"
+      ]
+    },
+    {
+      "tagId": "act.movement.side_roll",
+      "category": "Action",
+      "canonicalJa": "サイドロール",
+      "canonicalEn": "Side Roll",
+      "related": [
+        "act.movement.bridge",
+        "act.escape.roll",
+        "scn.role.bottom"
+      ],
+      "labels": {
+        "ja": "サイドロール",
+        "en": "Side Roll",
+        "ko": "사이드 롤",
+        "pt": "Rolamento Lateral",
+        "es": "Lateral Roll",
+        "fr": "Side Roll"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "side roll",
+          "lateral roll"
+        ],
+        "ja": [
+          "サイドロール"
+        ],
+        "ko": [
+          "사이드 롤",
+          "측면 롤"
+        ],
+        "pt": [
+          "rolamento lateral",
+          "side roll"
+        ],
+        "es": [
+          "lateral roll",
+          "side roll",
+          "rolamento lateral"
+        ],
+        "fr": [
+          "side roll",
+          "roulement latéral",
+          "côté roll"
+        ]
+      },
+      "aliases": [
+        "side roll",
         "lateral roll",
-        "épaule roll",
+        "サイドロール",
+        "사이드 롤",
+        "측면 롤",
+        "rolamento lateral",
+        "roulement latéral",
         "côté roll"
       ]
     },
