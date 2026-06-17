@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.36",
+  "version": "dict_v1.2.37",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -2296,6 +2296,7 @@
         "act.sub.armbar",
         "act.sub.arm_triangle",
         "act.control.stabilize",
+        "act.control.knee_climb",
         "pre.head_position"
       ],
       "labels": {
@@ -2381,6 +2382,7 @@
       "related": [
         "pos.top.mount",
         "act.sub.armbar",
+        "act.control.knee_climb",
         "pre.head_position"
       ],
       "labels": {
@@ -6613,6 +6615,136 @@
       ]
     },
     {
+      "tagId": "act.control.knee_clamp",
+      "category": "Action",
+      "canonicalJa": "膝で挟む",
+      "canonicalEn": "Knee Clamp",
+      "related": [
+        "act.sub.armbar",
+        "act.sub.straight_armbar_near",
+        "pre.control_elbow_line",
+        "pre.grip.arm_wrap",
+        "pos.guard.closed",
+        "pos.top.mount"
+      ],
+      "labels": {
+        "ja": "膝で挟む",
+        "en": "Knee Clamp",
+        "ko": "니 클램프",
+        "pt": "Compressão com Joelhos",
+        "es": "Rodilla Clamp",
+        "fr": "Genou Clamp"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "knee clamp",
+          "knee pinch",
+          "pinch knees",
+          "clamp with knees",
+          "sandwich with knees"
+        ],
+        "ja": [
+          "挟む",
+          "膝挟み",
+          "膝で挟み込む"
+        ],
+        "ko": [
+          "니 클램프",
+          "무릎으로 끼우기"
+        ],
+        "pt": [
+          "compressão com joelhos",
+          "joelho clamp"
+        ],
+        "es": [
+          "rodilla clamp",
+          "pinza de rodilla"
+        ],
+        "fr": [
+          "genou clamp",
+          "pincement des genoux"
+        ]
+      },
+      "aliases": [
+        "knee clamp",
+        "knee pinch",
+        "pinch knees",
+        "clamp with knees",
+        "sandwich with knees",
+        "挟む",
+        "膝挟み",
+        "膝で挟み込む",
+        "니 클램프",
+        "무릎으로 끼우기",
+        "compressão com joelhos",
+        "joelho clamp",
+        "rodilla clamp",
+        "pinza de rodilla",
+        "genou clamp",
+        "pincement des genoux"
+      ]
+    },
+    {
+      "tagId": "act.control.knee_climb",
+      "category": "Action",
+      "canonicalJa": "膝で相手に登る",
+      "canonicalEn": "Knee Climb",
+      "related": [
+        "pos.top.mount",
+        "pos.top.s_mount",
+        "act.sub.straight_armbar_near",
+        "act.sub.armbar"
+      ],
+      "labels": {
+        "ja": "膝で相手に登る",
+        "en": "Knee Climb",
+        "ko": "니 클라임",
+        "pt": "Subida com Joelhos",
+        "es": "Rodilla Climb",
+        "fr": "Genou Climb"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "knee climb",
+          "climb with knees",
+          "climb on opponent with knees"
+        ],
+        "ja": [
+          "ニークライム"
+        ],
+        "ko": [
+          "니 클라임",
+          "무릎으로 올라가기"
+        ],
+        "pt": [
+          "subida com joelhos",
+          "escalar com joelhos"
+        ],
+        "es": [
+          "rodilla climb",
+          "escalar con rodillas"
+        ],
+        "fr": [
+          "genou climb",
+          "monter avec les genoux"
+        ]
+      },
+      "aliases": [
+        "knee climb",
+        "climb with knees",
+        "climb on opponent with knees",
+        "ニークライム",
+        "니 클라임",
+        "무릎으로 올라가기",
+        "subida com joelhos",
+        "escalar com joelhos",
+        "rodilla climb",
+        "escalar con rodillas",
+        "genou climb",
+        "monter avec les genoux"
+      ]
+    },
+    {
       "tagId": "act.control.kneeling_base",
       "category": "Action",
       "canonicalJa": "サイドコントロールを取る",
@@ -7272,7 +7404,9 @@
       "related": [
         "pos.top.mount",
         "pos.guard.closed",
-        "pre.control_elbow_line"
+        "pre.control_elbow_line",
+        "act.control.knee_clamp",
+        "act.control.knee_climb"
       ],
       "labels": {
         "ja": "うで十字",
@@ -7481,7 +7615,8 @@
         "act.sub.armbar",
         "pre.control_elbow_line",
         "pre.arm_control",
-        "pre.spinning"
+        "pre.spinning",
+        "act.control.knee_climb"
       ],
       "labels": {
         "ja": "ストレートアームロック",
