@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.37",
+  "version": "dict_v1.2.38",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -6617,7 +6617,7 @@
     {
       "tagId": "act.control.knee_clamp",
       "category": "Action",
-      "canonicalJa": "膝で挟む",
+      "canonicalJa": "ひざで挟む",
       "canonicalEn": "Knee Clamp",
       "related": [
         "act.sub.armbar",
@@ -6628,7 +6628,7 @@
         "pos.top.mount"
       ],
       "labels": {
-        "ja": "膝で挟む",
+        "ja": "ひざで挟む",
         "en": "Knee Clamp",
         "ko": "니 클램프",
         "pt": "Compressão com Joelhos",
