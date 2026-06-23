@@ -113,12 +113,12 @@
         <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
       </div>
 
-      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-05-20</p>
-      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-05-20</p>
-      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-05-20</p>
-      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-05-20</p>
-      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-05-20</p>
-      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-05-20</p>
+      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-06-23</p>
+      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-06-23</p>
+      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-06-23</p>
+      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-06-23</p>
+      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-06-23</p>
+      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-06-23</p>
 
       <p class="muted lang-block lang-visible" data-lang="en">User-facing summaries by version. Older entries are kept for reference.</p>
       <p class="muted lang-block" data-lang="ja">ユーザー向けの変更概要です。以前のバージョンは参考として残しています。</p>
@@ -136,6 +136,16 @@
       <div class="card">
         <div class="lang-block lang-visible" data-lang="en">
           <ul>
+            <li>2.4.6
+              <ul>
+                <li>Fix: exporting a list no longer includes Quick Tag groups you removed. Importing a list package on another device also ignores removed groups from older export files.</li>
+              </ul>
+            </li>
+            <li>2.4.5
+              <ul>
+                <li>Fix: list exports and backup files saved from v2.4.2 or later can be imported again from Add → Import from file. They were incorrectly rejected as invalid.</li>
+              </ul>
+            </li>
             <li>2.4.4
               <ul>
                 <li>Lists and item detail:
@@ -215,6 +225,16 @@
         </div>
         <div class="lang-block" data-lang="ja">
           <ul>
+            <li>2.4.6
+              <ul>
+                <li>修正: リストのエクスポートに、削除したクイックタグのグループが含まれないようにしました。別端末へ取り込むときも、削除済みタグが復活しません。</li>
+              </ul>
+            </li>
+            <li>2.4.5
+              <ul>
+                <li>修正: v2.4.2 以降でエクスポートしたリストやバックアップ JSON を、追加画面の「ファイルから取り込み」で再度読み込めるようにしました。以前は無効なファイルとして誤って拒否されていました。</li>
+              </ul>
+            </li>
             <li>2.4.4
               <ul>
                 <li>リスト・アイテム詳細:
@@ -294,6 +314,16 @@
         </div>
         <div class="lang-block" data-lang="ko">
           <ul>
+            <li>2.4.6
+              <ul>
+                <li>수정: 리스트 내보내기에 삭제한 퀵 태그 그룹이 포함되지 않습니다. 다른 기기로 가져올 때도 삭제한 태그가 다시 나타나지 않습니다.</li>
+              </ul>
+            </li>
+            <li>2.4.5
+              <ul>
+                <li>수정: v2.4.2 이후 저장한 리스트 내보내기·백업 JSON을 추가 화면의 ‘파일에서 가져오기’로 다시 가져올 수 있습니다. 이전에는 잘못된 파일로 거부되었습니다.</li>
+              </ul>
+            </li>
             <li>2.4.4
               <ul>
                 <li>리스트·항목 상세:
@@ -372,6 +402,16 @@
         </div>
         <div class="lang-block" data-lang="pt">
           <ul>
+            <li>2.4.6
+              <ul>
+                <li>Correção: exportar uma lista não inclui mais grupos de Quick Tag que você removeu. Ao importar em outro dispositivo, grupos removidos em arquivos antigos também são ignorados.</li>
+              </ul>
+            </li>
+            <li>2.4.5
+              <ul>
+                <li>Correção: exportações de listas e backups salvos desde a v2.4.2 podem ser importados novamente em Adicionar → Importar de arquivo. Antes eram rejeitados incorretamente como inválidos.</li>
+              </ul>
+            </li>
             <li>2.4.4
               <ul>
                 <li>Listas e detalhe do item:
@@ -450,6 +490,16 @@
         </div>
         <div class="lang-block" data-lang="es">
           <ul>
+            <li>2.4.6
+              <ul>
+                <li>Corrección: exportar una lista ya no incluye grupos de Quick Tag que eliminó. Al importar en otro dispositivo, también se ignoran grupos eliminados en archivos anteriores.</li>
+              </ul>
+            </li>
+            <li>2.4.5
+              <ul>
+                <li>Corrección: las exportaciones de listas y copias de seguridad guardadas desde v2.4.2 se pueden importar de nuevo desde Añadir → Importar desde archivo. Antes se rechazaban incorrectamente como no válidas.</li>
+              </ul>
+            </li>
             <li>2.4.4
               <ul>
                 <li>Listas y detalle del elemento:
@@ -528,6 +578,16 @@
         </div>
         <div class="lang-block" data-lang="fr">
           <ul>
+            <li>2.4.6
+              <ul>
+                <li>Correctif : l’export d’une liste n’inclut plus les groupes Quick Tag que vous avez supprimés. À l’import sur un autre appareil, les groupes supprimés dans d’anciens fichiers sont aussi ignorés.</li>
+              </ul>
+            </li>
+            <li>2.4.5
+              <ul>
+                <li>Correctif : les exports de listes et sauvegardes enregistrés depuis la v2.4.2 peuvent à nouveau être importés via Ajouter → Importer depuis un fichier. Ils étaient auparavant rejetés à tort comme invalides.</li>
+              </ul>
+            </li>
             <li>2.4.4
               <ul>
                 <li>Listes et détail d’élément :

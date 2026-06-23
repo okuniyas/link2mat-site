@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.38",
+  "version": "dict_v1.2.39",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -6645,6 +6645,7 @@
         ],
         "ja": [
           "挟む",
+          "膝で挟む",
           "膝挟み",
           "膝で挟み込む"
         ],
@@ -6672,6 +6673,7 @@
         "clamp with knees",
         "sandwich with knees",
         "挟む",
+        "膝で挟む",
         "膝挟み",
         "膝で挟み込む",
         "니 클램프",
@@ -6687,7 +6689,7 @@
     {
       "tagId": "act.control.knee_climb",
       "category": "Action",
-      "canonicalJa": "膝で相手に登る",
+      "canonicalJa": "ひざで相手に登る",
       "canonicalEn": "Knee Climb",
       "related": [
         "pos.top.mount",
@@ -6696,7 +6698,7 @@
         "act.sub.armbar"
       ],
       "labels": {
-        "ja": "膝で相手に登る",
+        "ja": "ひざで相手に登る",
         "en": "Knee Climb",
         "ko": "니 클라임",
         "pt": "Subida com Joelhos",
@@ -6710,7 +6712,8 @@
           "climb on opponent with knees"
         ],
         "ja": [
-          "ニークライム"
+          "ニークライム",
+          "膝で相手に登る"
         ],
         "ko": [
           "니 클라임",
@@ -6734,6 +6737,7 @@
         "climb with knees",
         "climb on opponent with knees",
         "ニークライム",
+        "膝で相手に登る",
         "니 클라임",
         "무릎으로 올라가기",
         "subida com joelhos",
@@ -14221,6 +14225,68 @@
         "partner",
         "them",
         "相手"
+      ]
+    },
+    {
+      "tagId": "pre.position.above",
+      "category": "Prerequisite",
+      "canonicalJa": "上方",
+      "canonicalEn": "Above",
+      "related": [],
+      "labels": {
+        "ja": "上方",
+        "en": "Above",
+        "ko": "상방",
+        "pt": "Acima",
+        "es": "Arriba",
+        "fr": "Au-dessus"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "above",
+          "upper"
+        ],
+        "ja": [
+          "上方",
+          "じょうほう"
+        ]
+      },
+      "aliases": [
+        "above",
+        "upper",
+        "上方",
+        "じょうほう"
+      ]
+    },
+    {
+      "tagId": "pre.position.below",
+      "category": "Prerequisite",
+      "canonicalJa": "下方",
+      "canonicalEn": "Below",
+      "related": [],
+      "labels": {
+        "ja": "下方",
+        "en": "Below",
+        "ko": "하방",
+        "pt": "Abaixo",
+        "es": "Abajo",
+        "fr": "En-dessous"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "below",
+          "lower"
+        ],
+        "ja": [
+          "下方",
+          "かほう"
+        ]
+      },
+      "aliases": [
+        "below",
+        "lower",
+        "下方",
+        "かほう"
       ]
     },
     {
