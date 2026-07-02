@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.39",
+  "version": "dict_v1.2.42",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -227,7 +227,9 @@
         "하이 가드",
         "high guardia",
         "high garde"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pos.guard.open",
@@ -529,7 +531,8 @@
         "act.guard.sweep.false_reap",
         "pre.underhook",
         "pos.guard.knee_shield",
-        "pre.knee_twist_setup"
+        "pre.knee_twist_setup",
+        "act.control.lockdown"
       ],
       "labels": {
         "ja": "ハーフガード",
@@ -1068,7 +1071,9 @@
         "k-guardia",
         "garde k",
         "k-garde"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.keymaster",
@@ -1112,7 +1117,9 @@
         "キーマスターガード",
         "keymaster",
         "키마스터"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.knee_shield_setup",
@@ -1170,7 +1177,9 @@
         "escudo de joelho no passe",
         "rodilla en el pase",
         "genou pendant le passe"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.knee_twist_setup",
@@ -1228,7 +1237,9 @@
         "half guard knee twist",
         "니 트위스트",
         "meia guarda knee twist"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.shin_to_shin",
@@ -1278,7 +1289,9 @@
         "シン・トゥ・シン",
         "すね同士",
         "신 투 신"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.split_squat_setup",
@@ -1332,7 +1345,9 @@
         "split squat stance setup",
         "스플릿 스쿼트 베이스",
         "base split squat"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.camping_inside",
@@ -1386,7 +1401,9 @@
         "camping interno na passagem",
         "camping dentro en el pase",
         "camping intérieur passage"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.camping_outside",
@@ -1440,7 +1457,9 @@
         "camping externo na passagem",
         "camping fuera en el pase",
         "camping extérieur passage"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.headquarters_setup",
@@ -1495,7 +1514,9 @@
         "headquarters na passagem",
         "hq en el pase",
         "hq passe"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pos.guard.spider_x",
@@ -1575,7 +1596,9 @@
       "aliases": [
         "matrix",
         "매트릭스"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pos.guard.reverse_half",
@@ -3297,7 +3320,9 @@
         "guarda invertida",
         "inverted guardia",
         "inverted garde"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pos.guard.octopus",
@@ -3470,7 +3495,9 @@
         "puxada de guarda",
         "guardia pull",
         "garde pull"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.guard.entry",
@@ -3519,7 +3546,9 @@
         "enter guardia",
         "garde entry",
         "enter garde"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep",
@@ -3562,7 +3591,9 @@
         "raspagem",
         "barrido",
         "balayage"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.grass_cutter",
@@ -3610,7 +3641,9 @@
         "grasscutter barrido",
         "grass cutter balayage",
         "grasscutter balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.flower",
@@ -3652,7 +3685,9 @@
         "raspagem flor",
         "flower barrido",
         "flower balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.kick",
@@ -3694,7 +3729,9 @@
         "raspagem de chute",
         "kick barrido",
         "kick balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.lasso",
@@ -3736,7 +3773,9 @@
         "raspagem de laço",
         "lasso barrido",
         "lasso balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.tanquinho",
@@ -3778,7 +3817,9 @@
         "raspagem tanquinho",
         "tanquinho barrido",
         "tanquinho balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.unstoppable",
@@ -3820,7 +3861,9 @@
         "raspagem imparável",
         "unstoppable barrido",
         "unstoppable balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.foot",
@@ -3862,7 +3905,9 @@
         "raspagem de pé",
         "pie barrido",
         "pied balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.helicopter",
@@ -3904,7 +3949,9 @@
         "raspagem helicóptero",
         "helicopter barrido",
         "helicopter balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.pendulum",
@@ -3952,7 +3999,9 @@
         "raspagem pêndulo",
         "pendulum barrido",
         "pendulum balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.roll_over",
@@ -4001,7 +4050,9 @@
         "rollover barrido",
         "roll sur balayage",
         "rollover balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.overhead",
@@ -4043,7 +4094,9 @@
         "raspagem overhead",
         "overhead barrido",
         "overhead balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.back_roll",
@@ -4107,7 +4160,9 @@
         "barrido back roll",
         "back roll balayage",
         "balayage back roll"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.sleeve_drag",
@@ -4156,7 +4211,9 @@
         "manga drag",
         "manche drag balayage",
         "manche drag"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.false_reap",
@@ -4210,7 +4267,9 @@
         "false reap entry",
         "フォルスリープ",
         "폴스 리프"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.scissor",
@@ -4252,7 +4311,9 @@
         "raspagem de tesoura",
         "scissor barrido",
         "scissor balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.hikikomi_gaeshi",
@@ -4298,7 +4359,9 @@
         "pull-in sweep",
         "ひきこみがえし",
         "히키코미 가에시"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.sit_up",
@@ -4352,7 +4415,9 @@
         "sit up balayage",
         "sit-up balayage",
         "situp balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.hip_bump",
@@ -4400,7 +4465,9 @@
         "cadera bump",
         "hanche bump balayage",
         "hanche bump"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.hook",
@@ -4442,7 +4509,9 @@
         "raspagem de gancho",
         "hook barrido",
         "hook balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.knee_lever",
@@ -4498,7 +4567,9 @@
         "john wayne barrido",
         "genou lever balayage",
         "john wayne balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.leg_trap",
@@ -4541,7 +4612,9 @@
         "raspagem de armadilha na perna",
         "leg trap barrido",
         "leg trap balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.leg_scoop_roll",
@@ -4584,7 +4657,9 @@
         "raspagem de scoop de perna",
         "leg scoop barrido",
         "leg scoop balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.double_ankle",
@@ -4618,7 +4693,9 @@
         "double ankle sweep",
         "ダブルアンクルスイープ",
         "더블 앵클 스윕"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.leg_scoop",
@@ -4664,7 +4741,9 @@
         "scoop na perna",
         "scoop agarre",
         "scoop prise"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.sweep.hip_thrust",
@@ -4706,7 +4785,66 @@
         "raspagem de impulso de quadril",
         "cadera thrust barrido",
         "hanche thrust balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
+    },
+    {
+      "tagId": "act.guard.sweep.electric_chair",
+      "category": "Action",
+      "canonicalJa": "エレクトリックチェアスイープ",
+      "canonicalEn": "Electric Chair Sweep",
+      "related": [
+        "act.control.lockdown",
+        "act.control.dogfight",
+        "act.control.whip_up",
+        "pos.guard.half"
+      ],
+      "labels": {
+        "ja": "エレクトリックチェアスイープ",
+        "en": "Electric Chair Sweep",
+        "ko": "일렉트릭 체어 스윕",
+        "pt": "Raspagem Electric Chair",
+        "es": "Barrido Electric Chair",
+        "fr": "Balayage Electric Chair"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "electric chair sweep",
+          "electric chair"
+        ],
+        "ja": [
+          "エレクトリックチェア",
+          "エレクトリックチェア・スイープ"
+        ],
+        "ko": [
+          "일렉트릭 체어 스윕"
+        ],
+        "pt": [
+          "electric chair sweep",
+          "raspagem electric chair"
+        ],
+        "es": [
+          "electric chair sweep",
+          "barrido electric chair"
+        ],
+        "fr": [
+          "electric chair sweep",
+          "balayage electric chair"
+        ]
+      },
+      "aliases": [
+        "electric chair sweep",
+        "electric chair",
+        "エレクトリックチェア",
+        "エレクトリックチェア・スイープ",
+        "일렉트릭 체어 스윕",
+        "raspagem electric chair",
+        "barrido electric chair",
+        "balayage electric chair"
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.wrestle_up",
@@ -4752,7 +4890,9 @@
         "wrestle up",
         "레슬업",
         "wrestle-up"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.movement.sit_up",
@@ -4818,7 +4958,9 @@
         "levantar el tronco",
         "se redresser",
         "redresser le buste"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.guard.inversion",
@@ -4867,7 +5009,9 @@
         "invert",
         "인버전",
         "inversão"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.granby_roll",
@@ -4920,7 +5064,9 @@
         "roly poly",
         "그랜비 롤",
         "rolamento granby"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.kiss_of_the_dragon",
@@ -4970,7 +5116,9 @@
         "kotd",
         "키스 오브 더 드래곤",
         "beijo do dragão"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.berimbolo",
@@ -5015,7 +5163,9 @@
         "berimbolo",
         "bolo",
         "베림볼로"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.imanari_roll",
@@ -5067,7 +5217,9 @@
         "이마나리 롤",
         "rolo imanari",
         "roulé imanari"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.seatbelt",
@@ -5108,7 +5260,9 @@
         "시트벨트 컨트롤",
         "controle de seatbelt",
         "seatbelt contrôle"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "other"
     },
     {
       "tagId": "act.guard.retention",
@@ -5149,7 +5303,9 @@
         "retention",
         "가드 리텐션",
         "retenção de guarda"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.recovery",
@@ -5189,7 +5345,9 @@
         "recovery",
         "가드 리커버리",
         "recuperação de guarda"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.recovery.leg_hook",
@@ -5231,7 +5389,9 @@
         "recuperação de guarda com gancho de perna",
         "leg hook guardia recovery",
         "leg hook garde recovery"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.guard.leg_entanglement_entry",
@@ -5276,7 +5436,9 @@
         "enter ashi",
         "레그 엔트리",
         "entrada de perna"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.knee_cut",
@@ -5332,7 +5494,9 @@
         "coupe de genou",
         "genou slice",
         "genou cut passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.knee_through",
@@ -5382,7 +5546,9 @@
         "rodilla through",
         "genou through passe",
         "genou through"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.torreando",
@@ -5430,7 +5596,9 @@
         "passagem toreando",
         "bullfighter pase",
         "bullfighter passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.long_step",
@@ -5475,7 +5643,9 @@
         "ロングステップ",
         "롱 스텝 패스",
         "passagem passo longo"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.high_step",
@@ -5527,7 +5697,9 @@
         "passagem passo alto",
         "high step pase",
         "high step passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.leg_weave",
@@ -5580,7 +5752,9 @@
         "entrelaçar pernas",
         "leg weave pase",
         "leg weave passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.smash_pass",
@@ -5623,7 +5797,9 @@
         "passagem de esmagamento",
         "smash pase",
         "smash passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.diving_pass",
@@ -5666,7 +5842,9 @@
         "passagem de mergulho",
         "diving pase",
         "diving passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.folding_pass",
@@ -5709,7 +5887,9 @@
         "passagem de dobra",
         "folding pase",
         "folding passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.over_under",
@@ -5752,7 +5932,9 @@
         "passagem over-under",
         "sobre bajo",
         "sur sous"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.leg_drag",
@@ -5800,7 +5982,9 @@
         "leg drag pase",
         "traînée de jambe",
         "leg drag passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.lying_leg_drag",
@@ -5853,7 +6037,9 @@
         "横になってレッグドラッグ",
         "누워서 레그 드래그",
         "arrasto de perna deitado"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.duck_under",
@@ -5900,7 +6086,9 @@
         "덕 언더",
         "duck bajo",
         "duck sous"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.binding",
@@ -5943,7 +6131,9 @@
         "passagem de amarração",
         "binding pase",
         "binding passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.pass.stack_guard",
@@ -5997,7 +6187,9 @@
         "stacking passe",
         "stack passe",
         "stacking passe garde"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.stabilize",
@@ -6039,7 +6231,9 @@
         "stabilize",
         "안정화",
         "estabilizar"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.head_post",
@@ -6096,7 +6290,9 @@
         "cabeza posting",
         "tête post",
         "tête posting"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.control.cup",
@@ -6144,7 +6340,9 @@
         "컵",
         "copa",
         "coupe"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.chop",
@@ -6174,7 +6372,9 @@
       "aliases": [
         "chop control",
         "チョップコントロール"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.foot_hook",
@@ -6205,7 +6405,9 @@
         "hook with foot",
         "put foot on",
         "足でかける"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.cross_body",
@@ -6256,7 +6458,9 @@
         "controle cruzado",
         "cruzado body control",
         "croisé body contrôle"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.sub.armbar.step_over",
@@ -6347,7 +6551,9 @@
         "트위스팅 암 컨트롤",
         "controle de torção de braço",
         "twisting arm contrôle"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.control.grip_break",
@@ -6390,7 +6596,9 @@
         "quebra de pegada",
         "agarre break",
         "prise break"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.transition.mount",
@@ -6444,7 +6652,9 @@
         "transition to montée",
         "to montée",
         "montée transition"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.transition.take_back",
@@ -6488,7 +6698,9 @@
         "pegada de costas",
         "espalda take",
         "dos take"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.transition.take_back.gator_roll",
@@ -6530,7 +6742,9 @@
         "gator roll",
         "게이터 롤",
         "rolamento gator"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.control.club_ride",
@@ -6570,7 +6784,9 @@
       "aliases": [
         "crab ride",
         "클럽 라이드"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.turtle_breakdown",
@@ -6612,7 +6828,9 @@
         "turtle breakdown",
         "터틀 브레이크다운",
         "quebra da tartaruga"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.control.knee_clamp",
@@ -6684,7 +6902,9 @@
         "pinza de rodilla",
         "genou clamp",
         "pincement des genoux"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.knee_climb",
@@ -6746,7 +6966,9 @@
         "escalar con rodillas",
         "genou climb",
         "monter avec les genoux"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.kneeling_base",
@@ -6800,7 +7022,9 @@
         "pegada de controle lateral",
         "take lateral control",
         "take côté contrôle"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.control.front_headlock_stabilize",
@@ -6850,7 +7074,9 @@
         "frontal headlock control",
         "avant headlock contrôle",
         "FHL contrôle"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.uchi_muso",
@@ -6888,7 +7114,9 @@
         "inner muso",
         "内無双",
         "うち無双"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.soto_muso",
@@ -6924,7 +7152,9 @@
         "outer muso",
         "外無双",
         "そと無双"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.control.truck",
@@ -6959,7 +7189,159 @@
         "truck position",
         "トラックポジション",
         "トラック"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
+    },
+    {
+      "tagId": "act.control.lockdown",
+      "category": "Action",
+      "canonicalJa": "二重がらみ",
+      "canonicalEn": "Lockdown",
+      "related": [
+        "pos.guard.half",
+        "pre.body.one_leg",
+        "pre.body.both_legs",
+        "act.control.dogfight",
+        "act.escape.lockdown"
+      ],
+      "labels": {
+        "ja": "二重がらみ",
+        "en": "Lockdown",
+        "ko": "록다운",
+        "pt": "Lockdown",
+        "es": "Lockdown",
+        "fr": "Lockdown"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "lockdown",
+          "lock down"
+        ],
+        "ja": [
+          "ロックダウン",
+          "にじゅうがらみ",
+          "二重絡み"
+        ],
+        "ko": [
+          "록다운"
+        ],
+        "pt": [
+          "lockdown"
+        ],
+        "es": [
+          "lockdown"
+        ],
+        "fr": [
+          "lockdown"
+        ]
+      },
+      "aliases": [
+        "lockdown",
+        "lock down",
+        "ロックダウン",
+        "にじゅうがらみ",
+        "二重絡み",
+        "록다운"
+      ],
+      "approachCategory": "control",
+      "perspective": "bottom"
+    },
+    {
+      "tagId": "act.control.dogfight",
+      "category": "Action",
+      "canonicalJa": "ドッグファイト",
+      "canonicalEn": "Dogfight",
+      "related": [
+        "act.control.lockdown",
+        "act.control.whip_up",
+        "act.guard.sweep.electric_chair"
+      ],
+      "labels": {
+        "ja": "ドッグファイト",
+        "en": "Dogfight",
+        "ko": "도그파이트",
+        "pt": "Dogfight",
+        "es": "Dogfight",
+        "fr": "Dogfight"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "dogfight",
+          "dog fight"
+        ],
+        "ja": [
+          "ドッグファイト"
+        ],
+        "ko": [
+          "도그파이트"
+        ],
+        "pt": [
+          "dogfight"
+        ],
+        "es": [
+          "dogfight"
+        ],
+        "fr": [
+          "dogfight"
+        ]
+      },
+      "aliases": [
+        "dogfight",
+        "dog fight",
+        "ドッグファイト",
+        "도그파이트"
+      ],
+      "approachCategory": "control",
+      "perspective": "bottom"
+    },
+    {
+      "tagId": "act.control.whip_up",
+      "category": "Action",
+      "canonicalJa": "ウィップアップ",
+      "canonicalEn": "Whip Up",
+      "related": [
+        "act.control.lockdown",
+        "act.control.dogfight",
+        "act.guard.sweep.electric_chair"
+      ],
+      "labels": {
+        "ja": "ウィップアップ",
+        "en": "Whip Up",
+        "ko": "휩 업",
+        "pt": "Whip Up",
+        "es": "Whip Up",
+        "fr": "Whip Up"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "whip up",
+          "whip-up"
+        ],
+        "ja": [
+          "ウィップアップ"
+        ],
+        "ko": [
+          "휩 업"
+        ],
+        "pt": [
+          "whip up"
+        ],
+        "es": [
+          "whip up"
+        ],
+        "fr": [
+          "whip up"
+        ]
+      },
+      "aliases": [
+        "whip up",
+        "whip-up",
+        "ウィップアップ",
+        "휩 업"
+      ],
+      "approachCategory": "control",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.sub.rnc",
@@ -9137,7 +9519,9 @@
         "twister",
         "트위스터 훅",
         "트위스터"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.sub.calf_slicer",
@@ -9309,7 +9693,9 @@
         "elbow escape",
         "엘보 이스케이프",
         "escape de cotovelo"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.escape.roll",
@@ -9351,7 +9737,9 @@
         "roll escape",
         "롤 이스케이프",
         "escape com rolamento"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "other"
     },
     {
       "tagId": "act.escape.belly_down",
@@ -9391,7 +9779,9 @@
         "belly down escape",
         "벨리-다운 이스케이프",
         "escape de barriga para baixo"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "other"
     },
     {
       "tagId": "act.escape.back_roll",
@@ -9447,7 +9837,9 @@
         "espalda roll",
         "dos roll escape",
         "dos roll"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "other"
     },
     {
       "tagId": "act.escape.hip_escape",
@@ -9490,7 +9882,9 @@
         "escape de quadril",
         "cadera escape",
         "hanche escape"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "other"
     },
     {
       "tagId": "act.escape.back",
@@ -9533,7 +9927,9 @@
         "escape de costas",
         "espalda escape",
         "dos escape"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "other"
     },
     {
       "tagId": "act.escape.turtle",
@@ -9574,7 +9970,9 @@
         "turtle escape",
         "터틀 이스케이프",
         "escape da tartaruga"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.escape.underhook",
@@ -9614,7 +10012,9 @@
         "underhook escape",
         "언더훅 이스케이프",
         "escape com underhook"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.escape.overhead_roll",
@@ -9666,7 +10066,9 @@
         "오버헤드 롤",
         "escape rolamento por cima",
         "rolamento por cima"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.escape.overhead",
@@ -9706,7 +10108,62 @@
         "overhead escape",
         "오버헤드 이스케이프",
         "escape por cima"
-      ]
+      ],
+      "approachCategory": "escape",
+      "perspective": "bottom"
+    },
+    {
+      "tagId": "act.escape.lockdown",
+      "category": "Action",
+      "canonicalJa": "ロックダウン解除",
+      "canonicalEn": "Lockdown Escape",
+      "related": [
+        "act.control.lockdown",
+        "pos.guard.half",
+        "act.escape.hip_escape"
+      ],
+      "labels": {
+        "ja": "ロックダウン解除",
+        "en": "Lockdown Escape",
+        "ko": "록다운 이스케이프",
+        "pt": "Escape do Lockdown",
+        "es": "Escape de Lockdown",
+        "fr": "Échappement Lockdown"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "lockdown escape",
+          "escape lockdown"
+        ],
+        "ja": [
+          "ロックダウンエスケープ",
+          "ロックダウンからの脱出"
+        ],
+        "ko": [
+          "록다운 이스케이프"
+        ],
+        "pt": [
+          "escape do lockdown"
+        ],
+        "es": [
+          "escape de lockdown"
+        ],
+        "fr": [
+          "échappement lockdown"
+        ]
+      },
+      "aliases": [
+        "lockdown escape",
+        "escape lockdown",
+        "ロックダウンエスケープ",
+        "ロックダウンからの脱出",
+        "록다운 이스케이프",
+        "escape do lockdown",
+        "escape de lockdown",
+        "échappement lockdown"
+      ],
+      "approachCategory": "escape",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.single_leg_takedown",
@@ -9766,7 +10223,9 @@
         "simple leg TD",
         "simple leg",
         "simple leg amenée"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.double_leg_takedown",
@@ -9826,7 +10285,9 @@
         "doble leg TD",
         "doble leg",
         "double leg amenée"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.hip_throw",
@@ -9869,7 +10330,9 @@
         "queda de quadril",
         "cadera proyección",
         "hanche projection"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.osoto_gari",
@@ -9898,7 +10361,9 @@
       "aliases": [
         "osoto gari",
         "o-soto gari"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.ouchi_gari",
@@ -9927,7 +10392,9 @@
       "aliases": [
         "ouchi gari",
         "o-uchi gari"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.kouchi_gari",
@@ -9956,7 +10423,9 @@
       "aliases": [
         "kouchi gari",
         "ko-uchi gari"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.kosoto_gari",
@@ -9985,7 +10454,9 @@
       "aliases": [
         "kosoto gari",
         "ko-soto gari"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.uchi_mata",
@@ -10014,7 +10485,9 @@
       "aliases": [
         "uchi mata",
         "uchi-mata"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.rear_takedown",
@@ -10062,7 +10535,9 @@
         "trasero TD",
         "arrière amenée",
         "arrière TD"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.snapdown",
@@ -10105,7 +10580,9 @@
       "aliases": [
         "snapdown",
         "스냅다운"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.arm_drag",
@@ -10164,7 +10641,9 @@
         "arrasto de braço",
         "arrastre de brazo",
         "traînée de bras"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.sprawl",
@@ -10204,7 +10683,9 @@
       "aliases": [
         "sprawl",
         "스프롤"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.body_lock",
@@ -10246,7 +10727,9 @@
         "바디 락",
         "body luxación",
         "body clé"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.inside_trip",
@@ -10289,7 +10772,9 @@
         "rasteira interna",
         "interno trip",
         "intérieur trip"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.ankle_pick",
@@ -10333,7 +10818,9 @@
         "pegada no tornozelo",
         "tobillo pick",
         "cheville pick"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.knee_pick",
@@ -10391,7 +10878,9 @@
         "ファー・ニーピック",
         "니 픽",
         "파 니 픽"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.knee_tap",
@@ -10442,7 +10931,9 @@
         "膝タップ",
         "니 탭",
         "무릎 탭"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.cross_over_lift",
@@ -10485,7 +10976,9 @@
         "levantamento cruzado",
         "cruzado sobre lift",
         "croisé sur lift"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.wrestling.back_clinch",
@@ -10527,7 +11020,9 @@
         "clinch por trás",
         "espalda clinch",
         "dos clinch"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.corner_cut",
@@ -10567,7 +11062,9 @@
         "corner cut",
         "코너 컷",
         "corte de canto"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.switch_sit_out",
@@ -10617,7 +11114,9 @@
         "switch sit-out",
         "스위치",
         "싯-아웃"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.wrestling.arm_throw",
@@ -10667,7 +11166,9 @@
         "projeção de braço",
         "arm proyección",
         "arm projection"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.spinning_arm_throw",
@@ -10710,7 +11211,9 @@
         "projeção de braço giratória",
         "spinning arm proyección",
         "spinning arm projection"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.fireman_carry",
@@ -10749,7 +11252,9 @@
       "aliases": [
         "fireman carry",
         "파이어맨 캐리"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.high_crotch",
@@ -10806,7 +11311,9 @@
         "하이 크로치",
         "high crotch derribo",
         "high crotch amenée"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.cow_catcher",
@@ -10845,7 +11352,9 @@
       "aliases": [
         "cow catcher",
         "카우 캐처"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.wrestling.sumi_gaeshi",
@@ -10881,7 +11390,9 @@
         "corner reversal",
         "すみがえし",
         "スミガエシ"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.tomoe_nage",
@@ -10930,7 +11441,9 @@
         "ともえ投げ",
         "tomoe nage",
         "토모에 나게"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.yoko_tomoe_nage",
@@ -10980,7 +11493,9 @@
         "yoko tomoe nage",
         "side tomoe nage",
         "요코 토모에 나게"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.neck_throw",
@@ -11030,7 +11545,9 @@
         "首投",
         "クビナゲ",
         "목 던지기"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.wrestling.throw",
@@ -11088,7 +11605,9 @@
         "arremesso",
         "derribo",
         "projection"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.movement.ukemi",
@@ -11124,7 +11643,9 @@
       "aliases": [
         "ukemi",
         "우케미"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.movement.bridge",
@@ -11163,7 +11684,9 @@
         "bridge",
         "브리지",
         "ponte"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.movement.top_spin",
@@ -11212,7 +11735,9 @@
         "cabeza spin",
         "dessus spin",
         "tête spin"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.movement.body_spin",
@@ -11263,7 +11788,9 @@
         "giro de corpo",
         "giro de cuerpo",
         "rotation du corps"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.movement.shoulder_roll",
@@ -11304,7 +11831,9 @@
         "rolamento de ombro",
         "hombro roll",
         "épaule roll"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.movement.side_roll",
@@ -11360,7 +11889,9 @@
         "rolamento lateral",
         "roulement latéral",
         "côté roll"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.movement.shrimp",
@@ -11404,7 +11935,9 @@
         "shrimping",
         "쉬림핑",
         "encolhimento"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.movement.reverse_shrimp",
@@ -11444,7 +11977,9 @@
         "reverse shrimp",
         "리버스 쉬림프",
         "encolhimento reverso"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.movement.lying_down",
@@ -11492,7 +12027,9 @@
         "寝る",
         "눕기",
         "deitar"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.movement.technical_stand_up",
@@ -11555,7 +12092,9 @@
         "em pé (BJJ)",
         "de pie (BJJ)",
         "debout (BJJ)"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "act.movement.hanmi",
@@ -11588,7 +12127,9 @@
         "turn to side",
         "half body",
         "半身"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.movement.step_back",
@@ -11638,7 +12179,9 @@
         "espalda step",
         "step dos",
         "dos step"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "act.movement.knee_walking",
@@ -11688,7 +12231,9 @@
         "caminhar de joelhos",
         "rodilla walking",
         "genou walking"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.tactic.counter",
@@ -11737,7 +12282,9 @@
         "counter attack",
         "카운터",
         "contra-ataque"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "act.tactic.double_attack",
@@ -11783,7 +12330,9 @@
         "더블 어택",
         "ataque duplo",
         "doble attack"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "scn.attire.gi",
@@ -12833,7 +13382,9 @@
         "ラペラ巻き付け",
         "라펠 랩",
         "enrolar lapela"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.lapel_feed",
@@ -12889,7 +13440,9 @@
         "ラペラ送り",
         "라펠 피드",
         "alimentar lapela"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.lapel_pull",
@@ -12940,7 +13493,9 @@
         "ラペル引き出し",
         "라펠 풀",
         "puxar lapela"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.switch",
@@ -12997,7 +13552,9 @@
         "troca de pegada",
         "cambio de agarre",
         "changement de prise"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.hug",
@@ -13059,7 +13616,9 @@
         "épaule hug",
         "épaule hug prise",
         "épaule clamp"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.arm_wrap",
@@ -13108,7 +13667,9 @@
         "armwrap",
         "랩드 암",
         "braço enrolado"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.gable",
@@ -13156,7 +13717,9 @@
         "게이블 그립",
         "gable agarre",
         "gable prise"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.s_grip",
@@ -13217,7 +13780,9 @@
         "s-prise",
         "S prise",
         "S-prise"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.c_grip",
@@ -13278,7 +13843,9 @@
         "c-prise",
         "C prise",
         "C-prise"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.thumbless",
@@ -13327,7 +13894,9 @@
         "thumb-less agarre",
         "thumbless prise",
         "thumb-less prise"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.cross_grip",
@@ -13369,7 +13938,9 @@
         "pegada cruzada",
         "cruzado agarre",
         "croisé prise"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.underhook",
@@ -13417,7 +13988,9 @@
         "underhook",
         "언더훅",
         "gancho por baixo"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.overhook",
@@ -13466,7 +14039,9 @@
         "whizzer",
         "오버훅",
         "gancho por cima"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.underhook_side",
@@ -13498,7 +14073,11 @@
         "underhook side",
         "アンダーフック側",
         "アンダーフックサイド"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 10
     },
     {
       "tagId": "pre.overhook_side",
@@ -13529,7 +14108,11 @@
         "overhook side",
         "オーバーフック側",
         "オーバーフックサイド"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 11
     },
     {
       "tagId": "pre.2on1",
@@ -13578,7 +14161,9 @@
         "Russian tie",
         "2대1",
         "2-por-1"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.reverse_kimura",
@@ -13619,7 +14204,9 @@
         "reverse kimura",
         "리버스 키무라",
         "kimura reversa"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.wrist_control",
@@ -13665,7 +14252,9 @@
         "controle do punho",
         "muñeca control",
         "poignet contrôle"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "other"
     },
     {
       "tagId": "pre.seatbelt",
@@ -13711,7 +14300,9 @@
         "シートベルト",
         "시트벨트",
         "cinto de segurança"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.gift_wrap",
@@ -13743,7 +14334,9 @@
       "aliases": [
         "gift wrap",
         "ギフトラップ"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.chin_control",
@@ -13788,7 +14381,9 @@
         "턱 컨트롤",
         "controle do queixo",
         "chin contrôle"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.tie.collar",
@@ -13844,7 +14439,9 @@
         "カラータイ",
         "ネックタイ",
         "칼라 타이"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.tie.tricep",
@@ -13900,7 +14497,9 @@
         "トライセップタイ",
         "トライセップコントロール",
         "트라이셉 타이"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.tie.elbow",
@@ -13957,7 +14556,9 @@
         "エルボータイ",
         "エルボーコントロール",
         "엘보 타이"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.control_elbow_line",
@@ -14002,7 +14603,9 @@
         "肘ラインコントロール",
         "엘보 라인",
         "linha do cotovelo"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.arm_control",
@@ -14025,7 +14628,9 @@
       "aliases": [
         "腕のコントロール",
         "arm control"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "other"
     },
     {
       "tagId": "pre.position.near_side",
@@ -14055,7 +14660,11 @@
         "near side",
         "니어 사이드",
         "lado próximo"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.position.far_side",
@@ -14085,7 +14694,11 @@
         "far side",
         "파 사이드",
         "lado oposto"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.position.inside",
@@ -14099,7 +14712,11 @@
         "pt": "Interior",
         "es": "Interior",
         "fr": "Intérieur"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.position.outside",
@@ -14113,7 +14730,11 @@
         "pt": "Exterior",
         "es": "Exterior",
         "fr": "Extérieur"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.position.front_side",
@@ -14139,7 +14760,11 @@
       "aliases": [
         "front side",
         "正面側"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.position.back_side",
@@ -14167,7 +14792,11 @@
         "back side",
         "せなか側",
         "背中側"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.position.self",
@@ -14196,7 +14825,11 @@
         "me",
         "my",
         "自分"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.position.opponent",
@@ -14225,7 +14858,11 @@
         "partner",
         "them",
         "相手"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 7
     },
     {
       "tagId": "pre.position.above",
@@ -14256,7 +14893,11 @@
         "upper",
         "上方",
         "じょうほう"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 8
     },
     {
       "tagId": "pre.position.below",
@@ -14287,7 +14928,11 @@
         "lower",
         "下方",
         "かほう"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "other",
+      "bodyRegionOrder": 9
     },
     {
       "tagId": "pre.distance_management",
@@ -14312,7 +14957,9 @@
         "間合い",
         "距離の管理",
         "distance management"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.elbow_cup",
@@ -14352,7 +14999,9 @@
         "elbow cup",
         "엘보 컵",
         "copo de cotovelo"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.step_over",
@@ -14408,7 +15057,9 @@
         "montar",
         "step sur",
         "enjamber"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.spinning",
@@ -14448,7 +15099,9 @@
         "spinning",
         "스피닝",
         "giro"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.half_nelson",
@@ -14488,7 +15141,9 @@
       "aliases": [
         "half nelson",
         "하프 넬슨"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.control.pin",
@@ -14529,7 +15184,9 @@
         "pin",
         "핀",
         "fixação"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.head_position",
@@ -14574,7 +15231,9 @@
         "posição da cabeça",
         "cabeza position",
         "tête position"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.head_pull",
@@ -14651,7 +15310,9 @@
         "cabeza down",
         "tête pull",
         "tête down"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.inside_position",
@@ -14693,7 +15354,9 @@
         "posição interna",
         "interno position",
         "intérieur position"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.off_balance",
@@ -14737,7 +15400,9 @@
         "off balance",
         "오프 밸런스",
         "desequilíbrio"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.angle_created",
@@ -14783,7 +15448,9 @@
         "criar ângulo",
         "cadera angle",
         "hanche angle"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.connection",
@@ -14828,7 +15495,9 @@
         "connection",
         "커넥션",
         "conexão"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.pressure",
@@ -14869,7 +15538,9 @@
         "pressure",
         "프레셔",
         "pressão"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.crossface",
@@ -14910,7 +15581,9 @@
       "aliases": [
         "crossface",
         "크로스페이스"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.pillow",
@@ -14969,7 +15642,9 @@
         "brazo almohada",
         "oreiller",
         "bras oreiller"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.hip_control",
@@ -15011,7 +15686,9 @@
         "controle de quadril",
         "cadera control",
         "hanche contrôle"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.foot_on_hip",
@@ -15068,7 +15745,9 @@
         "cadera post",
         "pied on hanche",
         "hanche post"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.feint",
@@ -15116,7 +15795,9 @@
         "페인트",
         "finta",
         "feinte"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.fake",
@@ -15167,7 +15848,9 @@
         "finta com risco",
         "finta con riesgo",
         "feinte à risque"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.hip_turn",
@@ -15202,7 +15885,9 @@
         "腰を切る",
         "힙 턴",
         "giro de quadril"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.hip_line_control",
@@ -15244,7 +15929,9 @@
         "linha do quadril",
         "cadera line",
         "hanche line"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.shoulder_line_control",
@@ -15286,7 +15973,9 @@
         "linha do ombro",
         "hombro line",
         "épaule line"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.knee_line_control",
@@ -15333,7 +16022,9 @@
         "linha do joelho",
         "rodilla line",
         "genou line"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.heel_exposure_control",
@@ -15373,7 +16064,9 @@
         "heel exposure",
         "힐 익스포저",
         "exposição do calcanhar"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "top"
     },
     {
       "tagId": "pre.ankle_control",
@@ -15418,7 +16111,9 @@
         "足首持ち",
         "발목 컨트롤",
         "controle de tornozelo"
-      ]
+      ],
+      "approachCategory": "control",
+      "perspective": "other"
     },
     {
       "tagId": "pre.frame",
@@ -15457,7 +16152,9 @@
       "aliases": [
         "frame",
         "프레임"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.frame_s",
@@ -15498,7 +16195,9 @@
         "s frame",
         "s-frame",
         "s 프레임"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.leg_circle",
@@ -15538,7 +16237,9 @@
         "leg circle",
         "레그 서클",
         "círculo de perna"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.hip_escape",
@@ -15586,7 +16287,9 @@
         "cadera shift",
         "hanche movement",
         "hanche shift"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.base",
@@ -15625,7 +16328,9 @@
       "aliases": [
         "base",
         "베이스"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.combat_base",
@@ -15665,7 +16370,9 @@
         "combat base",
         "컴뱃 베이스",
         "base de combate"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.knee_split",
@@ -15707,7 +16414,9 @@
         "abertura de joelhos",
         "rodilla split",
         "genou split"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.standing",
@@ -15748,7 +16457,9 @@
         "em pé",
         "de pie",
         "debout"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.seated",
@@ -15788,7 +16499,9 @@
         "seated",
         "시티드",
         "sentado"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.side_switch",
@@ -15830,7 +16543,9 @@
         "troca de lado",
         "lateral switch",
         "côté switch"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.knee_elbow_connection",
@@ -15875,7 +16590,9 @@
         "conexão joelho-cotovelo",
         "rodilla elbow",
         "genou elbow"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.posture_break",
@@ -15919,7 +16636,9 @@
         "姿勢を崩す",
         "포스처 브레이크",
         "quebrar postura"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.posture.stand",
@@ -15980,7 +16699,9 @@
         "rodilla arriba",
         "poster",
         "genou dressé"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.hand_fight",
@@ -16020,7 +16741,9 @@
         "hand fight",
         "핸드 파이팅",
         "luta de mãos"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.level_change",
@@ -16060,7 +16783,9 @@
         "level change",
         "레벨 체인지",
         "mudança de nível"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.tripod",
@@ -16099,7 +16824,9 @@
         "tripod",
         "트라이포드",
         "tripé"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.double_ankle",
@@ -16140,7 +16867,9 @@
         "dupla pegada no tornozelo",
         "doble tobillo",
         "double cheville"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.shin_sweep",
@@ -16181,7 +16910,9 @@
         "raspagem de canela",
         "shin barrido",
         "shin balayage"
-      ]
+      ],
+      "approachCategory": "sweep",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.waiter",
@@ -16235,7 +16966,9 @@
         "posição de waiter",
         "waiter guardia",
         "waiter garde"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.cross_hook",
@@ -16276,7 +17009,9 @@
         "gancho cruzado",
         "cruzado hook",
         "croisé hook"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.leg_hook",
@@ -16325,7 +17060,9 @@
         "足フック",
         "레그 훅",
         "gancho de perna"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.push",
@@ -16368,7 +17105,9 @@
         "押す",
         "푸시",
         "empurrar"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.pull",
@@ -16424,7 +17163,9 @@
         "プル",
         "풀인",
         "puxar"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.kick",
@@ -16469,7 +17210,9 @@
         "kick",
         "킥",
         "chute"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.insert_reach",
@@ -16523,7 +17266,9 @@
         "encaixar",
         "meter",
         "insérer"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.open",
@@ -16577,7 +17322,9 @@
         "벌리다",
         "abrir",
         "ouvrir"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.leg_lasso",
@@ -16617,7 +17364,9 @@
         "leg lasso",
         "레그 라쏘",
         "laço de perna"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.handlebar",
@@ -16656,7 +17405,9 @@
         "handlebar",
         "핸들바",
         "guidão"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.spiral",
@@ -16695,7 +17446,9 @@
         "spiral",
         "스파이럴",
         "espiral"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.leg_pin",
@@ -16734,7 +17487,9 @@
         "leg pin",
         "레그 핀",
         "fixação de perna"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.leg_split",
@@ -16773,7 +17528,9 @@
         "leg split",
         "레그 스플릿",
         "abertura de pernas"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other"
     },
     {
       "tagId": "pre.shoulder_drive",
@@ -16815,7 +17572,9 @@
         "pressão com ombro",
         "hombro drive",
         "épaule drive"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.sitting_pass",
@@ -16856,7 +17615,9 @@
         "passagem sentada",
         "sitting pase",
         "sitting passe"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.x_pass",
@@ -16904,7 +17665,9 @@
         "X pase",
         "x passe",
         "X passe"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
     },
     {
       "tagId": "pre.reverse_half_guard_pass",
@@ -16952,7 +17715,9 @@
         "reverse half pase",
         "reverse half garde passe",
         "reverse half passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "pre.arm_triangle_pass",
@@ -16994,7 +17759,9 @@
         "passagem de triângulo de braço",
         "arm triángulo pase",
         "arm triangle passe"
-      ]
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
     },
     {
       "tagId": "pre.body.collar",
@@ -17016,7 +17783,11 @@
         "pt": "Gola",
         "es": "Cuello",
         "fr": "Col"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "collar",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.collar_front",
@@ -17034,7 +17805,11 @@
         "pt": "Gola Frente",
         "es": "Cuello Frente",
         "fr": "Col Devant"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "collar",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.collar_back",
@@ -17052,7 +17827,11 @@
         "pt": "Gola de Costas",
         "es": "Cuello Espalda",
         "fr": "Col Dos"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "collar",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.collar_low",
@@ -17074,7 +17853,11 @@
         "pt": "Gola Baixa",
         "es": "Cuello Bajo",
         "fr": "Col Bas"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "collar",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.sleeve",
@@ -17102,7 +17885,11 @@
       },
       "aliases": [
         "袖"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.knee",
@@ -17124,7 +17911,11 @@
         "pt": "Joelho",
         "es": "Rodilla",
         "fr": "Genou"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "knee",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.knee_side",
@@ -17145,7 +17936,11 @@
         "pt": "Joelho Lateral",
         "es": "Rodilla Lateral",
         "fr": "Genou Côté"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "knee",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.knee_pit",
@@ -17181,7 +17976,11 @@
         "knee pit",
         "back of knee",
         "popliteal"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "knee",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.below_knee",
@@ -17202,7 +18001,11 @@
         "pt": "Abaixo do Joelho",
         "es": "Debajo Rodilla",
         "fr": "Dessous Genou"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "knee",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.ankle",
@@ -17222,7 +18025,11 @@
         "pt": "Tornozelo",
         "es": "Tobillo",
         "fr": "Cheville"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.ankle_inside",
@@ -17242,7 +18049,11 @@
         "pt": "Tornozelo Interno",
         "es": "Tobillo Interno",
         "fr": "Cheville Intérieur"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.ankle_outside",
@@ -17262,7 +18073,11 @@
         "pt": "Tornozelo Externo",
         "es": "Tobillo Externo",
         "fr": "Cheville Extérieur"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.belt_front",
@@ -17290,7 +18105,11 @@
       },
       "aliases": [
         "帯前"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.belt_back",
@@ -17310,7 +18129,11 @@
         "pt": "Cinto Costas",
         "es": "Cinturón Atrás",
         "fr": "Ceinture Arrière"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.belt_side",
@@ -17330,7 +18153,11 @@
         "pt": "Cinto Lateral",
         "es": "Cinturón Lado",
         "fr": "Ceinture Côté"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.waist",
@@ -17358,7 +18185,11 @@
       },
       "aliases": [
         "腰"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.lapel",
@@ -17388,7 +18219,11 @@
       },
       "aliases": [
         "ラペラ"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.pant_cuff",
@@ -17408,7 +18243,11 @@
         "pt": "Barra da Calça",
         "es": "Bajo Pantalón",
         "fr": "Bas Pantalon"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.back_pants",
@@ -17428,7 +18267,11 @@
         "pt": "Calça por Trás",
         "es": "Pants Espalda",
         "fr": "Pants Dos"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 7
     },
     {
       "tagId": "pre.body.pocket",
@@ -17448,7 +18291,11 @@
         "pt": "Bolso",
         "es": "Bolsillo",
         "fr": "Poche"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.body.arm",
@@ -17468,7 +18315,11 @@
         "pt": "Braço",
         "es": "Brazo",
         "fr": "Bras"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.upper_arm_inner",
@@ -17488,7 +18339,11 @@
         "pt": "Parte Interna Braço",
         "es": "Parte Interna Brazo",
         "fr": "Partie Intérieure Bras"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.upper_arm_outer",
@@ -17508,7 +18363,11 @@
         "pt": "Parte Externa Braço",
         "es": "Parte Externa Brazo",
         "fr": "Partie Extérieure Bras"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.elbow",
@@ -17527,7 +18386,11 @@
         "pt": "Cotovelo",
         "es": "Codo",
         "fr": "Coude"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.elbow_back",
@@ -17547,7 +18410,11 @@
         "pt": "Parte de Trás Cotovelo",
         "es": "Parte Atrás Codo",
         "fr": "Arrière Coude"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.elbow_side",
@@ -17567,7 +18434,11 @@
         "pt": "Cotovelo Lateral",
         "es": "Codo Lateral",
         "fr": "Coude Côté"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.body.forearm_inner",
@@ -17587,7 +18458,11 @@
         "pt": "Antebraço Interno",
         "es": "Antebrazo Interno",
         "fr": "Avant-bras Intérieur"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.body.forearm_outer",
@@ -17607,7 +18482,11 @@
         "pt": "Antebraço Externo",
         "es": "Antebrazo Externo",
         "fr": "Avant-bras Extérieur"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 7
     },
     {
       "tagId": "pre.body.forearm_blade",
@@ -17627,7 +18506,11 @@
         "pt": "Lâmina Antebraço",
         "es": "Filo Antebrazo",
         "fr": "Lame Avant-bras"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "elbow",
+      "bodyRegionOrder": 8
     },
     {
       "tagId": "pre.body.chest",
@@ -17647,7 +18530,11 @@
         "pt": "Peito",
         "es": "Pecho",
         "fr": "Poitrine"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "torso",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.shoulder",
@@ -17667,7 +18554,11 @@
         "pt": "Ombro",
         "es": "Hombro",
         "fr": "Épaule"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "torso",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.sternum",
@@ -17687,7 +18578,11 @@
         "pt": "Esterno",
         "es": "Esternón",
         "fr": "Sternum"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "torso",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.armpit",
@@ -17717,7 +18612,11 @@
       "aliases": [
         "脇袖",
         "脇"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "torso",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.back",
@@ -17745,7 +18644,11 @@
       },
       "aliases": [
         "背中"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "torso",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.belly",
@@ -17765,7 +18668,11 @@
         "pt": "Barriga",
         "es": "Barriga",
         "fr": "Ventre"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "torso",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.body.side_ribs",
@@ -17786,7 +18693,11 @@
         "pt": "Costelas Laterais",
         "es": "Costillas Laterales",
         "fr": "Côtes Latérales"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "torso",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.body.wrist",
@@ -17814,7 +18725,11 @@
       },
       "aliases": [
         "手首"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.hand_thumb_side",
@@ -17835,7 +18750,11 @@
         "pt": "Lado Polegar Mão",
         "es": "Lado Pulgar Mano",
         "fr": "Côté Pouce Main"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.hand_pinky_side",
@@ -17856,7 +18775,11 @@
         "pt": "Lado Mindinho Mão",
         "es": "Lado Meñique Mano",
         "fr": "Côté Auriculaire Main"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.palm",
@@ -17876,7 +18799,11 @@
         "pt": "Palma",
         "es": "Palma",
         "fr": "Paume"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.back_of_hand",
@@ -17903,7 +18830,11 @@
       },
       "aliases": [
         "てのこう"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.body.fist",
@@ -17924,7 +18855,11 @@
         "pt": "Punho",
         "es": "Puño",
         "fr": "Poing"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.body.fingers",
@@ -17952,7 +18887,11 @@
       },
       "aliases": [
         "指"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "hand_below",
+      "bodyRegionOrder": 7
     },
     {
       "tagId": "pre.body.face",
@@ -18003,7 +18942,11 @@
         "rosto",
         "cara",
         "visage"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.forehead",
@@ -18023,7 +18966,11 @@
         "pt": "Testa",
         "es": "Frente",
         "fr": "Front"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.body.philtrum",
@@ -18044,7 +18991,11 @@
         "pt": "Filtro",
         "es": "Surco nasolabial",
         "fr": "Philtrum"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 7
     },
     {
       "tagId": "pre.body.back_of_head",
@@ -18072,7 +19023,11 @@
       },
       "aliases": [
         "後頭部"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.body.ear",
@@ -18092,7 +19047,11 @@
         "pt": "Orelha",
         "es": "Oreja",
         "fr": "Oreille"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.cheek",
@@ -18112,7 +19071,11 @@
         "pt": "Bochecha",
         "es": "Mejilla",
         "fr": "Joue"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.chin",
@@ -18132,7 +19095,11 @@
         "pt": "Queixo",
         "es": "Barbilla",
         "fr": "Menton"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.neck",
@@ -18160,7 +19127,11 @@
       },
       "aliases": [
         "首"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "face_head",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.shin",
@@ -18180,7 +19151,11 @@
         "pt": "Canela",
         "es": "Espinilla",
         "fr": "Tibia"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.body.calf",
@@ -18200,7 +19175,55 @@
         "pt": "Panturrilha",
         "es": "Gemelo",
         "fr": "Mollet"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 7
+    },
+    {
+      "tagId": "pre.body.one_leg",
+      "category": "Prerequisite",
+      "canonicalJa": "片足",
+      "canonicalEn": "One Leg",
+      "related": [
+        "act.wrestling.single_leg_takedown",
+        "pos.guard.half",
+        "act.sub.heel_hook",
+        "pos.guard.single_leg"
+      ],
+      "labels": {
+        "ja": "片足",
+        "en": "One Leg",
+        "ko": "한쪽 다리",
+        "pt": "Uma Perna",
+        "es": "Una Pierna",
+        "fr": "Une Jambe"
+      },
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 0
+    },
+    {
+      "tagId": "pre.body.both_legs",
+      "category": "Prerequisite",
+      "canonicalJa": "両足",
+      "canonicalEn": "Both Legs",
+      "related": [
+        "act.wrestling.double_leg_takedown",
+        "act.pass.stack_guard",
+        "pre.double_ankle",
+        "act.pass.leg_weave"
+      ],
+      "labels": {
+        "ja": "両足",
+        "en": "Both Legs",
+        "ko": "양쪽 다리",
+        "pt": "Ambas as Pernas",
+        "es": "Ambas Piernas",
+        "fr": "Deux Jambes"
+      },
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 1
     },
     {
       "tagId": "pre.body.thigh_front",
@@ -18220,7 +19243,11 @@
         "pt": "Frente da Coxa",
         "es": "Frente del Muslo",
         "fr": "Avant Cuisse"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 2
     },
     {
       "tagId": "pre.body.thigh_back",
@@ -18240,7 +19267,11 @@
         "pt": "Costas da Coxa",
         "es": "Parte Atrás Muslo",
         "fr": "Arrière Cuisse"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.body.thigh_side",
@@ -18260,7 +19291,11 @@
         "pt": "Lado da Coxa",
         "es": "Lado del Muslo",
         "fr": "Côté Cuisse"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 3
     },
     {
       "tagId": "pre.body.thigh_side_outer",
@@ -18282,7 +19317,11 @@
         "pt": "Coxa Externa",
         "es": "Muslo Externo",
         "fr": "Cuisse Externe"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "lower_body",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.hip_buttock",
@@ -18302,7 +19341,11 @@
         "pt": "Quadril / Nádegas",
         "es": "Cadera / Nalga",
         "fr": "Hanche / Fesse"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 8
     },
     {
       "tagId": "pre.body.groin",
@@ -18330,7 +19373,11 @@
       },
       "aliases": [
         "鼠蹊部"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "waist",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.body.above_knee",
@@ -18358,7 +19405,11 @@
       },
       "aliases": [
         "膝上"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "knee",
+      "bodyRegionOrder": 0
     },
     {
       "tagId": "pre.body.instep",
@@ -18378,7 +19429,11 @@
         "pt": "Peito do Pé",
         "es": "Empeine",
         "fr": "Cou-de-pied"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 5
     },
     {
       "tagId": "pre.body.sole",
@@ -18398,7 +19453,11 @@
         "pt": "Sola do Pé",
         "es": "Planta del Pie",
         "fr": "Plante du Pied"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 6
     },
     {
       "tagId": "pre.body.heel",
@@ -18418,7 +19477,11 @@
         "pt": "Calcanhar",
         "es": "Talón",
         "fr": "Talon"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 4
     },
     {
       "tagId": "pre.body.foot_thumb_side",
@@ -18439,7 +19502,11 @@
         "pt": "Lado Polegar Pé",
         "es": "Lado Pulgar Pie",
         "fr": "Côté Pouce Pied"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 7
     },
     {
       "tagId": "pre.body.foot_pinky_side",
@@ -18460,7 +19527,11 @@
         "pt": "Lado Mindinho Pé",
         "es": "Lado Meñique Pie",
         "fr": "Côté Auriculaire Pied"
-      }
+      },
+      "approachCategory": "other",
+      "perspective": "other",
+      "bodyRegion": "ankle",
+      "bodyRegionOrder": 8
     },
     {
       "tagId": "pre.grip.standard",
@@ -18493,7 +19564,9 @@
         "regular grip",
         "通常グリップ",
         "フロントグリップ"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.pistol",
@@ -18524,7 +19597,9 @@
       "aliases": [
         "pistol grip",
         "ピストルグリップ"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.pocket_grip",
@@ -18556,7 +19631,9 @@
         "pocket grip",
         "ポケットグリップ",
         "袋取り"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.gokor",
@@ -18586,7 +19663,9 @@
       "aliases": [
         "gokor grip",
         "ゴコールグリップ"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.butterfly_grip",
@@ -18617,7 +19696,9 @@
       "aliases": [
         "butterfly grip",
         "バタフライグリップ"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.butterfly_hook",
@@ -18652,7 +19733,9 @@
         "inside hook",
         "バタフライフック",
         "バタフライアシ"
-      ]
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
     },
     {
       "tagId": "pre.grip.pretzel",
@@ -18681,7 +19764,9 @@
       "aliases": [
         "pretzel grip",
         "プレッツェルグリップ"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     },
     {
       "tagId": "pre.grip.kimura",
@@ -18711,7 +19796,9 @@
       "aliases": [
         "kimura grip",
         "キムラグリップ"
-      ]
+      ],
+      "approachCategory": "grip",
+      "perspective": "other"
     }
   ]
 }
