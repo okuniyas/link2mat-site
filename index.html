@@ -2143,8 +2143,24 @@
           }
           return "en";
         }
-        const saved = localStorage.getItem(STORAGE_KEY);
-        const initial = (saved && SUPPORT_LANGS.indexOf(saved) !== -1) ? saved : detectBrowserLang();
+
+        function langFromUrl() {
+          const params = new URLSearchParams(window.location.search);
+          const code = String(params.get("lang") || "").toLowerCase().split("-")[0];
+          if (SUPPORT_LANGS.indexOf(code) !== -1) return code;
+          return null;
+        }
+
+        const fromUrl = langFromUrl();
+        let saved = null;
+        if (!fromUrl) {
+          try {
+            saved = localStorage.getItem(STORAGE_KEY);
+          } catch (e) {}
+        }
+        const initial =
+          fromUrl ||
+          (saved && SUPPORT_LANGS.indexOf(saved) !== -1 ? saved : detectBrowserLang());
         setLang(initial);
       })();
 
