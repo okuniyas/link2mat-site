@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.42",
+  "version": "dict_v1.2.44",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -1832,6 +1832,7 @@
       "related": [
         "act.control.stabilize",
         "act.sub.arm_triangle",
+        "act.sub.von_flue",
         "act.transition.mount",
         "pre.crossface"
       ],
@@ -1877,6 +1878,7 @@
       "canonicalEn": "North-South",
       "related": [
         "act.sub.kimura",
+        "act.sub.north_south_choke",
         "act.control.stabilize",
         "pre.shoulder_line_control"
       ],
@@ -7478,6 +7480,116 @@
         "estrangulamento ninja",
         "ninja estrangulación",
         "ninja étranglement"
+      ]
+    },
+    {
+      "tagId": "act.sub.von_flue",
+      "category": "Submission",
+      "canonicalJa": "ヴォンフルーチョーク",
+      "canonicalEn": "Von Flue Choke",
+      "related": [
+        "pos.top.side_control",
+        "pre.underhook"
+      ],
+      "labels": {
+        "ja": "ヴォンフルーチョーク",
+        "en": "Von Flue Choke",
+        "ko": "본 플루 초크",
+        "pt": "Estrangulamento Von Flue",
+        "es": "Von Flue Estrangulación",
+        "fr": "Von Flue Étranglement"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "von flue",
+          "von flue choke",
+          "Von Flue"
+        ],
+        "ja": [
+          "ヴォンフルー",
+          "ボンフルーチョーク",
+          "ボンフルー"
+        ],
+        "ko": [
+          "본 플루 초크"
+        ],
+        "pt": [
+          "estrangulamento von flue",
+          "von flue"
+        ],
+        "es": [
+          "von flue",
+          "von flue estrangulación"
+        ],
+        "fr": [
+          "von flue",
+          "von flue étranglement"
+        ]
+      },
+      "aliases": [
+        "von flue",
+        "von flue choke",
+        "Von Flue",
+        "ヴォンフルー",
+        "ボンフルーチョーク",
+        "ボンフルー",
+        "본 플루 초크",
+        "estrangulamento von flue",
+        "von flue estrangulación",
+        "von flue étranglement"
+      ]
+    },
+    {
+      "tagId": "act.sub.north_south_choke",
+      "category": "Submission",
+      "canonicalJa": "ノースサウスチョーク",
+      "canonicalEn": "North-South Choke",
+      "related": [
+        "pos.top.north_south",
+        "pre.head_position"
+      ],
+      "labels": {
+        "ja": "ノースサウスチョーク",
+        "en": "North-South Choke",
+        "ko": "노스사우스 초크",
+        "pt": "Estrangulamento Norte-Sul",
+        "es": "North-South Estrangulación",
+        "fr": "North-South Étranglement"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "north south choke",
+          "north-south choke",
+          "NS choke"
+        ],
+        "ja": [
+          "ノースサウスチョーク"
+        ],
+        "ko": [
+          "노스사우스 초크"
+        ],
+        "pt": [
+          "estrangulamento norte-sul",
+          "north south choke"
+        ],
+        "es": [
+          "north south choke",
+          "north-south estrangulación"
+        ],
+        "fr": [
+          "north-south choke",
+          "north south étranglement"
+        ]
+      },
+      "aliases": [
+        "north south choke",
+        "north-south choke",
+        "NS choke",
+        "ノースサウスチョーク",
+        "노스사우스 초크",
+        "estrangulamento norte-sul",
+        "north-south estrangulación",
+        "north south étranglement"
       ]
     },
     {
