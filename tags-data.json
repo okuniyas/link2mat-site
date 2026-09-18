@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.44",
+  "version": "dict_v1.2.45",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -2575,6 +2575,8 @@
       "canonicalEn": "Front Headlock",
       "related": [
         "act.sub.guillotine",
+        "act.sub.japanese_necktie",
+        "act.sub.peruvian_necktie",
         "act.wrestling.snapdown",
         "pre.tie.collar",
         "act.control.front_headlock_stabilize",
@@ -5901,7 +5903,8 @@
       "related": [
         "pre.connection",
         "pre.pressure",
-        "pre.shoulder_line_control"
+        "pre.shoulder_line_control",
+        "act.pass.double_under"
       ],
       "labels": {
         "ja": "オーバーアンダーパス",
@@ -5934,6 +5937,65 @@
         "passagem over-under",
         "sobre bajo",
         "sur sous"
+      ],
+      "approachCategory": "pass",
+      "perspective": "other"
+    },
+    {
+      "tagId": "act.pass.double_under",
+      "category": "Action",
+      "canonicalJa": "ダブルアンダーパス",
+      "canonicalEn": "Double Under Pass",
+      "related": [
+        "pos.guard.butterfly",
+        "pos.guard.open",
+        "pre.connection",
+        "pre.pressure",
+        "pre.shoulder_line_control",
+        "act.pass.over_under"
+      ],
+      "labels": {
+        "ja": "ダブルアンダーパス",
+        "en": "Double Under Pass",
+        "ko": "더블 언더 패스",
+        "pt": "Passagem Double Under",
+        "es": "Double Under Pase",
+        "fr": "Double Under Passe"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "double under",
+          "double under pass",
+          "double-under pass"
+        ],
+        "ja": [
+          "ダブルアンダー"
+        ],
+        "ko": [
+          "더블 언더 패스"
+        ],
+        "pt": [
+          "passagem double under",
+          "double under"
+        ],
+        "es": [
+          "double under",
+          "double under pase"
+        ],
+        "fr": [
+          "double under",
+          "double under passe"
+        ]
+      },
+      "aliases": [
+        "double under",
+        "double under pass",
+        "double-under pass",
+        "ダブルアンダー",
+        "더블 언더 패스",
+        "passagem double under",
+        "double under pase",
+        "double under passe"
       ],
       "approachCategory": "pass",
       "perspective": "other"
@@ -7165,6 +7227,7 @@
       "canonicalEn": "Truck Control",
       "related": [
         "act.sub.banana_split",
+        "act.sub.twister",
         "pre.twister_hook",
         "pos.turtle"
       ],
@@ -7612,7 +7675,13 @@
       },
       "aliasesByLocale": {
         "en": [
-          "japanese necktie"
+          "japanese necktie",
+          "japanese necktie choke"
+        ],
+        "ja": [
+          "ジャパニーズネクタイ",
+          "ジャパニーズネクタイチョーク",
+          "ジャパニーズネックタイチョーク"
         ],
         "ko": [
           "재패니즈 넥타이"
@@ -7629,8 +7698,69 @@
       },
       "aliases": [
         "japanese necktie",
+        "japanese necktie choke",
+        "ジャパニーズネクタイ",
+        "ジャパニーズネクタイチョーク",
+        "ジャパニーズネックタイチョーク",
         "재패니즈 넥타이",
         "gravata japonesa"
+      ]
+    },
+    {
+      "tagId": "act.sub.peruvian_necktie",
+      "category": "Submission",
+      "canonicalJa": "ペルビアンネックタイ",
+      "canonicalEn": "Peruvian Necktie",
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.head_position",
+        "act.sub.guillotine",
+        "act.wrestling.sprawl"
+      ],
+      "labels": {
+        "ja": "ペルビアンネックタイ",
+        "en": "Peruvian Necktie",
+        "ko": "페루비안 넥타이",
+        "pt": "Gravata Peruana",
+        "es": "Peruvian Necktie",
+        "fr": "Peruvian Necktie"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "peruvian necktie",
+          "peruvian necktie choke"
+        ],
+        "ja": [
+          "ペルビアンネクタイ",
+          "ペルビアンネクタイチョーク",
+          "ペルビアンネックタイチョーク"
+        ],
+        "ko": [
+          "페루비안 넥타이"
+        ],
+        "pt": [
+          "gravata peruana",
+          "peruvian necktie"
+        ],
+        "es": [
+          "peruvian necktie",
+          "corbata peruana"
+        ],
+        "fr": [
+          "peruvian necktie",
+          "cravate péruvienne"
+        ]
+      },
+      "aliases": [
+        "peruvian necktie",
+        "peruvian necktie choke",
+        "ペルビアンネクタイ",
+        "ペルビアンネクタイチョーク",
+        "ペルビアンネックタイチョーク",
+        "페루비안 넥타이",
+        "gravata peruana",
+        "corbata peruana",
+        "cravate péruvienne"
       ]
     },
     {
@@ -7861,12 +7991,15 @@
       "aliasesByLocale": {
         "en": [
           "arm triangle",
-          "kata gatame"
+          "kata gatame",
+          "katagatame"
         ],
         "ja": [
           "腕三角",
           "アームトライアングル",
-          "アームトライアングルチョーク"
+          "アームトライアングルチョーク",
+          "肩固め",
+          "カタガタメ"
         ],
         "ko": [
           "암 트라이앵글"
@@ -7886,9 +8019,12 @@
       "aliases": [
         "arm triangle",
         "kata gatame",
+        "katagatame",
         "腕三角",
         "アームトライアングル",
         "アームトライアングルチョーク",
+        "肩固め",
+        "カタガタメ",
         "암 트라이앵글",
         "triângulo de braço",
         "arm triángulo"
@@ -8737,23 +8873,44 @@
       },
       "aliasesByLocale": {
         "en": [
-          "forearm choke"
+          "forearm choke",
+          "paper cutter",
+          "paper cutter choke",
+          "bread cutter",
+          "bread cutter choke"
+        ],
+        "ja": [
+          "ペーパーカッターチョーク",
+          "ペーパーカッター",
+          "ブレッドカッター",
+          "ブ레드カッターチョーク"
         ],
         "ko": [
           "포어암 초크"
         ],
         "pt": [
-          "estrangulamento com antebraço"
+          "estrangulamento com antebraço",
+          "paper cutter"
         ],
         "es": [
-          "forearm estrangulación"
+          "forearm estrangulación",
+          "paper cutter"
         ],
         "fr": [
-          "forearm étranglement"
+          "forearm étranglement",
+          "paper cutter"
         ]
       },
       "aliases": [
         "forearm choke",
+        "paper cutter",
+        "paper cutter choke",
+        "bread cutter",
+        "bread cutter choke",
+        "ペーパーカッターチョーク",
+        "ペーパーカッター",
+        "ブレッドカッター",
+        "ブ레드カッターチョーク",
         "포어암 초크",
         "estrangulamento com antebraço",
         "forearm estrangulación",
@@ -8920,9 +9077,6 @@
         "en": [
           "shoulder lock"
         ],
-        "ja": [
-          "肩固め"
-        ],
         "ko": [
           "숄더 락"
         ],
@@ -8938,7 +9092,6 @@
       },
       "aliases": [
         "shoulder lock",
-        "肩固め",
         "숄더 락",
         "chave de ombro",
         "hombro luxación",
@@ -9287,9 +9440,6 @@
           "ude garami",
           "V1"
         ],
-        "ja": [
-          "肩固め"
-        ],
         "ko": [
           "아메리카나"
         ],
@@ -9312,7 +9462,6 @@
         "americana",
         "ude garami",
         "V1",
-        "肩固め",
         "아메리카나"
       ]
     },
@@ -9587,6 +9736,7 @@
         "pos.leg_entanglement.ashi",
         "pre.knee_line_control",
         "act.control.truck",
+        "act.sub.twister",
         "act.sub.banana_split",
         "act.sub.calf_slicer"
       ],
@@ -9600,40 +9750,77 @@
       },
       "aliasesByLocale": {
         "ja": [
-          "ツイスターフック",
-          "ツイスター"
+          "ツイスターフック"
         ],
         "en": [
-          "twister hook",
-          "twister"
+          "twister hook"
         ],
         "ko": [
-          "트위스터 훅",
-          "트위스터"
+          "트위스터 훅"
         ],
         "pt": [
-          "twister hook",
-          "twister"
+          "twister hook"
         ],
         "es": [
-          "twister hook",
-          "twister"
+          "twister hook"
         ],
         "fr": [
-          "twister hook",
-          "twister"
+          "twister hook"
         ]
       },
       "aliases": [
         "ツイスターフック",
-        "ツイスター",
         "twister hook",
-        "twister",
-        "트위스터 훅",
-        "트위스터"
+        "트위스터 훅"
       ],
       "approachCategory": "other",
       "perspective": "other"
+    },
+    {
+      "tagId": "act.sub.twister",
+      "category": "Submission",
+      "canonicalJa": "ツイスター",
+      "canonicalEn": "Twister",
+      "related": [
+        "act.control.truck",
+        "pre.twister_hook",
+        "pos.turtle"
+      ],
+      "labels": {
+        "ja": "ツイスター",
+        "en": "Twister",
+        "ko": "트위스터",
+        "pt": "Twister",
+        "es": "Twister",
+        "fr": "Twister"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "twister",
+          "twister submission"
+        ],
+        "ja": [
+          "ツイスター固め"
+        ],
+        "ko": [
+          "트위스터"
+        ],
+        "pt": [
+          "twister"
+        ],
+        "es": [
+          "twister"
+        ],
+        "fr": [
+          "twister"
+        ]
+      },
+      "aliases": [
+        "twister",
+        "twister submission",
+        "ツイスター固め",
+        "트위스터"
+      ]
     },
     {
       "tagId": "act.sub.calf_slicer",
@@ -19312,6 +19499,8 @@
         "es": "Una Pierna",
         "fr": "Une Jambe"
       },
+      "approachCategory": "other",
+      "perspective": "other",
       "bodyRegion": "lower_body",
       "bodyRegionOrder": 0
     },
@@ -19334,6 +19523,8 @@
         "es": "Ambas Piernas",
         "fr": "Deux Jambes"
       },
+      "approachCategory": "other",
+      "perspective": "other",
       "bodyRegion": "lower_body",
       "bodyRegionOrder": 1
     },
