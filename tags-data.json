@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.45",
+  "version": "dict_v1.2.46",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -20036,6 +20036,188 @@
         "inside hook",
         "バタフライフック",
         "バタフライアシ"
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
+    },
+    {
+      "tagId": "pre.dlr_hook",
+      "category": "Prerequisite",
+      "canonicalJa": "デラヒーバフック",
+      "canonicalEn": "De La Riva Hook",
+      "related": [
+        "pos.guard.dlr",
+        "act.guard.sweep",
+        "pre.leg_lasso"
+      ],
+      "labels": {
+        "ja": "デラヒーバフック",
+        "en": "De La Riva Hook",
+        "ko": "데 라 히바 훅",
+        "pt": "Gancho de La Riva",
+        "es": "Gancho De La Riva",
+        "fr": "Crochet De La Riva"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "de la riva hook",
+          "dlr hook",
+          "delariva hook"
+        ],
+        "ja": [
+          "デラヒーバフック",
+          "DLRフック",
+          "デラリバフック"
+        ],
+        "ko": [
+          "데 라 히바 훅"
+        ],
+        "pt": [
+          "gancho de la riva"
+        ],
+        "es": [
+          "gancho de la riva",
+          "dlr hook"
+        ],
+        "fr": [
+          "crochet de la riva",
+          "dlr hook"
+        ]
+      },
+      "aliases": [
+        "de la riva hook",
+        "dlr hook",
+        "delariva hook",
+        "デラヒーバフック",
+        "DLRフック",
+        "デラリバフック",
+        "데 라 히바 훅",
+        "gancho de la riva",
+        "crochet de la riva"
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
+    },
+    {
+      "tagId": "pre.rdlr_hook",
+      "category": "Prerequisite",
+      "canonicalJa": "リバースデラヒーバフック",
+      "canonicalEn": "Reverse De La Riva Hook",
+      "related": [
+        "pos.guard.rdlr",
+        "act.guard.sweep",
+        "act.guard.leg_entanglement_entry"
+      ],
+      "labels": {
+        "ja": "リバースデラヒーバフック",
+        "en": "Reverse De La Riva Hook",
+        "ko": "리버스 데 라 히바 훅",
+        "pt": "Gancho de La Riva Reverso",
+        "es": "Gancho Reverse De La Riva",
+        "fr": "Crochet Reverse De La Riva"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "reverse de la riva hook",
+          "rdlr hook",
+          "reverse delariva hook"
+        ],
+        "ja": [
+          "リバースデラヒーバフック",
+          "RDLRフック",
+          "リバースデラリバフック"
+        ],
+        "ko": [
+          "리버스 데 라 히바 훅"
+        ],
+        "pt": [
+          "gancho de la riva reverso",
+          "gancho rdlr"
+        ],
+        "es": [
+          "gancho reverse de la riva",
+          "rdlr hook"
+        ],
+        "fr": [
+          "crochet reverse de la riva",
+          "rdlr hook"
+        ]
+      },
+      "aliases": [
+        "reverse de la riva hook",
+        "rdlr hook",
+        "reverse delariva hook",
+        "リバースデラヒーバフック",
+        "RDLRフック",
+        "リバースデラリバフック",
+        "리버스 데 라 히바 훅",
+        "gancho de la riva reverso",
+        "gancho rdlr",
+        "gancho reverse de la riva",
+        "crochet reverse de la riva"
+      ],
+      "approachCategory": "other",
+      "perspective": "bottom"
+    },
+    {
+      "tagId": "pre.spider_hook",
+      "category": "Prerequisite",
+      "canonicalJa": "スパイダーフック",
+      "canonicalEn": "Spider Hook",
+      "related": [
+        "pos.guard.spider",
+        "act.guard.sweep",
+        "pre.body.sleeve"
+      ],
+      "labels": {
+        "ja": "スパイダーフック",
+        "en": "Spider Hook",
+        "ko": "스파이더 훅",
+        "pt": "Gancho Aranha",
+        "es": "Gancho Araña",
+        "fr": "Crochet Araignée"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "spider hook",
+          "foot on bicep",
+          "foot on biceps"
+        ],
+        "ja": [
+          "スパイダーフック",
+          "フットオンバイセップ",
+          "上腕フック"
+        ],
+        "ko": [
+          "스파이더 훅"
+        ],
+        "pt": [
+          "gancho aranha",
+          "pé no bíceps"
+        ],
+        "es": [
+          "gancho araña",
+          "pie en el bíceps"
+        ],
+        "fr": [
+          "crochet araignée",
+          "pied sur biceps"
+        ]
+      },
+      "aliases": [
+        "spider hook",
+        "foot on bicep",
+        "foot on biceps",
+        "スパイダーフック",
+        "フットオンバイセップ",
+        "上腕フック",
+        "스파이더 훅",
+        "gancho aranha",
+        "pé no bíceps",
+        "gancho araña",
+        "pie en el bíceps",
+        "crochet araignée",
+        "pied sur biceps"
       ],
       "approachCategory": "other",
       "perspective": "bottom"
