@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.46",
+  "version": "dict_v1.2.50",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -529,6 +529,7 @@
       "related": [
         "act.guard.sweep",
         "act.guard.sweep.false_reap",
+        "act.guard.sweep.back_roll",
         "pre.underhook",
         "pos.guard.knee_shield",
         "pre.knee_twist_setup",
@@ -1081,15 +1082,8 @@
       "canonicalJa": "キーマスター",
       "canonicalEn": "Keymaster",
       "related": [
-        "pos.guard.knee_shield",
         "pre.knee_shield_setup",
-        "pos.guard.open",
-        "pos.guard.dlr",
-        "pos.guard.sitting",
         "pos.guard.k_guard",
-        "act.guard.wrestle_up",
-        "act.guard.leg_entanglement_entry",
-        "pre.frame",
         "pre.knee_line_control"
       ],
       "labels": {
@@ -1517,6 +1511,61 @@
       ],
       "approachCategory": "other",
       "perspective": "other"
+    },
+    {
+      "tagId": "pre.high_ground",
+      "category": "Prerequisite",
+      "canonicalJa": "ハイグラウンド",
+      "canonicalEn": "High Ground",
+      "related": [
+        "pos.neutral.front_headlock",
+        "pre.grip.gable",
+        "act.sub.guillotine",
+        "act.sub.anaconda",
+        "act.sub.darce",
+        "pos.control.crucifix"
+      ],
+      "labels": {
+        "ja": "ハイグラウンド",
+        "en": "High Ground",
+        "ko": "하이 그라운드",
+        "pt": "High Ground",
+        "es": "High Ground",
+        "fr": "High Ground"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "ハイグラウンド（セットアップ）",
+          "ハイグラウンドセットアップ"
+        ],
+        "en": [
+          "high ground",
+          "high-ground",
+          "high ground setup",
+          "high ground front headlock"
+        ],
+        "ko": [
+          "하이 그라운드"
+        ],
+        "pt": [
+          "high ground"
+        ],
+        "es": [
+          "high ground"
+        ],
+        "fr": [
+          "high ground"
+        ]
+      },
+      "aliases": [
+        "ハイグラウンド（セットアップ）",
+        "ハイグラウンドセットアップ",
+        "high ground",
+        "high-ground",
+        "high ground setup",
+        "high ground front headlock",
+        "하이 그라운드"
+      ]
     },
     {
       "tagId": "pos.guard.spider_x",
@@ -1969,7 +2018,8 @@
         "pos.turtle",
         "pos.top.back_control",
         "act.sub.rnc",
-        "act.sub.armbar"
+        "act.sub.armbar",
+        "pre.high_ground"
       ],
       "labels": {
         "ja": "クルシフィクス",
@@ -2511,15 +2561,9 @@
       "canonicalEn": "Turtle",
       "related": [
         "act.control.turtle_breakdown",
-        "act.control.uchi_muso",
-        "act.control.truck",
-        "act.sub.banana_split",
         "act.transition.take_back",
         "act.escape.turtle",
-        "act.guard.wrestle_up",
-        "pre.twister_hook",
-        "pre.hip_control",
-        "pre.frame"
+        "pre.hip_control"
       ],
       "labels": {
         "ja": "タートル",
@@ -2582,7 +2626,8 @@
         "act.control.front_headlock_stabilize",
         "act.control.uchi_muso",
         "act.control.soto_muso",
-        "pre.head_position"
+        "pre.head_position",
+        "pre.high_ground"
       ],
       "labels": {
         "ja": "フロントヘッドロック",
@@ -4228,7 +4273,6 @@
         "pos.guard.rdlr",
         "pos.guard.reverse_half",
         "pos.guard.half",
-        "pos.guard.butterfly",
         "pos.guard.k_guard",
         "act.guard.leg_entanglement_entry",
         "pos.leg_entanglement.cross_ashi",
@@ -6858,6 +6902,7 @@
       "canonicalJa": "タートル崩し",
       "canonicalEn": "Turtle Breakdown",
       "related": [
+        "pos.turtle",
         "act.control.uchi_muso",
         "act.transition.take_back",
         "pre.hip_control",
@@ -7096,6 +7141,7 @@
       "canonicalJa": "フロントヘッドロック",
       "canonicalEn": "Front Headlock Control",
       "related": [
+        "pos.neutral.front_headlock",
         "act.sub.guillotine",
         "act.control.uchi_muso",
         "act.control.soto_muso",
@@ -7463,7 +7509,8 @@
       "related": [
         "pos.neutral.front_headlock",
         "pre.head_position",
-        "pre.wrist_control"
+        "pre.wrist_control",
+        "pre.high_ground"
       ],
       "labels": {
         "ja": "ギロチン",
@@ -7823,7 +7870,8 @@
       "related": [
         "pos.neutral.front_headlock",
         "pre.shoulder_line_control",
-        "pre.head_position"
+        "pre.head_position",
+        "pre.high_ground"
       ],
       "labels": {
         "ja": "ダースチョーク",
@@ -7880,7 +7928,8 @@
       "related": [
         "pos.neutral.front_headlock",
         "pre.shoulder_line_control",
-        "pre.head_position"
+        "pre.head_position",
+        "pre.high_ground"
       ],
       "labels": {
         "ja": "アナコンダチョーク",
@@ -10890,10 +10939,7 @@
       "canonicalEn": "Arm Drag",
       "related": [
         "pos.phase.standing",
-        "pre.tie.elbow",
-        "pre.tie.tricep",
         "act.guard.wrestle_up",
-        "pre.2on1",
         "act.transition.take_back",
         "act.wrestling.single_leg_takedown",
         "act.wrestling.double_leg_takedown"
@@ -11129,7 +11175,6 @@
       "related": [
         "pos.phase.standing",
         "pos.phase.clinch",
-        "pre.underhook",
         "pre.head_position",
         "act.wrestling.knee_tap",
         "act.wrestling.snapdown",
@@ -13980,7 +14025,8 @@
         "act.control.seatbelt",
         "act.control.uchi_muso",
         "act.control.soto_muso",
-        "pos.top.back_control"
+        "pos.top.back_control",
+        "pre.high_ground"
       ],
       "labels": {
         "ja": "ゲーブルグリップ",
