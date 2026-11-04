@@ -79,6 +79,7 @@
       <h1 class="lang-block" data-lang="pt">Política de privacidade</h1>
       <h1 class="lang-block" data-lang="es">Política de privacidad</h1>
       <h1 class="lang-block" data-lang="fr">Politique de confidentialité</h1>
+      <h1 class="lang-block" data-lang="ar">سياسة خصوصية Link2Mat</h1>
       <div class="lang-switcher" role="group" aria-label="Language / 言語">
         <span class="lang-label">Language / 言語:</span>
         <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
@@ -87,13 +88,15 @@
         <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
         <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
         <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">العربية</button>
       </div>
-      <p class="lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-10-13</p>
-      <p class="lang-block" data-lang="ja"><strong>更新日:</strong> 2026-10-13</p>
-      <p class="lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-10-13</p>
-      <p class="lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-10-13</p>
-      <p class="lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-10-13</p>
-      <p class="lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-10-13</p>
+      <p class="lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-11-03</p>
+      <p class="lang-block" data-lang="ja"><strong>更新日:</strong> 2026-11-03</p>
+      <p class="lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-11-03</p>
+      <p class="lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-11-03</p>
+      <p class="lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-11-03</p>
+      <p class="lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-11-03</p>
+      <p class="lang-block" data-lang="ar"><strong>آخر تحديث:</strong> 2026-11-03</p>
 
       <h2 class="lang-block lang-visible" data-lang="en">Overview</h2>
       <h2 class="lang-block" data-lang="ja">概要</h2>
@@ -101,6 +104,7 @@
       <h2 class="lang-block" data-lang="pt">Visão geral</h2>
       <h2 class="lang-block" data-lang="es">Resumen</h2>
       <h2 class="lang-block" data-lang="fr">Vue d’ensemble</h2>
+      <h2 class="lang-block" data-lang="ar">نظرة عامة</h2>
       <div class="bilingual">
         <div class="lang-block lang-visible" data-lang="en">
           <p>
@@ -136,6 +140,15 @@
           <p>
             Link2Mat vous aide à enregistrer des liens et des clips pour étudier le jiu‑jitsu.
             Cette politique explique comment vos données sont traitées.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="ar">
+          <p>
+            يساعدك Link2Mat على حفظ الروابط والمقاطع لتعلّم الجيو جيتسو.
+            توضح هذه السياسة كيفية التعامل مع بياناتك.
+          </p>
+          <p>
+            ملاحظة: واجهة التطبيق بالعربية متاحة تدريجياً؛ تخطيط من اليمين إلى اليسار (RTL) سيُضاف لاحقاً.
           </p>
         </div>
       </div>
@@ -553,7 +566,10 @@
         function setLang(lang) {
           document.body.setAttribute("data-lang", lang);
           langBlocks.forEach(function(el) {
-            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+            var d = el.getAttribute("data-lang");
+            // Phase 1 Arabic: show AR where present; also keep EN so untranslated sections remain readable (RTL deferred).
+            var on = d === lang || (lang === "ar" && d === "en");
+            el.classList.toggle("lang-visible", on);
           });
           langButtons.forEach(function(btn) {
             var on = btn.getAttribute("data-lang") === lang;
@@ -565,7 +581,7 @@
         langButtons.forEach(function(btn) {
           btn.addEventListener("click", function() { setLang(btn.getAttribute("data-lang")); });
         });
-        var supported = ["en", "ja", "ko", "pt", "es", "fr"];
+        var supported = ["en", "ja", "ko", "pt", "es", "fr", "ar"];
         function detectBrowserLang() {
           var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || "en"];
           for (var i = 0; i < list.length; i++) {

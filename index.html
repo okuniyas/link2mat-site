@@ -375,13 +375,15 @@
         <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">Português</button>
         <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
         <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">العربية</button>
       </div>
-      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-10-30</p>
-      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-10-30</p>
-      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-10-30</p>
-      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-10-30</p>
-      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-10-30</p>
-      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-10-30</p>
+      <p class="muted lang-block lang-visible" data-lang="en"><strong>Last updated:</strong> 2026-11-03</p>
+      <p class="muted lang-block" data-lang="ja"><strong>更新日:</strong> 2026-11-03</p>
+      <p class="muted lang-block" data-lang="ko"><strong>최종 업데이트:</strong> 2026-11-03</p>
+      <p class="muted lang-block" data-lang="pt"><strong>Última atualização:</strong> 2026-11-03</p>
+      <p class="muted lang-block" data-lang="es"><strong>Última actualización:</strong> 2026-11-03</p>
+      <p class="muted lang-block" data-lang="fr"><strong>Dernière mise à jour:</strong> 2026-11-03</p>
+      <p class="muted lang-block" data-lang="ar"><strong>آخر تحديث:</strong> 2026-11-03</p>
 
       <p class="muted lang-block lang-visible" data-lang="en"><a href="release-notes.html">Release notes</a> (version history)</p>
       <p class="muted lang-block" data-lang="ja"><a href="release-notes.html">リリースノート</a>（バージョン別の概要）</p>
@@ -389,6 +391,7 @@
       <p class="muted lang-block" data-lang="pt"><a href="release-notes.html">Notas de versão</a> (histórico)</p>
       <p class="muted lang-block" data-lang="es"><a href="release-notes.html">Notas de la versión</a> (historial)</p>
       <p class="muted lang-block" data-lang="fr"><a href="release-notes.html">Notes de version</a> (historique)</p>
+      <p class="muted lang-block" data-lang="ar"><a href="release-notes.html">ملاحظات الإصدار</a> (سجل الإصدارات)</p>
 
       <div class="card" style="margin: 12px 0 20px">
         <div class="lang-block lang-visible" data-lang="en">
@@ -438,6 +441,15 @@
             <li>Les tags liés du dictionnaire ont été nettoyés, et "High Ground" a été ajouté comme tag de mise en place.</li>
             <li>Correction de problèmes liés aux images de la bibliothèque, à l'export et à la sauvegarde.</li>
           </ul>
+        </div>
+        <div class="lang-block" data-lang="ar">
+          <p><strong>الأحدث: الإصدار 2.6.0</strong></p>
+          <ul>
+            <li>أصبحت الوسوم المقترحة أقل تأثراً بنصوص الترويج (مثل الجمل في نهاية وصف الفيديو)، فتبقى المرشحات أقرب للتقنية التي تدرسها.</li>
+            <li>نُظّمت الوسوم ذات الصلة في القاموس، وأُضيف "High Ground" كوسم إعداد.</li>
+            <li>أُصلحت مشاكل صور المكتبة والتصدير والنسخ الاحتياطي.</li>
+          </ul>
+          <p>ملاحظة: واجهة العربية تُضاف تدريجياً؛ تخطيط من اليمين إلى اليسار (RTL) لاحقاً. الأقسام غير المترجمة تظهر بالإنجليزية.</p>
         </div>
       </div>
 
@@ -2191,18 +2203,22 @@
         const langButtons = document.querySelectorAll(".lang-btn");
         const langBlocks = document.querySelectorAll(".lang-block");
 
-        /** Caption order in data-caption: en / ja / ko / pt / es / fr. Add a language: extend this array, add a .lang-btn, and add matching .lang-block + caption segment. */
-        const SUPPORT_LANGS = ["en", "ja", "ko", "pt", "es", "fr"];
+        /** Caption order in data-caption: en / ja / ko / pt / es / fr. Arabic (ar) uses EN captions until AR segments exist. */
+        const SUPPORT_LANGS = ["en", "ja", "ko", "pt", "es", "fr", "ar"];
+        const CAPTION_LANGS = ["en", "ja", "ko", "pt", "es", "fr"];
 
         function captionLangIndex(lang) {
-          const i = SUPPORT_LANGS.indexOf(lang);
+          const i = CAPTION_LANGS.indexOf(lang);
           return i >= 0 ? i : 0;
         }
 
         function setLang(lang) {
           document.body.setAttribute("data-lang", lang);
           langBlocks.forEach((el) => {
-            el.classList.toggle("lang-visible", el.getAttribute("data-lang") === lang);
+            const d = el.getAttribute("data-lang");
+            // Phase 1 Arabic: AR where present + EN fallback for untranslated sections (RTL deferred).
+            const on = d === lang || (lang === "ar" && d === "en");
+            el.classList.toggle("lang-visible", on);
           });
           langButtons.forEach((btn) => {
             const on = btn.getAttribute("data-lang") === lang;
