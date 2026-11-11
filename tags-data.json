@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.50",
+  "version": "dict_v1.2.54",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -1788,7 +1788,9 @@
       "related": [
         "act.guard.sweep",
         "act.sub.ankle_lock",
-        "pre.knee_line_control"
+        "pre.knee_line_control",
+        "act.pass.squat_down",
+        "act.pass.drop_knee"
       ],
       "labels": {
         "ja": "シングルレッグX",
@@ -5812,7 +5814,8 @@
       "related": [
         "pre.pressure",
         "pre.knee_line_control",
-        "pos.guard.half"
+        "pos.guard.half",
+        "act.pass.float_down"
       ],
       "labels": {
         "ja": "スマッシュパス",
@@ -6150,6 +6153,239 @@
       "perspective": "other"
     },
     {
+      "tagId": "act.pass.squat_down",
+      "category": "Action",
+      "canonicalJa": "しゃがむ",
+      "canonicalEn": "Squat Down",
+      "related": [
+        "pos.guard.slx",
+        "pre.level_change",
+        "pre.pressure",
+        "act.control.cross_body",
+        "act.pass.drop_knee",
+        "act.pass.float_down"
+      ],
+      "labels": {
+        "ja": "しゃがむ",
+        "en": "Squat Down",
+        "ko": "낮게 앉기",
+        "pt": "Agachar",
+        "es": "Agacharse",
+        "fr": "S'accroupir"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "腰を落とす",
+          "体勢を落とす",
+          "低くなる"
+        ],
+        "en": [
+          "squat down",
+          "squat",
+          "crouch",
+          "get low",
+          "drop hips",
+          "sink hips",
+          "sit low"
+        ],
+        "ko": [
+          "낮게 앉기",
+          "웅크리기"
+        ],
+        "pt": [
+          "agachar",
+          "abaixar o quadril"
+        ],
+        "es": [
+          "agacharse",
+          "bajar la cadera"
+        ],
+        "fr": [
+          "s'accroupir",
+          "baisser les hanches"
+        ]
+      },
+      "aliases": [
+        "腰を落とす",
+        "体勢を落とす",
+        "低くなる",
+        "squat down",
+        "squat",
+        "crouch",
+        "get low",
+        "drop hips",
+        "sink hips",
+        "sit low",
+        "낮게 앉기",
+        "웅크리기",
+        "agachar",
+        "abaixar o quadril",
+        "agacharse",
+        "bajar la cadera",
+        "s'accroupir",
+        "baisser les hanches"
+      ],
+      "approachCategory": "pass",
+      "perspective": "top"
+    },
+    {
+      "tagId": "act.pass.drop_knee",
+      "category": "Action",
+      "canonicalJa": "ひざをつく",
+      "canonicalEn": "Drop Knee",
+      "related": [
+        "pos.guard.slx",
+        "act.pass.squat_down",
+        "act.pass.float_down",
+        "act.pass.knee_cut",
+        "pre.pressure",
+        "act.control.cross_body"
+      ],
+      "labels": {
+        "ja": "ひざをつく",
+        "en": "Drop Knee",
+        "ko": "무릎 내리기",
+        "pt": "Apoiar o joelho",
+        "es": "Apoyar la rodilla",
+        "fr": "Poser le genou"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "膝をつく",
+          "膝を着く",
+          "膝をマットにつく",
+          "ひざを落とす"
+        ],
+        "en": [
+          "drop knee",
+          "drop a knee",
+          "drop one knee",
+          "drop the knee",
+          "knee down",
+          "knee to mat",
+          "put knee down"
+        ],
+        "ko": [
+          "무릎 내리기",
+          "무릎 꿇기"
+        ],
+        "pt": [
+          "apoiar o joelho",
+          "joelho no chão",
+          "joelho no tatame"
+        ],
+        "es": [
+          "apoyar la rodilla",
+          "rodilla al suelo",
+          "rodilla en el tatami"
+        ],
+        "fr": [
+          "poser le genou",
+          "genou au sol",
+          "genou sur le tapis"
+        ]
+      },
+      "aliases": [
+        "膝をつく",
+        "膝を着く",
+        "膝をマットにつく",
+        "ひざを落とす",
+        "drop knee",
+        "drop a knee",
+        "drop one knee",
+        "drop the knee",
+        "knee down",
+        "knee to mat",
+        "put knee down",
+        "무릎 내리기",
+        "무릎 꿇기",
+        "apoiar o joelho",
+        "joelho no chão",
+        "joelho no tatame",
+        "apoyar la rodilla",
+        "rodilla al suelo",
+        "rodilla en el tatami",
+        "poser le genou",
+        "genou au sol",
+        "genou sur le tapis"
+      ],
+      "approachCategory": "pass",
+      "perspective": "top"
+    },
+    {
+      "tagId": "act.pass.float_down",
+      "category": "Action",
+      "canonicalJa": "フロートダウン",
+      "canonicalEn": "Float Down",
+      "related": [
+        "act.pass.smash_pass",
+        "act.pass.squat_down",
+        "act.pass.drop_knee",
+        "pre.pressure",
+        "pos.top.side_control"
+      ],
+      "labels": {
+        "ja": "フロートダウン",
+        "en": "Float Down",
+        "ko": "체중 실어 내려가기",
+        "pt": "Descer flutuando",
+        "es": "Descender flotando",
+        "fr": "Descendre en flottant"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "体重を預けて降りる",
+          "体重を乗せていく",
+          "ふわっと降りる",
+          "体を降ろす"
+        ],
+        "en": [
+          "float down",
+          "floating down",
+          "float over",
+          "settle down",
+          "settle the weight"
+        ],
+        "ko": [
+          "체중 실어 내려가기",
+          "천천히 내려앉기"
+        ],
+        "pt": [
+          "descer flutuando",
+          "flutuar para baixo"
+        ],
+        "es": [
+          "descender flotando",
+          "flotar hacia abajo"
+        ],
+        "fr": [
+          "descendre en flottant",
+          "flotter vers le bas"
+        ]
+      },
+      "aliases": [
+        "体重を預けて降りる",
+        "体重を乗せていく",
+        "ふわっと降りる",
+        "体を降ろす",
+        "float down",
+        "floating down",
+        "float over",
+        "settle down",
+        "settle the weight",
+        "체중 실어 내려가기",
+        "천천히 내려앉기",
+        "descer flutuando",
+        "flutuar para baixo",
+        "descender flotando",
+        "flotar hacia abajo",
+        "descendre en flottant",
+        "flotter vers le bas"
+      ],
+      "approachCategory": "pass",
+      "perspective": "top"
+    },
+    {
       "tagId": "act.pass.duck_under",
       "category": "Action",
       "canonicalJa": "ダックアンダー",
@@ -6410,7 +6646,8 @@
       "related": [
         "act.transition.take_back",
         "pre.control_elbow_line",
-        "pre.grip.c_grip"
+        "pre.grip.c_grip",
+        "pre.body.neck"
       ],
       "labels": {
         "ja": "カップ",
@@ -6426,7 +6663,8 @@
           "cup control"
         ],
         "ja": [
-          "握らずに当てる"
+          "握らずに当てる",
+          "カップする"
         ],
         "ko": [
           "컵"
@@ -6445,6 +6683,7 @@
         "cup",
         "cup control",
         "握らずに当てる",
+        "カップする",
         "컵",
         "copa",
         "coupe"
@@ -6525,47 +6764,121 @@
       "related": [
         "pos.top.side_control",
         "pre.crossface",
-        "pre.hip_control"
+        "pre.hip_control",
+        "act.control.reverse_cross_body",
+        "pre.open_base",
+        "pre.twisting_base"
       ],
       "labels": {
         "ja": "崩れ袈裟固め",
         "en": "Cross Body Control",
         "ko": "크로스 바디 컨트롤",
-        "pt": "Controle Cruzado",
-        "es": "Cruzado Body Control",
-        "fr": "Croisé Body Contrôle"
+        "pt": "Cross Body Control",
+        "es": "Cross Body Control",
+        "fr": "Cross Body Control"
       },
       "aliasesByLocale": {
         "ja": [
-          "クロスボディコントロール"
+          "クロスボディコントロール",
+          "クロスボディ"
         ],
         "en": [
           "cross body control",
-          "crossbody"
+          "crossbody",
+          "cross body",
+          "kuzure kesa gatame"
         ],
         "ko": [
           "크로스 바디 컨트롤"
         ],
         "pt": [
+          "cross body control",
           "controle cruzado"
         ],
         "es": [
-          "cruzado body control",
+          "cross body control",
+          "control cruzado",
           "crossbody"
         ],
         "fr": [
-          "croisé body contrôle",
+          "cross body control",
+          "contrôle croisé",
           "crossbody"
         ]
       },
       "aliases": [
         "クロスボディコントロール",
+        "クロスボディ",
         "cross body control",
         "crossbody",
+        "cross body",
+        "kuzure kesa gatame",
         "크로스 바디 컨트롤",
         "controle cruzado",
-        "cruzado body control",
-        "croisé body contrôle"
+        "control cruzado",
+        "contrôle croisé"
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
+    },
+    {
+      "tagId": "act.control.reverse_cross_body",
+      "category": "Action",
+      "canonicalJa": "リバースクロスボディコントロール",
+      "canonicalEn": "Reverse Cross Body Control",
+      "related": [
+        "act.control.cross_body",
+        "pos.top.side_control",
+        "pos.top.north_south",
+        "pre.hip_control"
+      ],
+      "labels": {
+        "ja": "リバースクロスボディコントロール",
+        "en": "Reverse Cross Body Control",
+        "ko": "리버스 크로스 바디 컨트롤",
+        "pt": "Reverse Cross Body Control",
+        "es": "Reverse Cross Body Control",
+        "fr": "Reverse Cross Body Control"
+      },
+      "aliasesByLocale": {
+        "ja": [
+          "後袈裟固め",
+          "後ろ袈裟固め",
+          "リバース袈裟固め"
+        ],
+        "en": [
+          "reverse cross body control",
+          "reverse cross body",
+          "reverse crossbody",
+          "reverse kesa gatame",
+          "ushiro kesa gatame"
+        ],
+        "ko": [
+          "리버스 크로스 바디 컨트롤"
+        ],
+        "pt": [
+          "reverse cross body control",
+          "reverse kesa gatame"
+        ],
+        "es": [
+          "reverse cross body control",
+          "reverse kesa gatame"
+        ],
+        "fr": [
+          "reverse cross body control",
+          "reverse kesa gatame"
+        ]
+      },
+      "aliases": [
+        "後袈裟固め",
+        "後ろ袈裟固め",
+        "リバース袈裟固め",
+        "reverse cross body control",
+        "reverse cross body",
+        "reverse crossbody",
+        "reverse kesa gatame",
+        "ushiro kesa gatame",
+        "리버스 크로스 바디 컨트롤"
       ],
       "approachCategory": "other",
       "perspective": "top"
@@ -7100,8 +7413,7 @@
         "en": [
           "take side control",
           "kneeling base",
-          "sprawl base",
-          "twisting base"
+          "sprawl base"
         ],
         "ko": [
           "사이드 컨트롤 잡기"
@@ -7112,21 +7424,18 @@
         "es": [
           "take lateral control",
           "kneeling base",
-          "sprawl base",
-          "twisting base"
+          "sprawl base"
         ],
         "fr": [
           "take côté contrôle",
           "kneeling base",
-          "sprawl base",
-          "twisting base"
+          "sprawl base"
         ]
       },
       "aliases": [
         "take side control",
         "kneeling base",
         "sprawl base",
-        "twisting base",
         "사이드 컨트롤 잡기",
         "pegada de controle lateral",
         "take lateral control",
@@ -16678,6 +16987,98 @@
       "perspective": "other"
     },
     {
+      "tagId": "pre.open_base",
+      "category": "Prerequisite",
+      "canonicalJa": "オープンベース",
+      "canonicalEn": "Open Base",
+      "related": [
+        "pre.base",
+        "act.control.cross_body",
+        "act.control.reverse_cross_body",
+        "pre.twisting_base"
+      ],
+      "labels": {
+        "ja": "オープンベース",
+        "en": "Open Base",
+        "ko": "오픈 베이스",
+        "pt": "Base Aberta",
+        "es": "Open Base",
+        "fr": "Open Base"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "open base"
+        ],
+        "ko": [
+          "오픈 베이스"
+        ],
+        "pt": [
+          "base aberta",
+          "open base"
+        ],
+        "es": [
+          "open base",
+          "base abierta"
+        ],
+        "fr": [
+          "open base",
+          "base ouverte"
+        ]
+      },
+      "aliases": [
+        "open base",
+        "오픈 베이스",
+        "base aberta",
+        "base abierta",
+        "base ouverte"
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
+    },
+    {
+      "tagId": "pre.twisting_base",
+      "category": "Prerequisite",
+      "canonicalJa": "ツイスティングベース",
+      "canonicalEn": "Twisting Base",
+      "related": [
+        "pre.base",
+        "act.control.cross_body",
+        "act.control.reverse_cross_body",
+        "pre.open_base"
+      ],
+      "labels": {
+        "ja": "ツイスティングベース",
+        "en": "Twisting Base",
+        "ko": "트위스팅 베이스",
+        "pt": "Twisting Base",
+        "es": "Twisting Base",
+        "fr": "Twisting Base"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "twisting base"
+        ],
+        "ko": [
+          "트위스팅 베이스"
+        ],
+        "pt": [
+          "twisting base"
+        ],
+        "es": [
+          "twisting base"
+        ],
+        "fr": [
+          "twisting base"
+        ]
+      },
+      "aliases": [
+        "twisting base",
+        "트위스팅 베이스"
+      ],
+      "approachCategory": "other",
+      "perspective": "top"
+    },
+    {
       "tagId": "pre.combat_base",
       "category": "Prerequisite",
       "canonicalJa": "コンバットベース",
@@ -17097,7 +17498,8 @@
       "canonicalEn": "Level Change",
       "related": [
         "act.wrestling.double_leg_takedown",
-        "act.wrestling.single_leg_takedown"
+        "act.wrestling.single_leg_takedown",
+        "act.pass.squat_down"
       ],
       "labels": {
         "ja": "レベルチェンジ",
