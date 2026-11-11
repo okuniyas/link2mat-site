@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.54",
+  "version": "dict_v1.2.55",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -20093,6 +20093,64 @@
         "es": "Cadera / Nalga",
         "fr": "Hanche / Fesse"
       },
+      "aliasesByLocale": {
+        "ja": [
+          "ヒップ",
+          "お尻",
+          "尻"
+        ],
+        "en": [
+          "hip",
+          "hips",
+          "butt",
+          "buttock",
+          "buttocks",
+          "glute"
+        ],
+        "ko": [
+          "힙",
+          "엉덩이"
+        ],
+        "pt": [
+          "quadril",
+          "nádegas",
+          "bumbum"
+        ],
+        "es": [
+          "cadera",
+          "nalga",
+          "glúteo",
+          "trasero"
+        ],
+        "fr": [
+          "hanche",
+          "fesse",
+          "fessier"
+        ]
+      },
+      "aliases": [
+        "ヒップ",
+        "お尻",
+        "尻",
+        "hip",
+        "hips",
+        "butt",
+        "buttock",
+        "buttocks",
+        "glute",
+        "힙",
+        "엉덩이",
+        "quadril",
+        "nádegas",
+        "bumbum",
+        "cadera",
+        "nalga",
+        "glúteo",
+        "trasero",
+        "hanche",
+        "fesse",
+        "fessier"
+      ],
       "approachCategory": "other",
       "perspective": "other",
       "bodyRegion": "waist",
