@@ -1,5 +1,5 @@
 {
-  "version": "dict_v1.2.55",
+  "version": "dict_v1.2.58",
   "tags": [
     {
       "tagId": "pos.phase.standing",
@@ -118,6 +118,10 @@
         "fr": "Garde Fermée"
       },
       "aliasesByLocale": {
+        "ja": [
+          "クローズド",
+          "フルガード"
+        ],
         "en": [
           "closed guard"
         ],
@@ -135,6 +139,8 @@
         ]
       },
       "aliases": [
+        "クローズド",
+        "フルガード",
         "closed guard",
         "클로즈드 가드",
         "guarda fechada",
@@ -618,6 +624,9 @@
         "fr": "Garde Demi Profonde"
       },
       "aliasesByLocale": {
+        "ja": [
+          "ディープハーフ"
+        ],
         "en": [
           "deep half guard",
           "deep half"
@@ -638,6 +647,7 @@
         ]
       },
       "aliases": [
+        "ディープハーフ",
         "deep half guard",
         "deep half",
         "딥 하프 가드",
@@ -917,6 +927,9 @@
         "fr": "De La Riva"
       },
       "aliasesByLocale": {
+        "ja": [
+          "デラ"
+        ],
         "en": [
           "DLR",
           "de la riva"
@@ -937,6 +950,7 @@
         ]
       },
       "aliases": [
+        "デラ",
         "DLR",
         "de la riva",
         "데 라 히바",
@@ -963,6 +977,9 @@
         "fr": "Reverse De La Riva"
       },
       "aliasesByLocale": {
+        "ja": [
+          "リバデラ"
+        ],
         "en": [
           "RDLR",
           "reverse de la riva"
@@ -983,6 +1000,7 @@
         ]
       },
       "aliases": [
+        "リバデラ",
         "RDLR",
         "reverse de la riva",
         "리버스 데 라 히바",
@@ -1801,6 +1819,11 @@
         "fr": "Simple Leg X"
       },
       "aliasesByLocale": {
+        "ja": [
+          "シングルレッグエックス",
+          "シングルレッグエックスガード",
+          "シングルレッグXガード"
+        ],
         "en": [
           "SLX",
           "single leg x",
@@ -1824,6 +1847,9 @@
         ]
       },
       "aliases": [
+        "シングルレッグエックス",
+        "シングルレッグエックスガード",
+        "シングルレッグXガード",
         "SLX",
         "single leg x",
         "ashi",
@@ -2170,6 +2196,12 @@
         "fr": "Headquarters"
       },
       "aliasesByLocale": {
+        "ja": [
+          "ヘッドクォーター",
+          "ヘッドクォーターズ",
+          "ヘッドクォーターズポジション",
+          "HQポジション"
+        ],
         "en": [
           "headquarters",
           "hq",
@@ -2193,6 +2225,10 @@
         ]
       },
       "aliases": [
+        "ヘッドクォーター",
+        "ヘッドクォーターズ",
+        "ヘッドクォーターズポジション",
+        "HQポジション",
         "headquarters",
         "hq",
         "headquarters position",
@@ -5510,6 +5546,10 @@
         "fr": "Coupe de Genou"
       },
       "aliasesByLocale": {
+        "ja": [
+          "ニースライス",
+          "ニースライスパス"
+        ],
         "en": [
           "knee cut",
           "knee slice",
@@ -5533,6 +5573,8 @@
         ]
       },
       "aliases": [
+        "ニースライス",
+        "ニースライスパス",
         "knee cut",
         "knee slice",
         "knee cut pass",
@@ -6177,7 +6219,8 @@
         "ja": [
           "腰を落とす",
           "体勢を落とす",
-          "低くなる"
+          "低くなる",
+          "スクワットダウン"
         ],
         "en": [
           "squat down",
@@ -6209,6 +6252,7 @@
         "腰を落とす",
         "体勢を落とす",
         "低くなる",
+        "スクワットダウン",
         "squat down",
         "squat",
         "crouch",
@@ -6254,7 +6298,8 @@
           "膝をつく",
           "膝を着く",
           "膝をマットにつく",
-          "ひざを落とす"
+          "ひざを落とす",
+          "ドロップニー"
         ],
         "en": [
           "drop knee",
@@ -6290,6 +6335,7 @@
         "膝を着く",
         "膝をマットにつく",
         "ひざを落とす",
+        "ドロップニー",
         "drop knee",
         "drop a knee",
         "drop one knee",
@@ -7097,6 +7143,9 @@
         "fr": "Dos Take"
       },
       "aliasesByLocale": {
+        "ja": [
+          "バックを取る"
+        ],
         "en": [
           "back take"
         ],
@@ -7114,6 +7163,7 @@
         ]
       },
       "aliases": [
+        "バックを取る",
         "back take",
         "백 테이크",
         "pegada de costas",
@@ -8300,6 +8350,10 @@
         "fr": "Triangle Étranglement"
       },
       "aliasesByLocale": {
+        "ja": [
+          "トライアングル",
+          "三角"
+        ],
         "en": [
           "triangle",
           "sankaku"
@@ -8320,6 +8374,8 @@
         ]
       },
       "aliases": [
+        "トライアングル",
+        "三角",
         "triangle",
         "sankaku",
         "트라이앵글 초크",
@@ -11267,7 +11323,8 @@
           "single arm drag"
         ],
         "ja": [
-          "アームドラッグ"
+          "アームドラッグ",
+          "アームドラップ"
         ],
         "ko": [
           "암 드래그",
@@ -11290,6 +11347,7 @@
         "arm drag",
         "single arm drag",
         "アームドラッグ",
+        "アームドラップ",
         "암 드래그",
         "팔 드래그",
         "arrasto de braço",
